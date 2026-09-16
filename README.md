@@ -4,5 +4,7 @@
 
 - [隐私政策（PRIVACY.md）](PRIVACY.md)
 - [用户协议（TERMS.md）](TERMS.md)
+- [第三方软件声明（完整版）](THIRD_PARTY_NOTICES.md)
+- [第三方软件声明（摘要）](THIRD_PARTY_SUMMARY.md)
 
 联系开发者：healico@foxmail.com
