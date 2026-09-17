@@ -1,0 +1,2758 @@
+{
+  "reviewedAt": "2026-09-17",
+  "scope": "aarch64-unknown-linux-ohos normal/build closure; conservative coverage includes host build dependencies.",
+  "components": [
+    {
+      "name": "adler2",
+      "version": "2.0.1",
+      "declaredLicense": "0BSD OR MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "89a031a0f42eeff31c70dc598b398cbf31f1680f",
+      "crateSha256": "320119579fcad9c21884f5c4861d16174d0e06250625266f50fe6898340abefa",
+      "files": [
+        {
+          "name": "LICENSE-0BSD",
+          "sha256": "861399f8c21c042b110517e76dc6b63a2b334276c8cf17412fc3c8908ca8dc17"
+        },
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "8ada45cd9f843acf64e4722ae262c622a2b3b3007c7310ef36ac1061a30f6adb"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "aho-corasick",
+      "version": "1.1.4",
+      "declaredLicense": "Unlicense OR MIT",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "17f8b32e3b7c845ef3c5429b823804f552f14ec9",
+      "crateSha256": "ddd31a130427c27518df266943a5308ed92d4b226cc639f5a8f1002816174301",
+      "files": [
+        {
+          "name": "COPYING",
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        },
+        {
+          "name": "UNLICENSE",
+          "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+        }
+      ]
+    },
+    {
+      "name": "alloc-no-stdlib",
+      "version": "2.0.4",
+      "declaredLicense": "BSD-3-Clause",
+      "selectedLicense": "BSD-3-Clause",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "6032b6a9b20e03737135c55a0270ccffcc1438ef",
+      "crateSha256": "cc7bb162ec39d46ab1ca8c77bf72e890535becd1751bb45f64c597edb4c8c6b3",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "c0c56f26d9c051cac4d200c34c84e7ae9aaa853e01a982a1df08b09931e518ae"
+        }
+      ]
+    },
+    {
+      "name": "alloc-stdlib",
+      "version": "0.2.2",
+      "declaredLicense": "BSD-3-Clause",
+      "selectedLicense": "BSD-3-Clause",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "6032b6a9b20e03737135c55a0270ccffcc1438ef",
+      "crateSha256": "94fb8275041c72129eb51b7d0322c29b8387a0386127718b096429201a5d6ece",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "c0c56f26d9c051cac4d200c34c84e7ae9aaa853e01a982a1df08b09931e518ae"
+        }
+      ]
+    },
+    {
+      "name": "async-compression",
+      "version": "0.4.35",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "55741021c8d7b447a477d8bd7962a06b8a958315",
+      "crateSha256": "07a926debf178f2d355197f9caddb08e54a9329d44748034bba349c5848cb519",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "88d1e3160df48926ad3310a8ec5699b502889565908f1be7e77cd21282c7a709"
+        }
+      ]
+    },
+    {
+      "name": "atomic-waker",
+      "version": "1.1.2",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "9969a29ccd1fe298e2df7346849c0095ba303a64",
+      "crateSha256": "1505bd5d3d116872e7271a6d4e16d81d0c8570876c8de68093a09ac269d8aac0",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        },
+        {
+          "name": "LICENSE-THIRD-PARTY",
+          "sha256": "6226d0632e2e1a80c23597e964da9812ae193c535fe058154afb034e94167aa5"
+        }
+      ]
+    },
+    {
+      "name": "base64",
+      "version": "0.22.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "e14400697453bcc85997119b874bc03d9601d0af",
+      "crateSha256": "72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "0dd882e53de11566d50f8e8e2d5a651bcf3fabee4987d70f306233cf39094ba7"
+        }
+      ]
+    },
+    {
+      "name": "bitflags",
+      "version": "2.10.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "7cc8595e93d04d180d39e2f25242dca85dd71228",
+      "crateSha256": "812e12b5285cc515a9c72a5c1d3b6d46a19dac5acfef5265968c166106e31dd3",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ]
+    },
+    {
+      "name": "brotli-decompressor",
+      "version": "5.0.0",
+      "declaredLicense": "BSD-3-Clause/MIT",
+      "selectedLicense": "BSD-3-Clause AND MIT",
+      "evidence": "Legacy slash declaration is not treated as blanket OR: root Dropbox BSD and src/context.rs Google MIT both apply to their source scopes.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "a91c112180789502cdb9bf9e87f9546dd9a970fd",
+      "crateSha256": "874bb8112abecc98cbd6d81ea4fa7e94fb9449648c93cc89aa40c81c24d7de03",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "c0c56f26d9c051cac4d200c34c84e7ae9aaa853e01a982a1df08b09931e518ae"
+        },
+        {
+          "name": "LICENSE-MIT-Brotli",
+          "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94"
+        },
+        {
+          "name": "NOTICE-source-comments",
+          "sha256": "5a75ed3ee6b866e671967a53d9997b59183dbd9e707490482b1417d7533bb20a"
+        }
+      ]
+    },
+    {
+      "name": "brotli",
+      "version": "8.0.2",
+      "declaredLicense": "BSD-3-Clause AND MIT",
+      "selectedLicense": "BSD-3-Clause AND MIT",
+      "evidence": "Encoder LICENSE.MIT plus Google MIT file header; BSD text retained from its exact decoder dependency, not invented as an encoder root license.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "769efcbca153bfc4737f1986459da5d9d23368b8",
+      "crateSha256": "4bd8b9603c7aa97359dbd97ecf258968c95f3adddd6db2f7e7a5bef101c84560",
+      "files": [
+        {
+          "name": "LICENSE.MIT",
+          "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94"
+        },
+        {
+          "name": "LICENSE-BSD-dependency",
+          "sha256": "c0c56f26d9c051cac4d200c34c84e7ae9aaa853e01a982a1df08b09931e518ae"
+        },
+        {
+          "name": "NOTICE",
+          "sha256": "9fd01edb0921aa1ca70a4466d70334d2e8f8c858df7120be21dd68218a63ddf9"
+        },
+        {
+          "name": "NOTICE-source-comments",
+          "sha256": "e51276e79329404eb8cb2cce1d3c6c28260d39c8ab0664e25e3af8926778a8dc"
+        }
+      ]
+    },
+    {
+      "name": "bytes",
+      "version": "1.11.0",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "a7952fb4478f6dc226f623b217432fbc6f8dad24",
+      "crateSha256": "b35204fbdc0b3f4446b89fc1ac2cf84a8a68971995d0bf2e925ec7cd960f9cb3",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "45f522cacecb1023856e46df79ca625dfc550c94910078bd8aec6e02880b3d42"
+        }
+      ]
+    },
+    {
+      "name": "cc",
+      "version": "1.2.49",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "9ec00e4bf2a8b087760245b0ec721fb3bd59731f",
+      "crateSha256": "90583009037521a116abf44494efecd645ba48b6622457080f080b85544e2215",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.4",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "3510ca6abea34cbbc702509a4e50ea9709925eda",
+      "crateSha256": "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "name": "compression-codecs",
+      "version": "0.4.34",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "55741021c8d7b447a477d8bd7962a06b8a958315",
+      "crateSha256": "34a3cbbb8b6eca96f3a5c4bf6938d5b27ced3675d69f95bb51948722870bc323",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "88d1e3160df48926ad3310a8ec5699b502889565908f1be7e77cd21282c7a709"
+        }
+      ]
+    },
+    {
+      "name": "compression-core",
+      "version": "0.4.31",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "2a28343998e67ea519b87005b9d295b134c00dd0",
+      "crateSha256": "75984efb6ed102a0d42db99afb6c1948f0380d1d91808d5529916e6c08b49d8d",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "88d1e3160df48926ad3310a8ec5699b502889565908f1be7e77cd21282c7a709"
+        }
+      ]
+    },
+    {
+      "name": "convert_case",
+      "version": "0.6.0",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "a8702a05217664ca59cb7471df68a91dcf4b91ee",
+      "crateSha256": "ec182b0ca2f35d8fc196cf3404988fd8b8c739a4d270ff118a398feb0cbec1ca",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "797087750c4103075e96bb7a60202a040812f8679ae2f7263148a1cc0b298d28"
+        }
+      ]
+    },
+    {
+      "name": "cookie",
+      "version": "0.18.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "ba46fc5e97a1271435f38509d109e125a473bc82",
+      "crateSha256": "4ddef33a339a91ea89fb53151bd0a4689cfce27055c291dfa69945475d22c747",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "2773e20df8f4c52a026b5b578c7f2457341f5aa3fb6612fd87e1d2e1bd8f48ad"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "f28420c1906af38be726cd7842798f0194b27c41d6051c0d1e9ee348b8a4a0ea"
+        }
+      ]
+    },
+    {
+      "name": "cookie_store",
+      "version": "0.21.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "01d9a5f16b84019bee6bcf876f10e52063faa040",
+      "crateSha256": "2eac901828f88a5241ee0600950ab981148a18f2f756900ffba1b125ca6a3ef9",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "afb11426e09da40a1ae4f8fa17ddcc6b6a52d14df04c29bc5bcd06eb8730624d"
+        }
+      ]
+    },
+    {
+      "name": "crc32fast",
+      "version": "1.5.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "dbf4f76cd71cdcc57d9164cbd46890d53ce0423c",
+      "crateSha256": "9481c1c90cbf2ac953f07c8d4a58aa3945c425b7185c9154d67a65e4230da511",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "61d383b05b87d78f94d2937e2580cce47226d17823c0430fbcad09596537efcf"
+        }
+      ]
+    },
+    {
+      "name": "ctor",
+      "version": "0.2.9",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "16f0898ba55c17dab49183673bd634e6c0da5d33",
+      "crateSha256": "32a2785755761f3ddc1492979ce1e48d2c00d09311c39e4466429188f3dd6501",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a8ad31b1c3f40dca5a84119351b8fa8ddc868edd77fad8a8ebf6d8f2d16fa4ae"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "bccaa8b6c09f94e81f06696e179dbe058464bbdfbc823b6d49cada1d71e84ac3"
+        }
+      ]
+    },
+    {
+      "name": "deranged",
+      "version": "0.5.5",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "c249467d73779b196b68f56df8a9bf800bc89c8d",
+      "crateSha256": "ececcb659e7ba858fb4f10388c250a7252eb0a27373f1a72b8748afdd248e587",
+      "files": [
+        {
+          "name": "LICENSE-Apache",
+          "sha256": "edd65bdd88957a205c47d53fa499eed8865a70320f0f03f6391668cb304ea376"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "231c837c45eb53f108fb48929e488965bc4fcc14e9ea21d35f50e6b99d98685b"
+        }
+      ]
+    },
+    {
+      "name": "displaydoc",
+      "version": "0.2.5",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "e4028851bfb82998300237f7568a45f589a19e40",
+      "crateSha256": "97369cbbc041bc366949bc74d34658d6cda5621039731c6310521892a3a20ae0",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "document-features",
+      "version": "0.2.12",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "721e708012254b81760bd2befdae0970e7a2615e",
+      "crateSha256": "d4b8a88685455ed29a21542a33abd9cb6510b6b129abadabdcef0f4c55bc8f61",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "aa893340d14b9844625be6a50ac644169a01b52f0211cbf81b09e1874c8cd81d"
+        }
+      ]
+    },
+    {
+      "name": "encoding_rs",
+      "version": "0.8.35",
+      "declaredLicense": "(Apache-2.0 OR MIT) AND BSD-3-Clause",
+      "selectedLicense": "MIT AND BSD-3-Clause",
+      "evidence": "Select MIT for implementation; retain mandatory WHATWG data BSD license and COPYRIGHT.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "2fa58aecf537cc76ff52c0eb3d5e9f8fda466844",
+      "crateSha256": "75030f3c4f45dafd7586dd6780965a8c7e8e285a5ecb86713e63a79c5b2766f3",
+      "files": [
+        {
+          "name": "COPYRIGHT",
+          "sha256": "11789f45bb180841cd362a5eee6789c68ddb573a11105e30768c308a6add0190"
+        },
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "3fa4ca83dcc9237839b1bdeb2e6d16bdfb5ec0c5ce42b24694d8bbf0dcbef72c"
+        },
+        {
+          "name": "LICENSE-WHATWG",
+          "sha256": "838118388fe5c2e7f1dbbaeed13e1c7f3ebf88be91319c7c1d77c18e987d1a50"
+        }
+      ]
+    },
+    {
+      "name": "equivalent",
+      "version": "1.0.2",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "44cdd44f8b8ebb5f9ae096c7550a5e74ffb7d6ae",
+      "crateSha256": "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "7365cc8878a1d7ce155a58c4ca09c3d7a6be413efa5334a80ea842912b669349"
+        }
+      ]
+    },
+    {
+      "name": "find-msvc-tools",
+      "version": "0.1.5",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "15145d16f729182b003f5701b7c93f4685da952b",
+      "crateSha256": "3a3076410a55c90011c298b04d0cfa770b00fa04e1e3c97d3f6c9de105a03844",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "name": "flate2",
+      "version": "1.1.5",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "2661fbb3107a5489ad8d2315049d4d1a295f130b",
+      "crateSha256": "bfe33edd8e85a12a67454e37f8c75e730830d83e313556ab9ebf9ee7fbeb3bfb",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "75d3bf11a47fed60aee0a6cc56a97b896b470ee8fb52d6cd553bd8348337f422"
+        }
+      ]
+    },
+    {
+      "name": "fnv",
+      "version": "1.0.7",
+      "declaredLicense": "Apache-2.0 / MIT",
+      "selectedLicense": "Apache-2.0 AND MIT",
+      "evidence": "Legacy slash metadata: conservatively retain both root licenses and satisfy both notice requirements.",
+      "obligations": "提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "4b4784ebfd3332dc61f0640764d6f1140e03a9ab",
+      "crateSha256": "3f9eec918d3f24069decb9af1554cad7c880e2da24a9afd88aca000531ab82c1",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "65fdb6c76cd61612070c066eec9ecdb30ee74fb27859d0d9af58b9f499fd0c3e"
+        }
+      ]
+    },
+    {
+      "name": "form_urlencoded",
+      "version": "1.2.2",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "91377f48bf35011d042aa5abef9e7f2a0a625aaa",
+      "crateSha256": "cb4cb245038516f5f85277875cdaa4f7d2c9a0fa0468de06ed190163b1581fcf",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "20c7855c364d57ea4c97889a5e8d98470a9952dade37bd9248b9a54431670e5e"
+        }
+      ]
+    },
+    {
+      "name": "futures-channel",
+      "version": "0.3.31",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "1e052816b09890925cfdfcbe8d390cdaae5e4c38",
+      "crateSha256": "2dff15bf788c671c1934e366d07e30c1814a8ef514e1af724a602e8a2fbe1b10",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ]
+    },
+    {
+      "name": "futures-core",
+      "version": "0.3.31",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "1e052816b09890925cfdfcbe8d390cdaae5e4c38",
+      "crateSha256": "05f29059c0c2090612e8d742178b0580d2dc940c837851ad723096f87af6663e",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ]
+    },
+    {
+      "name": "futures-sink",
+      "version": "0.3.31",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "1e052816b09890925cfdfcbe8d390cdaae5e4c38",
+      "crateSha256": "e575fab7d1e0dcb8d0c7bcf9a63ee213816ab51902e6d244a95819acacf1d4f7",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ]
+    },
+    {
+      "name": "futures-task",
+      "version": "0.3.31",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "1e052816b09890925cfdfcbe8d390cdaae5e4c38",
+      "crateSha256": "f90f7dce0722e95104fcb095585910c0977252f286e354b5e3bd38902cd99988",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ]
+    },
+    {
+      "name": "futures-util",
+      "version": "0.3.31",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "1e052816b09890925cfdfcbe8d390cdaae5e4c38",
+      "crateSha256": "9fa08315bb612088cc391249efdc3bc77536f16c91f6cf495e6fbe85b20a4a81",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ]
+    },
+    {
+      "name": "getrandom",
+      "version": "0.2.16",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "ce4144b2c16fe1422037c93e267e6a52336e0834",
+      "crateSha256": "335ff9f135e4384c8150d6f27c6daed433577f86b4750418338c01a1a2528592",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "42fa16951ce7f24b5a467a40e5b449a1d41e662f97ca779864f053f39e097737"
+        }
+      ]
+    },
+    {
+      "name": "h2",
+      "version": "0.4.12",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "41a0f805c833666a68a293641b0979362e411b5f",
+      "crateSha256": "f3c0b69cfcb4e1b9f1bf2f53f95f766e4661169728ec61cd3fe5a0166f2d1386",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "b21623012e6c453d944b0342c515b631cfcbf30704c2621b291526b69c10724d"
+        }
+      ]
+    },
+    {
+      "name": "hashbrown",
+      "version": "0.16.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "1876e4f02708b93903d55ef598f68e82a826518f",
+      "crateSha256": "841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "ff8f68cb076caf8cefe7a6430d4ac086ce6af2ca8ce2c4e5a2004d4552ef52a2"
+        }
+      ]
+    },
+    {
+      "name": "http-body-util",
+      "version": "0.1.3",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "ad4a9c9450596ee3f41390448205432a8179d80c",
+      "crateSha256": "b021d93e26becf5dc7e1b75b1bed1fd93124b374ceb73f43d4d4eafec896a64a",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "b843fb7430efdf9732c834b6814beda44fccf3f0ddf7c9e030b39da17f6b159c"
+        }
+      ]
+    },
+    {
+      "name": "http-body",
+      "version": "1.0.1",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "69e80eb41cae652a1a38e1ce77690be1a0e7f356",
+      "crateSha256": "1efedce1fb8e6913f23e0c92de8e62cd5b772a67e7b3946df930a62566c93184",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "cddabf8adc6ccd6c3e68f5d71eac9fae3094116623cf23a46af0a5fd6b8ee813"
+        }
+      ]
+    },
+    {
+      "name": "http",
+      "version": "1.4.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "b9625d83b524f7a8306883484f29a746eefc1bab",
+      "crateSha256": "e3ba2a386d7f85a81f119ad7498ebe444d2e22c2af0b86b069416ace48b3311a",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "8bb1b50b0e5c9399ae33bd35fab2769010fa6c14e8860c729a52295d84896b7a"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "dc91f8200e4b2a1f9261035d4c18c33c246911a6c0f7b543d75347e61b249cff"
+        }
+      ]
+    },
+    {
+      "name": "httparse",
+      "version": "1.10.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "9f29e79f9832dbd0ae5220acb17c1866745bdecd",
+      "crateSha256": "6dbf3de79e51f3d586ab4cb9d5c3e2c14aa28ed23d180cf89b4df0454a69cc87",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "391a5396cec6230bfabd4ef4eb2350eb895bc5efce377a2218f5702ed020d3e3"
+        }
+      ]
+    },
+    {
+      "name": "hyper-rustls",
+      "version": "0.27.7",
+      "declaredLicense": "Apache-2.0 OR ISC OR MIT",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "aff7441ec40be7c334886f8807f32cccecb5adbe",
+      "crateSha256": "e3c93eb611681b207e1fe55d5a71ecf91572ec8a6705cdb6857f7d8d5242cf58",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "d1ef92123fc699442e1e8d971fe84921947efc8d9a1249ab037f1e661a972a6d"
+        },
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-ISC",
+          "sha256": "7cfafc877eccc46c0e346ccbaa5c51bb6b894d2b818e617d970211e232785ad4"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "709e3175b4212f7b13aa93971c9f62ff8c69ec45ad8c6532a7e0c41d7a7d6f8c"
+        }
+      ]
+    },
+    {
+      "name": "hyper-util",
+      "version": "0.1.19",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "d5740116a55cbf7af13d1142b365c56b1d684f3a",
+      "crateSha256": "727805d60e7938b76b826a6ef209eb70eaa1812794f9424d4a4e2d740662df5f",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "9e0a97848ea543aef745c98e84fde696a9a3e0735538f6daefdd3cb1942effc1"
+        }
+      ]
+    },
+    {
+      "name": "hyper",
+      "version": "1.8.1",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "166c6cacc74b215674937e782b3ab2cbd8b69883",
+      "crateSha256": "2ab2d4f250c3d7b1c9fcdff1cece94ea4e2dfbec68614f7b87cb205f24ca9d11",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "8f2eee700f56dd8b381d92dc5b136befe09f90e186f2c1c8414a70c4c7534550"
+        }
+      ]
+    },
+    {
+      "name": "icu_collections",
+      "version": "2.1.1",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "38a49da495248dd1ded84cf306e4ca42e64d5bb3",
+      "crateSha256": "4c6b649701667bbe825c3b7e6388cb521c23d88644678e83c0c4d0a621a34b43",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "icu_locale_core",
+      "version": "2.1.1",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "38a49da495248dd1ded84cf306e4ca42e64d5bb3",
+      "crateSha256": "edba7861004dd3714265b4db54a3c390e880ab658fec5f7db895fae2046b5bb6",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "icu_normalizer",
+      "version": "2.1.1",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "38a49da495248dd1ded84cf306e4ca42e64d5bb3",
+      "crateSha256": "5f6c8828b67bf8908d82127b2054ea1b4427ff0230ee9141c54251934ab1b599",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "icu_normalizer_data",
+      "version": "2.1.1",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "38a49da495248dd1ded84cf306e4ca42e64d5bb3",
+      "crateSha256": "7aedcccd01fc5fe81e6b489c15b247b8b0690feb23304303a9e560f37efc560a",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "icu_properties",
+      "version": "2.1.2",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "323738440f7ff810b8130b7881322466015f7fec",
+      "crateSha256": "020bfc02fe870ec3a66d93e677ccca0562506e5872c650f893269e08615d74ec",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "icu_properties_data",
+      "version": "2.1.2",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "323738440f7ff810b8130b7881322466015f7fec",
+      "crateSha256": "616c294cf8d725c6afcd8f55abc17c56464ef6211f9ed59cccffe534129c77af",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "icu_provider",
+      "version": "2.1.1",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "38a49da495248dd1ded84cf306e4ca42e64d5bb3",
+      "crateSha256": "85962cf0ce02e1e0a629cc34e7ca3e373ce20dda4c4d7294bbd0bf1fdb59e614",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "idna",
+      "version": "1.1.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "91377f48bf35011d042aa5abef9e7f2a0a625aaa",
+      "crateSha256": "3b0875f23caa03898994f6ddc501886a45c7d3d62d04d2d90788d47be1b1e4de",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "b38f11f6096706e6de553dabe2a7ed142d59b6fa8c97e290c67496154745cdd5"
+        }
+      ]
+    },
+    {
+      "name": "idna_adapter",
+      "version": "1.2.1",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "f948802e3a2ae936eec51886eefbd7d536a28791",
+      "crateSha256": "3acae9609540aa318d1bc588455225fb2085b9ed0c4f6bd0d9d5bcd86f1a0344",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "8b43ce8accd61e9d370b5ca9e9c4f953279b5c239926c62315b40e24df51b726"
+        }
+      ]
+    },
+    {
+      "name": "indexmap",
+      "version": "2.12.1",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "cfad7589c88e298e97449afb838c6a4b08c58394",
+      "crateSha256": "0ad4bb2b565bca0645f4d68c5c9af97fba094e9791da685bf83cb5f3ce74acf2",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "ecc269ef87fd38a1d98e30bfac9ba964a9dbd9315c3770fed98d4d7cb5882055"
+        }
+      ]
+    },
+    {
+      "name": "ipnet",
+      "version": "2.11.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "e600f0af55b4e98131cf61c416ef3b0faed04f2e",
+      "crateSha256": "469fb0b9cefa57e3ef31275ee7cacb78f2fdca44e4765491884a2b119d4eb130",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "87d9feb9238c6bd8e0024fc4733b06cff036f89f36d93b7df1c8a0549bbb7a5b"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "47dc9ff29128ddfb4d6a0435383c9f89120bc374dbcc1dd00b933a0b28aa7865"
+        }
+      ]
+    },
+    {
+      "name": "iri-string",
+      "version": "0.7.9",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "932e36bd67aa50fb41adbc7795f850a067ab76ee",
+      "crateSha256": "4f867b9d1d896b67beb18518eda36fdb77a32ea590de864f1325b294a6d14397",
+      "files": [
+        {
+          "name": "LICENSE-APACHE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "name": "LICENSE-MIT.txt",
+          "sha256": "21ab3c8e9af71d0212606c98a210f71d6a86234b179b3babff0ccc4798b90f33"
+        }
+      ]
+    },
+    {
+      "name": "itoa",
+      "version": "1.0.15",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "e2766b868e4ac1ae2bf5bea1ac43d4c0da23b899",
+      "crateSha256": "4a5f13b858c8d314ee3e8f639011f7ccefe71f97f96e50151fb991f267928e2c",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "libc",
+      "version": "0.2.178",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "2b95cbe1cecd28ab03d689b34c2696d70b65ff27",
+      "crateSha256": "37c93d8daa9d8a012fd8ab92f088405fb202ea0b6ab73ee2482ae66af4f42091",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "a8d47ff51ca256f56a8932dba07660672dbfe3004257ca8de708aac1415937a1"
+        }
+      ]
+    },
+    {
+      "name": "litemap",
+      "version": "0.8.1",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "29dfe2790b6cfdab94ca6a6b69f58ce54802dbf7",
+      "crateSha256": "6373607a59f0be73a39b6fe456b8192fcc3585f602af20751600e974dd455e77",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "litrs",
+      "version": "1.0.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "66ceed89adfd30d1fd04fabfdfe436aedc4cadbf",
+      "crateSha256": "11d3d7f243d5c5a8b9bb5d6dd2b1602c0cb0b9db1621bafc7ed66e35ff9fe092",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "7dc1552e88f49132cb358b1b962fc5e79fa42d70bcbb88c526d33e45b8e98036"
+        }
+      ]
+    },
+    {
+      "name": "log",
+      "version": "0.4.29",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "b1e2df7bce7a1b685aa9bfd1db0a5cac1f0fc27d",
+      "crateSha256": "5e5032e24019045c762d3c0f28f5b6b8bbf38563a65908389bf7978758920897",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ]
+    },
+    {
+      "name": "memchr",
+      "version": "2.7.6",
+      "declaredLicense": "Unlicense OR MIT",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "9ba486e4ba7e865c0510305c5dacba73988d9f31",
+      "crateSha256": "f52b00d39961fc5b2736ea853c9cc86238e165017a493d1d5c8eac6bdc4cc273",
+      "files": [
+        {
+          "name": "COPYING",
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        },
+        {
+          "name": "UNLICENSE",
+          "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+        }
+      ]
+    },
+    {
+      "name": "mime",
+      "version": "0.3.17",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "ce5062d216bf757a0ed3fc70f0fe255d1c8d74ae",
+      "crateSha256": "6877bb514081ee2a7ff5ef9de3281f14a4dd4bceac4c09388074a6b5df8a139a",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "df9cfd06d8a44d9a671eadd39ffd97f166481da015a30f45dfd27886209c5922"
+        }
+      ]
+    },
+    {
+      "name": "miniz_oxide",
+      "version": "0.8.9",
+      "declaredLicense": "MIT OR Zlib OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "44e43c7786e379b2b1a7fde4aa0e63be719e583d",
+      "crateSha256": "1fa76a2c86f704bdb222d66965fb3d63269ce38518b83cb0575fca855ebb6316",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "4108245a1f2df9d4e94df8abed5b4ba0759bb2f9b40a6b939f1be141077ae50b"
+        },
+        {
+          "name": "LICENSE-APACHE.md",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "name": "LICENSE-MIT.md",
+          "sha256": "799e9ca9d179295ef372f25d3769cdda7d25bb2668add6a6a1e22d1e4c678b8d"
+        },
+        {
+          "name": "LICENSE-ZLIB.md",
+          "sha256": "0a54e647fe54104658b5e563c04c6f9edf251710e47bce692e0bd990a4ddaa39"
+        }
+      ]
+    },
+    {
+      "name": "mio",
+      "version": "1.1.1",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "6125f9b304b1ef3eee826411bb39f7aca9085fd3",
+      "crateSha256": "a69bcab0ad47271a0234d9422b131806bf3968021e5dc9328caf2d4cd58557fc",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "07919255c7e04793d8ea760d6c2ce32d19f9ff02bdbdde3ce90b1e1880929a9b"
+        }
+      ]
+    },
+    {
+      "name": "napi-derive-backend",
+      "version": "1.0.75",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "a312b7eb4e12d3e0a3e9770429ee05c333947a39",
+      "crateSha256": "1639aaa9eeb76e91c6ae66da8ce3e89e921cd3885e99ec85f4abacae72fc91bf",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "3f1ce66533302df3a32edbfdfc0b78f0dd34659e4c1f5817162e5ea3c2297215"
+        }
+      ]
+    },
+    {
+      "name": "napi-derive",
+      "version": "2.16.13",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "a312b7eb4e12d3e0a3e9770429ee05c333947a39",
+      "crateSha256": "7cbe2585d8ac223f7d34f13701434b9d5f4eb9c332cccce8dee57ea18ab8ab0c",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "3f1ce66533302df3a32edbfdfc0b78f0dd34659e4c1f5817162e5ea3c2297215"
+        }
+      ]
+    },
+    {
+      "name": "napi-sys",
+      "version": "2.4.0",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "f1b8ab5e645e674df33c796ef75aa278cd1b4a31",
+      "crateSha256": "427802e8ec3a734331fec1035594a210ce1ff4dc5bc1950530920ab717964ea3",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "3f1ce66533302df3a32edbfdfc0b78f0dd34659e4c1f5817162e5ea3c2297215"
+        }
+      ]
+    },
+    {
+      "name": "napi",
+      "version": "2.16.17",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "f2178312d0e3e07beecc19836b91716a229107d3",
+      "crateSha256": "55740c4ae1d8696773c78fdafd5d0e5fe9bc9f1b071c7ba493ba5c413a9184f3",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "3f1ce66533302df3a32edbfdfc0b78f0dd34659e4c1f5817162e5ea3c2297215"
+        }
+      ]
+    },
+    {
+      "name": "num-conv",
+      "version": "0.1.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "b6606e5c451f5fb2bffc085a6d8d9530f3d44a48",
+      "crateSha256": "51d515d32fb182ee37cda2ccdcb92950d6a3c2893aa280e540671c2cd0f3b1d9",
+      "files": [
+        {
+          "name": "LICENSE-Apache",
+          "sha256": "c0fd5f9df8d17e13587f8fe403d2326b835e60d532817d0b42ae4aea44209251"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "af85fff507d80e6c7ff242acfc4b0a7f5de9a72286bb3c883c782772ca4b4402"
+        }
+      ]
+    },
+    {
+      "name": "once_cell",
+      "version": "1.21.3",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "29e3d93cf0367fc6c295785b282b8101127a3e16",
+      "crateSha256": "42f5e15c9953c5e4ccceeb2e7382a716482c34515315f7b03532b8b4e8393d2d",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "percent-encoding",
+      "version": "2.3.2",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "91377f48bf35011d042aa5abef9e7f2a0a625aaa",
+      "crateSha256": "9b4f627cb1b25917193a259e49bdad08f671f8d9708acfd5fe0a8c1455d87220",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "b38f11f6096706e6de553dabe2a7ed142d59b6fa8c97e290c67496154745cdd5"
+        }
+      ]
+    },
+    {
+      "name": "pin-project-lite",
+      "version": "0.2.16",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "cca1e8ae094ceff53e74abbfec8c9f2221ebd202",
+      "crateSha256": "3b3cff922bd51709b605d9ead9aa71031d81447142d828eb4a6eba76fe619f9b",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "pin-utils",
+      "version": "0.1.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "cddb4e490757830eff709310b32376420d7f5e93",
+      "crateSha256": "8b870d8c151b6f2fb93e84a13146138f05d02ed11c7e7c54f8826aaaf7c9f184",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a4db788775cb25f2da419a7ccd3f1f89c3d2cfa8748fb25257596b88183b4c77"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "28802412d2bfbafe432b305634413b41a984d30fba0df41d30aa2c8a2077c5b1"
+        }
+      ]
+    },
+    {
+      "name": "potential_utf",
+      "version": "0.1.4",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "29dfe2790b6cfdab94ca6a6b69f58ce54802dbf7",
+      "crateSha256": "b73949432f5e2a09657003c25bca5e19a0e9c84f8058ca374f49e0ebe605af77",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "powerfmt",
+      "version": "0.2.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "5889a2a65c99836fd718340726f6b4379bc5028f",
+      "crateSha256": "439ee305def115ba05938db6eb1644ff94165c5ab5e9420d1c1bcedbba909391",
+      "files": [
+        {
+          "name": "LICENSE-Apache",
+          "sha256": "155420c6403d4e0fca34105e3c03fdd6939b64c393c7ec6f95f5b72c5474eab0"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "070dbc7dda03a29296f2d58bdb9b7331af90f2abc9f31df22875d1eabaf29852"
+        }
+      ]
+    },
+    {
+      "name": "proc-macro2",
+      "version": "1.0.103",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "d1bf13ac1d90c3b65c1b7fc131a26f37a8e2d0db",
+      "crateSha256": "5ee95bc4ef87b8d5ba32e8b7714ccc834865276eab0aed5c9958d00ec45f49e8",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "psl-types",
+      "version": "2.0.11",
+      "declaredLicense": "MIT/Apache-2.0",
+      "selectedLicense": "Apache-2.0 AND MIT",
+      "evidence": "Legacy slash metadata: conservatively retain both root licenses and satisfy both notice requirements.",
+      "obligations": "提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "c0b9c35c4cc306c4f8a888814a68e652571e2730",
+      "crateSha256": "33cb294fe86a74cbcf50d4445b37da762029549ebeea341421c7c70370f86cac",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "7b25e06666d3797292dbb4b1c3f5ba509ebe02fce102e1dca7ca81dd3cbfbeb7"
+        },
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        }
+      ]
+    },
+    {
+      "name": "publicsuffix",
+      "version": "2.3.0",
+      "declaredLicense": "MIT/Apache-2.0",
+      "selectedLicense": "Apache-2.0 AND MIT",
+      "evidence": "Legacy slash metadata: conservatively retain both root licenses; this crate does not bundle the external public suffix list.",
+      "obligations": "提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "4f385ebad909b764176656cb1644fdc2d16bfa23",
+      "crateSha256": "6f42ea446cab60335f76979ec15e12619a2165b5ae2c12166bef27d283a9fadf",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f09adf500d35265ee63ef552f8e61487e09ee549da66eaf0ec7924e3ad7cf14b"
+        },
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        }
+      ]
+    },
+    {
+      "name": "quote",
+      "version": "1.0.42",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "bb9e7a46b3105e11c73416bd59b4455a71068949",
+      "crateSha256": "a338cc41d27e6cc6dce6cefc13a0729dfbb81c262b1f519331575dd80ef3067f",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "regex-automata",
+      "version": "0.4.13",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "ab0b07171b82d1d4fdc8359505d12b2e818514d4",
+      "crateSha256": "5276caf25ac86c8d810222b3dbb938e512c55c6831a10f3e6ed1c93b84041f1c",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ]
+    },
+    {
+      "name": "regex-syntax",
+      "version": "0.8.8",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT AND Unicode-DFS-2016",
+      "evidence": "MIT option for code; src/unicode_tables/LICENSE-UNICODE retained separately.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "691d51457db276bbdf9ca3de2cafe285c662c59f",
+      "crateSha256": "7a2d987857b319362043e95f5353c0535c1f58eec5336fdfcf626430af7def58",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        },
+        {
+          "name": "src/unicode_tables/LICENSE-UNICODE",
+          "sha256": "74db5baf44a41b1000312c673544b3374e4198af5605c7f9080a402cec42cfa3"
+        }
+      ]
+    },
+    {
+      "name": "regex",
+      "version": "1.12.2",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "5ea3eb1e95f0338e283f5f0b4681f0891a1cd836",
+      "crateSha256": "843bc0191f75f3e22651ae5f1e72939ab2f72a4bc30fa80a066bd66edefc24d4",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ]
+    },
+    {
+      "name": "reqwest",
+      "version": "0.12.25",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "f156a9ffa728fc80e646c789168cbc677b73eed7",
+      "crateSha256": "b6eff9328d40131d43bd911d42d79eb6a47312002a4daefc9e37f17e74a7701a",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "751963a8b88c0e3a9f27e98933079fbcf09b9998b2c13ac49c2e4d58444520d6"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "47d4e1803702728e03d30f8a848ae2249ba274bbd9f8443e803f7924d83cd371"
+        }
+      ]
+    },
+    {
+      "name": "ring",
+      "version": "0.17.14",
+      "declaredLicense": "Apache-2.0 AND ISC",
+      "selectedLicense": "Apache-2.0 AND ISC AND MIT",
+      "evidence": "BoringSSL/fiat Apache and ISC source headers apply by file; MIT selected for nested once_cell; source copyright blocks retained.",
+      "obligations": "提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "2723abbca9e83347d82b056d5b239c6604f786df",
+      "crateSha256": "a4689e6c2294d81e88dc6261c768b63bc4fcdb852be6d1352498b114f61383b7",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "b3d734001a94efff3579978d953391aa7115f877657d25eb54037a43875d078a"
+        },
+        {
+          "name": "LICENSE-BoringSSL",
+          "sha256": "005fc765ddc5115da796cca915baa9557abae13ff35e0a47c47affc56f6c414d"
+        },
+        {
+          "name": "LICENSE-other-bits",
+          "sha256": "f025ccfb7dfb6bdfedc75ca0f67acc69e6fb4998143d834f7c2f38a29989680f"
+        },
+        {
+          "name": "src/polyfill/once_cell/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "src/polyfill/once_cell/LICENSE-MIT",
+          "sha256": "6ee2ed6c77710de911761acd5fc1ad1da00f476beb1a7ef27e78c2d1858deafc"
+        },
+        {
+          "name": "third_party/fiat/LICENSE",
+          "sha256": "9eacbcb81be660840c714a560a9d65ba07913db98dd4baf969f78dd499fdd60f"
+        },
+        {
+          "name": "NOTICE-source-comments",
+          "sha256": "82246d411e6404d9e5d473bf6e310210e3884e552741637eb4166425deb1ba91"
+        }
+      ]
+    },
+    {
+      "name": "rustls-pki-types",
+      "version": "1.13.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "bbffac9a2db78d3af003084a7ad3fd86b503fc1f",
+      "crateSha256": "708c0f9d5f54ba0272468c1d306a52c495b31fa155e91bc25371e6df7996908c",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "45fd05c4865e7c350b98ad7ac50e1b15462d49af4a91e9b0c9dd933dc9a69742"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "9117d922e667125508dde62b02c1f57ed22f5ad21eb536aa2e2d99e1c796e639"
+        }
+      ]
+    },
+    {
+      "name": "rustls-webpki",
+      "version": "0.103.8",
+      "declaredLicense": "ISC",
+      "selectedLicense": "ISC",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "a1cb6cd377d18d7367b14ea5facf129c5d096882",
+      "crateSha256": "2ffdfa2f5286e2247234e03f680868ac2815974dc39e00ea15adc445d0aafe52",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "5b698ca13897be3afdb7174256fa1574f8c6892b8bea1a66dd6469d3fe27885a"
+        }
+      ]
+    },
+    {
+      "name": "rustls",
+      "version": "0.23.35",
+      "declaredLicense": "Apache-2.0 OR ISC OR MIT",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "7768cd2b44049e040685d48318d13bfa7f7d32a8",
+      "crateSha256": "533f54bc6a7d4f647e46ad909549eda97bf5afc1585190ef692b4286b198bd8f",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-ISC",
+          "sha256": "7cfafc877eccc46c0e346ccbaa5c51bb6b894d2b818e617d970211e232785ad4"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "709e3175b4212f7b13aa93971c9f62ff8c69ec45ad8c6532a7e0c41d7a7d6f8c"
+        }
+      ]
+    },
+    {
+      "name": "ryu",
+      "version": "1.0.20",
+      "declaredLicense": "Apache-2.0 OR BSL-1.0",
+      "selectedLicense": "Apache-2.0",
+      "evidence": "Apache option selected; upstream license and notices retained.",
+      "obligations": "提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "02237f8751db162e9ed0f5bd3e7135d1b256822e",
+      "crateSha256": "28d3b2b1366ec20994f1fd18c3c594f05c5dd4bc44d8bb0c1c632c8d6829481f",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "name": "LICENSE-BOOST",
+          "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+        }
+      ]
+    },
+    {
+      "name": "semver",
+      "version": "1.0.28",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "7625c7aa3f0e8ba21e099d1765bcebcb72aa8816",
+      "crateSha256": "8a7852d02fc848982e0c167ef163aaff9cd91dc640ba85e263cb1ce46fae51cd",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "serde",
+      "version": "1.0.228",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "a866b336f14aa57a07f0d0be9f8762746e64ecb4",
+      "crateSha256": "9a8e94ea7f378bd32cbbd37198a4a91436180c5bb472411e48b5ec2e2124ae9e",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "serde_core",
+      "version": "1.0.228",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "a866b336f14aa57a07f0d0be9f8762746e64ecb4",
+      "crateSha256": "41d385c7d4ca58e59fc732af25c3983b67ac852c1a25000afe1175de458b67ad",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "serde_derive",
+      "version": "1.0.228",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "a866b336f14aa57a07f0d0be9f8762746e64ecb4",
+      "crateSha256": "d540f220d3187173da220f885ab66608367b6574e925011a9353e4badda91d79",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "serde_json",
+      "version": "1.0.145",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "efa66e3a1d61459ab2d325f92ebe3acbd6ca18b1",
+      "crateSha256": "402a6f66d8c709116cf22f558eab210f5a50187f702eb4d7e5ef38d9a7f1c79c",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "serde_urlencoded",
+      "version": "0.7.1",
+      "declaredLicense": "MIT/Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "d8bc15d16adf6b3ba6ae46d199d7109cf5079efa",
+      "crateSha256": "d3491c14715ca2294c4d6a88f15e84739788c1d030eed8c110436aafdaa2f3fd",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "b9eb266294324f672cbe945fe8f2e32f85024f0d61a1a7d14382cdde0ac44769"
+        }
+      ]
+    },
+    {
+      "name": "shlex",
+      "version": "1.3.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "4a0724b0b62ef715467875b040a890ce75a8a829",
+      "crateSha256": "0fda2ff0d084019ba4d7c6f371c95d8fd75ce3524c3cb8fb653a3023f6323e64",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1"
+        }
+      ]
+    },
+    {
+      "name": "simd-adler32",
+      "version": "0.3.8",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "dc6439879ef4f6b88f5b5a53f2e789cfa7842a6c",
+      "crateSha256": "e320a6c5ad31d271ad523dcf3ad13e2767ad8b1cb8f047f75a8aeaf8da139da2",
+      "files": [
+        {
+          "name": "LICENSE.md",
+          "sha256": "42a35170233e83e18856792e748de4c1ce4a63b2afce9a370c89ef3fe23f9f2d"
+        }
+      ]
+    },
+    {
+      "name": "slab",
+      "version": "0.4.11",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "2e5779f8eb318827c78cad38007445a93ec04503",
+      "crateSha256": "7a2ae44ef20feb57a68b23d846850f861394c2e02dc425a50098ae8c90267589",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "8ce0830173fdac609dfb4ea603fdc002c2f4af0dc9b1a005653f5da9cf534b18"
+        }
+      ]
+    },
+    {
+      "name": "smallvec",
+      "version": "1.15.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "d0f47a3ea99296498ee940b5d99f59b403c498a2",
+      "crateSha256": "67b1b7a3b5fe4f1376887184045fcf45c69e92af734b7aaddc05fb777b6fbd03",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9"
+        }
+      ]
+    },
+    {
+      "name": "socket2",
+      "version": "0.6.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "d0ba3d39a6328115a49f470b11be25fd5eba686d",
+      "crateSha256": "17129e116933cf371d018bb80ae557e889637989d8638274fb25622827b03881",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "name": "stable_deref_trait",
+      "version": "1.2.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "30002b4228f7cdee309217b6bf6eee099dda0b00",
+      "crateSha256": "6ce2be8dc25455e1f91df71bfa12ad37d7af1092ae736f3a6cd0e37bc7810596",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "5e05b024f653a5ce199e77cbbbd42fb5553562ec714b819421ed0c3e552a75d7"
+        }
+      ]
+    },
+    {
+      "name": "subtle",
+      "version": "2.6.1",
+      "declaredLicense": "BSD-3-Clause",
+      "selectedLicense": "BSD-3-Clause",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "5457b5448b021d1da101ababbb854e6657233943",
+      "crateSha256": "13c2bddecc57b384dee18652358fb23172facb8a2c51ccc10d74c157bdea3292",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "d1fc1bc0d155df60b2e7705b6b2ae02a05c96f948e1cec6e2fb86360b09f346b"
+        }
+      ]
+    },
+    {
+      "name": "syn",
+      "version": "2.0.111",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "4e508677213155cf73b4072f7a82f73a26cad3f5",
+      "crateSha256": "390cc9a294ab71bdb1aa2e99d13be9c753cd2d7bd6560c77118597410c4d2e87",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "sync_wrapper",
+      "version": "1.0.2",
+      "declaredLicense": "Apache-2.0",
+      "selectedLicense": "Apache-2.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "55413956c36aeab47feb8c04d1b7a044d6df336a",
+      "crateSha256": "0bf256ce5efdfa370213c1dabab5935a12e49f2c58d15e9eac2870d3b4f27263",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        }
+      ]
+    },
+    {
+      "name": "synstructure",
+      "version": "0.13.2",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "91ead072fa43c55f35880bd7f75a2b0eab72a04e",
+      "crateSha256": "728a70f3dbaf5bab7f0c4b1ac8d7ae5ea60a4b5549c8a5914361c99147a709d2",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "219920e865eee70b7dcfc948a86b099e7f4fe2de01bcca2ca9a20c0a033f2b59"
+        }
+      ]
+    },
+    {
+      "name": "time-core",
+      "version": "0.1.6",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "45b9932e57ffedb43257bf2837c171ebc37a73c3",
+      "crateSha256": "40868e7c1d2f0b8d73e4a8c7f0ff63af4f6d19be117e90bd73eb1d62cf831c6b",
+      "files": [
+        {
+          "name": "LICENSE-Apache",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "2537228d9a1b44a5dc595241349cae7090b326c8de165aaf89bfddef4a00d0fc"
+        }
+      ]
+    },
+    {
+      "name": "time-macros",
+      "version": "0.2.24",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "45b9932e57ffedb43257bf2837c171ebc37a73c3",
+      "crateSha256": "30cfb0125f12d9c277f35663a0a33f8c30190f4e4574868a330595412d34ebf3",
+      "files": [
+        {
+          "name": "LICENSE-Apache",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "2537228d9a1b44a5dc595241349cae7090b326c8de165aaf89bfddef4a00d0fc"
+        }
+      ]
+    },
+    {
+      "name": "time",
+      "version": "0.3.44",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "04c0ef283828e25a0c7fc270f28c053ceb26afcf",
+      "crateSha256": "91e7d9e3bb61134e77bde20dd4825b97c010155709965fedf0f49bb138e52a9d",
+      "files": [
+        {
+          "name": "LICENSE-Apache",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "2537228d9a1b44a5dc595241349cae7090b326c8de165aaf89bfddef4a00d0fc"
+        }
+      ]
+    },
+    {
+      "name": "tinystr",
+      "version": "0.8.2",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "29dfe2790b6cfdab94ca6a6b69f58ce54802dbf7",
+      "crateSha256": "42d3e9c45c09de15d06dd8acf5f4e0e399e85927b7f00711024eb7ae10fa4869",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "tokio-rustls",
+      "version": "0.26.4",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "0c14e1496ef50adade4ac7c7d1f0270dfb3cdda5",
+      "crateSha256": "1729aa945f29d91ba541258c8df89027d5792d85a8841fb65e8bf0f4ede4ef61",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "cc117d90b498b32b11a886f279b359da16a73c3b01efbb2f5cc004b20262334e"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "e20fa2b8e0a2565f24a792b94b4bf4b6c2b9d36f781d8a9516e218a036e6677a"
+        }
+      ]
+    },
+    {
+      "name": "tokio-util",
+      "version": "0.7.17",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "454fd8c3477a37d12d5d11948fd6fe496924e950",
+      "crateSha256": "2efa149fe76073d6e8fd97ef4f4eca7b67f599660115591483572e406e165594",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "253cd04c6714889df2d32f3f64d669179a1c95c76ac43c40882c52eb06bc3552"
+        }
+      ]
+    },
+    {
+      "name": "tokio",
+      "version": "1.48.0",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "556820ff84030b37e74e11b86b7733f5795770ea",
+      "crateSha256": "ff360e02eab121e0bc37a2d3b4d4dc622e6eda3a8e5253d5435ecf5bd4c68408",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "253cd04c6714889df2d32f3f64d669179a1c95c76ac43c40882c52eb06bc3552"
+        }
+      ]
+    },
+    {
+      "name": "tower-http",
+      "version": "0.6.8",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "33166c8104be9b40ec15c480503d50d8c2312062",
+      "crateSha256": "d4e6559d53cc268e5031cd8429d05415bc4cb4aefc4aa5d6cc35fbf5b924a1f8",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "5049cf464977eff4b4fcfa7988d84e74116956a3eb9d5f1d451b3f828f945233"
+        }
+      ]
+    },
+    {
+      "name": "tower-layer",
+      "version": "0.3.3",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "fec9e559e276ba9609f939d3b0d2e4fa0504de6f",
+      "crateSha256": "121c2a6cda46980bb0fcd1647ffaf6cd3fc79a013de288782836f6df9c48780e",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "4249c8e6c5ebb85f97c77e6457c6fafc1066406eb8f1ef61e796fbdc5ff18482"
+        }
+      ]
+    },
+    {
+      "name": "tower-service",
+      "version": "0.3.3",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "646804d77eebf072dac180cb5e1256b9ee7e0229",
+      "crateSha256": "8df9b6e13f2d32c91b9bd719c00d1958837bc7dec474d94952798cc8e69eeec3",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "4249c8e6c5ebb85f97c77e6457c6fafc1066406eb8f1ef61e796fbdc5ff18482"
+        }
+      ]
+    },
+    {
+      "name": "tower",
+      "version": "0.5.2",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "7dc533ef86b02f89f3dc5fe64644dd1a5dc3b37d",
+      "crateSha256": "d039ad9159c98b70ecfd540b2573b97f7f52c3e8d9f8ad57a24b916a536975f9",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "4249c8e6c5ebb85f97c77e6457c6fafc1066406eb8f1ef61e796fbdc5ff18482"
+        }
+      ]
+    },
+    {
+      "name": "tracing-core",
+      "version": "0.1.35",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Root MIT plus separate src/spin/LICENSE (Mathijs van de Nes) retained.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "d92b4c0feb00960902410b68f71521d36c699d85",
+      "crateSha256": "7a04e24fab5c89c6a36eb8558c9656f30d81de51dfa4d3b45f26b21d61fa0a6c",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "898b1ae9821e98daf8964c8d6c7f61641f5f5aa78ad500020771c0939ee0dea1"
+        },
+        {
+          "name": "src/spin/LICENSE",
+          "sha256": "58545fed1565e42d687aecec6897d35c6d37ccb71479a137c0deb2203e125c79"
+        }
+      ]
+    },
+    {
+      "name": "tracing",
+      "version": "0.1.43",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "64e1c8d3ae5cf5deab40ad3d376c8595d4e4db7f",
+      "crateSha256": "2d15d90a0b5c19378952d479dc858407149d7bb45a14de0142f6c534b16fc647",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "898b1ae9821e98daf8964c8d6c7f61641f5f5aa78ad500020771c0939ee0dea1"
+        }
+      ]
+    },
+    {
+      "name": "try-lock",
+      "version": "0.2.5",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "fd160ecd9105e8afcc43dbea450a0ef6e5128cce",
+      "crateSha256": "e421abadd41a4225275504ea4d6566923418b7f05506fbc9c0fe86ba7396114b",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "c816a0749cdc6bf062a5111c159723de51b2bfac66a1dac2655abd9e6b1583eb"
+        }
+      ]
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.22",
+      "declaredLicense": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "selectedLicense": "MIT AND Unicode-3.0",
+      "evidence": "MIT option covers implementation; Unicode data terms remain mandatory.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "10d5e534c9e06fffcdc6896d4779ffb25641659b",
+      "crateSha256": "9312f7c4f6ff9069b165498234ce8be658059c6728633667c526e27dc2cf1df5",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        },
+        {
+          "name": "LICENSE-UNICODE",
+          "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+        }
+      ]
+    },
+    {
+      "name": "unicode-segmentation",
+      "version": "1.13.3",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "66a032fd8d667bc47ac5b640b151dff3f5356d07",
+      "crateSha256": "c6f5d3c3b1bf09027a88a6bc961fc00497d651009560b5463668dc81b0fa87a8",
+      "files": [
+        {
+          "name": "COPYRIGHT",
+          "sha256": "23860c2a7b5d96b21569afedf033469bab9fe14a1b24a35068b8641c578ce24d"
+        },
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+        }
+      ]
+    },
+    {
+      "name": "untrusted",
+      "version": "0.9.0",
+      "declaredLicense": "ISC",
+      "selectedLicense": "ISC",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "89c8b8415f692d3803d183fc5fbf9ec08a6adcf4",
+      "crateSha256": "8ecb6da28b8a351d773b68d5825ac39017e680750f980f3a1a85cd8dd28a47c1",
+      "files": [
+        {
+          "name": "LICENSE.txt",
+          "sha256": "7abd9b6960dcf7d4d0a48606a5b71bfe37d472db68d70637f3a58a56785f1621"
+        }
+      ]
+    },
+    {
+      "name": "url",
+      "version": "2.5.7",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "2387efa12d3d294d488bb77ab580a21b88868fd2",
+      "crateSha256": "08bc136a29a3d1758e07a9cca267be308aeebf5cfd5a10f3f67ab2097683ef5b",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "b38f11f6096706e6de553dabe2a7ed142d59b6fa8c97e290c67496154745cdd5"
+        }
+      ]
+    },
+    {
+      "name": "utf8_iter",
+      "version": "1.0.4",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "6b604ea2365bd535fb66eb4bfe92a9e00e333090",
+      "crateSha256": "b6c140620e7ffbb22c2dee59cafe6084a59b5ffc27a8859a5f0d494b5d52b6be",
+      "files": [
+        {
+          "name": "COPYRIGHT",
+          "sha256": "c30152c94a6d75e021adbc52b3a52470366a46edb917e17deae3259251af244c"
+        },
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "3fa4ca83dcc9237839b1bdeb2e6d16bdfb5ec0c5ce42b24694d8bbf0dcbef72c"
+        }
+      ]
+    },
+    {
+      "name": "version_check",
+      "version": "0.9.5",
+      "declaredLicense": "MIT/Apache-2.0",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "d77ef9f27cc336719b2d839d09ee6635dd22f758",
+      "crateSha256": "0b928f33d975fc6ad9f86c8f283853ad26bdd5b10b7f1542aa2fa15e2289105a",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "b7e650f3fce5c53249d1cdc608b54df156a97edd636cf9d23498d0cfe7aec63e"
+        }
+      ]
+    },
+    {
+      "name": "want",
+      "version": "0.3.1",
+      "declaredLicense": "MIT",
+      "selectedLicense": "MIT",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "6e65401c71fa55c75b6fb52f595a692ef3643939",
+      "crateSha256": "bfa7760aed19e106de2c7c0b581b509f2f25d3dacaf737cb82ac61bc6d760b0e",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "a65f5d0a945d267751344c95665945b90c030ea107faf5c85d518929886187da"
+        }
+      ]
+    },
+    {
+      "name": "webpki-roots",
+      "version": "1.0.4",
+      "declaredLicense": "CDLA-Permissive-2.0",
+      "selectedLicense": "CDLA-Permissive-2.0",
+      "evidence": "Trust-anchor dataset license included; no additional restriction on results is imposed.",
+      "obligations": "提供数据许可证；不以本应用条款限制许可证授予的权利。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "28ead9cc265a743040663dfa8739741da549458d",
+      "crateSha256": "b2878ef029c47c6e8cf779119f20fcf52bde7ad42a731b2a304bc221df17571e",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "e271993808fec50ab29350b39539cdec611a9103f827e0aa26d61da70e2d33f8"
+        }
+      ]
+    },
+    {
+      "name": "writeable",
+      "version": "0.6.2",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "29dfe2790b6cfdab94ca6a6b69f58ce54802dbf7",
+      "crateSha256": "9edde0db4769d2dc68579893f2306b26c6ecfbe0ef499b013d731b7b9247e0b9",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "yoke-derive",
+      "version": "0.8.1",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "29dfe2790b6cfdab94ca6a6b69f58ce54802dbf7",
+      "crateSha256": "b659052874eb698efe5b9e8cf382204678a0086ebf46982b79d6ca3182927e5d",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "yoke",
+      "version": "0.8.1",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "29dfe2790b6cfdab94ca6a6b69f58ce54802dbf7",
+      "crateSha256": "72d6e5c6afb84d73944e5cedb052c4680d5657337201555f9f2a16b7406d4954",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "zerofrom-derive",
+      "version": "0.1.6",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "f4290a877dfcb0f87cad6de4abdd65f0cbb33c9c",
+      "crateSha256": "d71e5d6e06ab090c67b5e44993ec16b72dcbaabc526db883a360057678b48502",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "zerofrom",
+      "version": "0.1.6",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "f4290a877dfcb0f87cad6de4abdd65f0cbb33c9c",
+      "crateSha256": "50cc42e0333e05660c3587f3bf9d0478688e15d870fab3346451ce7f8c9fbea5",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "zeroize",
+      "version": "1.8.2",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "c100874101bfd584870de5dde1b13dd92a17bf48",
+      "crateSha256": "b97154e67e32c85465826e8bcc1c59429aaaf107c1e4a9e53c8d8ccd5eff88d0",
+      "files": [
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "0b04ee3ce0021a922f43f37a17fee09a5a1ee6d1f4e149d5bf75b72395a49c72"
+        }
+      ]
+    },
+    {
+      "name": "zerotrie",
+      "version": "0.2.3",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "29dfe2790b6cfdab94ca6a6b69f58ce54802dbf7",
+      "crateSha256": "2a59c17a5562d507e4b54960e8569ebee33bee890c70aa3fe7b97e85a9fd7851",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "zerovec-derive",
+      "version": "0.11.2",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "29dfe2790b6cfdab94ca6a6b69f58ce54802dbf7",
+      "crateSha256": "eadce39539ca5cb3985590102671f2567e659fca9666581ad3411d59207951f3",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "zerovec",
+      "version": "0.11.5",
+      "declaredLicense": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "sourceCommit": "29dfe2790b6cfdab94ca6a6b69f58ce54802dbf7",
+      "crateSha256": "6c28719294829477f525be0186d13efa9a3c602f7ec202ca9e353d310fb9a002",
+      "files": [
+        {
+          "name": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    }
+  ]
+}

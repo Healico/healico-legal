@@ -1,0 +1,1 @@
+{"private": true, "dependencies": {"lie": "3.3.0", "pako": "1.0.11", "readable-stream": "2.3.8", "setimmediate": "1.0.5", "@rollup/plugin-alias": "5.0.1", "@rollup/plugin-commonjs": "25.0.7", "@rollup/plugin-node-resolve": "15.2.3", "rollup": "4.5.1"}}

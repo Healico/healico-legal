@@ -6,6 +6,7 @@
 - [用户协议（TERMS.md）](TERMS.md)
 - [第三方软件声明（完整版）](THIRD_PARTY_NOTICES.md)
 - [第三方软件声明（摘要）](THIRD_PARTY_SUMMARY.md)
+- [第三方来源与复合许可证复核](third-party/provenance/README.md)
 
 - [LGPL 源码、目标文件与重新链接材料](relink/README.md)
 

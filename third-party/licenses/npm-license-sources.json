@@ -1,0 +1,64 @@
+[
+  {
+    "name": "jszip",
+    "version": "3.10.1",
+    "license": "(MIT OR GPL-3.0-or-later)",
+    "tarball": "https://registry.npmjs.org/jszip/-/jszip-3.10.1.tgz",
+    "integrity": "sha512-xXDvecyTpGLrqFrvkrUSoxxfJI5AH7U8zxxtVclpsUtMCq4JQ290LY8AW5c7Ggnr/Y/oK+bQMbqK2qmtk3pN4g==",
+    "dependencies": {
+      "lie": "~3.3.0",
+      "pako": "~1.0.2",
+      "setimmediate": "^1.0.5",
+      "readable-stream": "~2.3.6"
+    },
+    "licenseFiles": [
+      "LICENSE.markdown"
+    ]
+  },
+  {
+    "name": "lie",
+    "version": "3.3.0",
+    "license": "MIT",
+    "tarball": "https://registry.npmjs.org/lie/-/lie-3.3.0.tgz",
+    "integrity": "sha512-UaiMJzeWRlEujzAuw5LokY1L5ecNQYZKfmyZ9L7wDHb/p5etKaxXhohBcrw0EYby+G/NA52vRSN4N39dxHAIwQ==",
+    "dependencies": {
+      "immediate": "~3.0.5"
+    },
+    "licenseFiles": [
+      "license.md"
+    ]
+  },
+  {
+    "name": "immediate",
+    "version": "3.0.6",
+    "license": "MIT",
+    "tarball": "https://registry.npmjs.org/immediate/-/immediate-3.0.6.tgz",
+    "integrity": "sha512-XXOFtyqDjNDAQxVfYxuF7g9Il/IbWmmlQg2MYKOH8ExIT1qg6xc4zyS3HaEEATgs1btfzxq15ciUiY7gjSXRGQ==",
+    "dependencies": null,
+    "licenseFiles": [
+      "LICENSE.txt"
+    ]
+  },
+  {
+    "name": "pako",
+    "version": "1.0.11",
+    "license": "(MIT AND Zlib)",
+    "tarball": "https://registry.npmjs.org/pako/-/pako-1.0.11.tgz",
+    "integrity": "sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==",
+    "dependencies": {},
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "sjcl",
+    "version": "1.0.8",
+    "license": "(BSD-2-Clause OR GPL-2.0-only)",
+    "tarball": "https://registry.npmjs.org/sjcl/-/sjcl-1.0.8.tgz",
+    "integrity": "sha512-LzIjEQ0S0DpIgnxMEayM1rq9aGwGRG4OnZhCdjx7glTaJtf4zRfpg87ImfjSJjoW9vKpagd82McDOwbRT5kQKQ==",
+    "dependencies": null,
+    "licenseFiles": [
+      "LICENSE.txt"
+    ]
+  }
+]

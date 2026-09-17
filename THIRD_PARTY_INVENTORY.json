@@ -150,46 +150,61 @@
       ]
     },
     {
-      "name": "JSZip upstream",
-      "version": "3.10.1",
-      "kind": "embedded-js",
+      "name": "JSZip (xqdoo00o fork)",
+      "version": "3.10.1 / 52378c05099c",
       "license": "MIT",
-      "repository": "https://github.com/Stuk/jszip/tree/v3.10.1",
-      "evidence": "Actual dist.js JSZip.version=3.10.1; OHPM NOTICE incorrectly labels 3.5.0; MIT option selected",
-      "source": "https://github.com/Stuk/jszip/tree/v3.10.1",
+      "source": "https://github.com/xqdoo00o/jszip/tree/52378c05099c48bba49c2bbb4d9d549a3272d7a7",
+      "evidence": "All installed lib files match this commit after CRLF normalization except the archived SJCL crypto-provider patch; MIT option selected. OHPM README version 3.5.0 is stale.",
+      "declaredLicense": "MIT OR GPL-3.0-only",
+      "selectedLicense": "MIT",
+      "kind": "embedded-js",
       "distributed": true,
+      "repository": "https://github.com/xqdoo00o/jszip/tree/52378c05099c48bba49c2bbb4d9d549a3272d7a7",
       "licenseFiles": [
         {
           "name": "LICENSE.markdown",
           "sha256": "602ef1d5d3db1b23ada0b61d4230ef336012de7bc3b773d565f2b27a2757f51d"
+        },
+        {
+          "name": "lib/license_header.js",
+          "sha256": "c20e9105920b0aa67ea9412afde0925591431dd1dd783f09b1e5c77c7d3e06a9"
         }
       ]
     },
     {
-      "name": "@ohos/jszip embedded notices",
-      "version": "1.0.1 bundle",
+      "name": "@ohos/jszip bundled copyright notices",
+      "version": "1.0.1 / ebece08923c9",
+      "license": "MIT AND Zlib AND BSD-2-Clause",
+      "source": "https://gitcode.com/openharmony-tpc/openharmony_tpc_samples/tree/ebece08923c9400d104a9b2e1f4a42e0193c657f",
+      "evidence": "Verbatim actual bundle comment blocks; dependency and fork licenses listed separately.",
       "kind": "embedded-js",
-      "license": "MIT AND Zlib AND BSD-2-Clause (provenance review pending)",
-      "repository": "https://ohpm.openharmony.cn/#/cn/detail/%40ohos%2Fjszip",
-      "evidence": "Verbatim bundled notices; references below do not assert exact versions of embedded dependencies",
-      "source": "https://ohpm.openharmony.cn/#/cn/detail/%40ohos%2Fjszip",
       "distributed": true,
+      "repository": "https://gitcode.com/openharmony-tpc/openharmony_tpc_samples/tree/ebece08923c9400d104a9b2e1f4a42e0193c657f",
       "licenseFiles": [
         {
           "name": "NOTICE",
-          "sha256": "37e65c3688a3d8f28adf8bba15bcc68b0c0f5d221084403bbc4eb854a98ae0c1"
+          "sha256": "c63746bfd88c6454dabcb1b80df6901542d20d64a830d6891c48fd38d5ffe9f7"
         }
       ]
     },
     {
-      "name": "lie upstream license reference",
+      "name": "lie (JSZip bundle)",
       "version": "3.3.0",
       "license": "MIT",
-      "kind": "license-reference",
-      "repository": "https://www.npmjs.com/package/lie/v/3.3.0",
-      "evidence": "Upstream license reference for identified bundled code; exact embedded version not established; selected permissive option where dual licensed",
       "source": "https://www.npmjs.com/package/lie/v/3.3.0",
-      "distributed": false,
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "npm": {
+        "version": "3.3.0",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/lie/-/lie-3.3.0.tgz",
+        "integrity": "sha512-UaiMJzeWRlEujzAuw5LokY1L5ecNQYZKfmyZ9L7wDHb/p5etKaxXhohBcrw0EYby+G/NA52vRSN4N39dxHAIwQ==",
+        "license": "MIT",
+        "dependencies": {
+          "immediate": "~3.0.5"
+        }
+      },
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://www.npmjs.com/package/lie/v/3.3.0",
       "licenseFiles": [
         {
           "name": "license.md",
@@ -198,14 +213,20 @@
       ]
     },
     {
-      "name": "immediate upstream license reference",
+      "name": "immediate (JSZip bundle)",
       "version": "3.0.6",
       "license": "MIT",
-      "kind": "license-reference",
-      "repository": "https://www.npmjs.com/package/immediate/v/3.0.6",
-      "evidence": "Upstream license reference for identified bundled code; exact embedded version not established; selected permissive option where dual licensed",
       "source": "https://www.npmjs.com/package/immediate/v/3.0.6",
-      "distributed": false,
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "npm": {
+        "version": "3.0.6",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/immediate/-/immediate-3.0.6.tgz",
+        "integrity": "sha512-XXOFtyqDjNDAQxVfYxuF7g9Il/IbWmmlQg2MYKOH8ExIT1qg6xc4zyS3HaEEATgs1btfzxq15ciUiY7gjSXRGQ==",
+        "license": "MIT"
+      },
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://www.npmjs.com/package/immediate/v/3.0.6",
       "licenseFiles": [
         {
           "name": "LICENSE.txt",
@@ -214,38 +235,1872 @@
       ]
     },
     {
-      "name": "pako upstream license reference",
+      "name": "pako (JSZip bundle)",
       "version": "1.0.11",
-      "license": "MIT AND Zlib",
-      "kind": "license-reference",
-      "repository": "https://www.npmjs.com/package/pako/v/1.0.11",
-      "evidence": "Upstream license reference for identified bundled code; exact embedded version not established; selected permissive option where dual licensed",
+      "license": "(MIT AND Zlib)",
       "source": "https://www.npmjs.com/package/pako/v/1.0.11",
-      "distributed": false,
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "npm": {
+        "version": "1.0.11",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/pako/-/pako-1.0.11.tgz",
+        "integrity": "sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==",
+        "license": "(MIT AND Zlib)"
+      },
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://www.npmjs.com/package/pako/v/1.0.11",
       "licenseFiles": [
         {
           "name": "LICENSE",
           "sha256": "9bce71206bb197a44eea817bf9c4091118b153cbe09f7544ed7e5abc536d5bcc"
         },
         {
-          "name": "NOTICE-bundled-zlib",
-          "sha256": "99794bf9aec12a6a4e6ff7c7d0a46fd81cd90eb18a31bd8ce61332f97c482161"
+          "name": "NOTICE-zlib",
+          "sha256": "71c9a147b2e157842081b4bbb859dcc0acd7207149f4125f7dd1a15989688aa6"
         }
       ]
     },
     {
-      "name": "sjcl upstream license reference",
-      "version": "1.0.8",
+      "name": "readable-stream (JSZip bundle)",
+      "version": "2.3.8",
+      "license": "MIT",
+      "source": "https://www.npmjs.com/package/readable-stream/v/2.3.8",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "npm": {
+        "version": "2.3.8",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/readable-stream/-/readable-stream-2.3.8.tgz",
+        "integrity": "sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==",
+        "license": "MIT",
+        "dependencies": {
+          "core-util-is": "~1.0.0",
+          "inherits": "~2.0.3",
+          "isarray": "~1.0.0",
+          "process-nextick-args": "~2.0.0",
+          "safe-buffer": "~5.1.1",
+          "string_decoder": "~1.1.1",
+          "util-deprecate": "~1.0.1"
+        }
+      },
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://www.npmjs.com/package/readable-stream/v/2.3.8",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "4f8ade273d406cf67b5a078d751d0b651e3f73b84f958b493e9254ab3ce47391"
+        }
+      ]
+    },
+    {
+      "name": "setimmediate (JSZip bundle)",
+      "version": "1.0.5",
+      "license": "MIT",
+      "source": "https://www.npmjs.com/package/setimmediate/v/1.0.5",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "npm": {
+        "version": "1.0.5",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/setimmediate/-/setimmediate-1.0.5.tgz",
+        "integrity": "sha512-MATJdZp8sLqDl/68LfQmbP8zKPLQNV6BIZoIgrscFDQ+RsvK/BxeDQOgyxKKoh0y/8h3BqVFnCqQ/gd+reiIXA==",
+        "license": "MIT"
+      },
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://www.npmjs.com/package/setimmediate/v/1.0.5",
+      "licenseFiles": [
+        {
+          "name": "LICENSE.txt",
+          "sha256": "e989f62f4fdcda4199c3d1d6049e9a52aad32539c02d2a5e8c92583ed0960e2b"
+        }
+      ]
+    },
+    {
+      "name": "core-util-is (JSZip bundle)",
+      "version": "1.0.3",
+      "license": "MIT",
+      "source": "https://www.npmjs.com/package/core-util-is/v/1.0.3",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "npm": {
+        "version": "1.0.3",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/core-util-is/-/core-util-is-1.0.3.tgz",
+        "integrity": "sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==",
+        "license": "MIT"
+      },
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://www.npmjs.com/package/core-util-is/v/1.0.3",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "9248b91d3cee18551aa7386215f61578c3484a6d47bfbcd5a3b05ebe8998b7cb"
+        }
+      ]
+    },
+    {
+      "name": "inherits (JSZip bundle)",
+      "version": "2.0.4",
+      "license": "ISC",
+      "source": "https://www.npmjs.com/package/inherits/v/2.0.4",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "npm": {
+        "version": "2.0.4",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/inherits/-/inherits-2.0.4.tgz",
+        "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
+        "license": "ISC"
+      },
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://www.npmjs.com/package/inherits/v/2.0.4",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "3a395674c5c917a5c484fbb4825d855da35333cc24cf770efa7e2f0420ecba14"
+        }
+      ]
+    },
+    {
+      "name": "isarray (JSZip bundle)",
+      "version": "1.0.0",
+      "license": "MIT",
+      "source": "https://www.npmjs.com/package/isarray/v/1.0.0",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "npm": {
+        "version": "1.0.0",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/isarray/-/isarray-1.0.0.tgz",
+        "integrity": "sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==",
+        "license": "MIT"
+      },
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://www.npmjs.com/package/isarray/v/1.0.0",
+      "licenseFiles": [
+        {
+          "name": "LICENSE-from-README",
+          "sha256": "6f203c01965501ab17a750e94c191a47c61c7043f587400fbeea92be853e337d"
+        }
+      ]
+    },
+    {
+      "name": "process-nextick-args (JSZip bundle)",
+      "version": "2.0.1",
+      "license": "MIT",
+      "source": "https://www.npmjs.com/package/process-nextick-args/v/2.0.1",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "npm": {
+        "version": "2.0.1",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
+        "integrity": "sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==",
+        "license": "MIT"
+      },
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://www.npmjs.com/package/process-nextick-args/v/2.0.1",
+      "licenseFiles": [
+        {
+          "name": "license.md",
+          "sha256": "f25d2af75b3e4127175b550231cc59ee11ed6cc07debce16498ace9ed163e25f"
+        }
+      ]
+    },
+    {
+      "name": "safe-buffer (JSZip bundle)",
+      "version": "5.1.2",
+      "license": "MIT",
+      "source": "https://www.npmjs.com/package/safe-buffer/v/5.1.2",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "npm": {
+        "version": "5.1.2",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/safe-buffer/-/safe-buffer-5.1.2.tgz",
+        "integrity": "sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==",
+        "license": "MIT"
+      },
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://www.npmjs.com/package/safe-buffer/v/5.1.2",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "dff1a84cb70365271326e19f09b24dd85364a47b4fc2beb446ccd9dec225531f"
+        }
+      ]
+    },
+    {
+      "name": "string_decoder (JSZip bundle)",
+      "version": "1.1.1",
+      "license": "MIT",
+      "source": "https://www.npmjs.com/package/string_decoder/v/1.1.1",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "npm": {
+        "version": "1.1.1",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/string_decoder/-/string_decoder-1.1.1.tgz",
+        "integrity": "sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==",
+        "license": "MIT",
+        "dependencies": {
+          "safe-buffer": "~5.1.0"
+        }
+      },
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://www.npmjs.com/package/string_decoder/v/1.1.1",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "4f8ade273d406cf67b5a078d751d0b651e3f73b84f958b493e9254ab3ce47391"
+        }
+      ]
+    },
+    {
+      "name": "util-deprecate (JSZip bundle)",
+      "version": "1.0.2",
+      "license": "MIT",
+      "source": "https://www.npmjs.com/package/util-deprecate/v/1.0.2",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "npm": {
+        "version": "1.0.2",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/util-deprecate/-/util-deprecate-1.0.2.tgz",
+        "integrity": "sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==",
+        "license": "MIT"
+      },
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://www.npmjs.com/package/util-deprecate/v/1.0.2",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "ff15562c1fef0205e4f0ad1efb4d266805bd8686f95d2b788b2dac4d8da81370"
+        }
+      ]
+    },
+    {
+      "name": "SJCL (JSZip fork build)",
+      "version": "52378c05099c / OHOS patch",
       "license": "BSD-2-Clause",
-      "kind": "license-reference",
-      "repository": "https://www.npmjs.com/package/sjcl/v/1.0.8",
-      "evidence": "Upstream license reference for identified bundled code; exact embedded version not established; selected permissive option where dual licensed",
-      "source": "https://www.npmjs.com/package/sjcl/v/1.0.8",
-      "distributed": false,
+      "source": "https://github.com/xqdoo00o/jszip/blob/52378c05099c48bba49c2bbb4d9d549a3272d7a7/lib/sjcl.js",
+      "evidence": "Actual source is the fork build plus the recorded OHOS adaptation. BSD option selected; full upstream dual-license text and actual source notices retained.",
+      "licenseReference": {
+        "name": "sjcl",
+        "version": "1.0.8",
+        "repository": {
+          "url": "git+https://github.com/bitwiseshiftleft/sjcl.git",
+          "type": "git"
+        },
+        "license": "(BSD-2-Clause OR GPL-2.0-only)",
+        "tarball": "https://registry.npmjs.org/sjcl/-/sjcl-1.0.8.tgz",
+        "integrity": "sha512-LzIjEQ0S0DpIgnxMEayM1rq9aGwGRG4OnZhCdjx7glTaJtf4zRfpg87ImfjSJjoW9vKpagd82McDOwbRT5kQKQ==",
+        "sha256": "e951881e45a6744e3fa946ebe613e18009ba951bd6a7580e2e450d9d0c893d4f"
+      },
+      "selectedLicense": "BSD-2-Clause",
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://github.com/xqdoo00o/jszip/blob/52378c05099c48bba49c2bbb4d9d549a3272d7a7/lib/sjcl.js",
       "licenseFiles": [
         {
           "name": "LICENSE.txt",
           "sha256": "ef430277d3cca1d3e7cdb6d4a61d7ff1eb208c4c2058602d2b361aaab60cd9c0"
+        },
+        {
+          "name": "README/COPYRIGHT",
+          "sha256": "bd3f345bedb5df8c1de385b22ec1a1dc532d65087c8eff42e3cf0896b2369cdf"
+        }
+      ]
+    },
+    {
+      "name": "abort-controller (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "abort-controller",
+        "version": "3.0.0",
+        "repository": {
+          "url": "git+https://github.com/mysticatea/abort-controller.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/abort-controller/-/abort-controller-3.0.0.tgz",
+        "integrity": "sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==",
+        "sha256": "d2e249d5d010eb18e57c12c610d63e3ca3fa9dd0a5378009c1f465e21f50ab2f"
+      },
+      "modules": [],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "47a7783b604324a5e925ac5af34441bde3c80b36ee9f53e95207501fe5efed95"
+        }
+      ]
+    },
+    {
+      "name": "asn1.js (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "asn1.js",
+        "version": "5.4.1",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/indutny/asn1.js.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/asn1.js/-/asn1.js-5.4.1.tgz",
+        "integrity": "sha512-+I//4cYPccV8LdmBLiX8CYvf9Sp3vQsrqu2QNXRcrbiWvcx/UdlFiqUJJzxRQxgsZmvhXhn4cSKeSmoFjVdupA==",
+        "sha256": "9cc59e0b515f254ee8ecc9fe584d6fb02d86b2a10f6de6c5d6923ef0d8f8c2a1"
+      },
+      "modules": [
+        "./node_modules/asn1.js/lib/asn1.js",
+        "./node_modules/asn1.js/lib/asn1/api.js",
+        "./node_modules/asn1.js/lib/asn1/base/buffer.js",
+        "./node_modules/asn1.js/lib/asn1/base/index.js",
+        "./node_modules/asn1.js/lib/asn1/base/node.js",
+        "./node_modules/asn1.js/lib/asn1/base/reporter.js",
+        "./node_modules/asn1.js/lib/asn1/constants/der.js",
+        "./node_modules/asn1.js/lib/asn1/constants/index.js",
+        "./node_modules/asn1.js/lib/asn1/decoders/der.js",
+        "./node_modules/asn1.js/lib/asn1/decoders/index.js",
+        "./node_modules/asn1.js/lib/asn1/decoders/pem.js",
+        "./node_modules/asn1.js/lib/asn1/encoders/der.js",
+        "./node_modules/asn1.js/lib/asn1/encoders/index.js",
+        "./node_modules/asn1.js/lib/asn1/encoders/pem.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "d15da24a59efc4c81d449433047aa067734b9637e3878122d83e6b36864731b8"
+        }
+      ]
+    },
+    {
+      "name": "base64-js (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "base64-js",
+        "version": "1.5.1",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/beatgammit/base64-js.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz",
+        "integrity": "sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==",
+        "sha256": "b1b7a945b52685269083425216d6597e33d97bf21699d656e92fdb3eb5210a85"
+      },
+      "modules": [],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "ce471b4b8188bf221ecd29bc6585d37d2769b0657521b92459c1284307cc4936"
+        }
+      ]
+    },
+    {
+      "name": "bn.js (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "bn.js",
+        "version": "4.12.0",
+        "repository": {
+          "url": "git@github.com:indutny/bn.js",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/bn.js/-/bn.js-4.12.0.tgz",
+        "integrity": "sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==",
+        "sha256": "b6fee0574045a4b068abdddd0d5ca5b2351d07223ea1425cf83d349c6dab6238"
+      },
+      "modules": [
+        "./node_modules/asn1.js/node_modules/bn.js/lib/bn.js",
+        "./node_modules/bn.js/lib/bn.js",
+        "./node_modules/create-ecdh/node_modules/bn.js/lib/bn.js",
+        "./node_modules/diffie-hellman/node_modules/bn.js/lib/bn.js",
+        "./node_modules/elliptic/node_modules/bn.js/lib/bn.js",
+        "./node_modules/miller-rabin/node_modules/bn.js/lib/bn.js",
+        "./node_modules/public-encrypt/node_modules/bn.js/lib/bn.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "45efea862951b9d9a9402de77c9e36b5892c14ad7fc7a028a6a4b85877890d57"
+        }
+      ]
+    },
+    {
+      "name": "brorand (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "brorand",
+        "version": "1.1.0",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/indutny/brorand.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/brorand/-/brorand-1.1.0.tgz",
+        "integrity": "sha512-cKV8tMCEpQs4hK/ik71d6LrPOnpkpGBR0wzxqr68g2m/LB2GxVYQroAjMJZRVM1Y4BCjCKc3vAamxSzOY2RP+w==",
+        "sha256": "6add0656db12f5694a96d922916edf764f1a52ee332e2773271733a38fa51225"
+      },
+      "modules": [
+        "./node_modules/brorand/index.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE-from-README",
+          "sha256": "9fc67388b6ad110dbf2f9208d671f5fbfc8a90e4a1b34ec43b79afa62e8167f7"
+        }
+      ]
+    },
+    {
+      "name": "browserify-aes (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "browserify-aes",
+        "version": "1.2.0",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/crypto-browserify/browserify-aes.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/browserify-aes/-/browserify-aes-1.2.0.tgz",
+        "integrity": "sha512-+7CHXqGuspUn/Sl5aO7Ea0xWGAtETPXNSAjHo48JfLdPWcMng33Xe4znFvQweqc/uzk5zSOI3H52CYnjCfb5hA==",
+        "sha256": "9b64ba05c9ad861e2f61933cda370d031d0adcb0582428a212b6746c9ca2e168"
+      },
+      "modules": [
+        "./node_modules/browserify-aes/aes.js",
+        "./node_modules/browserify-aes/authCipher.js",
+        "./node_modules/browserify-aes/browser.js",
+        "./node_modules/browserify-aes/decrypter.js",
+        "./node_modules/browserify-aes/encrypter.js",
+        "./node_modules/browserify-aes/ghash.js",
+        "./node_modules/browserify-aes/incr32.js",
+        "./node_modules/browserify-aes/modes/cbc.js",
+        "./node_modules/browserify-aes/modes/cfb.js",
+        "./node_modules/browserify-aes/modes/cfb1.js",
+        "./node_modules/browserify-aes/modes/cfb8.js",
+        "./node_modules/browserify-aes/modes/ctr.js",
+        "./node_modules/browserify-aes/modes/ecb.js",
+        "./node_modules/browserify-aes/modes/index.js",
+        "./node_modules/browserify-aes/modes/list.json",
+        "./node_modules/browserify-aes/modes/ofb.js",
+        "./node_modules/browserify-aes/streamCipher.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "265111dec0b1f746895b7f876b957867552d445476424fbde73932b448358f32"
+        }
+      ]
+    },
+    {
+      "name": "browserify-cipher (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "browserify-cipher",
+        "version": "1.0.1",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/crypto-browserify/browserify-cipher.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/browserify-cipher/-/browserify-cipher-1.0.1.tgz",
+        "integrity": "sha512-sPhkz0ARKbf4rRQt2hTpAHqn47X3llLkUGn+xEJzLjwY8LRs2p0v7ljvI5EyoRO/mexrNunNECisZs+gw2zz1w==",
+        "sha256": "2d28155c2ae999ae5b69a6223f591ffcced3985d607d5d63238327327c6a06e4"
+      },
+      "modules": [
+        "./node_modules/browserify-cipher/browser.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "3e5df0dc9dd887062941b31a1b709a4fdaf3179530b595b89676edb7af08dbcc"
+        }
+      ]
+    },
+    {
+      "name": "browserify-des (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "browserify-des",
+        "version": "1.0.2",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/browserify-des.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/browserify-des/-/browserify-des-1.0.2.tgz",
+        "integrity": "sha512-BioO1xf3hFwz4kc6iBhI3ieDFompMhrMlnDFC4/0/vd5MokpuAc3R+LYbwTA9A5Yc9pq9UYPqffKpW2ObuwX5A==",
+        "sha256": "b7503b6a58abbd1a3b0f0aabfcd978edff54ad33ebf97a6f0bbdf45bebda9421"
+      },
+      "modules": [
+        "./node_modules/browserify-des/index.js",
+        "./node_modules/browserify-des/modes.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "1f124e6c7ca835c8e847e310a090cc88383f178b2b30a84057c6fd495fdef170"
+        }
+      ]
+    },
+    {
+      "name": "browserify-rsa (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "browserify-rsa",
+        "version": "4.1.0",
+        "repository": {
+          "url": "git+https://github.com/crypto-browserify/browserify-rsa.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/browserify-rsa/-/browserify-rsa-4.1.0.tgz",
+        "integrity": "sha512-AdEER0Hkspgno2aR97SAf6vi0y0k8NuOpGnVH3O99rcA5Q6sh8QxcngtHuJ6uXwnfAXNM4Gn1Gb7/MV1+Ymbog==",
+        "sha256": "489ced11ec555e756dfcf34a05786d06e6e1c1e778479e0208aa13f3da8c3268"
+      },
+      "modules": [
+        "./node_modules/browserify-rsa/index.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "af80511b74b4391d2d3a637b3ce3a83dc9c0361b988058e6ab057ec74654f28c"
+        }
+      ]
+    },
+    {
+      "name": "browserify-sign (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "ISC",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "browserify-sign",
+        "version": "4.2.2",
+        "repository": {
+          "url": "git+https://github.com/crypto-browserify/browserify-sign.git",
+          "type": "git"
+        },
+        "license": "ISC",
+        "tarball": "https://registry.npmjs.org/browserify-sign/-/browserify-sign-4.2.2.tgz",
+        "integrity": "sha512-1rudGyeYY42Dk6texmv7c4VcQ0EsvVbLwZkA+AQB7SxvXxmcD93jcHie8bzecJ+ChDlmAm2Qyu0+Ccg5uhZXCg==",
+        "sha256": "418620eaced8b222a46640788730267d005c52bc145af740f5b8bf95524b382a"
+      },
+      "modules": [
+        "./node_modules/browserify-sign/algos.js",
+        "./node_modules/browserify-sign/browser/algorithms.json",
+        "./node_modules/browserify-sign/browser/curves.json",
+        "./node_modules/browserify-sign/browser/index.js",
+        "./node_modules/browserify-sign/browser/sign.js",
+        "./node_modules/browserify-sign/browser/verify.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0279dc4b1d1c5e118d9ebd3d5d07f954b734999780cb2076c9c174cdc09098e6"
+        }
+      ]
+    },
+    {
+      "name": "buffer (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "buffer",
+        "version": "6.0.3",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/feross/buffer.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/buffer/-/buffer-6.0.3.tgz",
+        "integrity": "sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==",
+        "sha256": "555b6f49224afcf6b2c5a9aea7cd34a7f443f395b10532bc5580022d57aa51f5"
+      },
+      "modules": [],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "caf96060dc6de2af3adca29e7f50445b9ac26f860a8f646396a42e5d26cd9564"
+        }
+      ]
+    },
+    {
+      "name": "buffer-xor (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "buffer-xor",
+        "version": "2.0.2",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/buffer-xor.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/buffer-xor/-/buffer-xor-2.0.2.tgz",
+        "integrity": "sha512-eHslX0bin3GB+Lx2p7lEYRShRewuNZL3fUl4qlVJGGiwoPGftmt8JQgk2Y9Ji5/01TnVDo33E5b5O3vUB1HdqQ==",
+        "sha256": "e216954085d89e28122cf163010fc50d9f55473349693d9b8583fd0dca08c8b3"
+      },
+      "modules": [
+        "./node_modules/buffer-xor/index.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "96369f6286ebd995734560fbffb98695f28405619d0ff54824044a0cebfbf0e1"
+        }
+      ]
+    },
+    {
+      "name": "cipher-base (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "cipher-base",
+        "version": "1.0.4",
+        "repository": {
+          "url": "git+https://github.com/crypto-browserify/cipher-base.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/cipher-base/-/cipher-base-1.0.4.tgz",
+        "integrity": "sha512-Kkht5ye6ZGmwv40uUDZztayT2ThLQGfnj/T71N/XzeZeo3nf8foyW7zGTsPYkEya3m5f3cAypH+qe7YOrM1U2Q==",
+        "sha256": "010199a4f371ca2258c04942d4bad96dccb98070d98a30d9213e29bc0ebdf295"
+      },
+      "modules": [
+        "./node_modules/cipher-base/index.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "cded00c8eb0ffa2d698fc3b30c91d804899b20075a5ed904503905adf744a159"
+        }
+      ]
+    },
+    {
+      "name": "create-ecdh (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "create-ecdh",
+        "version": "4.0.4",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/createECDH.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/create-ecdh/-/create-ecdh-4.0.4.tgz",
+        "integrity": "sha512-mf+TCx8wWc9VpuxfP2ht0iSISLZnt0JgWlrOKZiNqyUZWnjIaCIVNQArMHnCZKfEYRg6IM7A+NeJoN8gf/Ws0A==",
+        "sha256": "990182d062df4f280785c5eac9cd0c28d10d0105b93fcf53e4580c3901713ce1"
+      },
+      "modules": [
+        "./node_modules/create-ecdh/browser.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "a9a1ea6807dbbe0136c088cf4a5f37fbc3b6fd1f31dd36f2813107028f60e62d"
+        }
+      ]
+    },
+    {
+      "name": "create-hash (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "create-hash",
+        "version": "1.2.0",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/crypto-browserify/createHash.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/create-hash/-/create-hash-1.2.0.tgz",
+        "integrity": "sha512-z00bCGNHDG8mHAkP7CtT1qVu+bFQUPjYq/4Iv3C3kWjTFV10zIjfSoeqXo9Asws8gwSHDGj/hl2u4OGIjapeCg==",
+        "sha256": "fe4079490bd932ccf1f1530f49a88aaca57dbdb6f337c9144749a225e2014bad"
+      },
+      "modules": [
+        "./node_modules/create-hash/browser.js",
+        "./node_modules/create-hash/md5.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "cded00c8eb0ffa2d698fc3b30c91d804899b20075a5ed904503905adf744a159"
+        }
+      ]
+    },
+    {
+      "name": "create-hmac (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "create-hmac",
+        "version": "1.1.7",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/createHmac.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/create-hmac/-/create-hmac-1.1.7.tgz",
+        "integrity": "sha512-MJG9liiZ+ogc4TzUwuvbER1JRdgvUFSB5+VR/g5h82fGaIRWMWddtKBHi7/sVhfjQZ6SehlyhvQYrcYkaUIpLg==",
+        "sha256": "fd77daf860b84566d8ccc30561eaba00a9efc4fbba94d4a5f417f4f636337aa7"
+      },
+      "modules": [
+        "./node_modules/create-hmac/browser.js",
+        "./node_modules/create-hmac/legacy.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "cded00c8eb0ffa2d698fc3b30c91d804899b20075a5ed904503905adf744a159"
+        }
+      ]
+    },
+    {
+      "name": "crypto-browserify (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "crypto-browserify",
+        "version": "3.12.0",
+        "repository": {
+          "url": "git://github.com/crypto-browserify/crypto-browserify.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/crypto-browserify/-/crypto-browserify-3.12.0.tgz",
+        "integrity": "sha512-fz4spIh+znjO2VjL+IdhEpRJ3YN6sMzITSBijk6FK2UvTqruSQW+/cCZTSNsMiZNvUeq0CqurF+dAbyiGOY6Wg==",
+        "sha256": "046ae534ee4a7f76955eb7114e814eb17f998928da55bd5639aa350b61cf7508"
+      },
+      "modules": [],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "6134c69bc22c8289252e70de3af20bd67071233459055be74d83acfcc4865e7e"
+        }
+      ]
+    },
+    {
+      "name": "des.js (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "des.js",
+        "version": "1.1.0",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/indutny/des.js.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/des.js/-/des.js-1.1.0.tgz",
+        "integrity": "sha512-r17GxjhUCjSRy8aiJpr8/UadFIzMzJGexI3Nmz4ADi9LYSFx4gTBp80+NaX/YsXWWLhpZ7v/v/ubEc/bCNfKwg==",
+        "sha256": "9a06b8294e38ca9bb70a6257290cc217e9172dfc0059f7639f59f074a924ef9d"
+      },
+      "modules": [
+        "./node_modules/des.js/lib/des.js",
+        "./node_modules/des.js/lib/des/cbc.js",
+        "./node_modules/des.js/lib/des/cipher.js",
+        "./node_modules/des.js/lib/des/des.js",
+        "./node_modules/des.js/lib/des/ede.js",
+        "./node_modules/des.js/lib/des/utils.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE-from-README",
+          "sha256": "05977191d78b941fbedf4a4918312569c04c6e74d1efbe26dcdf91d3e85e615e"
+        }
+      ]
+    },
+    {
+      "name": "diffie-hellman (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "diffie-hellman",
+        "version": "5.0.3",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/diffie-hellman.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/diffie-hellman/-/diffie-hellman-5.0.3.tgz",
+        "integrity": "sha512-kqag/Nl+f3GwyK25fhUMYj81BUOrZ9IuJsjIcDE5icNM9FJHAVm3VcUDxdLPoQtTuUylWm6ZIknYJwwaPxsUzg==",
+        "sha256": "67809ae0f25353a16b0dae4c4faffecf32525d238e45506fa27da6d2d4fbe53a"
+      },
+      "modules": [
+        "./node_modules/diffie-hellman/browser.js",
+        "./node_modules/diffie-hellman/lib/dh.js",
+        "./node_modules/diffie-hellman/lib/generatePrime.js",
+        "./node_modules/diffie-hellman/lib/primes.json"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "dc3339f05d09a3d2c2c71d1a424c0cca9f2df4f2906015c7a5aee8e3e1866764"
+        }
+      ]
+    },
+    {
+      "name": "elliptic (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "elliptic",
+        "version": "6.5.4",
+        "repository": {
+          "url": "git+ssh://git@github.com/indutny/elliptic.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/elliptic/-/elliptic-6.5.4.tgz",
+        "integrity": "sha512-iLhC6ULemrljPZb+QutR5TQGB+pdW6KGD5RSegS+8sorOZT+rdQFbsQFJgvN3eRqNALqJer4oQ16YvJHlU8hzQ==",
+        "sha256": "2435ce5afcb6881ec0a7d5b31b0820d30664bd529a54439928da60c02e45c5be"
+      },
+      "modules": [
+        "./node_modules/elliptic/lib/elliptic.js",
+        "./node_modules/elliptic/lib/elliptic/curve/base.js",
+        "./node_modules/elliptic/lib/elliptic/curve/edwards.js",
+        "./node_modules/elliptic/lib/elliptic/curve/index.js",
+        "./node_modules/elliptic/lib/elliptic/curve/mont.js",
+        "./node_modules/elliptic/lib/elliptic/curve/short.js",
+        "./node_modules/elliptic/lib/elliptic/curves.js",
+        "./node_modules/elliptic/lib/elliptic/ec/index.js",
+        "./node_modules/elliptic/lib/elliptic/ec/key.js",
+        "./node_modules/elliptic/lib/elliptic/ec/signature.js",
+        "./node_modules/elliptic/lib/elliptic/eddsa/index.js",
+        "./node_modules/elliptic/lib/elliptic/eddsa/key.js",
+        "./node_modules/elliptic/lib/elliptic/eddsa/signature.js",
+        "./node_modules/elliptic/lib/elliptic/precomputed/secp256k1.js",
+        "./node_modules/elliptic/lib/elliptic/utils.js",
+        "./node_modules/elliptic/package.json"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE-from-README",
+          "sha256": "4872076f23d355deffc80a8e8f3c778a36ef5e29d84b30c1b073da92bde86129"
+        }
+      ]
+    },
+    {
+      "name": "end-of-stream (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "end-of-stream",
+        "version": "1.4.4",
+        "repository": {
+          "url": "git://github.com/mafintosh/end-of-stream.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.4.tgz",
+        "integrity": "sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==",
+        "sha256": "0b8becf0cba76fdddfe4ad2289917edf74047913eb6891a7922ccf822bdf0db5"
+      },
+      "modules": [],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6"
+        }
+      ]
+    },
+    {
+      "name": "event-target-shim (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "event-target-shim",
+        "version": "5.0.1",
+        "repository": {
+          "url": "git+https://github.com/mysticatea/event-target-shim.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/event-target-shim/-/event-target-shim-5.0.1.tgz",
+        "integrity": "sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==",
+        "sha256": "f0717da2cde5c703b92e66906623724959c23ac14e9439c436b84c8a4f5b26bc"
+      },
+      "modules": [],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "633e14a004996857f9ffef9bdd1347b5036d3a4b7a2c2b356d422c19fb8dbdaa"
+        }
+      ]
+    },
+    {
+      "name": "events (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "events",
+        "version": "3.3.0",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/Gozala/events.git",
+          "web": "https://github.com/Gozala/events"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/events/-/events-3.3.0.tgz",
+        "integrity": "sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==",
+        "sha256": "2c30dd630b58299bdfaac8688f763c6f312d29779c500b1e3701a1d4fb3b534b"
+      },
+      "modules": [
+        "./node_modules/events/events.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "cc1c988042c4f240b8475653c44480b428e806be8e16fbeedbe0cb52f4c5239e"
+        }
+      ]
+    },
+    {
+      "name": "evp_bytestokey (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "evp_bytestokey",
+        "version": "1.0.3",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/EVP_BytesToKey.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/evp_bytestokey/-/evp_bytestokey-1.0.3.tgz",
+        "integrity": "sha512-/f2Go4TognH/KvCISP7OUsHn85hT9nUkxxA9BEWxFn+Oj9o8ZNLm/40hdlgSLyuOimsrTKLUMEorQexp/aPQeA==",
+        "sha256": "c10a145896ed84fb886f273bd583d3895390561d6b513b17f5cf70312f7c40e1"
+      },
+      "modules": [
+        "./node_modules/evp_bytestokey/index.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "cded00c8eb0ffa2d698fc3b30c91d804899b20075a5ed904503905adf744a159"
+        }
+      ]
+    },
+    {
+      "name": "hash-base (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "hash-base",
+        "version": "3.1.0",
+        "repository": {
+          "url": "git+https://github.com/crypto-browserify/hash-base.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/hash-base/-/hash-base-3.1.0.tgz",
+        "integrity": "sha512-1nmYp/rhMDiE7AYkDw+lLwlAzz0AntGIe51F3RfFfEqyQ3feY2eI/NcwC6umIQVOASPMsWJLJScWKSSvzL9IVA==",
+        "sha256": "cf77fccc889f84a7fb615b0e1cd195685c9a61418cf5e23ff42dbea5608f461d"
+      },
+      "modules": [
+        "./node_modules/hash-base/index.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "28d5c883c27a332634d0738d4c4b549c28e4cfdf20187d26189f4690f83cdea8"
+        }
+      ]
+    },
+    {
+      "name": "hash.js (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "hash.js",
+        "version": "1.1.7",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/indutny/hash.js.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/hash.js/-/hash.js-1.1.7.tgz",
+        "integrity": "sha512-taOaskGt4z4SOANNseOviYDvjEJinIkRgmp7LbKP2YTTmVxWBl87s/uzK9r+44BclBSp2X7K1hqeNfz9JbBeXA==",
+        "sha256": "8eadfe0cbd33052fedb65ed4bf9acfe4645eafaabf877d99e3b1d9d771668ca6"
+      },
+      "modules": [
+        "./node_modules/hash.js/lib/hash.js",
+        "./node_modules/hash.js/lib/hash/common.js",
+        "./node_modules/hash.js/lib/hash/hmac.js",
+        "./node_modules/hash.js/lib/hash/ripemd.js",
+        "./node_modules/hash.js/lib/hash/sha.js",
+        "./node_modules/hash.js/lib/hash/sha/1.js",
+        "./node_modules/hash.js/lib/hash/sha/224.js",
+        "./node_modules/hash.js/lib/hash/sha/256.js",
+        "./node_modules/hash.js/lib/hash/sha/384.js",
+        "./node_modules/hash.js/lib/hash/sha/512.js",
+        "./node_modules/hash.js/lib/hash/sha/common.js",
+        "./node_modules/hash.js/lib/hash/utils.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE-from-README",
+          "sha256": "9fc67388b6ad110dbf2f9208d671f5fbfc8a90e4a1b34ec43b79afa62e8167f7"
+        }
+      ]
+    },
+    {
+      "name": "hmac-drbg (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "hmac-drbg",
+        "version": "1.0.1",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/indutny/hmac-drbg.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/hmac-drbg/-/hmac-drbg-1.0.1.tgz",
+        "integrity": "sha512-Tti3gMqLdZfhOQY1Mzf/AanLiqh1WTiJgEj26ZuYQ9fbkLomzGchCws4FyrSd4VkpBfiNhaE1On+lOz894jvXg==",
+        "sha256": "321370d938a49a55cbdfcef124f63cde6d3a947b7231aeab1a5ba0ca62e35962"
+      },
+      "modules": [
+        "./node_modules/hmac-drbg/lib/hmac-drbg.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE-from-README",
+          "sha256": "b4cc23afc821ff075d8fd610d704177c2febd2434057335ed6697fadcb821e53"
+        }
+      ]
+    },
+    {
+      "name": "ieee754 (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "BSD-3-Clause",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "ieee754",
+        "version": "1.2.1",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/feross/ieee754.git"
+        },
+        "license": "BSD-3-Clause",
+        "tarball": "https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz",
+        "integrity": "sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==",
+        "sha256": "8ef14b9b397e339db89db97881fb714f49319d8f0eb1275901f45567b28f9dac"
+      },
+      "modules": [],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "9d78a7400453b7f1922347bd6923f27918c1039f8b1720460d07cab31dc21204"
+        }
+      ]
+    },
+    {
+      "name": "inherits (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "ISC",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "inherits",
+        "version": "2.0.4",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/isaacs/inherits.git"
+        },
+        "license": "ISC",
+        "tarball": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
+        "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
+        "sha256": "d94dbc6c1bb3c5ac0fb12a73ade187108fc60de273a1b754f55044eb5e24afaf"
+      },
+      "modules": [
+        "./node_modules/inherits/inherits_browser.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "3a395674c5c917a5c484fbb4825d855da35333cc24cf770efa7e2f0420ecba14"
+        }
+      ]
+    },
+    {
+      "name": "md5.js (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "md5.js",
+        "version": "1.3.5",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/md5.js.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/md5.js/-/md5.js-1.3.5.tgz",
+        "integrity": "sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg==",
+        "sha256": "06777b61b01229c755ab4c6f4208d8f692222db4201abc9263877e4415693d03"
+      },
+      "modules": [
+        "./node_modules/md5.js/index.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "28d5c883c27a332634d0738d4c4b549c28e4cfdf20187d26189f4690f83cdea8"
+        }
+      ]
+    },
+    {
+      "name": "miller-rabin (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "miller-rabin",
+        "version": "4.0.1",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/indutny/miller-rabin.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/miller-rabin/-/miller-rabin-4.0.1.tgz",
+        "integrity": "sha512-115fLhvZVqWwHPbClyntxEVfVDfl9DLLTuJvq3g2O/Oxi8AiNouAHvDSzHS0viUJc+V5vm3eq91Xwqn9dp4jRA==",
+        "sha256": "55bc46e7a4150804a546e634a971ea28844b47abbbe3136cb895951d84d6b8c9"
+      },
+      "modules": [
+        "./node_modules/miller-rabin/lib/mr.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE-from-README",
+          "sha256": "9fc67388b6ad110dbf2f9208d671f5fbfc8a90e4a1b34ec43b79afa62e8167f7"
+        }
+      ]
+    },
+    {
+      "name": "minimalistic-assert (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "ISC",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "minimalistic-assert",
+        "version": "1.0.1",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/calvinmetcalf/minimalistic-assert.git"
+        },
+        "license": "ISC",
+        "tarball": "https://registry.npmjs.org/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz",
+        "integrity": "sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==",
+        "sha256": "f16522c947d6dbe3a99f5ff4296ccc253090b838959abdddc45fe81edb03f3a0"
+      },
+      "modules": [
+        "./node_modules/minimalistic-assert/index.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "136fee1129ea96ce18b41c26a72f5d4ba196ee41bfd73b55d0b8509cdda148e9"
+        }
+      ]
+    },
+    {
+      "name": "minimalistic-crypto-utils (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "minimalistic-crypto-utils",
+        "version": "1.0.1",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/indutny/minimalistic-crypto-utils.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz",
+        "integrity": "sha512-JIYlbt6g8i5jKfJ3xz7rF0LXmv2TkDxBLUkiBeZ7bAx4GnnNMr8xFpGnOxn6GhTEHx3SjRrZEoU+j04prX1ktg==",
+        "sha256": "f35f6e02efe1b2d6e8764fea48ef6d1211693c838f54d6ef50f0bc9fe6fa9db3"
+      },
+      "modules": [
+        "./node_modules/minimalistic-crypto-utils/lib/utils.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE-from-README",
+          "sha256": "28b226f732846b5f16af1ae09ef4e8f39b1fcbf501c889af737a3995d5065fbf"
+        }
+      ]
+    },
+    {
+      "name": "parse-asn1 (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "ISC",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "parse-asn1",
+        "version": "5.1.6",
+        "repository": {
+          "url": "git://github.com/crypto-browserify/parse-asn1.git",
+          "type": "git"
+        },
+        "license": "ISC",
+        "tarball": "https://registry.npmjs.org/parse-asn1/-/parse-asn1-5.1.6.tgz",
+        "integrity": "sha512-RnZRo1EPU6JBnra2vGHj0yhp6ebyjBZpmUCLHWiFhxlzvBCCpAuZ7elsBp1PVAbQN0/04VD/19rfzlBSwLstMw==",
+        "sha256": "6bf4679313c62f9bc4669ef1413857d9685829c2329c3f36071e9ca7a065b531"
+      },
+      "modules": [
+        "./node_modules/parse-asn1/aesid.json",
+        "./node_modules/parse-asn1/asn1.js",
+        "./node_modules/parse-asn1/certificate.js",
+        "./node_modules/parse-asn1/fixProc.js",
+        "./node_modules/parse-asn1/index.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "1ed7565944d5aa655783bcd7b75e2cf1554b459d0e7240ab83632aefecc3eb8f"
+        }
+      ]
+    },
+    {
+      "name": "pbkdf2 (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "pbkdf2",
+        "version": "3.1.2",
+        "repository": {
+          "url": "git+https://github.com/crypto-browserify/pbkdf2.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/pbkdf2/-/pbkdf2-3.1.2.tgz",
+        "integrity": "sha512-iuh7L6jA7JEGu2WxDwtQP1ddOpaJNC4KlDEFfdQajSGgGPNi4OyDc2R7QnbY2bR9QjBVGwgvTdNJZoE7RaxUMA==",
+        "sha256": "3df5733b55d62726e968bc1661ed06b505345ed63b3503951b9e3bc9b46ed65f"
+      },
+      "modules": [
+        "./node_modules/pbkdf2/browser.js",
+        "./node_modules/pbkdf2/lib/async.js",
+        "./node_modules/pbkdf2/lib/default-encoding.js",
+        "./node_modules/pbkdf2/lib/precondition.js",
+        "./node_modules/pbkdf2/lib/sync-browser.js",
+        "./node_modules/pbkdf2/lib/to-buffer.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "c2cfec246614ccd782467926542ebeda763b902c4d2f8e8a6350937f001676bc"
+        }
+      ]
+    },
+    {
+      "name": "process (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "process",
+        "version": "0.11.10",
+        "repository": {
+          "url": "git://github.com/shtylman/node-process.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/process/-/process-0.11.10.tgz",
+        "integrity": "sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==",
+        "sha256": "7c10569b3c9cb056152ad630d40f9f4fcc321a0013c2bb8384f036aaa674e6bb"
+      },
+      "modules": [],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "ec35edfcd130a68eebfc7a5c32ce1d3a7688f8771c14437916b2772640d2d0b0"
+        }
+      ]
+    },
+    {
+      "name": "public-encrypt (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "public-encrypt",
+        "version": "4.0.3",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/publicEncrypt.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/public-encrypt/-/public-encrypt-4.0.3.tgz",
+        "integrity": "sha512-zVpa8oKZSz5bTMTFClc1fQOnyyEzpl5ozpi1B5YcvBrdohMjH2rfsBtyXcuNuwjsDIXmBYlF2N5FlJYhR29t8Q==",
+        "sha256": "7f0eeca034a7bf643451b10706af9e3ac5f1501a7ab022db4d25bcf011c2014b"
+      },
+      "modules": [
+        "./node_modules/public-encrypt/browser.js",
+        "./node_modules/public-encrypt/mgf.js",
+        "./node_modules/public-encrypt/privateDecrypt.js",
+        "./node_modules/public-encrypt/publicEncrypt.js",
+        "./node_modules/public-encrypt/withPublic.js",
+        "./node_modules/public-encrypt/xor.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "dc3339f05d09a3d2c2c71d1a424c0cca9f2df4f2906015c7a5aee8e3e1866764"
+        }
+      ]
+    },
+    {
+      "name": "punycode (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "punycode",
+        "version": "2.3.1",
+        "repository": {
+          "url": "git+https://github.com/mathiasbynens/punycode.js.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz",
+        "integrity": "sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==",
+        "sha256": "e4ce59f9fbac44349abab87279ab658f6b4614916bec5e088ae3be9323e193bb"
+      },
+      "modules": [],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE-MIT.txt",
+          "sha256": "e7f14c40a4fc6bcd3ac4cbbabe5b6a2fd9c4063f4fe124e3a5222fb3ce13f479"
+        }
+      ]
+    },
+    {
+      "name": "randombytes (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "randombytes",
+        "version": "2.1.0",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/crypto-browserify/randombytes.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/randombytes/-/randombytes-2.1.0.tgz",
+        "integrity": "sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==",
+        "sha256": "b8a6d3e6532817912ad3dacbb0e64be75026941a5167549aa1d7fecbafd1bcaa"
+      },
+      "modules": [
+        "./node_modules/randombytes/browser.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "33af78c3242ef32e9e06861fd9757c37d86af9e2667edb28028c64bc2bd77fde"
+        }
+      ]
+    },
+    {
+      "name": "randomfill (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "randomfill",
+        "version": "1.0.4",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/randomfill.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/randomfill/-/randomfill-1.0.4.tgz",
+        "integrity": "sha512-87lcbR8+MhcWcUiQ+9e+Rwx8MyR2P7qnt15ynUlbm3TU/fjbgz4GsvfSUDTemtCCtVCqb4ZcEFlyPNTh9bBTLw==",
+        "sha256": "3b0c2fec576a572e139563606102e0ffd9dc8a2853525eb7aa1a30e0de754fa6"
+      },
+      "modules": [
+        "./node_modules/randomfill/browser.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "33af78c3242ef32e9e06861fd9757c37d86af9e2667edb28028c64bc2bd77fde"
+        }
+      ]
+    },
+    {
+      "name": "readable-stream (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "readable-stream",
+        "version": "3.6.2",
+        "repository": {
+          "url": "git://github.com/nodejs/readable-stream.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz",
+        "integrity": "sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA==",
+        "sha256": "edd866c05e318aa9c091763eebdd4207409b7a7648be19c5317a96047305ab5d"
+      },
+      "modules": [
+        "./node_modules/readable-stream/errors-browser.js",
+        "./node_modules/readable-stream/lib/_stream_duplex.js",
+        "./node_modules/readable-stream/lib/_stream_passthrough.js",
+        "./node_modules/readable-stream/lib/_stream_readable.js",
+        "./node_modules/readable-stream/lib/_stream_transform.js",
+        "./node_modules/readable-stream/lib/_stream_writable.js",
+        "./node_modules/readable-stream/lib/internal/streams/async_iterator.js",
+        "./node_modules/readable-stream/lib/internal/streams/buffer_list.js",
+        "./node_modules/readable-stream/lib/internal/streams/destroy.js",
+        "./node_modules/readable-stream/lib/internal/streams/end-of-stream.js",
+        "./node_modules/readable-stream/lib/internal/streams/from-browser.js",
+        "./node_modules/readable-stream/lib/internal/streams/pipeline.js",
+        "./node_modules/readable-stream/lib/internal/streams/state.js",
+        "./node_modules/readable-stream/lib/internal/streams/stream-browser.js",
+        "./node_modules/readable-stream/readable-browser.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "4f8ade273d406cf67b5a078d751d0b651e3f73b84f958b493e9254ab3ce47391"
+        }
+      ]
+    },
+    {
+      "name": "ripemd160 (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "ripemd160",
+        "version": "2.0.2",
+        "repository": {
+          "url": "git+https://github.com/crypto-browserify/ripemd160.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/ripemd160/-/ripemd160-2.0.2.tgz",
+        "integrity": "sha512-ii4iagi25WusVoiC4B4lq7pbXfAp3D9v5CwfkY33vffw2+pkDjY1D8GaN7spsxvCSx8dkPqOZCEZyfxcmJG2IA==",
+        "sha256": "44493c512eb8157f294dbfc44dfe38757b81f357d53c4030fdab6dc83f6f94ba"
+      },
+      "modules": [
+        "./node_modules/ripemd160/index.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "a31993ef38f79ae9ea22389055faa5897263f223a49b4084fea9ad249fa68e5b"
+        }
+      ]
+    },
+    {
+      "name": "safe-buffer (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "safe-buffer",
+        "version": "5.2.1",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/feross/safe-buffer.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz",
+        "integrity": "sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==",
+        "sha256": "5d181804516c4a693a384272a7bd0e42d17e0d4b301ccfbe408669ccafdcb3e8"
+      },
+      "modules": [
+        "./node_modules/safe-buffer/index.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "dff1a84cb70365271326e19f09b24dd85364a47b4fc2beb446ccd9dec225531f"
+        }
+      ]
+    },
+    {
+      "name": "safer-buffer (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "safer-buffer",
+        "version": "2.1.2",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/ChALkeR/safer-buffer.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",
+        "integrity": "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==",
+        "sha256": "78812f65ae3b98071ce1c9bacbe0666f4220d0b2753c2a11530eb27df440a3b3"
+      },
+      "modules": [
+        "./node_modules/safer-buffer/safer.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "aa72fb6117e423794ec098a00d0413fa4ceb2369b68869e07d32ca32235a5f1e"
+        }
+      ]
+    },
+    {
+      "name": "sha.js (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "(MIT AND BSD-3-Clause)",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "sha.js",
+        "version": "2.4.11",
+        "repository": {
+          "url": "git://github.com/crypto-browserify/sha.js.git",
+          "type": "git"
+        },
+        "license": "(MIT AND BSD-3-Clause)",
+        "tarball": "https://registry.npmjs.org/sha.js/-/sha.js-2.4.11.tgz",
+        "integrity": "sha512-QMEp5B7cftE7APOjk5Y6xgrbWu+WkLVQwk8JNjZ8nKRciZaByEW6MubieAiToS7+dwvrjGhH8jRXz3MVd0AYqQ==",
+        "sha256": "a3ccf27df7edd393c7526cf608620f50bec8ef284975e59adb24ff4eb8d36c49"
+      },
+      "modules": [
+        "./node_modules/sha.js/hash.js",
+        "./node_modules/sha.js/index.js",
+        "./node_modules/sha.js/sha.js",
+        "./node_modules/sha.js/sha1.js",
+        "./node_modules/sha.js/sha224.js",
+        "./node_modules/sha.js/sha256.js",
+        "./node_modules/sha.js/sha384.js",
+        "./node_modules/sha.js/sha512.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "e154e2a13eaefcdac28913b4c142c0e367a34584e639726b26b1d008bb345812"
+        }
+      ]
+    },
+    {
+      "name": "string_decoder (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "string_decoder",
+        "version": "1.3.0",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/nodejs/string_decoder.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz",
+        "integrity": "sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==",
+        "sha256": "7d036900940345e423538371ae45b23bfaf4b454bc398c6ba604063b0597b3ad"
+      },
+      "modules": [
+        "./node_modules/string_decoder/lib/string_decoder.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "4f8ade273d406cf67b5a078d751d0b651e3f73b84f958b493e9254ab3ce47391"
+        }
+      ]
+    },
+    {
+      "name": "util-deprecate (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseReference": {
+        "name": "util-deprecate",
+        "version": "1.0.2",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/TooTallNate/util-deprecate.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz",
+        "integrity": "sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==",
+        "sha256": "79a1de983c1b393180c47456d6b73caab278a00ea6e37d5c6675f2dcdec2a3e5"
+      },
+      "modules": [
+        "./node_modules/util-deprecate/browser.js"
+      ],
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "ff15562c1fef0205e4f0ad1efb4d266805bd8686f95d2b788b2dac4d8da81370"
+        }
+      ]
+    },
+    {
+      "name": "OHOS / Node / originjs adaptation notices",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "Apache-2.0 AND MIT AND MulanPSL-2.0",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45",
+      "evidence": "Full original package NOTICE and actual source headers; Mulan text retained from originjs upstream. README.OpenSource 0.18.6 is not a verified originjs tag; exact adapted files are pinned to OHOS commit.",
+      "originjsLicenseCommit": "cd50376b915894177ff4f6fffabf824b5b7a3f76",
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45",
+      "licenseFiles": [
+        {
+          "name": "LICENSE-Apache-2.0",
+          "sha256": "54364f4171f8f045e4295758a9a9dee0c934e6dc0861a4c5c4a82c30dc854a0e"
+        },
+        {
+          "name": "LICENSE-MulanPSL-2.0",
+          "sha256": "6dd81a55ee561cc72968b70e8d23b1bde847bdbde120180bd3d9abaf713904e7"
+        },
+        {
+          "name": "NOTICE-package",
+          "sha256": "6cd6740689176285135a0575794d7a95da922a2c5565cc7f1b463eac19841470"
+        },
+        {
+          "name": "NOTICE-source-comments",
+          "sha256": "5a865ee45503ab3a19f3cbc5f0328e4260eaa8017e073f73f771d99c5222d252"
+        }
+      ]
+    },
+    {
+      "name": "Google Closure UTF-8 conversion (hash.js)",
+      "version": "8598d87242af",
+      "license": "Apache-2.0",
+      "source": "https://github.com/google/closure-library/tree/8598d87242af59aac233270742c8984e2b2bdbe0",
+      "evidence": "Actual bundled hash.js/lib/hash/utils.js cites this commit and Apache-2.0. Both copyright header and license are retained.",
+      "kind": "embedded-js",
+      "distributed": true,
+      "repository": "https://github.com/google/closure-library/tree/8598d87242af59aac233270742c8984e2b2bdbe0",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe"
+        },
+        {
+          "name": "NOTICE",
+          "sha256": "ff5a785e3041bfb7203756f2d7262c6ea78c1c83df1a86d14c70bb4b94d6c3b6"
         }
       ]
     },
@@ -254,6 +2109,9 @@
       "name": "adler2",
       "version": "2.0.1",
       "license": "0BSD OR MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/oyvindln/adler2",
       "source": "https://crates.io/crates/adler2/2.0.1",
       "distributed": true,
@@ -277,6 +2135,9 @@
       "name": "aho-corasick",
       "version": "1.1.4",
       "license": "Unlicense OR MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/BurntSushi/aho-corasick",
       "source": "https://crates.io/crates/aho-corasick/1.1.4",
       "distributed": true,
@@ -300,6 +2161,9 @@
       "name": "alloc-no-stdlib",
       "version": "2.0.4",
       "license": "BSD-3-Clause",
+      "selectedLicense": "BSD-3-Clause",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/dropbox/rust-alloc-no-stdlib",
       "source": "https://crates.io/crates/alloc-no-stdlib/2.0.4",
       "distributed": true,
@@ -315,6 +2179,9 @@
       "name": "alloc-stdlib",
       "version": "0.2.2",
       "license": "BSD-3-Clause",
+      "selectedLicense": "BSD-3-Clause",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/dropbox/rust-alloc-no-stdlib",
       "source": "https://crates.io/crates/alloc-stdlib/0.2.2",
       "distributed": true,
@@ -330,6 +2197,9 @@
       "name": "async-compression",
       "version": "0.4.35",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/Nullus157/async-compression",
       "source": "https://crates.io/crates/async-compression/0.4.35",
       "distributed": true,
@@ -349,6 +2219,9 @@
       "name": "atomic-waker",
       "version": "1.1.2",
       "license": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/smol-rs/atomic-waker",
       "source": "https://crates.io/crates/atomic-waker/1.1.2",
       "distributed": true,
@@ -372,6 +2245,9 @@
       "name": "base64",
       "version": "0.22.1",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/marshallpierce/rust-base64",
       "source": "https://crates.io/crates/base64/0.22.1",
       "distributed": true,
@@ -391,6 +2267,9 @@
       "name": "bitflags",
       "version": "2.10.0",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/bitflags/bitflags",
       "source": "https://crates.io/crates/bitflags/2.10.0",
       "distributed": true,
@@ -410,6 +2289,9 @@
       "name": "brotli-decompressor",
       "version": "5.0.0",
       "license": "BSD-3-Clause/MIT",
+      "selectedLicense": "BSD-3-Clause AND MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Legacy slash declaration is not treated as blanket OR: root Dropbox BSD and src/context.rs Google MIT both apply to their source scopes.",
       "repository": "https://github.com/dropbox/rust-brotli-decompressor",
       "source": "https://crates.io/crates/brotli-decompressor/5.0.0",
       "distributed": true,
@@ -417,6 +2299,14 @@
         {
           "name": "LICENSE",
           "sha256": "6c91ec82929f91ffa341a9928e5c98b44767c6a1bb8d7789edad88d3fa5681af"
+        },
+        {
+          "name": "LICENSE-MIT-Brotli",
+          "sha256": "2a57418d6b10947fe0dfbec3a600269e2745136c125cbf15b256e5ae18af23cb"
+        },
+        {
+          "name": "NOTICE-source-comments",
+          "sha256": "0613a492c11e141fb3144735bc4514b041a1fdd8bf5f40dd6ece39137c731535"
         }
       ]
     },
@@ -425,6 +2315,9 @@
       "name": "brotli",
       "version": "8.0.2",
       "license": "BSD-3-Clause AND MIT",
+      "selectedLicense": "BSD-3-Clause AND MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Encoder LICENSE.MIT plus Google MIT file header; BSD text retained from its exact decoder dependency, not invented as an encoder root license.",
       "repository": "https://github.com/dropbox/rust-brotli",
       "source": "https://crates.io/crates/brotli/8.0.2",
       "distributed": true,
@@ -440,6 +2333,10 @@
         {
           "name": "NOTICE",
           "sha256": "b2869755a80ab8cfe62852c1f3b482c3c5eb1255990824571465215381483471"
+        },
+        {
+          "name": "NOTICE-source-comments",
+          "sha256": "425b22949be0900b64c20ca1a250a389ae322ab1e44b78682db73b1df46ceec7"
         }
       ]
     },
@@ -448,6 +2345,9 @@
       "name": "bytes",
       "version": "1.11.0",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/tokio-rs/bytes",
       "source": "https://crates.io/crates/bytes/1.11.0",
       "distributed": true,
@@ -463,6 +2363,9 @@
       "name": "cc",
       "version": "1.2.49",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang/cc-rs",
       "source": "https://crates.io/crates/cc/1.2.49",
       "distributed": true,
@@ -482,6 +2385,9 @@
       "name": "cfg-if",
       "version": "1.0.4",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang/cfg-if",
       "source": "https://crates.io/crates/cfg-if/1.0.4",
       "distributed": true,
@@ -501,6 +2407,9 @@
       "name": "compression-codecs",
       "version": "0.4.34",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/Nullus157/async-compression",
       "source": "https://crates.io/crates/compression-codecs/0.4.34",
       "distributed": true,
@@ -520,6 +2429,9 @@
       "name": "compression-core",
       "version": "0.4.31",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/Nullus157/async-compression",
       "source": "https://crates.io/crates/compression-core/0.4.31",
       "distributed": true,
@@ -539,6 +2451,9 @@
       "name": "convert_case",
       "version": "0.6.0",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/rutrum/convert-case",
       "source": "https://crates.io/crates/convert_case/0.6.0",
       "distributed": true,
@@ -554,6 +2469,9 @@
       "name": "cookie",
       "version": "0.18.1",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/SergioBenitez/cookie-rs",
       "source": "https://crates.io/crates/cookie/0.18.1",
       "distributed": true,
@@ -573,6 +2491,9 @@
       "name": "cookie_store",
       "version": "0.21.1",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/pfernie/cookie_store",
       "source": "https://crates.io/crates/cookie_store/0.21.1",
       "distributed": true,
@@ -592,6 +2513,9 @@
       "name": "crc32fast",
       "version": "1.5.0",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/srijs/rust-crc32fast",
       "source": "https://crates.io/crates/crc32fast/1.5.0",
       "distributed": true,
@@ -611,6 +2535,9 @@
       "name": "ctor",
       "version": "0.2.9",
       "license": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/mmastrac/rust-ctor",
       "source": "https://crates.io/crates/ctor/0.2.9",
       "distributed": true,
@@ -630,14 +2557,13 @@
       "name": "deranged",
       "version": "0.5.5",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/jhpratt/deranged",
       "source": "https://crates.io/crates/deranged/0.5.5",
       "distributed": true,
       "licenseFiles": [
-        {
-          "name": "LICENSE-APACHE",
-          "sha256": "b4839ecf405b5fa4a20f234ae6b686ab7f245e7eec8eb634174b833ea86a4653"
-        },
         {
           "name": "LICENSE-Apache",
           "sha256": "b4839ecf405b5fa4a20f234ae6b686ab7f245e7eec8eb634174b833ea86a4653"
@@ -653,6 +2579,9 @@
       "name": "displaydoc",
       "version": "0.2.5",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/yaahc/displaydoc",
       "source": "https://crates.io/crates/displaydoc/0.2.5",
       "distributed": true,
@@ -672,6 +2601,9 @@
       "name": "document-features",
       "version": "0.2.12",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/slint-ui/document-features",
       "source": "https://crates.io/crates/document-features/0.2.12",
       "distributed": true,
@@ -691,6 +2623,9 @@
       "name": "encoding_rs",
       "version": "0.8.35",
       "license": "(Apache-2.0 OR MIT) AND BSD-3-Clause",
+      "selectedLicense": "MIT AND BSD-3-Clause",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Select MIT for implementation; retain mandatory WHATWG data BSD license and COPYRIGHT.",
       "repository": "https://github.com/hsivonen/encoding_rs",
       "source": "https://crates.io/crates/encoding_rs/0.8.35",
       "distributed": true,
@@ -718,6 +2653,9 @@
       "name": "equivalent",
       "version": "1.0.2",
       "license": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/indexmap-rs/equivalent",
       "source": "https://crates.io/crates/equivalent/1.0.2",
       "distributed": true,
@@ -737,6 +2675,9 @@
       "name": "find-msvc-tools",
       "version": "0.1.5",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang/cc-rs",
       "source": "https://crates.io/crates/find-msvc-tools/0.1.5",
       "distributed": true,
@@ -756,6 +2697,9 @@
       "name": "flate2",
       "version": "1.1.5",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang/flate2-rs",
       "source": "https://crates.io/crates/flate2/1.1.5",
       "distributed": true,
@@ -775,6 +2719,9 @@
       "name": "fnv",
       "version": "1.0.7",
       "license": "Apache-2.0 / MIT",
+      "selectedLicense": "Apache-2.0 AND MIT",
+      "obligations": "提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。",
+      "evidence": "Legacy slash metadata: conservatively retain both root licenses and satisfy both notice requirements.",
       "repository": "https://github.com/servo/rust-fnv",
       "source": "https://crates.io/crates/fnv/1.0.7",
       "distributed": true,
@@ -794,6 +2741,9 @@
       "name": "form_urlencoded",
       "version": "1.2.2",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/servo/rust-url",
       "source": "https://crates.io/crates/form_urlencoded/1.2.2",
       "distributed": true,
@@ -813,6 +2763,9 @@
       "name": "futures-channel",
       "version": "0.3.31",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang/futures-rs",
       "source": "https://crates.io/crates/futures-channel/0.3.31",
       "distributed": true,
@@ -832,6 +2785,9 @@
       "name": "futures-core",
       "version": "0.3.31",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang/futures-rs",
       "source": "https://crates.io/crates/futures-core/0.3.31",
       "distributed": true,
@@ -851,6 +2807,9 @@
       "name": "futures-sink",
       "version": "0.3.31",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang/futures-rs",
       "source": "https://crates.io/crates/futures-sink/0.3.31",
       "distributed": true,
@@ -870,6 +2829,9 @@
       "name": "futures-task",
       "version": "0.3.31",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang/futures-rs",
       "source": "https://crates.io/crates/futures-task/0.3.31",
       "distributed": true,
@@ -889,6 +2851,9 @@
       "name": "futures-util",
       "version": "0.3.31",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang/futures-rs",
       "source": "https://crates.io/crates/futures-util/0.3.31",
       "distributed": true,
@@ -908,6 +2873,9 @@
       "name": "getrandom",
       "version": "0.2.16",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-random/getrandom",
       "source": "https://crates.io/crates/getrandom/0.2.16",
       "distributed": true,
@@ -927,6 +2895,9 @@
       "name": "h2",
       "version": "0.4.12",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/hyperium/h2",
       "source": "https://crates.io/crates/h2/0.4.12",
       "distributed": true,
@@ -942,6 +2913,9 @@
       "name": "hashbrown",
       "version": "0.16.1",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang/hashbrown",
       "source": "https://crates.io/crates/hashbrown/0.16.1",
       "distributed": true,
@@ -961,6 +2935,9 @@
       "name": "http-body-util",
       "version": "0.1.3",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/hyperium/http-body",
       "source": "https://crates.io/crates/http-body-util/0.1.3",
       "distributed": true,
@@ -976,6 +2953,9 @@
       "name": "http-body",
       "version": "1.0.1",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/hyperium/http-body",
       "source": "https://crates.io/crates/http-body/1.0.1",
       "distributed": true,
@@ -991,6 +2971,9 @@
       "name": "http",
       "version": "1.4.0",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/hyperium/http",
       "source": "https://crates.io/crates/http/1.4.0",
       "distributed": true,
@@ -1010,6 +2993,9 @@
       "name": "httparse",
       "version": "1.10.1",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/seanmonstar/httparse",
       "source": "https://crates.io/crates/httparse/1.10.1",
       "distributed": true,
@@ -1029,6 +3015,9 @@
       "name": "hyper-rustls",
       "version": "0.27.7",
       "license": "Apache-2.0 OR ISC OR MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rustls/hyper-rustls",
       "source": "https://crates.io/crates/hyper-rustls/0.27.7",
       "distributed": true,
@@ -1056,6 +3045,9 @@
       "name": "hyper-util",
       "version": "0.1.19",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/hyperium/hyper-util",
       "source": "https://crates.io/crates/hyper-util/0.1.19",
       "distributed": true,
@@ -1071,6 +3063,9 @@
       "name": "hyper",
       "version": "1.8.1",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/hyperium/hyper",
       "source": "https://crates.io/crates/hyper/1.8.1",
       "distributed": true,
@@ -1086,6 +3081,9 @@
       "name": "icu_collections",
       "version": "2.1.1",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/icu_collections/2.1.1",
       "distributed": true,
@@ -1101,6 +3099,9 @@
       "name": "icu_locale_core",
       "version": "2.1.1",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/icu_locale_core/2.1.1",
       "distributed": true,
@@ -1116,6 +3117,9 @@
       "name": "icu_normalizer",
       "version": "2.1.1",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/icu_normalizer/2.1.1",
       "distributed": true,
@@ -1131,6 +3135,9 @@
       "name": "icu_normalizer_data",
       "version": "2.1.1",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/icu_normalizer_data/2.1.1",
       "distributed": true,
@@ -1146,6 +3153,9 @@
       "name": "icu_properties",
       "version": "2.1.2",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/icu_properties/2.1.2",
       "distributed": true,
@@ -1161,6 +3171,9 @@
       "name": "icu_properties_data",
       "version": "2.1.2",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/icu_properties_data/2.1.2",
       "distributed": true,
@@ -1176,6 +3189,9 @@
       "name": "icu_provider",
       "version": "2.1.1",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/icu_provider/2.1.1",
       "distributed": true,
@@ -1191,6 +3207,9 @@
       "name": "idna",
       "version": "1.1.0",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/servo/rust-url/",
       "source": "https://crates.io/crates/idna/1.1.0",
       "distributed": true,
@@ -1210,6 +3229,9 @@
       "name": "idna_adapter",
       "version": "1.2.1",
       "license": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/hsivonen/idna_adapter",
       "source": "https://crates.io/crates/idna_adapter/1.2.1",
       "distributed": true,
@@ -1229,6 +3251,9 @@
       "name": "indexmap",
       "version": "2.12.1",
       "license": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/indexmap-rs/indexmap",
       "source": "https://crates.io/crates/indexmap/2.12.1",
       "distributed": true,
@@ -1248,6 +3273,9 @@
       "name": "ipnet",
       "version": "2.11.0",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/krisprice/ipnet",
       "source": "https://crates.io/crates/ipnet/2.11.0",
       "distributed": true,
@@ -1267,6 +3295,9 @@
       "name": "iri-string",
       "version": "0.7.9",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/lo48576/iri-string",
       "source": "https://crates.io/crates/iri-string/0.7.9",
       "distributed": true,
@@ -1286,6 +3317,9 @@
       "name": "itoa",
       "version": "1.0.15",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/dtolnay/itoa",
       "source": "https://crates.io/crates/itoa/1.0.15",
       "distributed": true,
@@ -1305,6 +3339,9 @@
       "name": "libc",
       "version": "0.2.178",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang/libc",
       "source": "https://crates.io/crates/libc/0.2.178",
       "distributed": true,
@@ -1324,6 +3361,9 @@
       "name": "litemap",
       "version": "0.8.1",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/litemap/0.8.1",
       "distributed": true,
@@ -1339,6 +3379,9 @@
       "name": "litrs",
       "version": "1.0.0",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/LukasKalbertodt/litrs",
       "source": "https://crates.io/crates/litrs/1.0.0",
       "distributed": true,
@@ -1358,6 +3401,9 @@
       "name": "log",
       "version": "0.4.29",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang/log",
       "source": "https://crates.io/crates/log/0.4.29",
       "distributed": true,
@@ -1377,6 +3423,9 @@
       "name": "memchr",
       "version": "2.7.6",
       "license": "Unlicense OR MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/BurntSushi/memchr",
       "source": "https://crates.io/crates/memchr/2.7.6",
       "distributed": true,
@@ -1400,6 +3449,9 @@
       "name": "mime",
       "version": "0.3.17",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/hyperium/mime",
       "source": "https://crates.io/crates/mime/0.3.17",
       "distributed": true,
@@ -1419,6 +3471,9 @@
       "name": "miniz_oxide",
       "version": "0.8.9",
       "license": "MIT OR Zlib OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide",
       "source": "https://crates.io/crates/miniz_oxide/0.8.9",
       "distributed": true,
@@ -1446,6 +3501,9 @@
       "name": "mio",
       "version": "1.1.1",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/tokio-rs/mio",
       "source": "https://crates.io/crates/mio/1.1.1",
       "distributed": true,
@@ -1461,6 +3519,9 @@
       "name": "napi-derive-backend",
       "version": "1.0.75",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/napi-rs/napi-rs",
       "source": "https://crates.io/crates/napi-derive-backend/1.0.75",
       "distributed": true,
@@ -1476,6 +3537,9 @@
       "name": "napi-derive",
       "version": "2.16.13",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/napi-rs/napi-rs",
       "source": "https://crates.io/crates/napi-derive/2.16.13",
       "distributed": true,
@@ -1491,6 +3555,9 @@
       "name": "napi-sys",
       "version": "2.4.0",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/napi-rs/napi-rs",
       "source": "https://crates.io/crates/napi-sys/2.4.0",
       "distributed": true,
@@ -1506,6 +3573,9 @@
       "name": "napi",
       "version": "2.16.17",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/napi-rs/napi-rs",
       "source": "https://crates.io/crates/napi/2.16.17",
       "distributed": true,
@@ -1521,14 +3591,13 @@
       "name": "num-conv",
       "version": "0.1.0",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/jhpratt/num-conv",
       "source": "https://crates.io/crates/num-conv/0.1.0",
       "distributed": true,
       "licenseFiles": [
-        {
-          "name": "LICENSE-APACHE",
-          "sha256": "35660f0f1f5a46ac204ac2973e2f7f4e170fc10108aecdc816021d66754c0083"
-        },
         {
           "name": "LICENSE-Apache",
           "sha256": "35660f0f1f5a46ac204ac2973e2f7f4e170fc10108aecdc816021d66754c0083"
@@ -1544,6 +3613,9 @@
       "name": "once_cell",
       "version": "1.21.3",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/matklad/once_cell",
       "source": "https://crates.io/crates/once_cell/1.21.3",
       "distributed": true,
@@ -1563,6 +3635,9 @@
       "name": "percent-encoding",
       "version": "2.3.2",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/servo/rust-url/",
       "source": "https://crates.io/crates/percent-encoding/2.3.2",
       "distributed": true,
@@ -1582,6 +3657,9 @@
       "name": "pin-project-lite",
       "version": "0.2.16",
       "license": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/taiki-e/pin-project-lite",
       "source": "https://crates.io/crates/pin-project-lite/0.2.16",
       "distributed": true,
@@ -1601,6 +3679,9 @@
       "name": "pin-utils",
       "version": "0.1.0",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang-nursery/pin-utils",
       "source": "https://crates.io/crates/pin-utils/0.1.0",
       "distributed": true,
@@ -1620,6 +3701,9 @@
       "name": "potential_utf",
       "version": "0.1.4",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/potential_utf/0.1.4",
       "distributed": true,
@@ -1635,14 +3719,13 @@
       "name": "powerfmt",
       "version": "0.2.0",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/jhpratt/powerfmt",
       "source": "https://crates.io/crates/powerfmt/0.2.0",
       "distributed": true,
       "licenseFiles": [
-        {
-          "name": "LICENSE-APACHE",
-          "sha256": "4b05c4b43039d82b9ef8f3fb6cbf97f8312485eb9e6546a8171b37b73e048b08"
-        },
         {
           "name": "LICENSE-Apache",
           "sha256": "4b05c4b43039d82b9ef8f3fb6cbf97f8312485eb9e6546a8171b37b73e048b08"
@@ -1658,6 +3741,9 @@
       "name": "proc-macro2",
       "version": "1.0.103",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/dtolnay/proc-macro2",
       "source": "https://crates.io/crates/proc-macro2/1.0.103",
       "distributed": true,
@@ -1677,6 +3763,9 @@
       "name": "psl-types",
       "version": "2.0.11",
       "license": "MIT/Apache-2.0",
+      "selectedLicense": "Apache-2.0 AND MIT",
+      "obligations": "提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。",
+      "evidence": "Legacy slash metadata: conservatively retain both root licenses and satisfy both notice requirements.",
       "repository": "https://github.com/addr-rs/psl-types",
       "source": "https://crates.io/crates/psl-types/2.0.11",
       "distributed": true,
@@ -1696,6 +3785,9 @@
       "name": "publicsuffix",
       "version": "2.3.0",
       "license": "MIT/Apache-2.0",
+      "selectedLicense": "Apache-2.0 AND MIT",
+      "obligations": "提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。",
+      "evidence": "Legacy slash metadata: conservatively retain both root licenses; this crate does not bundle the external public suffix list.",
       "repository": "https://github.com/rushmorem/publicsuffix",
       "source": "https://crates.io/crates/publicsuffix/2.3.0",
       "distributed": true,
@@ -1715,6 +3807,9 @@
       "name": "quote",
       "version": "1.0.42",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/dtolnay/quote",
       "source": "https://crates.io/crates/quote/1.0.42",
       "distributed": true,
@@ -1734,6 +3829,9 @@
       "name": "regex-automata",
       "version": "0.4.13",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang/regex",
       "source": "https://crates.io/crates/regex-automata/0.4.13",
       "distributed": true,
@@ -1753,6 +3851,9 @@
       "name": "regex-syntax",
       "version": "0.8.8",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT AND Unicode-DFS-2016",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "MIT option for code; src/unicode_tables/LICENSE-UNICODE retained separately.",
       "repository": "https://github.com/rust-lang/regex",
       "source": "https://crates.io/crates/regex-syntax/0.8.8",
       "distributed": true,
@@ -1764,6 +3865,10 @@
         {
           "name": "LICENSE-MIT",
           "sha256": "14435fbcd271e2783f721b57b7bf4f6502c1379249a4300e0e5bb774686c2d90"
+        },
+        {
+          "name": "src/unicode_tables/LICENSE-UNICODE",
+          "sha256": "ea8df489e83b7674d5c9d50c320bec3b15d2e2eeb7a3a8879a666d91e5640c16"
         }
       ]
     },
@@ -1772,6 +3877,9 @@
       "name": "regex",
       "version": "1.12.2",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang/regex",
       "source": "https://crates.io/crates/regex/1.12.2",
       "distributed": true,
@@ -1791,6 +3899,9 @@
       "name": "reqwest",
       "version": "0.12.25",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/seanmonstar/reqwest",
       "source": "https://crates.io/crates/reqwest/0.12.25",
       "distributed": true,
@@ -1810,6 +3921,9 @@
       "name": "ring",
       "version": "0.17.14",
       "license": "Apache-2.0 AND ISC",
+      "selectedLicense": "Apache-2.0 AND ISC AND MIT",
+      "obligations": "提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。",
+      "evidence": "BoringSSL/fiat Apache and ISC source headers apply by file; MIT selected for nested once_cell; source copyright blocks retained.",
       "repository": "https://github.com/briansmith/ring",
       "source": "https://crates.io/crates/ring/0.17.14",
       "distributed": true,
@@ -1825,6 +3939,22 @@
         {
           "name": "LICENSE-other-bits",
           "sha256": "07414b6c33f30acfd5e0dda512e77ddbeb9f8a37290568fd056a01a0b50244c1"
+        },
+        {
+          "name": "src/polyfill/once_cell/LICENSE-APACHE",
+          "sha256": "954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76"
+        },
+        {
+          "name": "src/polyfill/once_cell/LICENSE-MIT",
+          "sha256": "740a360e4d9c99a258a4a870097a4641af896babd62ca7ab2a2c6de4d5ada151"
+        },
+        {
+          "name": "third_party/fiat/LICENSE",
+          "sha256": "f1954d2b51ee6ac825defdc6ee947930241269d40ad6082b9d9e758613ce7b61"
+        },
+        {
+          "name": "NOTICE-source-comments",
+          "sha256": "7350066365c8a9780984a7ef11c976b6e11cc5682f28bde0539e270d57164e49"
         }
       ]
     },
@@ -1833,6 +3963,9 @@
       "name": "rustls-pki-types",
       "version": "1.13.1",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rustls/pki-types",
       "source": "https://crates.io/crates/rustls-pki-types/1.13.1",
       "distributed": true,
@@ -1852,6 +3985,9 @@
       "name": "rustls-webpki",
       "version": "0.103.8",
       "license": "ISC",
+      "selectedLicense": "ISC",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/rustls/webpki",
       "source": "https://crates.io/crates/rustls-webpki/0.103.8",
       "distributed": true,
@@ -1867,6 +4003,9 @@
       "name": "rustls",
       "version": "0.23.35",
       "license": "Apache-2.0 OR ISC OR MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rustls/rustls",
       "source": "https://crates.io/crates/rustls/0.23.35",
       "distributed": true,
@@ -1890,6 +4029,9 @@
       "name": "ryu",
       "version": "1.0.20",
       "license": "Apache-2.0 OR BSL-1.0",
+      "selectedLicense": "Apache-2.0",
+      "obligations": "提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。",
+      "evidence": "Apache option selected; upstream license and notices retained.",
       "repository": "https://github.com/dtolnay/ryu",
       "source": "https://crates.io/crates/ryu/1.0.20",
       "distributed": true,
@@ -1909,6 +4051,9 @@
       "name": "semver",
       "version": "1.0.28",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/dtolnay/semver",
       "source": "https://crates.io/crates/semver/1.0.28",
       "distributed": true,
@@ -1928,6 +4073,9 @@
       "name": "serde",
       "version": "1.0.228",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/serde-rs/serde",
       "source": "https://crates.io/crates/serde/1.0.228",
       "distributed": true,
@@ -1947,6 +4095,9 @@
       "name": "serde_core",
       "version": "1.0.228",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/serde-rs/serde",
       "source": "https://crates.io/crates/serde_core/1.0.228",
       "distributed": true,
@@ -1966,6 +4117,9 @@
       "name": "serde_derive",
       "version": "1.0.228",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/serde-rs/serde",
       "source": "https://crates.io/crates/serde_derive/1.0.228",
       "distributed": true,
@@ -1985,6 +4139,9 @@
       "name": "serde_json",
       "version": "1.0.145",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/serde-rs/json",
       "source": "https://crates.io/crates/serde_json/1.0.145",
       "distributed": true,
@@ -2004,6 +4161,9 @@
       "name": "serde_urlencoded",
       "version": "0.7.1",
       "license": "MIT/Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/nox/serde_urlencoded",
       "source": "https://crates.io/crates/serde_urlencoded/0.7.1",
       "distributed": true,
@@ -2023,6 +4183,9 @@
       "name": "shlex",
       "version": "1.3.0",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/comex/rust-shlex",
       "source": "https://crates.io/crates/shlex/1.3.0",
       "distributed": true,
@@ -2042,6 +4205,9 @@
       "name": "simd-adler32",
       "version": "0.3.8",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/mcountryman/simd-adler32",
       "source": "https://crates.io/crates/simd-adler32/0.3.8",
       "distributed": true,
@@ -2057,6 +4223,9 @@
       "name": "slab",
       "version": "0.4.11",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/tokio-rs/slab",
       "source": "https://crates.io/crates/slab/0.4.11",
       "distributed": true,
@@ -2072,6 +4241,9 @@
       "name": "smallvec",
       "version": "1.15.1",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/servo/rust-smallvec",
       "source": "https://crates.io/crates/smallvec/1.15.1",
       "distributed": true,
@@ -2091,6 +4263,9 @@
       "name": "socket2",
       "version": "0.6.1",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rust-lang/socket2",
       "source": "https://crates.io/crates/socket2/0.6.1",
       "distributed": true,
@@ -2110,6 +4285,9 @@
       "name": "stable_deref_trait",
       "version": "1.2.1",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/storyyeller/stable_deref_trait",
       "source": "https://crates.io/crates/stable_deref_trait/1.2.1",
       "distributed": true,
@@ -2129,6 +4307,9 @@
       "name": "subtle",
       "version": "2.6.1",
       "license": "BSD-3-Clause",
+      "selectedLicense": "BSD-3-Clause",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/dalek-cryptography/subtle",
       "source": "https://crates.io/crates/subtle/2.6.1",
       "distributed": true,
@@ -2144,6 +4325,9 @@
       "name": "syn",
       "version": "2.0.111",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/dtolnay/syn",
       "source": "https://crates.io/crates/syn/2.0.111",
       "distributed": true,
@@ -2163,6 +4347,9 @@
       "name": "sync_wrapper",
       "version": "1.0.2",
       "license": "Apache-2.0",
+      "selectedLicense": "Apache-2.0",
+      "obligations": "提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/Actyx/sync_wrapper",
       "source": "https://crates.io/crates/sync_wrapper/1.0.2",
       "distributed": true,
@@ -2178,6 +4365,9 @@
       "name": "synstructure",
       "version": "0.13.2",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/mystor/synstructure",
       "source": "https://crates.io/crates/synstructure/0.13.2",
       "distributed": true,
@@ -2193,14 +4383,13 @@
       "name": "time-core",
       "version": "0.1.6",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/time-rs/time",
       "source": "https://crates.io/crates/time-core/0.1.6",
       "distributed": true,
       "licenseFiles": [
-        {
-          "name": "LICENSE-APACHE",
-          "sha256": "4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe"
-        },
         {
           "name": "LICENSE-Apache",
           "sha256": "4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe"
@@ -2216,14 +4405,13 @@
       "name": "time-macros",
       "version": "0.2.24",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/time-rs/time",
       "source": "https://crates.io/crates/time-macros/0.2.24",
       "distributed": true,
       "licenseFiles": [
-        {
-          "name": "LICENSE-APACHE",
-          "sha256": "4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe"
-        },
         {
           "name": "LICENSE-Apache",
           "sha256": "4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe"
@@ -2239,14 +4427,13 @@
       "name": "time",
       "version": "0.3.44",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/time-rs/time",
       "source": "https://crates.io/crates/time/0.3.44",
       "distributed": true,
       "licenseFiles": [
-        {
-          "name": "LICENSE-APACHE",
-          "sha256": "4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe"
-        },
         {
           "name": "LICENSE-Apache",
           "sha256": "4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe"
@@ -2262,6 +4449,9 @@
       "name": "tinystr",
       "version": "0.8.2",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/tinystr/0.8.2",
       "distributed": true,
@@ -2277,6 +4467,9 @@
       "name": "tokio-rustls",
       "version": "0.26.4",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/rustls/tokio-rustls",
       "source": "https://crates.io/crates/tokio-rustls/0.26.4",
       "distributed": true,
@@ -2296,6 +4489,9 @@
       "name": "tokio-util",
       "version": "0.7.17",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/tokio-rs/tokio",
       "source": "https://crates.io/crates/tokio-util/0.7.17",
       "distributed": true,
@@ -2311,6 +4507,9 @@
       "name": "tokio",
       "version": "1.48.0",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/tokio-rs/tokio",
       "source": "https://crates.io/crates/tokio/1.48.0",
       "distributed": true,
@@ -2326,6 +4525,9 @@
       "name": "tower-http",
       "version": "0.6.8",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/tower-rs/tower-http",
       "source": "https://crates.io/crates/tower-http/0.6.8",
       "distributed": true,
@@ -2341,6 +4543,9 @@
       "name": "tower-layer",
       "version": "0.3.3",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/tower-rs/tower",
       "source": "https://crates.io/crates/tower-layer/0.3.3",
       "distributed": true,
@@ -2356,6 +4561,9 @@
       "name": "tower-service",
       "version": "0.3.3",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/tower-rs/tower",
       "source": "https://crates.io/crates/tower-service/0.3.3",
       "distributed": true,
@@ -2371,6 +4579,9 @@
       "name": "tower",
       "version": "0.5.2",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/tower-rs/tower",
       "source": "https://crates.io/crates/tower/0.5.2",
       "distributed": true,
@@ -2386,6 +4597,9 @@
       "name": "tracing-core",
       "version": "0.1.35",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Root MIT plus separate src/spin/LICENSE (Mathijs van de Nes) retained.",
       "repository": "https://github.com/tokio-rs/tracing",
       "source": "https://crates.io/crates/tracing-core/0.1.35",
       "distributed": true,
@@ -2393,6 +4607,10 @@
         {
           "name": "LICENSE",
           "sha256": "c1e08ee9a7288bf649d6a78f6079006333df4212f5fcda85be1a0a451f71852d"
+        },
+        {
+          "name": "src/spin/LICENSE",
+          "sha256": "6ac8711fb340c62ce0a4ecd463342d3fa0e8e70de697c863a2e1c0c53006003c"
         }
       ]
     },
@@ -2401,6 +4619,9 @@
       "name": "tracing",
       "version": "0.1.43",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/tokio-rs/tracing",
       "source": "https://crates.io/crates/tracing/0.1.43",
       "distributed": true,
@@ -2416,6 +4637,9 @@
       "name": "try-lock",
       "version": "0.2.5",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/seanmonstar/try-lock",
       "source": "https://crates.io/crates/try-lock/0.2.5",
       "distributed": true,
@@ -2431,6 +4655,9 @@
       "name": "unicode-ident",
       "version": "1.0.22",
       "license": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "selectedLicense": "MIT AND Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "MIT option covers implementation; Unicode data terms remain mandatory.",
       "repository": "https://github.com/dtolnay/unicode-ident",
       "source": "https://crates.io/crates/unicode-ident/1.0.22",
       "distributed": true,
@@ -2454,6 +4681,9 @@
       "name": "unicode-segmentation",
       "version": "1.13.3",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/unicode-rs/unicode-segmentation",
       "source": "https://crates.io/crates/unicode-segmentation/1.13.3",
       "distributed": true,
@@ -2477,6 +4707,9 @@
       "name": "untrusted",
       "version": "0.9.0",
       "license": "ISC",
+      "selectedLicense": "ISC",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/briansmith/untrusted",
       "source": "https://crates.io/crates/untrusted/0.9.0",
       "distributed": true,
@@ -2492,6 +4725,9 @@
       "name": "url",
       "version": "2.5.7",
       "license": "MIT OR Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/servo/rust-url",
       "source": "https://crates.io/crates/url/2.5.7",
       "distributed": true,
@@ -2511,6 +4747,9 @@
       "name": "utf8_iter",
       "version": "1.0.4",
       "license": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/hsivonen/utf8_iter",
       "source": "https://crates.io/crates/utf8_iter/1.0.4",
       "distributed": true,
@@ -2534,6 +4773,9 @@
       "name": "version_check",
       "version": "0.9.5",
       "license": "MIT/Apache-2.0",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/SergioBenitez/version_check",
       "source": "https://crates.io/crates/version_check/0.9.5",
       "distributed": true,
@@ -2553,6 +4795,9 @@
       "name": "want",
       "version": "0.3.1",
       "license": "MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/seanmonstar/want",
       "source": "https://crates.io/crates/want/0.3.1",
       "distributed": true,
@@ -2568,6 +4813,9 @@
       "name": "webpki-roots",
       "version": "1.0.4",
       "license": "CDLA-Permissive-2.0",
+      "selectedLicense": "CDLA-Permissive-2.0",
+      "obligations": "提供数据许可证；不以本应用条款限制许可证授予的权利。",
+      "evidence": "Trust-anchor dataset license included; no additional restriction on results is imposed.",
       "repository": "https://github.com/rustls/webpki-roots",
       "source": "https://crates.io/crates/webpki-roots/1.0.4",
       "distributed": true,
@@ -2583,6 +4831,9 @@
       "name": "writeable",
       "version": "0.6.2",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/writeable/0.6.2",
       "distributed": true,
@@ -2598,6 +4849,9 @@
       "name": "yoke-derive",
       "version": "0.8.1",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/yoke-derive/0.8.1",
       "distributed": true,
@@ -2613,6 +4867,9 @@
       "name": "yoke",
       "version": "0.8.1",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/yoke/0.8.1",
       "distributed": true,
@@ -2628,6 +4885,9 @@
       "name": "zerofrom-derive",
       "version": "0.1.6",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/zerofrom-derive/0.1.6",
       "distributed": true,
@@ -2643,6 +4903,9 @@
       "name": "zerofrom",
       "version": "0.1.6",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/zerofrom/0.1.6",
       "distributed": true,
@@ -2658,6 +4921,9 @@
       "name": "zeroize",
       "version": "1.8.2",
       "license": "Apache-2.0 OR MIT",
+      "selectedLicense": "MIT",
+      "obligations": "保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。",
+      "evidence": "MIT option selected for the declared alternative; both original license texts remain available.",
       "repository": "https://github.com/RustCrypto/utils",
       "source": "https://crates.io/crates/zeroize/1.8.2",
       "distributed": true,
@@ -2677,6 +4943,9 @@
       "name": "zerotrie",
       "version": "0.2.3",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/zerotrie/0.2.3",
       "distributed": true,
@@ -2692,6 +4961,9 @@
       "name": "zerovec-derive",
       "version": "0.11.2",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/zerovec-derive/0.11.2",
       "distributed": true,
@@ -2707,6 +4979,9 @@
       "name": "zerovec",
       "version": "0.11.5",
       "license": "Unicode-3.0",
+      "selectedLicense": "Unicode-3.0",
+      "obligations": "保留代码许可证及 Unicode 数据版权、许可和免责声明。",
+      "evidence": "Declared terms retained; original license and notice texts delivered.",
       "repository": "https://github.com/unicode-org/icu4x",
       "source": "https://crates.io/crates/zerovec/0.11.5",
       "distributed": true,

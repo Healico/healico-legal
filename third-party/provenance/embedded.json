@@ -1,0 +1,2601 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-09-17",
+  "scope": "Installed sources and bundled notices; not a final release acceptance. Snapshot versions identify adapted code, not guessed original npm versions.",
+  "inputs": [
+    {
+      "path": "native/healico-net/Cargo.lock",
+      "sha256": "1fa04ea977a1f5413bd2beb4de1fe76a9fa8a4839c6498d5cce1b9fa506c9a79"
+    },
+    {
+      "path": "oh-package-lock.json5",
+      "sha256": "c8696ee58ad8ec1ad8a8a7434f74e78106827d4a130d50666d397f6e08ac3a5c"
+    },
+    {
+      "path": "entry/oh-package-lock.json5",
+      "sha256": "f0b8a4a45690db275caebdcb34df168ff5cc877c2087a65672812f121ef9a2f9"
+    },
+    {
+      "path": "entry/oh_modules/@ohos/jszip/oh-package.json5",
+      "sha256": "200e92c0dd96dbdf02b1024520735b40dec62b2b0655aafe8860135d5d79a0b6"
+    },
+    {
+      "path": "entry/oh_modules/@ohos/jszip/README.OpenSource",
+      "sha256": "70c155cac89d2bec8d217311b298ae1f3daba69b6a978fa9af97f7feaca3fa96"
+    },
+    {
+      "path": "entry/oh_modules/@ohos/jszip/LICENSE",
+      "sha256": "4da736903280595ec63e9f6dbb4eefe969cab88431b23e028d0204e7c1d51f7a"
+    },
+    {
+      "path": "entry/oh_modules/@ohos/jszip/NOTICE",
+      "sha256": "a81a413bfc176ca7d3a62b087b1b24fddd4febe81080a9f4e411a3b07f36870e"
+    },
+    {
+      "path": "entry/oh_modules/@ohos/jszip/rollup.config.js",
+      "sha256": "c207e54cbb479fe25311c257af08612c29d964c77cb6bd13abee54eff4b14138"
+    },
+    {
+      "path": "oh_modules/.ohpm/@ohos+node-polyfill@1.0.1/oh_modules/@ohos/node-polyfill/oh-package.json5",
+      "sha256": "df1bfbd2f2f83aa099e887d478160c9c24a9b1f1e5b1a6c0628a12314222ab7c"
+    },
+    {
+      "path": "oh_modules/.ohpm/@ohos+node-polyfill@1.0.1/oh_modules/@ohos/node-polyfill/README.OpenSource",
+      "sha256": "03c4cf2ff4e1c6dec64b7c7687521040639e99315c8020d6bef97e083018628e"
+    },
+    {
+      "path": "oh_modules/.ohpm/@ohos+node-polyfill@1.0.1/oh_modules/@ohos/node-polyfill/LICENSE",
+      "sha256": "c5905f75f6cd50333fd50d2c552c245a5d6292342583d09ebdfbda2756dec924"
+    },
+    {
+      "path": "oh_modules/.ohpm/@ohos+node-polyfill@1.0.1/oh_modules/@ohos/node-polyfill/NOTICE",
+      "sha256": "5a9039cb1fdc52f0245212d27c85d6b41ddd13200277c771e09f159316420b1a"
+    },
+    {
+      "path": "oh_modules/.ohpm/@ohos+node-polyfill@1.0.1/oh_modules/@ohos/node-polyfill/rollup.config.js",
+      "sha256": "8499b505cace1eb71e2ebe67ff78642da20fa9c5402396c9f502d046abb63f73"
+    },
+    {
+      "path": "third-party/licenses/ring-0.17.14/NOTICE-source-comments",
+      "sha256": "82246d411e6404d9e5d473bf6e310210e3884e552741637eb4166425deb1ba91"
+    },
+    {
+      "path": "third-party/licenses/brotli-8.0.2/NOTICE-source-comments",
+      "sha256": "e51276e79329404eb8cb2cce1d3c6c28260d39c8ab0664e25e3af8926778a8dc"
+    },
+    {
+      "path": "third-party/licenses/brotli-decompressor-5.0.0/NOTICE-source-comments",
+      "sha256": "5a75ed3ee6b866e671967a53d9997b59183dbd9e707490482b1417d7533bb20a"
+    },
+    {
+      "path": "third-party/provenance/jszip-rebuild/package-lock.json",
+      "sha256": "80d5bd5059f1b749292a049d7bfb58188a22ec12958856defad88fcca705aebf"
+    },
+    {
+      "path": "third-party/provenance/jszip-rebuild/package.json",
+      "sha256": "2dd35fcf87020bcf47cb570d60cd334e3048cb98c15931b608162616e16a73d4"
+    },
+    {
+      "path": "third-party/provenance/jszip-rebuild/result.json",
+      "sha256": "011900d5f7a68ea8ed413337e4c5451efe1c4d553c4b186fa3c03c114a3b8f30"
+    },
+    {
+      "path": "third-party/provenance/jszip-rebuild/rollup.config.js",
+      "sha256": "c207e54cbb479fe25311c257af08612c29d964c77cb6bd13abee54eff4b14138"
+    },
+    {
+      "path": "third-party/provenance/jszip-sjcl-ohos.patch",
+      "sha256": "c95363ba6520cc8a0a46a8c738315c12d4ec8cb6c8d7e618e65c4c8df20cb2ec"
+    },
+    {
+      "path": "third-party/provenance/rust-licenses.json",
+      "sha256": "e7de35ecfbdcabe22eccf068ffa97d943d365317ba5ac0a79f94d8531bca100f"
+    }
+  ],
+  "snapshots": [
+    {
+      "id": "jszip",
+      "name": "@ohos/jszip",
+      "version": "1.0.1",
+      "installDir": "entry/oh_modules/@ohos/jszip",
+      "repository": "https://gitcode.com/openharmony-tpc/openharmony_tpc_samples",
+      "commit": "ebece08923c9400d104a9b2e1f4a42e0193c657f",
+      "sourceDir": "ohos-jszip/library",
+      "scope": [
+        "src/main/core",
+        "src/main/dist"
+      ],
+      "files": [
+        {
+          "path": "src/main/core/jszip-master/lib/aes.js",
+          "sha256": "ef9aacca1752e247fb99f89d40967764f3a38235bee13b209d7bd65906ebab07",
+          "lfSha256": "d43c22ceeab4fb8cf4e22c20b1a07d02a4e0faf9ef9adb63cdefe39db416bdd3"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/base64.js",
+          "sha256": "3670ae5cd80c6f80d25f2cd2778723d884a8cbaadf5b0b35c15ea2a5515fc5e4",
+          "lfSha256": "5df6b73d9ed6c317c67835f3427d860c16fd93acf503eb471fd897167e747fdb"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/compressedObject.js",
+          "sha256": "590645e4bf7b9d9ae5ae320fcd34c482d833fd90854fb0e25ffbc99e96502ff3",
+          "lfSha256": "ed70f8540af12f36a4ab076089676dcadfd4ceff79352a4391103836147af97f"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/compressions.js",
+          "sha256": "4056a3aff457ad168aca0f44f3f380d59369cabefe5bc80217d2808830fde37f",
+          "lfSha256": "50e650a7eaf2a54ede299c12dfba30a362c7644e7c00df0d16ab3cf228bb77b0"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/crc32.js",
+          "sha256": "d737bc6d1a895ccbc01ec115a535ffd4303ed493bda18342596b24f0008db854",
+          "lfSha256": "63750f4131b1eabb545a4718c863af860184baf033c76851be282f1c7f5dcba9"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/defaults.js",
+          "sha256": "14f071611387df37dacad3207135265252fae688b8accbdbaa47ad12a3495336",
+          "lfSha256": "585eeeb04375fe7bd27e846d8941d26fd435efb36a87fba9ff137fd8b97880a6"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/external.js",
+          "sha256": "d868285f2f415188d81c0b7d421f1ae0f547bd9c9f9b97d26705b6601d7d5859",
+          "lfSha256": "982fed36a600668223d1d0ce8c446f87ccd1f82634df18f206b4a2f4096e31c7"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/flate.js",
+          "sha256": "f761ad6b0198bb3452242585f960a2cf253e1aa943b187ec9280e803e9704dc7",
+          "lfSha256": "57f1452680cf7af6a9659de398d847dd1e870ea3a601662c498b073c640eb547"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/generate/ZipFileWorker.js",
+          "sha256": "e6779e896077b07f624f94289e846aea3b3b94faf807cca92176a242545dd407",
+          "lfSha256": "7d6d910790ccf994f614cc4be6e4025b748205fc885274354178b91946e02d85"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/generate/index.js",
+          "sha256": "f14eb92f95f6b63a70f448342a70edda4c4ed4162995f53875f375b2a11df99d",
+          "lfSha256": "84d9fb21207c4281d3809c7021b7eaaf3075b9659d64348bbc3dae3858476107"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/index.js",
+          "sha256": "951dd52ec7ac245c11d1691b561d668a3866c879117f167ac9faa9358f690ed8",
+          "lfSha256": "0fdb844fcdd6fd8ce8ced5e20b37cdabb629b4c155a1d3fb5df29c69eeb4f228"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/license_header.js",
+          "sha256": "cc9f11dc7754ee94d1bcd3a494e6e82d51e8e04724a9e4687013ab312f402dbe",
+          "lfSha256": "27873abeec2df3693480a8d1b8fe17dd61bee843d1b39c1c9cfab57ffe93099e"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/load.js",
+          "sha256": "e340b374977d1cb61cb62a91f0ec134f984f9bc5a20b364a5445b82fec4d0621",
+          "lfSha256": "492fa1b58340d06d79efc7b4df1b1d2440e8e2ab9807b145c560ddae36b42037"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/nodejs/NodejsStreamInputAdapter.js",
+          "sha256": "21c8e6422d4b0ca8987b56cb53d5ff6423402656d4e9fac30e670fb0bc1faadd",
+          "lfSha256": "dcf35c72168e825d2e634cfa13a289ba8c7a76da0584a39b785611d0d736ddd9"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/nodejs/NodejsStreamOutputAdapter.js",
+          "sha256": "2665e27539b090734515a80cab51d669e7c705aa39d7d6f2024b93c19c6df518",
+          "lfSha256": "cc88c3a8e6aa74262bd1ecc452ee8f78c48a16a0b6095d2f9df7500320957799"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/nodejsUtils.js",
+          "sha256": "da7d8fc5cbb5178faee4f369641bb0628dab11b7da093cf98ed89bd13382a6bb",
+          "lfSha256": "763d0af1cde619da6d9cfbe1ee82e2e32d86349d8abe32613c7481e8143740e1"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/object.js",
+          "sha256": "75858f43ada34574407f6c7db5c7af063b93be307aa671f148f1688894d0ad72",
+          "lfSha256": "7cacf606d9eadc6e6fae959e56460f85f499865194a201b0e84d988cf4b9eee9"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/readable-stream-browser.js",
+          "sha256": "0e24b9e0202603f15439fc5b6759808cf22467b924a5b59b5d2c41d52bbd87bc",
+          "lfSha256": "ed51f0a96964f61d5700b6c681b055dd07e27140f1b719d2fe1c64fd14b506e0"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/reader/ArrayReader.js",
+          "sha256": "6992259274133f71d629100b95caa5409e18e53bc3d778ffd7a844bb681494a5",
+          "lfSha256": "bb711509472587e8c88e8e311d5c86bde76528286793afbc6573c1ddd9674814"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/reader/DataReader.js",
+          "sha256": "a4b0d1478b64412eb178f6530dc640d29d9da7f5dc1393697a1830869f392913",
+          "lfSha256": "e8e0b4728ddc6fc3dbe5b449d87b884c4b3be99862bd1edf6a700ecfb3b3b247"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/reader/NodeBufferReader.js",
+          "sha256": "caf4358e32055dc297500daa4c051ea7fba25395798a684802cb595e5bd850ee",
+          "lfSha256": "1703f32f1cba687ac630690901848ab07a1b6a06b0e8fbe88a8ae6f5a67da84d"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/reader/StringReader.js",
+          "sha256": "594fa82fe6ff412cddf43240a60121c8a5a1075e2ec248dafb261d01123e07fd",
+          "lfSha256": "477a2e887eee11a56a50726152327b2a4d75d778f96463933197706e1ce90d59"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/reader/Uint8ArrayReader.js",
+          "sha256": "7d4a27e1e6ecf47e712730ac475d1e0cc5f9de160a432778ab4355349717a641",
+          "lfSha256": "198816389bc1c62b3ca7c5c6f5fdff1b076f83e5bd74b37ee5b504e6d7e155d9"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/reader/readerFor.js",
+          "sha256": "0a101f8abf03dd7cc3664341c9e9c786a3ead6c357e51feb945a097534c35248",
+          "lfSha256": "1eef5a73bba844922812893f9a7e01cfdb54072aae42f7ecf67c41dc925ea9cf"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/signature.js",
+          "sha256": "89ca77351db5cc9c86833fab33d311bc72d0cbd96ff5cc7561623d274d855273",
+          "lfSha256": "18e10348490604003a2480aea813a6e90eaaac26c050d559c281618b9aaded56"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/sjcl.js",
+          "sha256": "aeaad4c1f3e708637ab6d59db995f17c492d20875d3f8ab4301345d293d88a59",
+          "lfSha256": "01630bf9436d069f846083791bdfeade9d34eda7074570f0f25368f85743f447"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/stream/ConvertWorker.js",
+          "sha256": "ac507009060559213b291c4be650dc8c2492b52d968ced245ef4ce27c8efb6a5",
+          "lfSha256": "ae1dc8573bab7e5be4a4cb9958201e3e763cb2f2392a04d9a8dc440d683042f0"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/stream/Crc32Probe.js",
+          "sha256": "7b5c3aba4dec8fd385addb42533ac4d1d7cd164db1464e3d454bdaf47ea52ded",
+          "lfSha256": "8e186e5e0ab42fff35907666a90266420751613c28266e5809b7bfa2d55a3a9a"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/stream/DataLengthProbe.js",
+          "sha256": "6912efd209234f8b27381a6c9eb3de3fef4ed0014536ada334b7b6a447386595",
+          "lfSha256": "638e65360b0fbe1f4e0b2628fd3a1782a4df59c477d454007fa52b1a2587b93f"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/stream/DataWorker.js",
+          "sha256": "0bb50f23740755a20d7c4dd53928e2bfe3075436be8bcd610ed832f8c42d21ba",
+          "lfSha256": "8203f14e856d33aa9afc272a576f169b29980e8da0ee0f633e6e5f23cfa48a3e"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/stream/GenericWorker.js",
+          "sha256": "14008603c5dd8b7c9b0f5781a58c61de211ba399d83b9b3caddad36ac313e9f3",
+          "lfSha256": "ae76cecd1d728ca41dd6ae0665b258f442da64d9b25ff94785dcb80a501b8be1"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/stream/StreamHelper.js",
+          "sha256": "3e1ffc9ac76d229832326b3e232a91d2a9a522eb2c26e36b43c7264728de51d1",
+          "lfSha256": "aebc6518b4871d106e799f90139d55620d02e9413ef2a7b0f953a9cea7bda124"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/support.js",
+          "sha256": "e55cfd31d082aa9ec6d3ea773001deb66b16d34861141be63f91a82961287b5f",
+          "lfSha256": "7629a6ef610030595e4c2211249f487e44cfbe4b8299105d64b5491d87fd3a51"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/utf8.js",
+          "sha256": "25702122db8d544baf8d3836401c0a424bd269bdcd39dc71663f4e4ba826a467",
+          "lfSha256": "5bdfe3666fe57640bc791b4d6d2fc00853f4d954596260138bf488054fa9df5a"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/utils.js",
+          "sha256": "37d70e99693e30101b44c04190449191c3070ac73a027fa6abe996e8d548b56a",
+          "lfSha256": "c77e896a1e47b44939e9dcdc2e05275fd83c1d69ee252089f9a1f44ba8c5cd1d"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/zipEntries.js",
+          "sha256": "fdb1a2ef629d0f274fe584c4872fc84aec4ca113c2535008581e80d57da68ec0",
+          "lfSha256": "73ea2c105d67715e2f44d6cc0093dcbfc0cba33582b887364b7e7649f9a5b75c"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/zipEntry.js",
+          "sha256": "a16c842922a8e2cebc4c145c0aed9e83cb070dbed61538fbc4edf4771f2368c4",
+          "lfSha256": "71efbac87088a50e444cff322c650923dadd8a0a405eb7352e445046238ccc09"
+        },
+        {
+          "path": "src/main/core/jszip-master/lib/zipObject.js",
+          "sha256": "bd52eabc9904591f32d279c70661caf98954e80fec824e6539faa156c8969801",
+          "lfSha256": "7069d286887e59e32961fd2cf23a7212f239d94a537575be678add34ca25bf57"
+        },
+        {
+          "path": "src/main/dist/dist.js",
+          "sha256": "42a29684b2ea8d7cdb0ea8b09f000390cf5455ae72a029a73d9aca132d36c703",
+          "lfSha256": "80e8e6a0b94d931ea1aaa7c3176625453a5d6d0b03188eae99554dda5e700948"
+        }
+      ]
+    },
+    {
+      "id": "node-polyfill",
+      "name": "@ohos/node-polyfill",
+      "version": "1.0.1",
+      "installDir": "oh_modules/.ohpm/@ohos+node-polyfill@1.0.1/oh_modules/@ohos/node-polyfill",
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill",
+      "commit": "cfaeb3882330768750c71b035d5bc9349b87bf45",
+      "sourceDir": "library",
+      "scope": [
+        "src/main/core",
+        "src/main/dist"
+      ],
+      "files": [
+        {
+          "path": "src/main/core/AggregateError.js",
+          "sha256": "a4f08507ecadec2d8ff9210c3273584a98c5f2d099c303ed9949142b4134e787",
+          "lfSha256": "e70a1855283fac52359cdf1938712b1ef6651b01ee9de2ff838018e6e91cb86b"
+        },
+        {
+          "path": "src/main/core/buffer/index.js",
+          "sha256": "1c5c35583f2d109eea6b70defe91623c1fee7b300603585a69e796913f85e8f6",
+          "lfSha256": "59100342563377c77f8b72c27f961e39f02841c4b2bf54ca2cbb2107f48d19f4"
+        },
+        {
+          "path": "src/main/core/buffer/plugins/base64-js.js",
+          "sha256": "23c4e8b5e154b0d682a0c5ce18af9b68738819e555ee4cf0c7cad86d49414590",
+          "lfSha256": "2997451ad02599b21c36ee4c9bcb822cac5e312326062fc5469d43b6d82a907d"
+        },
+        {
+          "path": "src/main/core/buffer/plugins/ieee754.js",
+          "sha256": "ee5ceb46b9ac214af1dd741342e7cd1fe0a932fc5c606ca0e9b2ed007a822f12",
+          "lfSha256": "e3b6a409fa2d07a011d2003bc4c0ad48e4150bf61dc316d4a34c3768020c9f8e"
+        },
+        {
+          "path": "src/main/core/constants.js",
+          "sha256": "6c3e7bf689936784a92ea28fa8e6c0ad735e13847d10bb83a2959b0c65ab8594",
+          "lfSha256": "2ddd0b0eda179c953f10f2fffba7859a56d03b08e53198817344dac60ccbc83c"
+        },
+        {
+          "path": "src/main/core/crypto/getRandomValues.js",
+          "sha256": "44a0f3159012769762b3feca2983416deb97606c406f73741da2a6805e662e99",
+          "lfSha256": "5592c106b4e6e1e5971736615f282782986cdd31e329383639cfe39dc38a5c97"
+        },
+        {
+          "path": "src/main/core/crypto/index.js",
+          "sha256": "50f04a8950ca4af694f33141d36752a562a961465e0778535021ac87cc8ede7f",
+          "lfSha256": "03f9faad8416746641fcef6d53fb997071124d7ef3a01f6930aa35ce8df64d78"
+        },
+        {
+          "path": "src/main/core/events/index.js",
+          "sha256": "6ca14fe23bdec9a9be1b74a273b7b8d56cb2929a3b74b340d17aaf26fd9a3523",
+          "lfSha256": "c906b54c4d822166c8b41d260b8ce98d5a1d1f77bb6e43bd58db9d9b22479bc2"
+        },
+        {
+          "path": "src/main/core/global/index.js",
+          "sha256": "7f0ca45ecf58fbab975d339d7b62c5cc7b58928d19708afac07312a9ab841d49",
+          "lfSha256": "25e984601ed4a751c41a8a400a5da19b50a19c6b8e19b6f114638ac3d9648115"
+        },
+        {
+          "path": "src/main/core/index.js",
+          "sha256": "26c822adf6f29c78ebf24134c1eb73b3a4587a1a6b840723a78c95a369a826c6",
+          "lfSha256": "f9c9093c8365b71778ec03ab4338fddeee277ffa0ee89e588e2cce77c63dfde7"
+        },
+        {
+          "path": "src/main/core/net/index.js",
+          "sha256": "a4bc00d9ac6308a68b1f5016909bcfa1ca30c02fe549ea581340611ab16f55d0",
+          "lfSha256": "12226d7617b4a3206b3a7371e3c935c15cbab909f746300ba5da8341d8e3f5f7"
+        },
+        {
+          "path": "src/main/core/path/index.js",
+          "sha256": "90bbfe1a7d492686662a71d618558ae49612735f3dcfbe648d529f7325c50e3d",
+          "lfSha256": "362c766f4dde13b2c997252a9f5947ec0b424a6869648afca2d71da5889821ef"
+        },
+        {
+          "path": "src/main/core/primordials.js",
+          "sha256": "1364cb875a56faf01948e9822deaac7ca7f411eb630c487ca975986840ecce71",
+          "lfSha256": "1d5abcbdf80d0786993edd4458c443ca8f352584b22f722335dfff2eddad5346"
+        },
+        {
+          "path": "src/main/core/process/index.js",
+          "sha256": "d523f35be9200523f5fc4428f6a2a03120caf84bedab1155f9281d30c0571fa5",
+          "lfSha256": "d2ecf4703e60e6139b6aacd9e3a53bebfb16b66aad4e228077bc8c893623be25"
+        },
+        {
+          "path": "src/main/core/querystring/index.js",
+          "sha256": "4ba9792774f3405a2dc792984aba3ff5874c99d34d46dafe071d71a8cf78187a",
+          "lfSha256": "c9a138119a93a318b68dd0c8090d69dc8fc9275557a474961da0dc132529b57b"
+        },
+        {
+          "path": "src/main/core/querystring/internal/querystring.js",
+          "sha256": "3a0c41373e60b8783a9d4a4c623e47f336043f6c5e567f32606b204d22f39669",
+          "lfSha256": "b9eb0838e5f6f4b1c268379a3dbc9117edd9903fdeaadad988dea1da62b762c1"
+        },
+        {
+          "path": "src/main/core/stream/lib/_stream_duplex.js",
+          "sha256": "774223190060be99c6f952b948582262001f978ec6e322e1f3dd60ecf15e7180",
+          "lfSha256": "ea2015c796298ace31004ecd8fb3a85b2f27bc2eb3a5df253ac06bebd3525276"
+        },
+        {
+          "path": "src/main/core/stream/lib/_stream_passthrough.js",
+          "sha256": "9a109618c71f21c1a078020336e7d8b3cd63547cf3d01a11ea4c2f0a01c89e19",
+          "lfSha256": "2cb95d1bb8b7dcd690e1a94eeb03fd39556c1490f89777735cec22aa03e0b621"
+        },
+        {
+          "path": "src/main/core/stream/lib/_stream_readable.js",
+          "sha256": "49dff06083019e75bd6e804af83e612cf3a258cab483d20d8aaebf1af795f7a3",
+          "lfSha256": "5b57200fc8a1c8aae53ce7781fc72ed06a9b57add6cd9ecf584a14b62adec538"
+        },
+        {
+          "path": "src/main/core/stream/lib/_stream_transform.js",
+          "sha256": "845b24258e74c5a5da679368eb362ec4c9cacfc55f10ccd8becef365489bbd53",
+          "lfSha256": "35fb688ea4a3c21ae3dff35f1871b62fece41f482bf03d39b83b5b85d84ad151"
+        },
+        {
+          "path": "src/main/core/stream/lib/_stream_writable.js",
+          "sha256": "b5af769ac564008cc0534dbc725ec8e4ebd12f32dae60a8f629c77691631ffd2",
+          "lfSha256": "b2d9a401fd37259dd4c6e6849c334edd1700d66328cfc71986358d20e7ffd223"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/add-abort-signal.js",
+          "sha256": "0b72603a475f3a5ace465b435ce236ebf4c5549c1b2745ee25ba06c4d619a08e",
+          "lfSha256": "1aebc075cd7b7aff783a4faf1cb6702f55d5ad684fdea627f92fdd5faaeb4ce3"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/buffer_list.js",
+          "sha256": "cdc7a61e34d035ab6383d4eae171cb6e7f22477c26f456327bc40723fda0ee10",
+          "lfSha256": "ea5f9af22f672500168feadd3ec24cfd5c605180455a69cc5dcecf93936a67f9"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/compose.js",
+          "sha256": "c2f7fb4f5ecb4c6cb7666d796fe7d403cc9bb4c7a245191b86b952024826d564",
+          "lfSha256": "c2999f0647cfda371a93fb81228318435df0d156388f4eb72f057bf5adf7e7a9"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/destroy.js",
+          "sha256": "051a7e7d4d7ff5da3bea88224241d6d63d03813ff736cb324095ff3468be2975",
+          "lfSha256": "b5a6fa87bd4683b6895966d121f5630dbcffbba9311fe3fa589f74fe6503eee6"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/duplex.js",
+          "sha256": "ae9faa48439f0e8244c36f3239d71b49da542652febdeea6543e9fd6993b0deb",
+          "lfSha256": "70aecf49ad3730c9eb2d5b11ca4680e8d6249efd6bd7cffbfd774a177afecc33"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/duplexify.js",
+          "sha256": "31eeb80d33cbad27ad528fa7abf20c87b6a890e42402c8c1b7360ff850e751b9",
+          "lfSha256": "a198421d64dcde2a02d4eb786ea1f19979c21e3e23576e92bc36a1f0a6770a6d"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/end-of-stream.js",
+          "sha256": "300e07bc03dd7c10fc8964f5830442c55d2808ae7378ce613e7755737d20e81a",
+          "lfSha256": "77bcc0d559d47501a435f555c88892791aedc2879fb4e223e60a21f643a13e90"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/from.js",
+          "sha256": "738ce93f25e7bd909ce69e280fdc5cb8771e23b82962ad61e44a1c0d6973163a",
+          "lfSha256": "6b874eb9b92ced47858e2cccbf178303cc4aab6591515936f9d3c6d581ec7fba"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/lazy_transform.js",
+          "sha256": "08e2149098750e434d71174d26e85bb181a66bdc1fb2f6cb4bfc85dde8bf9127",
+          "lfSha256": "126a47fb2e6d4051e75b92a448f37c6eabf3366e863acd692a696572697d535f"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/legacy.js",
+          "sha256": "e932b59c5f4b7d87b562711332d12b048c1296b14a9e5746097af4a289d382ea",
+          "lfSha256": "89141f146f41af3d8aa6e7ee888c95aa72751f42cdf77a620fad5c4e6809e37d"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/operators.js",
+          "sha256": "6ec989d9245b460cd253674a67dc6cd5d6e8ea2da22d4a83244a61f142f4c657",
+          "lfSha256": "29edd919308de3a613b0a8454adfaba2f3a5977662accc4c07e1f69121b4a38a"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/passthrough.js",
+          "sha256": "79ecaa698bfc4d992431a8117c81fc24b3cf735a375e8a72ad1ba814e14a85e8",
+          "lfSha256": "1de76dae817e0a35ebffa33c052bf9ab91ace09227b25f2f65f2bee6ea8d3d77"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/pipeline.js",
+          "sha256": "882e90d90823f8a79709983216b2b6d202596d76fd8df9f8141dec6aeeec6ac5",
+          "lfSha256": "b6a8b93156264311fd47425f2256b97826b31683782a921eee5442bc607c44ee"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/readable.js",
+          "sha256": "3139de2cd3dbb515d3f2ceab64196b2153d3d3e0a087d06fc5a4b2aac70eb329",
+          "lfSha256": "d535dfaa6af43290bb53db3c4cdc073a6d4276e773a826e9445be714fc93a479"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/state.js",
+          "sha256": "bdffd8399f5480ccbab3a2ff9ce7c9c1742bf792b4b045cad0f3ef09ff0c9769",
+          "lfSha256": "84fb09c330e91db5e4cf22371bfde75302c3d3648fa838550a1a4194431a6fad"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/transform.js",
+          "sha256": "c85e7e3b88438888ea9b168cd32cb850b94548baf5463e6a7ef9e58d56a2a50a",
+          "lfSha256": "33ec8d84af1686d35798e8b88f0174a128f13d7803913c72a18f7423954217e4"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/utils.js",
+          "sha256": "e9194a7ae314cb251c30d37969807455c716d94dc63cbe11615503b349fe2cab",
+          "lfSha256": "9f2129cf50330338f16407c5152abe733cdc96cf3c4f95d7dd9ddeaee57ad375"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/streams/writable.js",
+          "sha256": "f820e2fb44f5310e0a017a3f3bf9dbc95d6e17d081fe712c862fc1a0b290c521",
+          "lfSha256": "59a47ca0c780374693cdc2942f6e233cadd473cdc44d6a33c3edf3700990711e"
+        },
+        {
+          "path": "src/main/core/stream/lib/internal/validators.js",
+          "sha256": "17799bb8b080c2619b67479b8b5ddffe88711e9a6fad46ce485c92b50db4667a",
+          "lfSha256": "147d370b2a069fb73899c6eaac3eef486f8893edc61c1cd2962a133bc3d25ebd"
+        },
+        {
+          "path": "src/main/core/stream/lib/ours/browser.js",
+          "sha256": "8220c3de26f5a5285f592818ff38f85600cbf8eec004e32760949c54c3549c15",
+          "lfSha256": "4068c4a9c2501dc35bcc64f69dd6b661fe31a7b5dc411185b95ec51f9bdf0f62"
+        },
+        {
+          "path": "src/main/core/stream/lib/ours/errors.js",
+          "sha256": "baa4710ff637fea59715b72c9a9d62484de2f45126de03f20faf6a967e038ead",
+          "lfSha256": "52bb6a6e570c921524662b07014b6686ba8cf82f9c8d24a4d879c0c81190d311"
+        },
+        {
+          "path": "src/main/core/stream/lib/ours/index.js",
+          "sha256": "8f44a723d87db0ba05e0dea1b51e10184ea100cf80bba4331f1383bfd3f6551f",
+          "lfSha256": "2f778fdd3c084aaa10144885af736dec74fdd643f881530f8f6ecb168487c03a"
+        },
+        {
+          "path": "src/main/core/stream/lib/ours/primordials.js",
+          "sha256": "ccd5f2d0d910c662d1a09455ab20e1c88519e7c7e50d81b07e9b76920051a74e",
+          "lfSha256": "d51b32e349897736b6cad0f214ab2246392fb4f86e301e83d38a6161695e8a97"
+        },
+        {
+          "path": "src/main/core/stream/lib/ours/util.js",
+          "sha256": "ebe564b904bdbd1f9ad86d37e35b08db87a0f2aa162fcd7d30ce607274e5bf1e",
+          "lfSha256": "fbfbf1bbda61323d154a1b45ff3b18de701c60012f6f9c1a91eaa94b51b723ce"
+        },
+        {
+          "path": "src/main/core/stream/lib/stream/promises.js",
+          "sha256": "93547a55b1008621900b0dc3691fbacd874c6b0c49793d8316783762927e5726",
+          "lfSha256": "0db7efc7df8d63df4f018fd5f59c4cd4633870f00d945df23ffe13967def463d"
+        },
+        {
+          "path": "src/main/core/stream/lib/stream.js",
+          "sha256": "e38d9b833aad41159df987cc3d97c2a0548327fade62db3a6a41329da403bf06",
+          "lfSha256": "bbfa24aa23d86bf2ad3846a5286d3692d5a3bc5cfde0806d56de288f10a74900"
+        },
+        {
+          "path": "src/main/core/stream/plugins/abort-controller.js",
+          "sha256": "85013a8d9c29d0a90e66ee91b6acb2d4c46ffc2fb07a01a0988084c4c7e45428",
+          "lfSha256": "e8432cc68382c5390027a6a466e83d5517c9c282f62dfc7c312053709d1716c5"
+        },
+        {
+          "path": "src/main/core/stream/plugins/event-target-shim.js",
+          "sha256": "a7da9f9a060af5c1387aaa7cc75288ace6a277fc4f9197fead64f951e978038d",
+          "lfSha256": "08cd39949bc42fe42647b75422a4f1d038371f8d615b259ed3c833335d8942c5"
+        },
+        {
+          "path": "src/main/core/stream/src/browser.js",
+          "sha256": "04bb38c72458cc80c7ce2c375f53c1f9d69dbb41211108a3577b5620757b0baf",
+          "lfSha256": "324e5e3ecb9580a3e58951162784b10e2490728a327282d0598218c56bcedf7e"
+        },
+        {
+          "path": "src/main/core/stream/src/errors.js",
+          "sha256": "f9838b7e3d6a52fc165ec6204eb2f07d51639b2c01752c5c42fbd6e3ee0a55f6",
+          "lfSha256": "35f7141857d494edf43cdd44071389ccc7f157304a6e056d7d12fe75ad5e7858"
+        },
+        {
+          "path": "src/main/core/stream/src/index.js",
+          "sha256": "7177a5ba8116864a76eaab8eb67a1675c58b24dc6975a2da080145806f1ecac1",
+          "lfSha256": "f0eddbcd6b0cb99cfc5a023335d83f8d9077f96c41ccbb73892accaef1cf6916"
+        },
+        {
+          "path": "src/main/core/stream/src/primordials.js",
+          "sha256": "a91bb88642eacf8595333fddff5cabf03560c953dbdc447328c0d2d1247d485a",
+          "lfSha256": "4b29b65c397ee88a8e0fc07c2270902bdb03f3e68e79f231332ff7893485399b"
+        },
+        {
+          "path": "src/main/core/stream/src/util.js",
+          "sha256": "0a00ec4c3ba69c81ac5f80efd1ddb223cb06f61f6e73ecfbadc138ca6bc0c1fe",
+          "lfSha256": "d4419fcecd88fe71d671bd3fd0d48ac0d3f7c7433e29214f0047454e7352437e"
+        },
+        {
+          "path": "src/main/core/string_decoder/index.js",
+          "sha256": "def4f4805bde1688f8d45419be29149e337c3b13956e827bf391ed7e48cbe2bf",
+          "lfSha256": "ea105ae0da294147ec9feaa865ba546c4b494613df3339bf991d079ade53de2c"
+        },
+        {
+          "path": "src/main/core/timers/index.js",
+          "sha256": "e6201f7a391e38c5787481f8171b52f69c59ac9033a70c21112ee4969e2a6410",
+          "lfSha256": "0c4d30e0e1499644f1ff02b045611c07adb6445bb3b7b29e67ef5cef9b858a8f"
+        },
+        {
+          "path": "src/main/core/url/index.js",
+          "sha256": "3165d5d4e42771de9b8fbd101506ed052c8b44571f93c5080ce3245b78e5d4a3",
+          "lfSha256": "bd96e1bde94f88f259c34e7a086a15f4ba4f1c7a38ef25dfd197b822d4d79139"
+        },
+        {
+          "path": "src/main/core/url/internal/punycode.js",
+          "sha256": "5d4f0479f60a3fc07cb6f003458af99a94979ea1a2c288a64f64073750ad1779",
+          "lfSha256": "6eaeefcd8cf2dc0de9107cdf59d6b19b4a568c0e1fbc3e7e6a46f275bf2573ff"
+        },
+        {
+          "path": "src/main/core/url/internal/url.js",
+          "sha256": "081d4be4af0eae7512d82fe7bd0fb1a8c8a82beb52f18f60dc30c631b08393d1",
+          "lfSha256": "ab3799e241571d19158ed664208614ba50101fd2cb75bf0987251166ff72c2e9"
+        },
+        {
+          "path": "src/main/core/util/index.js",
+          "sha256": "dff6b4f5d4025a85fa11297f6cb6bda3a5b9869cd42fccf0bb2399588cf958c7",
+          "lfSha256": "2ac8a2e8b4d95187d6e635fabfa4648e691c0fcdbe965fdb6776bed61b71a0e8"
+        },
+        {
+          "path": "src/main/core/util/internal/comparisons.js",
+          "sha256": "7f3911204450ed77be760f8b46138de527863d44599fb76ced48ce8c1af49e37",
+          "lfSha256": "4a0dab6005deb1796124310df1e27b73ee90d97e9ab7235bd4df46c80191219a"
+        },
+        {
+          "path": "src/main/core/util/internal/debuglog.js",
+          "sha256": "a0b3a3486ad962d79f7d79d8044fee0e28168fc77fedf50e7aa94fc4fce0a8fb",
+          "lfSha256": "61c7b17025691590d4b8c01747f0fd9c432d6d81f39eb2e494bc6e908517ff8f"
+        },
+        {
+          "path": "src/main/core/validator.js",
+          "sha256": "a06cfdb6398657b6efbbecef85b613b7b631a7b0b6bbe7f91b5a4605e5a4569c",
+          "lfSha256": "a6c722fb99c4449eff78d9a64804f7b6ccc200b32d503d8a7ab384f1fdd37dc7"
+        },
+        {
+          "path": "src/main/dist/_commonjsHelpers-YxXKG0rd.js",
+          "sha256": "1a2c86bec24a783382da398d65946151c971d6381b5a91e5a9f5af646c9c1f58",
+          "lfSha256": "4122079ea33ab12f8c496c5ed4e2d00bae5b7cbac7d2a3fc268fe2861dbc0936"
+        },
+        {
+          "path": "src/main/dist/buffer.js",
+          "sha256": "e9320122ca83034a080b05c6c271f1aad0feeb5b64300a3dcd9092f296d039e3",
+          "lfSha256": "50417d61e1006c2c115663cb0eec6725b31fd07d459bb72b2c1d2ba02fb8286e"
+        },
+        {
+          "path": "src/main/dist/crypto.js",
+          "sha256": "dbc70269397c94b3f7498bde27f42abe51fe0417a5331a2221e261a7ed0314cc",
+          "lfSha256": "2bd270f846781fecfef17bc612dd763d3245360b6bdf14ed7ceb69c094934e56"
+        },
+        {
+          "path": "src/main/dist/events.js",
+          "sha256": "e43c0f989516c0dcf1b3c9e59476b9b5a56c307f05becca9a65fc613b9eca8d6",
+          "lfSha256": "7f5373bc7c347201ad49e799603fdc055b0370b8d94ca4ec31d5830bbc43638b"
+        },
+        {
+          "path": "src/main/dist/index--Ue374Tl.js",
+          "sha256": "e1a256d0d0f16dae1aefbdac07ce25a1fa3bd3eab86a17dbf66659dca529908b",
+          "lfSha256": "17bb87e97a15193d387afc75c568e62be7632592840ab3fca508b95dc081621b"
+        },
+        {
+          "path": "src/main/dist/index-AlLy9-ib.js",
+          "sha256": "1bed38fcff85620f6aa70bc1c303e67f2339165be0bfb656120bf6894dc16436",
+          "lfSha256": "058c4d1203dea9d994512dbf9e9d233664450433b20802aac5586c855d13ad28"
+        },
+        {
+          "path": "src/main/dist/index-EG_V-WgX.js",
+          "sha256": "2f83392509e6cd8c120fc00c55f5ba62a53183e844c7a3d36416510fe807aa8f",
+          "lfSha256": "8021369cb5c7a64df57ce3cd9c22cf406f8221bc5ed49649a5366fcc7686b0c2"
+        },
+        {
+          "path": "src/main/dist/index-QWYowoET.js",
+          "sha256": "d21771e3d41927940492b075292fb156c7b8a39991adbb6c79e1531cc65f868e",
+          "lfSha256": "cf9bd393d8a93105f3d0094e5730637229971d35a8c726112f941b43f2e57823"
+        },
+        {
+          "path": "src/main/dist/index-TNOP0p48.js",
+          "sha256": "b2dca0ece5c794a2076f528fe75139242e777af8c05bfe116a4b8033d595900e",
+          "lfSha256": "ed17c86b4de22f9618d45f147a113aad3b5770207fa0f0ebec058eb5e468a6bd"
+        },
+        {
+          "path": "src/main/dist/index-W9NyXpHm.js",
+          "sha256": "4088748d5e0301add91a9c264f615c4675abf29273a70620ae715d14784b7ca1",
+          "lfSha256": "993feda7c66bb124ceb0c7fdc88e53e74f999f4a9508114c200dde0364cae703"
+        },
+        {
+          "path": "src/main/dist/index-cKMvGPIK.js",
+          "sha256": "d21771e3d41927940492b075292fb156c7b8a39991adbb6c79e1531cc65f868e",
+          "lfSha256": "cf9bd393d8a93105f3d0094e5730637229971d35a8c726112f941b43f2e57823"
+        },
+        {
+          "path": "src/main/dist/index-nGHiIcvT.js",
+          "sha256": "2ee20710e576dfa3d8ab67e6aebc0c91ed3064b5d676ebf04c7cdf4d5898f52b",
+          "lfSha256": "e039dcdcfc3a4a452a1c24942e1261156e5f3649a7fe6f873fc7f07d3f8c62f0"
+        },
+        {
+          "path": "src/main/dist/index-n_WnU07Q.js",
+          "sha256": "2f83392509e6cd8c120fc00c55f5ba62a53183e844c7a3d36416510fe807aa8f",
+          "lfSha256": "8021369cb5c7a64df57ce3cd9c22cf406f8221bc5ed49649a5366fcc7686b0c2"
+        },
+        {
+          "path": "src/main/dist/index-t9dAgl11.js",
+          "sha256": "2ee20710e576dfa3d8ab67e6aebc0c91ed3064b5d676ebf04c7cdf4d5898f52b",
+          "lfSha256": "e039dcdcfc3a4a452a1c24942e1261156e5f3649a7fe6f873fc7f07d3f8c62f0"
+        },
+        {
+          "path": "src/main/dist/net.js",
+          "sha256": "083d58717b97a61921036ff6755a229f90a42725d7938cf10a9cdf23df92f5bd",
+          "lfSha256": "277f98f4fa236c10044c45328d4744ec4d2ee21692bd7401f0bb21bae413ba09"
+        },
+        {
+          "path": "src/main/dist/path.js",
+          "sha256": "79cdcbc7b7810134da358e3c1ae4c91c22506be803176bdd778b880fb5f7e75c",
+          "lfSha256": "f7d37cd46fefa0b10f48a0fc932bc08adf0ba302dabfeda87176677dfec43f69"
+        },
+        {
+          "path": "src/main/dist/primordials-4u6fpP8i.js",
+          "sha256": "3d0305e319eeee14b5817ca9770670767a05c3ba794926b596aa230b3adacf23",
+          "lfSha256": "7ebf3e48bf1cc533baec90848e08fc800de7d2cffc016c01fbfb428193d25582"
+        },
+        {
+          "path": "src/main/dist/primordials-aFYok2wy.js",
+          "sha256": "3d0305e319eeee14b5817ca9770670767a05c3ba794926b596aa230b3adacf23",
+          "lfSha256": "7ebf3e48bf1cc533baec90848e08fc800de7d2cffc016c01fbfb428193d25582"
+        },
+        {
+          "path": "src/main/dist/process.js",
+          "sha256": "f6a9272aa6a420ae6f0891604818739fcb7f9d43ff81b46b4b088ef5ba2c62cb",
+          "lfSha256": "72e6b7615c45a8e13fbd798dfd33485089b452261c18d67b4a0cfe9674769d4e"
+        },
+        {
+          "path": "src/main/dist/querystring.js",
+          "sha256": "b9f8af6e779bfedaf4dc49553c82d2680098d3cf80797fa0b37d0864fe7a1a0e",
+          "lfSha256": "c95a123da4b80dfc26a78d7dec51f059321252815666908aa784dd33222e7aaf"
+        },
+        {
+          "path": "src/main/dist/stream.js",
+          "sha256": "345b5c601e8ad116675a36c81b37383c92a17674127812f06754d0e920f70969",
+          "lfSha256": "57f542d4277cd5d78e30c6d57fd8ac39b4820fb6b6b336e43b30809b6240e35c"
+        },
+        {
+          "path": "src/main/dist/string_decoder.js",
+          "sha256": "24c23e86f05400d0eb916758cf63b2af6743bee27b1c8446432e26b94d4b6e6d",
+          "lfSha256": "3149bf79ea474ff88d191c028c64789a33d79102cccd49bdca88ef7e390bf8ba"
+        },
+        {
+          "path": "src/main/dist/timers.js",
+          "sha256": "341b5ac30f2b4d99a6cea5032c2f6d51e53e47abb13402f63fb457e020352f59",
+          "lfSha256": "d2ea0a67ec30dc828eb77109f24d858860f57da9b116ecddb3e58b58124b11a1"
+        },
+        {
+          "path": "src/main/dist/url.js",
+          "sha256": "ab84eb1262d8f87833e4e199f7bd532d1875114e408cf624f93bf577a2a92cd6",
+          "lfSha256": "b1bfd86f15ac6fb4127c7e211b03619dcd0a44c04f2f0993ada65b03a250ded3"
+        },
+        {
+          "path": "src/main/dist/util.js",
+          "sha256": "411d03a802d33f6eda1fbebfffabb70b0f5bc68fe749b9790103c87e2fffe4ce",
+          "lfSha256": "7090df4802ef2a9318bb6faf4f5a21567d0844bc45974a3d84804b48c203e561"
+        },
+        {
+          "path": "src/main/dist/validator-4OkgCN7J.js",
+          "sha256": "429c69f7fdff2201115adbe3d8b4ecd50de690e23eeec9271c4147498c007063",
+          "lfSha256": "4552a6499abf5c0e940dcb6fbddefc383d7845ac4c746fd0f8dc8c73c2af81be"
+        },
+        {
+          "path": "src/main/dist/validator-awlESmKw.js",
+          "sha256": "3abe3012d32182571536f233257418a06bdd8b300b585a911e1cec7d4bf0a023",
+          "lfSha256": "b74ddb7a4c765988a684f767a9ca745164708a14c3221ac7c959070528c37e5f"
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "name": "JSZip (xqdoo00o fork)",
+      "version": "3.10.1 / 52378c05099c",
+      "license": "MIT",
+      "dir": "jszip-fork",
+      "source": "https://github.com/xqdoo00o/jszip/tree/52378c05099c48bba49c2bbb4d9d549a3272d7a7",
+      "evidence": "All installed lib files match this commit after CRLF normalization except the archived SJCL crypto-provider patch; MIT option selected. OHPM README version 3.5.0 is stale.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/jszip-fork/LICENSE.markdown",
+          "sha256": "566c953c6090b1218ca6217dd7359d45dde46581968586dc607d59a78af6a9c4"
+        },
+        {
+          "path": "third-party/licenses/jszip-fork/lib/license_header.js",
+          "sha256": "27873abeec2df3693480a8d1b8fe17dd61bee843d1b39c1c9cfab57ffe93099e"
+        }
+      ],
+      "declaredLicense": "MIT OR GPL-3.0-only",
+      "selectedLicense": "MIT"
+    },
+    {
+      "name": "@ohos/jszip bundled copyright notices",
+      "version": "1.0.1 / ebece08923c9",
+      "license": "MIT AND Zlib AND BSD-2-Clause",
+      "dir": "jszip-embedded",
+      "source": "https://gitcode.com/openharmony-tpc/openharmony_tpc_samples/tree/ebece08923c9400d104a9b2e1f4a42e0193c657f",
+      "evidence": "Verbatim actual bundle comment blocks; dependency and fork licenses listed separately.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/jszip-embedded/NOTICE",
+          "sha256": "af2b9110a9c44bdc0a0be19b3cf29b2e6c9c940d3213b498bd6b6e59296c5a03"
+        }
+      ]
+    },
+    {
+      "name": "lie (JSZip bundle)",
+      "version": "3.3.0",
+      "license": "MIT",
+      "dir": "embedded-js/jszip-lie-3.3.0",
+      "source": "https://www.npmjs.com/package/lie/v/3.3.0",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/jszip-lie-3.3.0/license.md",
+          "sha256": "5c81b0caa98593408b03125efa25efe622341ed87ae55561968828cd887d64a4"
+        }
+      ],
+      "npm": {
+        "version": "3.3.0",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/lie/-/lie-3.3.0.tgz",
+        "integrity": "sha512-UaiMJzeWRlEujzAuw5LokY1L5ecNQYZKfmyZ9L7wDHb/p5etKaxXhohBcrw0EYby+G/NA52vRSN4N39dxHAIwQ==",
+        "license": "MIT",
+        "dependencies": {
+          "immediate": "~3.0.5"
+        }
+      }
+    },
+    {
+      "name": "immediate (JSZip bundle)",
+      "version": "3.0.6",
+      "license": "MIT",
+      "dir": "embedded-js/jszip-immediate-3.0.6",
+      "source": "https://www.npmjs.com/package/immediate/v/3.0.6",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/jszip-immediate-3.0.6/LICENSE.txt",
+          "sha256": "809e66de579fb7d92503848bbe6d1f348f4f6521a71e5d294fe7cc0c87a3b4ff"
+        }
+      ],
+      "npm": {
+        "version": "3.0.6",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/immediate/-/immediate-3.0.6.tgz",
+        "integrity": "sha512-XXOFtyqDjNDAQxVfYxuF7g9Il/IbWmmlQg2MYKOH8ExIT1qg6xc4zyS3HaEEATgs1btfzxq15ciUiY7gjSXRGQ==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "pako (JSZip bundle)",
+      "version": "1.0.11",
+      "license": "(MIT AND Zlib)",
+      "dir": "embedded-js/jszip-pako-1.0.11",
+      "source": "https://www.npmjs.com/package/pako/v/1.0.11",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/jszip-pako-1.0.11/LICENSE",
+          "sha256": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539"
+        },
+        {
+          "path": "third-party/licenses/embedded-js/jszip-pako-1.0.11/NOTICE-zlib",
+          "sha256": "fce0076f4f6ea125cc66b7b05307d095dc39b1d0e057c6853df2b431535f3992"
+        }
+      ],
+      "npm": {
+        "version": "1.0.11",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/pako/-/pako-1.0.11.tgz",
+        "integrity": "sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==",
+        "license": "(MIT AND Zlib)"
+      }
+    },
+    {
+      "name": "readable-stream (JSZip bundle)",
+      "version": "2.3.8",
+      "license": "MIT",
+      "dir": "embedded-js/jszip-readable-stream-2.3.8",
+      "source": "https://www.npmjs.com/package/readable-stream/v/2.3.8",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/jszip-readable-stream-2.3.8/LICENSE",
+          "sha256": "ec62dc96da0099b87f4511736c87309335527fb7031639493e06c95728dc8c54"
+        }
+      ],
+      "npm": {
+        "version": "2.3.8",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/readable-stream/-/readable-stream-2.3.8.tgz",
+        "integrity": "sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==",
+        "license": "MIT",
+        "dependencies": {
+          "core-util-is": "~1.0.0",
+          "inherits": "~2.0.3",
+          "isarray": "~1.0.0",
+          "process-nextick-args": "~2.0.0",
+          "safe-buffer": "~5.1.1",
+          "string_decoder": "~1.1.1",
+          "util-deprecate": "~1.0.1"
+        }
+      }
+    },
+    {
+      "name": "setimmediate (JSZip bundle)",
+      "version": "1.0.5",
+      "license": "MIT",
+      "dir": "embedded-js/jszip-setimmediate-1.0.5",
+      "source": "https://www.npmjs.com/package/setimmediate/v/1.0.5",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/jszip-setimmediate-1.0.5/LICENSE.txt",
+          "sha256": "c4b4ad3a5746f1f5249a6dd90396ec519264e1bb02e01e48a6522c48a3a97cb4"
+        }
+      ],
+      "npm": {
+        "version": "1.0.5",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/setimmediate/-/setimmediate-1.0.5.tgz",
+        "integrity": "sha512-MATJdZp8sLqDl/68LfQmbP8zKPLQNV6BIZoIgrscFDQ+RsvK/BxeDQOgyxKKoh0y/8h3BqVFnCqQ/gd+reiIXA==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "core-util-is (JSZip bundle)",
+      "version": "1.0.3",
+      "license": "MIT",
+      "dir": "embedded-js/jszip-core-util-is-1.0.3",
+      "source": "https://www.npmjs.com/package/core-util-is/v/1.0.3",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/jszip-core-util-is-1.0.3/LICENSE",
+          "sha256": "33b734d60042d0fe0c92dd1fc1e874193a1c899ec3e276a2eb935d2d0bf5b710"
+        }
+      ],
+      "npm": {
+        "version": "1.0.3",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/core-util-is/-/core-util-is-1.0.3.tgz",
+        "integrity": "sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "inherits (JSZip bundle)",
+      "version": "2.0.4",
+      "license": "ISC",
+      "dir": "embedded-js/jszip-inherits-2.0.4",
+      "source": "https://www.npmjs.com/package/inherits/v/2.0.4",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/jszip-inherits-2.0.4/LICENSE",
+          "sha256": "5ffe28e7ade7d8f10d85d5337a73fd793dac5c462fb9a28fbf8c5046c7fbca3b"
+        }
+      ],
+      "npm": {
+        "version": "2.0.4",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/inherits/-/inherits-2.0.4.tgz",
+        "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
+        "license": "ISC"
+      }
+    },
+    {
+      "name": "isarray (JSZip bundle)",
+      "version": "1.0.0",
+      "license": "MIT",
+      "dir": "embedded-js/jszip-isarray-1.0.0",
+      "source": "https://www.npmjs.com/package/isarray/v/1.0.0",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/jszip-isarray-1.0.0/LICENSE-from-README",
+          "sha256": "66aa9feab8bb39aceebd69f2a357015d57ceab486d3c7a19ff8d3d4110a6d101"
+        }
+      ],
+      "npm": {
+        "version": "1.0.0",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/isarray/-/isarray-1.0.0.tgz",
+        "integrity": "sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "process-nextick-args (JSZip bundle)",
+      "version": "2.0.1",
+      "license": "MIT",
+      "dir": "embedded-js/jszip-process-nextick-args-2.0.1",
+      "source": "https://www.npmjs.com/package/process-nextick-args/v/2.0.1",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/jszip-process-nextick-args-2.0.1/license.md",
+          "sha256": "ecdccbcf39024f624ded480c01c0b25458e1eca8f26ecf040933865ce56d9a4f"
+        }
+      ],
+      "npm": {
+        "version": "2.0.1",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
+        "integrity": "sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "safe-buffer (JSZip bundle)",
+      "version": "5.1.2",
+      "license": "MIT",
+      "dir": "embedded-js/jszip-safe-buffer-5.1.2",
+      "source": "https://www.npmjs.com/package/safe-buffer/v/5.1.2",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/jszip-safe-buffer-5.1.2/LICENSE",
+          "sha256": "c7cc929b57080f4b9d0c6cf57669f0463fc5b39906344dfc8d3bc43426b30eac"
+        }
+      ],
+      "npm": {
+        "version": "5.1.2",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/safe-buffer/-/safe-buffer-5.1.2.tgz",
+        "integrity": "sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "string_decoder (JSZip bundle)",
+      "version": "1.1.1",
+      "license": "MIT",
+      "dir": "embedded-js/jszip-string_decoder-1.1.1",
+      "source": "https://www.npmjs.com/package/string_decoder/v/1.1.1",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/jszip-string_decoder-1.1.1/LICENSE",
+          "sha256": "11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b"
+        }
+      ],
+      "npm": {
+        "version": "1.1.1",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/string_decoder/-/string_decoder-1.1.1.tgz",
+        "integrity": "sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==",
+        "license": "MIT",
+        "dependencies": {
+          "safe-buffer": "~5.1.0"
+        }
+      }
+    },
+    {
+      "name": "util-deprecate (JSZip bundle)",
+      "version": "1.0.2",
+      "license": "MIT",
+      "dir": "embedded-js/jszip-util-deprecate-1.0.2",
+      "source": "https://www.npmjs.com/package/util-deprecate/v/1.0.2",
+      "evidence": "Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/jszip-util-deprecate-1.0.2/LICENSE",
+          "sha256": "0154425673db15cdfa80ecba2c9b1f1a867f7197a006764712849bfc3a93cbb7"
+        }
+      ],
+      "npm": {
+        "version": "1.0.2",
+        "resolved": "https://repo.huaweicloud.com/repository/npm/util-deprecate/-/util-deprecate-1.0.2.tgz",
+        "integrity": "sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "SJCL (JSZip fork build)",
+      "version": "52378c05099c / OHOS patch",
+      "license": "BSD-2-Clause",
+      "dir": "embedded-js/sjcl",
+      "source": "https://github.com/xqdoo00o/jszip/blob/52378c05099c48bba49c2bbb4d9d549a3272d7a7/lib/sjcl.js",
+      "evidence": "Actual source is the fork build plus the recorded OHOS adaptation. BSD option selected; full upstream dual-license text and actual source notices retained.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/sjcl/LICENSE.txt",
+          "sha256": "ef430277d3cca1d3e7cdb6d4a61d7ff1eb208c4c2058602d2b361aaab60cd9c0"
+        },
+        {
+          "path": "third-party/licenses/embedded-js/sjcl/README/COPYRIGHT",
+          "sha256": "68e23fbdb402746f3231b53ac1ed0fc0672b34c4ffe78f0ff38710094c50720f"
+        }
+      ],
+      "licenseReference": {
+        "name": "sjcl",
+        "version": "1.0.8",
+        "repository": {
+          "url": "git+https://github.com/bitwiseshiftleft/sjcl.git",
+          "type": "git"
+        },
+        "license": "(BSD-2-Clause OR GPL-2.0-only)",
+        "tarball": "https://registry.npmjs.org/sjcl/-/sjcl-1.0.8.tgz",
+        "integrity": "sha512-LzIjEQ0S0DpIgnxMEayM1rq9aGwGRG4OnZhCdjx7glTaJtf4zRfpg87ImfjSJjoW9vKpagd82McDOwbRT5kQKQ==",
+        "sha256": "e951881e45a6744e3fa946ebe613e18009ba951bd6a7580e2e450d9d0c893d4f"
+      },
+      "selectedLicense": "BSD-2-Clause"
+    },
+    {
+      "name": "abort-controller (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-abort-controller",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-abort-controller/LICENSE",
+          "sha256": "dbbf03317f0101fed5643cd87ca80fb769e358fa4f428445bf2315deeb23a154"
+        }
+      ],
+      "licenseReference": {
+        "name": "abort-controller",
+        "version": "3.0.0",
+        "repository": {
+          "url": "git+https://github.com/mysticatea/abort-controller.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/abort-controller/-/abort-controller-3.0.0.tgz",
+        "integrity": "sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==",
+        "sha256": "d2e249d5d010eb18e57c12c610d63e3ca3fa9dd0a5378009c1f465e21f50ab2f"
+      },
+      "modules": []
+    },
+    {
+      "name": "asn1.js (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-asn1.js",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-asn1.js/LICENSE",
+          "sha256": "251ecdcdb2bafa7b106187a8cce96f322d0074c66e557c3c94cb49c769970408"
+        }
+      ],
+      "licenseReference": {
+        "name": "asn1.js",
+        "version": "5.4.1",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/indutny/asn1.js.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/asn1.js/-/asn1.js-5.4.1.tgz",
+        "integrity": "sha512-+I//4cYPccV8LdmBLiX8CYvf9Sp3vQsrqu2QNXRcrbiWvcx/UdlFiqUJJzxRQxgsZmvhXhn4cSKeSmoFjVdupA==",
+        "sha256": "9cc59e0b515f254ee8ecc9fe584d6fb02d86b2a10f6de6c5d6923ef0d8f8c2a1"
+      },
+      "modules": [
+        "./node_modules/asn1.js/lib/asn1.js",
+        "./node_modules/asn1.js/lib/asn1/api.js",
+        "./node_modules/asn1.js/lib/asn1/base/buffer.js",
+        "./node_modules/asn1.js/lib/asn1/base/index.js",
+        "./node_modules/asn1.js/lib/asn1/base/node.js",
+        "./node_modules/asn1.js/lib/asn1/base/reporter.js",
+        "./node_modules/asn1.js/lib/asn1/constants/der.js",
+        "./node_modules/asn1.js/lib/asn1/constants/index.js",
+        "./node_modules/asn1.js/lib/asn1/decoders/der.js",
+        "./node_modules/asn1.js/lib/asn1/decoders/index.js",
+        "./node_modules/asn1.js/lib/asn1/decoders/pem.js",
+        "./node_modules/asn1.js/lib/asn1/encoders/der.js",
+        "./node_modules/asn1.js/lib/asn1/encoders/index.js",
+        "./node_modules/asn1.js/lib/asn1/encoders/pem.js"
+      ]
+    },
+    {
+      "name": "base64-js (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-base64-js",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-base64-js/LICENSE",
+          "sha256": "5b37224c080cdcc97c871ada971c224e9926370fe74f11b539aa1cf9f3b1aca1"
+        }
+      ],
+      "licenseReference": {
+        "name": "base64-js",
+        "version": "1.5.1",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/beatgammit/base64-js.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz",
+        "integrity": "sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==",
+        "sha256": "b1b7a945b52685269083425216d6597e33d97bf21699d656e92fdb3eb5210a85"
+      },
+      "modules": []
+    },
+    {
+      "name": "bn.js (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-bn.js",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-bn.js/LICENSE",
+          "sha256": "445739f5b5eb63e5aeff5aeb0f35a45080a421615dce0d97f9939aeea498acdd"
+        }
+      ],
+      "licenseReference": {
+        "name": "bn.js",
+        "version": "4.12.0",
+        "repository": {
+          "url": "git@github.com:indutny/bn.js",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/bn.js/-/bn.js-4.12.0.tgz",
+        "integrity": "sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==",
+        "sha256": "b6fee0574045a4b068abdddd0d5ca5b2351d07223ea1425cf83d349c6dab6238"
+      },
+      "modules": [
+        "./node_modules/asn1.js/node_modules/bn.js/lib/bn.js",
+        "./node_modules/bn.js/lib/bn.js",
+        "./node_modules/create-ecdh/node_modules/bn.js/lib/bn.js",
+        "./node_modules/diffie-hellman/node_modules/bn.js/lib/bn.js",
+        "./node_modules/elliptic/node_modules/bn.js/lib/bn.js",
+        "./node_modules/miller-rabin/node_modules/bn.js/lib/bn.js",
+        "./node_modules/public-encrypt/node_modules/bn.js/lib/bn.js"
+      ]
+    },
+    {
+      "name": "brorand (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-brorand",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-brorand/LICENSE-from-README",
+          "sha256": "f6ea0899d4a65578f4be7e01b61fa2ffb08268ca06571f4f53d8a82025179982"
+        }
+      ],
+      "licenseReference": {
+        "name": "brorand",
+        "version": "1.1.0",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/indutny/brorand.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/brorand/-/brorand-1.1.0.tgz",
+        "integrity": "sha512-cKV8tMCEpQs4hK/ik71d6LrPOnpkpGBR0wzxqr68g2m/LB2GxVYQroAjMJZRVM1Y4BCjCKc3vAamxSzOY2RP+w==",
+        "sha256": "6add0656db12f5694a96d922916edf764f1a52ee332e2773271733a38fa51225"
+      },
+      "modules": [
+        "./node_modules/brorand/index.js"
+      ]
+    },
+    {
+      "name": "browserify-aes (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-browserify-aes",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-browserify-aes/LICENSE",
+          "sha256": "82ba430b068b75a41438568e1e4ed1f96e02699c9b51735154af03e9b59d6b0d"
+        }
+      ],
+      "licenseReference": {
+        "name": "browserify-aes",
+        "version": "1.2.0",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/crypto-browserify/browserify-aes.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/browserify-aes/-/browserify-aes-1.2.0.tgz",
+        "integrity": "sha512-+7CHXqGuspUn/Sl5aO7Ea0xWGAtETPXNSAjHo48JfLdPWcMng33Xe4znFvQweqc/uzk5zSOI3H52CYnjCfb5hA==",
+        "sha256": "9b64ba05c9ad861e2f61933cda370d031d0adcb0582428a212b6746c9ca2e168"
+      },
+      "modules": [
+        "./node_modules/browserify-aes/aes.js",
+        "./node_modules/browserify-aes/authCipher.js",
+        "./node_modules/browserify-aes/browser.js",
+        "./node_modules/browserify-aes/decrypter.js",
+        "./node_modules/browserify-aes/encrypter.js",
+        "./node_modules/browserify-aes/ghash.js",
+        "./node_modules/browserify-aes/incr32.js",
+        "./node_modules/browserify-aes/modes/cbc.js",
+        "./node_modules/browserify-aes/modes/cfb.js",
+        "./node_modules/browserify-aes/modes/cfb1.js",
+        "./node_modules/browserify-aes/modes/cfb8.js",
+        "./node_modules/browserify-aes/modes/ctr.js",
+        "./node_modules/browserify-aes/modes/ecb.js",
+        "./node_modules/browserify-aes/modes/index.js",
+        "./node_modules/browserify-aes/modes/list.json",
+        "./node_modules/browserify-aes/modes/ofb.js",
+        "./node_modules/browserify-aes/streamCipher.js"
+      ]
+    },
+    {
+      "name": "browserify-cipher (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-browserify-cipher",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-browserify-cipher/LICENSE",
+          "sha256": "dc09aa476634db0dbae1a296f099d5bd39e27c96b876d4d20b236fa565002bb6"
+        }
+      ],
+      "licenseReference": {
+        "name": "browserify-cipher",
+        "version": "1.0.1",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/crypto-browserify/browserify-cipher.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/browserify-cipher/-/browserify-cipher-1.0.1.tgz",
+        "integrity": "sha512-sPhkz0ARKbf4rRQt2hTpAHqn47X3llLkUGn+xEJzLjwY8LRs2p0v7ljvI5EyoRO/mexrNunNECisZs+gw2zz1w==",
+        "sha256": "2d28155c2ae999ae5b69a6223f591ffcced3985d607d5d63238327327c6a06e4"
+      },
+      "modules": [
+        "./node_modules/browserify-cipher/browser.js"
+      ]
+    },
+    {
+      "name": "browserify-des (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-browserify-des",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-browserify-des/license",
+          "sha256": "e54f1a2edadb1d8d3a482bcd0712acad2947337ae35e40ca34b22eb77940863f"
+        }
+      ],
+      "licenseReference": {
+        "name": "browserify-des",
+        "version": "1.0.2",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/browserify-des.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/browserify-des/-/browserify-des-1.0.2.tgz",
+        "integrity": "sha512-BioO1xf3hFwz4kc6iBhI3ieDFompMhrMlnDFC4/0/vd5MokpuAc3R+LYbwTA9A5Yc9pq9UYPqffKpW2ObuwX5A==",
+        "sha256": "b7503b6a58abbd1a3b0f0aabfcd978edff54ad33ebf97a6f0bbdf45bebda9421"
+      },
+      "modules": [
+        "./node_modules/browserify-des/index.js",
+        "./node_modules/browserify-des/modes.js"
+      ]
+    },
+    {
+      "name": "browserify-rsa (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-browserify-rsa",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-browserify-rsa/LICENSE",
+          "sha256": "d7314f44f0873f703b3cbaad5d60b947eb252a70072df586488e20a236c1223f"
+        }
+      ],
+      "licenseReference": {
+        "name": "browserify-rsa",
+        "version": "4.1.0",
+        "repository": {
+          "url": "git+https://github.com/crypto-browserify/browserify-rsa.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/browserify-rsa/-/browserify-rsa-4.1.0.tgz",
+        "integrity": "sha512-AdEER0Hkspgno2aR97SAf6vi0y0k8NuOpGnVH3O99rcA5Q6sh8QxcngtHuJ6uXwnfAXNM4Gn1Gb7/MV1+Ymbog==",
+        "sha256": "489ced11ec555e756dfcf34a05786d06e6e1c1e778479e0208aa13f3da8c3268"
+      },
+      "modules": [
+        "./node_modules/browserify-rsa/index.js"
+      ]
+    },
+    {
+      "name": "browserify-sign (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "ISC",
+      "dir": "embedded-js/polyfill-browserify-sign",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-browserify-sign/LICENSE",
+          "sha256": "a0e06d86a5a17341fa6134ee30ef18d73251cf32b8a577cdfd6aad6ad34af61d"
+        }
+      ],
+      "licenseReference": {
+        "name": "browserify-sign",
+        "version": "4.2.2",
+        "repository": {
+          "url": "git+https://github.com/crypto-browserify/browserify-sign.git",
+          "type": "git"
+        },
+        "license": "ISC",
+        "tarball": "https://registry.npmjs.org/browserify-sign/-/browserify-sign-4.2.2.tgz",
+        "integrity": "sha512-1rudGyeYY42Dk6texmv7c4VcQ0EsvVbLwZkA+AQB7SxvXxmcD93jcHie8bzecJ+ChDlmAm2Qyu0+Ccg5uhZXCg==",
+        "sha256": "418620eaced8b222a46640788730267d005c52bc145af740f5b8bf95524b382a"
+      },
+      "modules": [
+        "./node_modules/browserify-sign/algos.js",
+        "./node_modules/browserify-sign/browser/algorithms.json",
+        "./node_modules/browserify-sign/browser/curves.json",
+        "./node_modules/browserify-sign/browser/index.js",
+        "./node_modules/browserify-sign/browser/sign.js",
+        "./node_modules/browserify-sign/browser/verify.js"
+      ]
+    },
+    {
+      "name": "buffer (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-buffer",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-buffer/LICENSE",
+          "sha256": "06bafa45fdad2579ba0e43b0c9b2c6290287c99c4203c300254a462b38a307f6"
+        }
+      ],
+      "licenseReference": {
+        "name": "buffer",
+        "version": "6.0.3",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/feross/buffer.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/buffer/-/buffer-6.0.3.tgz",
+        "integrity": "sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==",
+        "sha256": "555b6f49224afcf6b2c5a9aea7cd34a7f443f395b10532bc5580022d57aa51f5"
+      },
+      "modules": []
+    },
+    {
+      "name": "buffer-xor (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-buffer-xor",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-buffer-xor/LICENSE",
+          "sha256": "51ad9defd71911dbe413daf277bcb2e1077743f5ee5ae48d0a3b90a5b7486f55"
+        }
+      ],
+      "licenseReference": {
+        "name": "buffer-xor",
+        "version": "2.0.2",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/buffer-xor.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/buffer-xor/-/buffer-xor-2.0.2.tgz",
+        "integrity": "sha512-eHslX0bin3GB+Lx2p7lEYRShRewuNZL3fUl4qlVJGGiwoPGftmt8JQgk2Y9Ji5/01TnVDo33E5b5O3vUB1HdqQ==",
+        "sha256": "e216954085d89e28122cf163010fc50d9f55473349693d9b8583fd0dca08c8b3"
+      },
+      "modules": [
+        "./node_modules/buffer-xor/index.js"
+      ]
+    },
+    {
+      "name": "cipher-base (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-cipher-base",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-cipher-base/LICENSE",
+          "sha256": "cf93ad78cfd5f3523248675aeb2a46e003367596883d4fa26a0c38d553ab0f61"
+        }
+      ],
+      "licenseReference": {
+        "name": "cipher-base",
+        "version": "1.0.4",
+        "repository": {
+          "url": "git+https://github.com/crypto-browserify/cipher-base.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/cipher-base/-/cipher-base-1.0.4.tgz",
+        "integrity": "sha512-Kkht5ye6ZGmwv40uUDZztayT2ThLQGfnj/T71N/XzeZeo3nf8foyW7zGTsPYkEya3m5f3cAypH+qe7YOrM1U2Q==",
+        "sha256": "010199a4f371ca2258c04942d4bad96dccb98070d98a30d9213e29bc0ebdf295"
+      },
+      "modules": [
+        "./node_modules/cipher-base/index.js"
+      ]
+    },
+    {
+      "name": "create-ecdh (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-create-ecdh",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-create-ecdh/LICENSE",
+          "sha256": "d4ad87ad0bb7d57c17ae73b46e064243b972edc3036c38c222172c9600a20b56"
+        }
+      ],
+      "licenseReference": {
+        "name": "create-ecdh",
+        "version": "4.0.4",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/createECDH.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/create-ecdh/-/create-ecdh-4.0.4.tgz",
+        "integrity": "sha512-mf+TCx8wWc9VpuxfP2ht0iSISLZnt0JgWlrOKZiNqyUZWnjIaCIVNQArMHnCZKfEYRg6IM7A+NeJoN8gf/Ws0A==",
+        "sha256": "990182d062df4f280785c5eac9cd0c28d10d0105b93fcf53e4580c3901713ce1"
+      },
+      "modules": [
+        "./node_modules/create-ecdh/browser.js"
+      ]
+    },
+    {
+      "name": "create-hash (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-create-hash",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-create-hash/LICENSE",
+          "sha256": "cf93ad78cfd5f3523248675aeb2a46e003367596883d4fa26a0c38d553ab0f61"
+        }
+      ],
+      "licenseReference": {
+        "name": "create-hash",
+        "version": "1.2.0",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/crypto-browserify/createHash.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/create-hash/-/create-hash-1.2.0.tgz",
+        "integrity": "sha512-z00bCGNHDG8mHAkP7CtT1qVu+bFQUPjYq/4Iv3C3kWjTFV10zIjfSoeqXo9Asws8gwSHDGj/hl2u4OGIjapeCg==",
+        "sha256": "fe4079490bd932ccf1f1530f49a88aaca57dbdb6f337c9144749a225e2014bad"
+      },
+      "modules": [
+        "./node_modules/create-hash/browser.js",
+        "./node_modules/create-hash/md5.js"
+      ]
+    },
+    {
+      "name": "create-hmac (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-create-hmac",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-create-hmac/LICENSE",
+          "sha256": "cf93ad78cfd5f3523248675aeb2a46e003367596883d4fa26a0c38d553ab0f61"
+        }
+      ],
+      "licenseReference": {
+        "name": "create-hmac",
+        "version": "1.1.7",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/createHmac.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/create-hmac/-/create-hmac-1.1.7.tgz",
+        "integrity": "sha512-MJG9liiZ+ogc4TzUwuvbER1JRdgvUFSB5+VR/g5h82fGaIRWMWddtKBHi7/sVhfjQZ6SehlyhvQYrcYkaUIpLg==",
+        "sha256": "fd77daf860b84566d8ccc30561eaba00a9efc4fbba94d4a5f417f4f636337aa7"
+      },
+      "modules": [
+        "./node_modules/create-hmac/browser.js",
+        "./node_modules/create-hmac/legacy.js"
+      ]
+    },
+    {
+      "name": "crypto-browserify (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-crypto-browserify",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-crypto-browserify/LICENSE",
+          "sha256": "6134c69bc22c8289252e70de3af20bd67071233459055be74d83acfcc4865e7e"
+        }
+      ],
+      "licenseReference": {
+        "name": "crypto-browserify",
+        "version": "3.12.0",
+        "repository": {
+          "url": "git://github.com/crypto-browserify/crypto-browserify.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/crypto-browserify/-/crypto-browserify-3.12.0.tgz",
+        "integrity": "sha512-fz4spIh+znjO2VjL+IdhEpRJ3YN6sMzITSBijk6FK2UvTqruSQW+/cCZTSNsMiZNvUeq0CqurF+dAbyiGOY6Wg==",
+        "sha256": "046ae534ee4a7f76955eb7114e814eb17f998928da55bd5639aa350b61cf7508"
+      },
+      "modules": []
+    },
+    {
+      "name": "des.js (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-des.js",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-des.js/LICENSE-from-README",
+          "sha256": "444326049d335af6eec2a4e04cca7326efecb155832ab51236699ef8f3480554"
+        }
+      ],
+      "licenseReference": {
+        "name": "des.js",
+        "version": "1.1.0",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/indutny/des.js.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/des.js/-/des.js-1.1.0.tgz",
+        "integrity": "sha512-r17GxjhUCjSRy8aiJpr8/UadFIzMzJGexI3Nmz4ADi9LYSFx4gTBp80+NaX/YsXWWLhpZ7v/v/ubEc/bCNfKwg==",
+        "sha256": "9a06b8294e38ca9bb70a6257290cc217e9172dfc0059f7639f59f074a924ef9d"
+      },
+      "modules": [
+        "./node_modules/des.js/lib/des.js",
+        "./node_modules/des.js/lib/des/cbc.js",
+        "./node_modules/des.js/lib/des/cipher.js",
+        "./node_modules/des.js/lib/des/des.js",
+        "./node_modules/des.js/lib/des/ede.js",
+        "./node_modules/des.js/lib/des/utils.js"
+      ]
+    },
+    {
+      "name": "diffie-hellman (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-diffie-hellman",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-diffie-hellman/LICENSE",
+          "sha256": "db6109f994692150ed82cd904bb053c73b97b23678bf52047f747bfec11e1934"
+        }
+      ],
+      "licenseReference": {
+        "name": "diffie-hellman",
+        "version": "5.0.3",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/diffie-hellman.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/diffie-hellman/-/diffie-hellman-5.0.3.tgz",
+        "integrity": "sha512-kqag/Nl+f3GwyK25fhUMYj81BUOrZ9IuJsjIcDE5icNM9FJHAVm3VcUDxdLPoQtTuUylWm6ZIknYJwwaPxsUzg==",
+        "sha256": "67809ae0f25353a16b0dae4c4faffecf32525d238e45506fa27da6d2d4fbe53a"
+      },
+      "modules": [
+        "./node_modules/diffie-hellman/browser.js",
+        "./node_modules/diffie-hellman/lib/dh.js",
+        "./node_modules/diffie-hellman/lib/generatePrime.js",
+        "./node_modules/diffie-hellman/lib/primes.json"
+      ]
+    },
+    {
+      "name": "elliptic (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-elliptic",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-elliptic/LICENSE-from-README",
+          "sha256": "e35dd6aa90fea6345dda378653af72e39a13255e1d5a46e8b0ab7d8ea7401a17"
+        }
+      ],
+      "licenseReference": {
+        "name": "elliptic",
+        "version": "6.5.4",
+        "repository": {
+          "url": "git+ssh://git@github.com/indutny/elliptic.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/elliptic/-/elliptic-6.5.4.tgz",
+        "integrity": "sha512-iLhC6ULemrljPZb+QutR5TQGB+pdW6KGD5RSegS+8sorOZT+rdQFbsQFJgvN3eRqNALqJer4oQ16YvJHlU8hzQ==",
+        "sha256": "2435ce5afcb6881ec0a7d5b31b0820d30664bd529a54439928da60c02e45c5be"
+      },
+      "modules": [
+        "./node_modules/elliptic/lib/elliptic.js",
+        "./node_modules/elliptic/lib/elliptic/curve/base.js",
+        "./node_modules/elliptic/lib/elliptic/curve/edwards.js",
+        "./node_modules/elliptic/lib/elliptic/curve/index.js",
+        "./node_modules/elliptic/lib/elliptic/curve/mont.js",
+        "./node_modules/elliptic/lib/elliptic/curve/short.js",
+        "./node_modules/elliptic/lib/elliptic/curves.js",
+        "./node_modules/elliptic/lib/elliptic/ec/index.js",
+        "./node_modules/elliptic/lib/elliptic/ec/key.js",
+        "./node_modules/elliptic/lib/elliptic/ec/signature.js",
+        "./node_modules/elliptic/lib/elliptic/eddsa/index.js",
+        "./node_modules/elliptic/lib/elliptic/eddsa/key.js",
+        "./node_modules/elliptic/lib/elliptic/eddsa/signature.js",
+        "./node_modules/elliptic/lib/elliptic/precomputed/secp256k1.js",
+        "./node_modules/elliptic/lib/elliptic/utils.js",
+        "./node_modules/elliptic/package.json"
+      ]
+    },
+    {
+      "name": "end-of-stream (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-end-of-stream",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-end-of-stream/LICENSE",
+          "sha256": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6"
+        }
+      ],
+      "licenseReference": {
+        "name": "end-of-stream",
+        "version": "1.4.4",
+        "repository": {
+          "url": "git://github.com/mafintosh/end-of-stream.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.4.tgz",
+        "integrity": "sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==",
+        "sha256": "0b8becf0cba76fdddfe4ad2289917edf74047913eb6891a7922ccf822bdf0db5"
+      },
+      "modules": []
+    },
+    {
+      "name": "event-target-shim (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-event-target-shim",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-event-target-shim/LICENSE",
+          "sha256": "97d87142793695cd73243de7258694abe85b3b6060fca7f247b0a2afa8219678"
+        }
+      ],
+      "licenseReference": {
+        "name": "event-target-shim",
+        "version": "5.0.1",
+        "repository": {
+          "url": "git+https://github.com/mysticatea/event-target-shim.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/event-target-shim/-/event-target-shim-5.0.1.tgz",
+        "integrity": "sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==",
+        "sha256": "f0717da2cde5c703b92e66906623724959c23ac14e9439c436b84c8a4f5b26bc"
+      },
+      "modules": []
+    },
+    {
+      "name": "events (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-events",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-events/LICENSE",
+          "sha256": "631987b7616a325a5b97566c232418481ddf7dbb5ecadefb991e791876cc2599"
+        }
+      ],
+      "licenseReference": {
+        "name": "events",
+        "version": "3.3.0",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/Gozala/events.git",
+          "web": "https://github.com/Gozala/events"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/events/-/events-3.3.0.tgz",
+        "integrity": "sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==",
+        "sha256": "2c30dd630b58299bdfaac8688f763c6f312d29779c500b1e3701a1d4fb3b534b"
+      },
+      "modules": [
+        "./node_modules/events/events.js"
+      ]
+    },
+    {
+      "name": "evp_bytestokey (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-evp_bytestokey",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-evp_bytestokey/LICENSE",
+          "sha256": "cf93ad78cfd5f3523248675aeb2a46e003367596883d4fa26a0c38d553ab0f61"
+        }
+      ],
+      "licenseReference": {
+        "name": "evp_bytestokey",
+        "version": "1.0.3",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/EVP_BytesToKey.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/evp_bytestokey/-/evp_bytestokey-1.0.3.tgz",
+        "integrity": "sha512-/f2Go4TognH/KvCISP7OUsHn85hT9nUkxxA9BEWxFn+Oj9o8ZNLm/40hdlgSLyuOimsrTKLUMEorQexp/aPQeA==",
+        "sha256": "c10a145896ed84fb886f273bd583d3895390561d6b513b17f5cf70312f7c40e1"
+      },
+      "modules": [
+        "./node_modules/evp_bytestokey/index.js"
+      ]
+    },
+    {
+      "name": "hash-base (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-hash-base",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-hash-base/LICENSE",
+          "sha256": "898f204abbbbde58c6230a31842c59aeb8040fbcffa924db28e6d0b1d7631a3a"
+        }
+      ],
+      "licenseReference": {
+        "name": "hash-base",
+        "version": "3.1.0",
+        "repository": {
+          "url": "git+https://github.com/crypto-browserify/hash-base.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/hash-base/-/hash-base-3.1.0.tgz",
+        "integrity": "sha512-1nmYp/rhMDiE7AYkDw+lLwlAzz0AntGIe51F3RfFfEqyQ3feY2eI/NcwC6umIQVOASPMsWJLJScWKSSvzL9IVA==",
+        "sha256": "cf77fccc889f84a7fb615b0e1cd195685c9a61418cf5e23ff42dbea5608f461d"
+      },
+      "modules": [
+        "./node_modules/hash-base/index.js"
+      ]
+    },
+    {
+      "name": "hash.js (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-hash.js",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-hash.js/LICENSE-from-README",
+          "sha256": "f6ea0899d4a65578f4be7e01b61fa2ffb08268ca06571f4f53d8a82025179982"
+        }
+      ],
+      "licenseReference": {
+        "name": "hash.js",
+        "version": "1.1.7",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/indutny/hash.js.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/hash.js/-/hash.js-1.1.7.tgz",
+        "integrity": "sha512-taOaskGt4z4SOANNseOviYDvjEJinIkRgmp7LbKP2YTTmVxWBl87s/uzK9r+44BclBSp2X7K1hqeNfz9JbBeXA==",
+        "sha256": "8eadfe0cbd33052fedb65ed4bf9acfe4645eafaabf877d99e3b1d9d771668ca6"
+      },
+      "modules": [
+        "./node_modules/hash.js/lib/hash.js",
+        "./node_modules/hash.js/lib/hash/common.js",
+        "./node_modules/hash.js/lib/hash/hmac.js",
+        "./node_modules/hash.js/lib/hash/ripemd.js",
+        "./node_modules/hash.js/lib/hash/sha.js",
+        "./node_modules/hash.js/lib/hash/sha/1.js",
+        "./node_modules/hash.js/lib/hash/sha/224.js",
+        "./node_modules/hash.js/lib/hash/sha/256.js",
+        "./node_modules/hash.js/lib/hash/sha/384.js",
+        "./node_modules/hash.js/lib/hash/sha/512.js",
+        "./node_modules/hash.js/lib/hash/sha/common.js",
+        "./node_modules/hash.js/lib/hash/utils.js"
+      ]
+    },
+    {
+      "name": "hmac-drbg (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-hmac-drbg",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-hmac-drbg/LICENSE-from-README",
+          "sha256": "c44d794d54cc09fbbcc090207df3e798f6f6506a92789fbde41b918cb5f9e261"
+        }
+      ],
+      "licenseReference": {
+        "name": "hmac-drbg",
+        "version": "1.0.1",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/indutny/hmac-drbg.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/hmac-drbg/-/hmac-drbg-1.0.1.tgz",
+        "integrity": "sha512-Tti3gMqLdZfhOQY1Mzf/AanLiqh1WTiJgEj26ZuYQ9fbkLomzGchCws4FyrSd4VkpBfiNhaE1On+lOz894jvXg==",
+        "sha256": "321370d938a49a55cbdfcef124f63cde6d3a947b7231aeab1a5ba0ca62e35962"
+      },
+      "modules": [
+        "./node_modules/hmac-drbg/lib/hmac-drbg.js"
+      ]
+    },
+    {
+      "name": "ieee754 (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "BSD-3-Clause",
+      "dir": "embedded-js/polyfill-ieee754",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-ieee754/LICENSE",
+          "sha256": "18d45466ba3253deae04667e267a91ea8de8548f18c1125264d1c9db28194cc1"
+        }
+      ],
+      "licenseReference": {
+        "name": "ieee754",
+        "version": "1.2.1",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/feross/ieee754.git"
+        },
+        "license": "BSD-3-Clause",
+        "tarball": "https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz",
+        "integrity": "sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==",
+        "sha256": "8ef14b9b397e339db89db97881fb714f49319d8f0eb1275901f45567b28f9dac"
+      },
+      "modules": []
+    },
+    {
+      "name": "inherits (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "ISC",
+      "dir": "embedded-js/polyfill-inherits",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-inherits/LICENSE",
+          "sha256": "5ffe28e7ade7d8f10d85d5337a73fd793dac5c462fb9a28fbf8c5046c7fbca3b"
+        }
+      ],
+      "licenseReference": {
+        "name": "inherits",
+        "version": "2.0.4",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/isaacs/inherits.git"
+        },
+        "license": "ISC",
+        "tarball": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
+        "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
+        "sha256": "d94dbc6c1bb3c5ac0fb12a73ade187108fc60de273a1b754f55044eb5e24afaf"
+      },
+      "modules": [
+        "./node_modules/inherits/inherits_browser.js"
+      ]
+    },
+    {
+      "name": "md5.js (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-md5.js",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-md5.js/LICENSE",
+          "sha256": "898f204abbbbde58c6230a31842c59aeb8040fbcffa924db28e6d0b1d7631a3a"
+        }
+      ],
+      "licenseReference": {
+        "name": "md5.js",
+        "version": "1.3.5",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/md5.js.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/md5.js/-/md5.js-1.3.5.tgz",
+        "integrity": "sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg==",
+        "sha256": "06777b61b01229c755ab4c6f4208d8f692222db4201abc9263877e4415693d03"
+      },
+      "modules": [
+        "./node_modules/md5.js/index.js"
+      ]
+    },
+    {
+      "name": "miller-rabin (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-miller-rabin",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-miller-rabin/LICENSE-from-README",
+          "sha256": "f6ea0899d4a65578f4be7e01b61fa2ffb08268ca06571f4f53d8a82025179982"
+        }
+      ],
+      "licenseReference": {
+        "name": "miller-rabin",
+        "version": "4.0.1",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/indutny/miller-rabin.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/miller-rabin/-/miller-rabin-4.0.1.tgz",
+        "integrity": "sha512-115fLhvZVqWwHPbClyntxEVfVDfl9DLLTuJvq3g2O/Oxi8AiNouAHvDSzHS0viUJc+V5vm3eq91Xwqn9dp4jRA==",
+        "sha256": "55bc46e7a4150804a546e634a971ea28844b47abbbe3136cb895951d84d6b8c9"
+      },
+      "modules": [
+        "./node_modules/miller-rabin/lib/mr.js"
+      ]
+    },
+    {
+      "name": "minimalistic-assert (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "ISC",
+      "dir": "embedded-js/polyfill-minimalistic-assert",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-minimalistic-assert/LICENSE",
+          "sha256": "136fee1129ea96ce18b41c26a72f5d4ba196ee41bfd73b55d0b8509cdda148e9"
+        }
+      ],
+      "licenseReference": {
+        "name": "minimalistic-assert",
+        "version": "1.0.1",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/calvinmetcalf/minimalistic-assert.git"
+        },
+        "license": "ISC",
+        "tarball": "https://registry.npmjs.org/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz",
+        "integrity": "sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==",
+        "sha256": "f16522c947d6dbe3a99f5ff4296ccc253090b838959abdddc45fe81edb03f3a0"
+      },
+      "modules": [
+        "./node_modules/minimalistic-assert/index.js"
+      ]
+    },
+    {
+      "name": "minimalistic-crypto-utils (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-minimalistic-crypto-utils",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-minimalistic-crypto-utils/LICENSE-from-README",
+          "sha256": "a36b7beb1d841fca50b5f8faa8d66f6741e49c9406750f9dc4b52edaaeb3dcde"
+        }
+      ],
+      "licenseReference": {
+        "name": "minimalistic-crypto-utils",
+        "version": "1.0.1",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/indutny/minimalistic-crypto-utils.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz",
+        "integrity": "sha512-JIYlbt6g8i5jKfJ3xz7rF0LXmv2TkDxBLUkiBeZ7bAx4GnnNMr8xFpGnOxn6GhTEHx3SjRrZEoU+j04prX1ktg==",
+        "sha256": "f35f6e02efe1b2d6e8764fea48ef6d1211693c838f54d6ef50f0bc9fe6fa9db3"
+      },
+      "modules": [
+        "./node_modules/minimalistic-crypto-utils/lib/utils.js"
+      ]
+    },
+    {
+      "name": "parse-asn1 (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "ISC",
+      "dir": "embedded-js/polyfill-parse-asn1",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-parse-asn1/LICENSE",
+          "sha256": "bc5ed4eed738303bf403ec3b7e0a8e76760ef60664ad050a0ff61db23da77e66"
+        }
+      ],
+      "licenseReference": {
+        "name": "parse-asn1",
+        "version": "5.1.6",
+        "repository": {
+          "url": "git://github.com/crypto-browserify/parse-asn1.git",
+          "type": "git"
+        },
+        "license": "ISC",
+        "tarball": "https://registry.npmjs.org/parse-asn1/-/parse-asn1-5.1.6.tgz",
+        "integrity": "sha512-RnZRo1EPU6JBnra2vGHj0yhp6ebyjBZpmUCLHWiFhxlzvBCCpAuZ7elsBp1PVAbQN0/04VD/19rfzlBSwLstMw==",
+        "sha256": "6bf4679313c62f9bc4669ef1413857d9685829c2329c3f36071e9ca7a065b531"
+      },
+      "modules": [
+        "./node_modules/parse-asn1/aesid.json",
+        "./node_modules/parse-asn1/asn1.js",
+        "./node_modules/parse-asn1/certificate.js",
+        "./node_modules/parse-asn1/fixProc.js",
+        "./node_modules/parse-asn1/index.js"
+      ]
+    },
+    {
+      "name": "pbkdf2 (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-pbkdf2",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-pbkdf2/LICENSE",
+          "sha256": "a9667a8bf55e7f20cf894cb47774f94ebd4eb366408aafb980f1f6547bcdc10a"
+        }
+      ],
+      "licenseReference": {
+        "name": "pbkdf2",
+        "version": "3.1.2",
+        "repository": {
+          "url": "git+https://github.com/crypto-browserify/pbkdf2.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/pbkdf2/-/pbkdf2-3.1.2.tgz",
+        "integrity": "sha512-iuh7L6jA7JEGu2WxDwtQP1ddOpaJNC4KlDEFfdQajSGgGPNi4OyDc2R7QnbY2bR9QjBVGwgvTdNJZoE7RaxUMA==",
+        "sha256": "3df5733b55d62726e968bc1661ed06b505345ed63b3503951b9e3bc9b46ed65f"
+      },
+      "modules": [
+        "./node_modules/pbkdf2/browser.js",
+        "./node_modules/pbkdf2/lib/async.js",
+        "./node_modules/pbkdf2/lib/default-encoding.js",
+        "./node_modules/pbkdf2/lib/precondition.js",
+        "./node_modules/pbkdf2/lib/sync-browser.js",
+        "./node_modules/pbkdf2/lib/to-buffer.js"
+      ]
+    },
+    {
+      "name": "process (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-process",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-process/LICENSE",
+          "sha256": "59a400d04c5078579acc27ddd6452c1bdf763f9506e01364700935fbb1a7c91b"
+        }
+      ],
+      "licenseReference": {
+        "name": "process",
+        "version": "0.11.10",
+        "repository": {
+          "url": "git://github.com/shtylman/node-process.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/process/-/process-0.11.10.tgz",
+        "integrity": "sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==",
+        "sha256": "7c10569b3c9cb056152ad630d40f9f4fcc321a0013c2bb8384f036aaa674e6bb"
+      },
+      "modules": []
+    },
+    {
+      "name": "public-encrypt (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-public-encrypt",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-public-encrypt/LICENSE",
+          "sha256": "db6109f994692150ed82cd904bb053c73b97b23678bf52047f747bfec11e1934"
+        }
+      ],
+      "licenseReference": {
+        "name": "public-encrypt",
+        "version": "4.0.3",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/publicEncrypt.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/public-encrypt/-/public-encrypt-4.0.3.tgz",
+        "integrity": "sha512-zVpa8oKZSz5bTMTFClc1fQOnyyEzpl5ozpi1B5YcvBrdohMjH2rfsBtyXcuNuwjsDIXmBYlF2N5FlJYhR29t8Q==",
+        "sha256": "7f0eeca034a7bf643451b10706af9e3ac5f1501a7ab022db4d25bcf011c2014b"
+      },
+      "modules": [
+        "./node_modules/public-encrypt/browser.js",
+        "./node_modules/public-encrypt/mgf.js",
+        "./node_modules/public-encrypt/privateDecrypt.js",
+        "./node_modules/public-encrypt/publicEncrypt.js",
+        "./node_modules/public-encrypt/withPublic.js",
+        "./node_modules/public-encrypt/xor.js"
+      ]
+    },
+    {
+      "name": "punycode (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-punycode",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-punycode/LICENSE-MIT.txt",
+          "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a"
+        }
+      ],
+      "licenseReference": {
+        "name": "punycode",
+        "version": "2.3.1",
+        "repository": {
+          "url": "git+https://github.com/mathiasbynens/punycode.js.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz",
+        "integrity": "sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==",
+        "sha256": "e4ce59f9fbac44349abab87279ab658f6b4614916bec5e088ae3be9323e193bb"
+      },
+      "modules": []
+    },
+    {
+      "name": "randombytes (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-randombytes",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-randombytes/LICENSE",
+          "sha256": "ddc0dd5947bd2966b9a4cfde098566b011de0acfbe7814536955636ce9e3eced"
+        }
+      ],
+      "licenseReference": {
+        "name": "randombytes",
+        "version": "2.1.0",
+        "repository": {
+          "type": "git",
+          "url": "git+ssh://git@github.com/crypto-browserify/randombytes.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/randombytes/-/randombytes-2.1.0.tgz",
+        "integrity": "sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==",
+        "sha256": "b8a6d3e6532817912ad3dacbb0e64be75026941a5167549aa1d7fecbafd1bcaa"
+      },
+      "modules": [
+        "./node_modules/randombytes/browser.js"
+      ]
+    },
+    {
+      "name": "randomfill (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-randomfill",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-randomfill/LICENSE",
+          "sha256": "ddc0dd5947bd2966b9a4cfde098566b011de0acfbe7814536955636ce9e3eced"
+        }
+      ],
+      "licenseReference": {
+        "name": "randomfill",
+        "version": "1.0.4",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/crypto-browserify/randomfill.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/randomfill/-/randomfill-1.0.4.tgz",
+        "integrity": "sha512-87lcbR8+MhcWcUiQ+9e+Rwx8MyR2P7qnt15ynUlbm3TU/fjbgz4GsvfSUDTemtCCtVCqb4ZcEFlyPNTh9bBTLw==",
+        "sha256": "3b0c2fec576a572e139563606102e0ffd9dc8a2853525eb7aa1a30e0de754fa6"
+      },
+      "modules": [
+        "./node_modules/randomfill/browser.js"
+      ]
+    },
+    {
+      "name": "readable-stream (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-readable-stream",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-readable-stream/LICENSE",
+          "sha256": "ec62dc96da0099b87f4511736c87309335527fb7031639493e06c95728dc8c54"
+        }
+      ],
+      "licenseReference": {
+        "name": "readable-stream",
+        "version": "3.6.2",
+        "repository": {
+          "url": "git://github.com/nodejs/readable-stream.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz",
+        "integrity": "sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA==",
+        "sha256": "edd866c05e318aa9c091763eebdd4207409b7a7648be19c5317a96047305ab5d"
+      },
+      "modules": [
+        "./node_modules/readable-stream/errors-browser.js",
+        "./node_modules/readable-stream/lib/_stream_duplex.js",
+        "./node_modules/readable-stream/lib/_stream_passthrough.js",
+        "./node_modules/readable-stream/lib/_stream_readable.js",
+        "./node_modules/readable-stream/lib/_stream_transform.js",
+        "./node_modules/readable-stream/lib/_stream_writable.js",
+        "./node_modules/readable-stream/lib/internal/streams/async_iterator.js",
+        "./node_modules/readable-stream/lib/internal/streams/buffer_list.js",
+        "./node_modules/readable-stream/lib/internal/streams/destroy.js",
+        "./node_modules/readable-stream/lib/internal/streams/end-of-stream.js",
+        "./node_modules/readable-stream/lib/internal/streams/from-browser.js",
+        "./node_modules/readable-stream/lib/internal/streams/pipeline.js",
+        "./node_modules/readable-stream/lib/internal/streams/state.js",
+        "./node_modules/readable-stream/lib/internal/streams/stream-browser.js",
+        "./node_modules/readable-stream/readable-browser.js"
+      ]
+    },
+    {
+      "name": "ripemd160 (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-ripemd160",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-ripemd160/LICENSE",
+          "sha256": "4847d2fd9ed54cc006dd79f5a14fa5dd35eb8274dca511418166e195e277c05b"
+        }
+      ],
+      "licenseReference": {
+        "name": "ripemd160",
+        "version": "2.0.2",
+        "repository": {
+          "url": "git+https://github.com/crypto-browserify/ripemd160.git",
+          "type": "git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/ripemd160/-/ripemd160-2.0.2.tgz",
+        "integrity": "sha512-ii4iagi25WusVoiC4B4lq7pbXfAp3D9v5CwfkY33vffw2+pkDjY1D8GaN7spsxvCSx8dkPqOZCEZyfxcmJG2IA==",
+        "sha256": "44493c512eb8157f294dbfc44dfe38757b81f357d53c4030fdab6dc83f6f94ba"
+      },
+      "modules": [
+        "./node_modules/ripemd160/index.js"
+      ]
+    },
+    {
+      "name": "safe-buffer (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-safe-buffer",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-safe-buffer/LICENSE",
+          "sha256": "c7cc929b57080f4b9d0c6cf57669f0463fc5b39906344dfc8d3bc43426b30eac"
+        }
+      ],
+      "licenseReference": {
+        "name": "safe-buffer",
+        "version": "5.2.1",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/feross/safe-buffer.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz",
+        "integrity": "sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==",
+        "sha256": "5d181804516c4a693a384272a7bd0e42d17e0d4b301ccfbe408669ccafdcb3e8"
+      },
+      "modules": [
+        "./node_modules/safe-buffer/index.js"
+      ]
+    },
+    {
+      "name": "safer-buffer (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-safer-buffer",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-safer-buffer/LICENSE",
+          "sha256": "4bc935e71be198c67ddf3c2b5fddb195f6edc182bfc155a96a6db61b44b494b9"
+        }
+      ],
+      "licenseReference": {
+        "name": "safer-buffer",
+        "version": "2.1.2",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/ChALkeR/safer-buffer.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",
+        "integrity": "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==",
+        "sha256": "78812f65ae3b98071ce1c9bacbe0666f4220d0b2753c2a11530eb27df440a3b3"
+      },
+      "modules": [
+        "./node_modules/safer-buffer/safer.js"
+      ]
+    },
+    {
+      "name": "sha.js (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "(MIT AND BSD-3-Clause)",
+      "dir": "embedded-js/polyfill-sha.js",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-sha.js/LICENSE",
+          "sha256": "58dcf38be1438f739412b87eb70d64bf00e9976d529bb119f700d8b3167924f0"
+        }
+      ],
+      "licenseReference": {
+        "name": "sha.js",
+        "version": "2.4.11",
+        "repository": {
+          "url": "git://github.com/crypto-browserify/sha.js.git",
+          "type": "git"
+        },
+        "license": "(MIT AND BSD-3-Clause)",
+        "tarball": "https://registry.npmjs.org/sha.js/-/sha.js-2.4.11.tgz",
+        "integrity": "sha512-QMEp5B7cftE7APOjk5Y6xgrbWu+WkLVQwk8JNjZ8nKRciZaByEW6MubieAiToS7+dwvrjGhH8jRXz3MVd0AYqQ==",
+        "sha256": "a3ccf27df7edd393c7526cf608620f50bec8ef284975e59adb24ff4eb8d36c49"
+      },
+      "modules": [
+        "./node_modules/sha.js/hash.js",
+        "./node_modules/sha.js/index.js",
+        "./node_modules/sha.js/sha.js",
+        "./node_modules/sha.js/sha1.js",
+        "./node_modules/sha.js/sha224.js",
+        "./node_modules/sha.js/sha256.js",
+        "./node_modules/sha.js/sha384.js",
+        "./node_modules/sha.js/sha512.js"
+      ]
+    },
+    {
+      "name": "string_decoder (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-string_decoder",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-string_decoder/LICENSE",
+          "sha256": "11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b"
+        }
+      ],
+      "licenseReference": {
+        "name": "string_decoder",
+        "version": "1.3.0",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/nodejs/string_decoder.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz",
+        "integrity": "sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==",
+        "sha256": "7d036900940345e423538371ae45b23bfaf4b454bc398c6ba604063b0597b3ad"
+      },
+      "modules": [
+        "./node_modules/string_decoder/lib/string_decoder.js"
+      ]
+    },
+    {
+      "name": "util-deprecate (node-polyfill snapshot)",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "MIT",
+      "dir": "embedded-js/polyfill-util-deprecate",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core",
+      "evidence": "Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/polyfill-util-deprecate/LICENSE",
+          "sha256": "0154425673db15cdfa80ecba2c9b1f1a867f7197a006764712849bfc3a93cbb7"
+        }
+      ],
+      "licenseReference": {
+        "name": "util-deprecate",
+        "version": "1.0.2",
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/TooTallNate/util-deprecate.git"
+        },
+        "license": "MIT",
+        "tarball": "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz",
+        "integrity": "sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==",
+        "sha256": "79a1de983c1b393180c47456d6b73caab278a00ea6e37d5c6675f2dcdec2a3e5"
+      },
+      "modules": [
+        "./node_modules/util-deprecate/browser.js"
+      ]
+    },
+    {
+      "name": "OHOS / Node / originjs adaptation notices",
+      "version": "1.0.1 / cfaeb3882330",
+      "license": "Apache-2.0 AND MIT AND MulanPSL-2.0",
+      "dir": "polyfill-snapshot",
+      "source": "https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45",
+      "evidence": "Full original package NOTICE and actual source headers; Mulan text retained from originjs upstream. README.OpenSource 0.18.6 is not a verified originjs tag; exact adapted files are pinned to OHOS commit.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/polyfill-snapshot/LICENSE-Apache-2.0",
+          "sha256": "c5905f75f6cd50333fd50d2c552c245a5d6292342583d09ebdfbda2756dec924"
+        },
+        {
+          "path": "third-party/licenses/polyfill-snapshot/LICENSE-MulanPSL-2.0",
+          "sha256": "d0b16a3cb603569486834cb55fa8a539832063864793339386f5e1f646928987"
+        },
+        {
+          "path": "third-party/licenses/polyfill-snapshot/NOTICE-package",
+          "sha256": "5a9039cb1fdc52f0245212d27c85d6b41ddd13200277c771e09f159316420b1a"
+        },
+        {
+          "path": "third-party/licenses/polyfill-snapshot/NOTICE-source-comments",
+          "sha256": "b299fe55793711ce1fb0ae999135374055baabb412f0b6150af63c0213cfa74c"
+        }
+      ],
+      "originjsLicenseCommit": "cd50376b915894177ff4f6fffabf824b5b7a3f76"
+    },
+    {
+      "name": "Google Closure UTF-8 conversion (hash.js)",
+      "version": "8598d87242af",
+      "license": "Apache-2.0",
+      "dir": "embedded-js/google-closure-utf8",
+      "source": "https://github.com/google/closure-library/tree/8598d87242af59aac233270742c8984e2b2bdbe0",
+      "evidence": "Actual bundled hash.js/lib/hash/utils.js cites this commit and Apache-2.0. Both copyright header and license are retained.",
+      "licenseFiles": [
+        {
+          "path": "third-party/licenses/embedded-js/google-closure-utf8/LICENSE",
+          "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+        },
+        {
+          "path": "third-party/licenses/embedded-js/google-closure-utf8/NOTICE",
+          "sha256": "a833d4536433c4fe9864c68ac938f7165d8585f956b1598ae760171deabaf835"
+        }
+      ]
+    }
+  ]
+}

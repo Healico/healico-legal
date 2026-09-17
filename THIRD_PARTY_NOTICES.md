@@ -21,7 +21,7 @@ HarmonyOS/DevEco 工具链本身由华为按其协议提供；实际随 HAP 分�
 
 ## 组件清单
 
-本清单包含 Libqrencode、3 个随应用分发的 OHPM 组件、1 个开发测试组件、运行库与嵌入代码通知，以及 Rust 构建闭包中的 136 个 crate。上游许可证参考条目不代表已确定内嵌依赖的精确版本。Rust 清单来自 `Cargo.lock` 和目标 `aarch64-unknown-linux-ohos` 的 normal/build 依赖图，包含保守纳入的宿主构建依赖，不表示每个 crate 都进入最终机器码。
+本清单包含 Libqrencode、3 个随应用分发的 OHPM 组件、1 个开发测试组件、运行库与嵌入代码通知，以及 Rust 构建闭包中的 136 个 crate。内嵌代码按经验证的版本或适配源码提交列示；补充许可证的 npm 版本不等于推定的历史内嵌版本。Rust 清单来自 `Cargo.lock` 和目标 `aarch64-unknown-linux-ohos` 的 normal/build 依赖图，包含保守纳入的宿主构建依赖，不表示每个 crate 都进入最终机器码。
 
 ## Libqrencode 与 OHPM 组件
 
@@ -2385,18 +2385,76 @@ Apache License
 
    END OF TERMS AND CONDITIONS
 
-## 运行库、嵌入代码及许可证参考
+## 运行库与已溯源的嵌入代码
 
 | 组件 | 版本 | 许可证 | 来源/仓库 | 分发状态 | 许可证文件 |
 | --- | --- | --- | --- | --- | --- |
 | LLVM OHOS libc++ / libc++abi / libunwind | 15.0.4 | Apache-2.0 WITH LLVM-exception AND MIT AND NCSA | https://gitee.com/openharmony/third_party_llvm-project | 分发或构建闭包 | NOTICE |
 | Rust standard library | 1.93.0 | MIT OR Apache-2.0 (with bundled third-party notices) | https://github.com/rust-lang/rust/tree/254b59607d4417e9dffbc307138ae5c86280fe4c | 分发或构建闭包 | COPYRIGHT-library.html, LICENSE-APACHE, LICENSE-MIT |
-| JSZip upstream | 3.10.1 | MIT | https://github.com/Stuk/jszip/tree/v3.10.1 | 分发或构建闭包 | LICENSE.markdown |
-| @ohos/jszip embedded notices | 1.0.1 bundle | MIT AND Zlib AND BSD-2-Clause (provenance review pending) | https://ohpm.openharmony.cn/#/cn/detail/%40ohos%2Fjszip | 分发或构建闭包 | NOTICE |
-| lie upstream license reference | 3.3.0 | MIT | https://www.npmjs.com/package/lie/v/3.3.0 | 许可证参考；非版本认定 | license.md |
-| immediate upstream license reference | 3.0.6 | MIT | https://www.npmjs.com/package/immediate/v/3.0.6 | 许可证参考；非版本认定 | LICENSE.txt |
-| pako upstream license reference | 1.0.11 | MIT AND Zlib | https://www.npmjs.com/package/pako/v/1.0.11 | 许可证参考；非版本认定 | LICENSE, NOTICE-bundled-zlib |
-| sjcl upstream license reference | 1.0.8 | BSD-2-Clause | https://www.npmjs.com/package/sjcl/v/1.0.8 | 许可证参考；非版本认定 | LICENSE.txt |
+| JSZip (xqdoo00o fork) | 3.10.1 / 52378c05099c | MIT | https://github.com/xqdoo00o/jszip/tree/52378c05099c48bba49c2bbb4d9d549a3272d7a7 | 分发或构建闭包 | LICENSE.markdown, lib/license_header.js |
+| @ohos/jszip bundled copyright notices | 1.0.1 / ebece08923c9 | MIT AND Zlib AND BSD-2-Clause | https://gitcode.com/openharmony-tpc/openharmony_tpc_samples/tree/ebece08923c9400d104a9b2e1f4a42e0193c657f | 分发或构建闭包 | NOTICE |
+| lie (JSZip bundle) | 3.3.0 | MIT | https://www.npmjs.com/package/lie/v/3.3.0 | 分发或构建闭包 | license.md |
+| immediate (JSZip bundle) | 3.0.6 | MIT | https://www.npmjs.com/package/immediate/v/3.0.6 | 分发或构建闭包 | LICENSE.txt |
+| pako (JSZip bundle) | 1.0.11 | (MIT AND Zlib) | https://www.npmjs.com/package/pako/v/1.0.11 | 分发或构建闭包 | LICENSE, NOTICE-zlib |
+| readable-stream (JSZip bundle) | 2.3.8 | MIT | https://www.npmjs.com/package/readable-stream/v/2.3.8 | 分发或构建闭包 | LICENSE |
+| setimmediate (JSZip bundle) | 1.0.5 | MIT | https://www.npmjs.com/package/setimmediate/v/1.0.5 | 分发或构建闭包 | LICENSE.txt |
+| core-util-is (JSZip bundle) | 1.0.3 | MIT | https://www.npmjs.com/package/core-util-is/v/1.0.3 | 分发或构建闭包 | LICENSE |
+| inherits (JSZip bundle) | 2.0.4 | ISC | https://www.npmjs.com/package/inherits/v/2.0.4 | 分发或构建闭包 | LICENSE |
+| isarray (JSZip bundle) | 1.0.0 | MIT | https://www.npmjs.com/package/isarray/v/1.0.0 | 分发或构建闭包 | LICENSE-from-README |
+| process-nextick-args (JSZip bundle) | 2.0.1 | MIT | https://www.npmjs.com/package/process-nextick-args/v/2.0.1 | 分发或构建闭包 | license.md |
+| safe-buffer (JSZip bundle) | 5.1.2 | MIT | https://www.npmjs.com/package/safe-buffer/v/5.1.2 | 分发或构建闭包 | LICENSE |
+| string_decoder (JSZip bundle) | 1.1.1 | MIT | https://www.npmjs.com/package/string_decoder/v/1.1.1 | 分发或构建闭包 | LICENSE |
+| util-deprecate (JSZip bundle) | 1.0.2 | MIT | https://www.npmjs.com/package/util-deprecate/v/1.0.2 | 分发或构建闭包 | LICENSE |
+| SJCL (JSZip fork build) | 52378c05099c / OHOS patch | BSD-2-Clause | https://github.com/xqdoo00o/jszip/blob/52378c05099c48bba49c2bbb4d9d549a3272d7a7/lib/sjcl.js | 分发或构建闭包 | LICENSE.txt, README/COPYRIGHT |
+| abort-controller (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| asn1.js (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| base64-js (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| bn.js (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| brorand (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE-from-README |
+| browserify-aes (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| browserify-cipher (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| browserify-des (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | license |
+| browserify-rsa (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| browserify-sign (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | ISC | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| buffer (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| buffer-xor (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| cipher-base (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| create-ecdh (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| create-hash (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| create-hmac (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| crypto-browserify (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| des.js (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE-from-README |
+| diffie-hellman (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| elliptic (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE-from-README |
+| end-of-stream (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| event-target-shim (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| events (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| evp_bytestokey (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| hash-base (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| hash.js (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE-from-README |
+| hmac-drbg (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE-from-README |
+| ieee754 (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | BSD-3-Clause | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| inherits (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | ISC | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| md5.js (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| miller-rabin (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE-from-README |
+| minimalistic-assert (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | ISC | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| minimalistic-crypto-utils (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE-from-README |
+| parse-asn1 (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | ISC | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| pbkdf2 (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| process (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| public-encrypt (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| punycode (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE-MIT.txt |
+| randombytes (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| randomfill (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| readable-stream (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| ripemd160 (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| safe-buffer (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| safer-buffer (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| sha.js (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | (MIT AND BSD-3-Clause) | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| string_decoder (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| util-deprecate (node-polyfill snapshot) | 1.0.1 / cfaeb3882330 | MIT | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45/library/src/main/core | 分发或构建闭包 | LICENSE |
+| OHOS / Node / originjs adaptation notices | 1.0.1 / cfaeb3882330 | Apache-2.0 AND MIT AND MulanPSL-2.0 | https://gitcode.com/openharmony-sig/ohos_polyfill/tree/cfaeb3882330768750c71b035d5bc9349b87bf45 | 分发或构建闭包 | LICENSE-Apache-2.0, LICENSE-MulanPSL-2.0, NOTICE-package, NOTICE-source-comments |
+| Google Closure UTF-8 conversion (hash.js) | 8598d87242af | Apache-2.0 | https://github.com/google/closure-library/tree/8598d87242af59aac233270742c8984e2b2bdbe0 | 分发或构建闭包 | LICENSE, NOTICE |
 
 LLVM OHOS libc++ / libc++abi / libunwind: SDK LLVM NOTICE; HAP libc++_shared.so SHA-256 f69947af100b652e349ae51e4a4888bcc7a327db9085272d318176ef1782bf0f
 
@@ -13993,9 +14051,11 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
-JSZip upstream: Actual dist.js JSZip.version=3.10.1; OHPM NOTICE incorrectly labels 3.5.0; MIT option selected
+JSZip (xqdoo00o fork): All installed lib files match this commit after CRLF normalization except the archived SJCL crypto-provider patch; MIT option selected. OHPM README version 3.5.0 is stale.
 
---- JSZip upstream 3.10.1 · LICENSE.markdown · SHA-256 602ef1d5d3db1b23ada0b61d4230ef336012de7bc3b773d565f2b27a2757f51d ---
+本版本采用的许可：MIT
+
+--- JSZip (xqdoo00o fork) 3.10.1 / 52378c05099c · LICENSE.markdown · SHA-256 602ef1d5d3db1b23ada0b61d4230ef336012de7bc3b773d565f2b27a2757f51d ---
 
 JSZip is dual licensed. At your choice you may use it under the MIT license *or* the GPLv3
 license.
@@ -14649,34 +14709,105 @@ copy of the Program in return for a fee.
 
                      END OF TERMS AND CONDITIONS
 
-@ohos/jszip embedded notices: Verbatim bundled notices; references below do not assert exact versions of embedded dependencies
+--- JSZip (xqdoo00o fork) 3.10.1 / 52378c05099c · lib/license_header.js · SHA-256 c20e9105920b0aa67ea9412afde0925591431dd1dd783f09b1e5c77c7d3e06a9 ---
 
---- @ohos/jszip embedded notices 1.0.1 bundle · NOTICE · SHA-256 37e65c3688a3d8f28adf8bba15bcc68b0c0f5d221084403bbc4eb854a98ae0c1 ---
+/*!
 
-Actual @ohos/jszip 1.0.1 src/main/dist/dist.js notices (verbatim comment blocks).
-Source SHA-256: 42a29684b2ea8d7cdb0ea8b09f000390cf5455ae72a029a73d9aca132d36c703
+JSZip v__VERSION__ - A JavaScript class for generating and reading zip files
+<http://stuartk.com/jszip>
 
-// Copyright Joyent, Inc. and other Node contributors.
+(c) 2009-2016 Stuart Knightley <stuart [at] stuartk.com>
+Dual licenced under the MIT license or GPLv3. See https://raw.github.com/Stuk/jszip/main/LICENSE.markdown.
 
+JSZip uses the library pako released under the MIT license :
+https://github.com/nodeca/pako/blob/main/LICENSE
+*/
 
-// distribute, sublicense, and/or sell copies of the Software, and to permit
+@ohos/jszip bundled copyright notices: Verbatim actual bundle comment blocks; dependency and fork licenses listed separately.
 
+--- @ohos/jszip bundled copyright notices 1.0.1 / ebece08923c9 · NOTICE · SHA-256 c63746bfd88c6454dabcb1b80df6901542d20d64a830d6891c48fd38d5ffe9f7 ---
 
-// The above copyright notice and this permission notice shall be included
+Verbatim comment notices from @ohos/jszip 1.0.1.
+Bundle SHA-256: 42a29684b2ea8d7cdb0ea8b09f000390cf5455ae72a029a73d9aca132d36c703
 
+Sources: src/main/dist/dist.js
 
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+	// Copyright Joyent, Inc. and other Node contributors.
+	//
+	// Permission is hereby granted, free of charge, to any person obtaining a
+	// copy of this software and associated documentation files (the
+	// "Software"), to deal in the Software without restriction, including
+	// without limitation the rights to use, copy, modify, merge, publish,
+	// distribute, sublicense, and/or sell copies of the Software, and to permit
+	// persons to whom the Software is furnished to do so, subject to the
+	// following conditions:
+	//
+	// The above copyright notice and this permission notice shall be included
+	// in all copies or substantial portions of the Software.
+	//
+	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+	// USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+Sources: src/main/dist/dist.js
 
 /**
 	 * The following functions come from pako, from pako/lib/utils/strings
 	 * released under the MIT license, see pako https://github.com/nodeca/pako/
 	 */
 
+Sources: src/main/dist/dist.js
+
 /**
  * The following functions come from pako, from pako/lib/zlib/crc32.js
  * released under the MIT license, see pako https://github.com/nodeca/pako/
  */
+
+Sources: src/main/dist/dist.js
+
+/** @fileOverview Javascript cryptography implementation.
+ *
+ * Crush to remove comments, shorten variable names and
+ * generally reduce transmission size.
+ *
+ * @author Emily Stark
+ * @author Mike Hamburg
+ * @author Dan Boneh
+ */
+
+Sources: src/main/dist/dist.js
+
+/** @fileOverview Arrays of bits, encoded as arrays of Numbers.
+ *
+ * @author Emily Stark
+ * @author Mike Hamburg
+ * @author Dan Boneh
+ */
+
+Sources: src/main/dist/dist.js
+
+/** @fileOverview Bit array codec implementations.
+ *
+ * @author Emily Stark
+ * @author Mike Hamburg
+ * @author Dan Boneh
+ */
+
+Sources: src/main/dist/dist.js
+
+/** @fileOverview Javascript SHA-1 implementation.
+ *
+ * Based on the implementation in RFC 3174, method 1, and on the SJCL
+ * SHA-256 implementation.
+ *
+ * @author Quinn Slack
+ */
+
+Sources: src/main/dist/dist.js
 
 /** @fileOverview Low-level AES implementation.
  *
@@ -14694,6 +14825,38 @@ Source SHA-256: 42a29684b2ea8d7cdb0ea8b09f000390cf5455ae72a029a73d9aca132d36c703
  * @author Mike Hamburg
  * @author Dan Boneh
  */
+
+Sources: src/main/dist/dist.js
+
+/** @fileOverview HMAC implementation.
+ *
+ * @author Emily Stark
+ * @author Mike Hamburg
+ * @author Dan Boneh
+ */
+
+Sources: src/main/dist/dist.js
+
+/** @fileOverview Password-based key-derivation function, version 2.0.
+ *
+ * @author Emily Stark
+ * @author Mike Hamburg
+ * @author Dan Boneh
+ */
+
+Sources: src/main/dist/dist.js
+
+/** @fileOverview CTR mode implementation.
+ *
+ * Special thanks to Roy Nicholson for pointing out a bug in our
+ * implementation.
+ *
+ * @author Emily Stark
+ * @author Mike Hamburg
+ * @author Dan Boneh
+ */
+
+Sources: src/main/dist/dist.js
 
 // (C) 1995-2013 Jean-loup Gailly and Mark Adler
 // (C) 2014-2017 Vitaly Puzrin and Andrey Tupitsin
@@ -14714,328 +14877,9 @@ Source SHA-256: 42a29684b2ea8d7cdb0ea8b09f000390cf5455ae72a029a73d9aca132d36c703
 //   misrepresented as being the original software.
 // 3. This notice may not be removed or altered from any source distribution.
 
+lie (JSZip bundle): Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.
 
-/* ===========================================================================
- * Initialize the tree data structures for a new zlib stream.
- */
-
-// (!) This block is disabled in zlib defaults,
-// don't enable it for binary compatibility
-
-
-/* Slide the hash table (could be avoided with 32 bit values
-       at the expense of memory usage). We slide even when level == 0
-       to keep the hash table consistent if we switch back to level > 0
-       later. (Using level 0 permanently is not an optimal usage of
-       zlib, so we don't care about this pathological case.)
-       */
-
-/* ===========================================================================
- * Initialize the "longest match" routines for a new zlib stream
- */
-
-/* pointer back to this zlib stream */
-
-/* bit 0 true for zlib, bit 1 true for gzip */
-
-/* Size of match buffer for literals/lengths.  There are 4 reasons for
-   * limiting lit_bufsize to 64K:
-   *   - frequencies can be kept in 16 bit counters
-   *   - if compression is not successful for the first block, all input
-   *     data is still in the window so we can still emit a stored block even
-   *     when input comes from standard input.  (This can also be done for
-   *     all blocks if lit_bufsize is not greater than 32K.)
-   *   - if compression is not successful for a file smaller than 64K, we can
-   *     even emit a stored file instead of a stored block (saving 5 bytes).
-   *     This is applicable only for zip (not gzip or zlib).
-   *   - creating new Huffman trees less frequently may not provide fast
-   *     adaptation to changes in the input data statistics. (Take for
-   *     example a binary file with poorly compressible code followed by
-   *     a highly compressible string table.) Smaller buffer sizes give
-   *     fast adaptation but have of course the overhead of transmitting
-   *     trees more frequently.
-   *   - I can't count above 4
-   */
-
-/* suppress zlib wrapper */
-
-/* when using zlib wrappers, compute Adler-32 for provided dictionary */
-
-/**
- * class Deflate
- *
- * Generic JS-style wrapper for zlib calls. If you don't need
- * streaming behaviour - use more simple functions: [[deflate]],
- * [[deflateRaw]] and [[gzip]].
- **/
-
-/**
- * new Deflate(options)
- * - options (Object): zlib deflate options.
- *
- * Creates new deflator instance with specified params. Throws exception
- * on bad params. Supported options:
- *
- * - `level`
- * - `windowBits`
- * - `memLevel`
- * - `strategy`
- * - `dictionary`
- *
- * [http://zlib.net/manual.html#Advanced](http://zlib.net/manual.html#Advanced)
- * for more information on these.
- *
- * Additional options, for internal needs:
- *
- * - `chunkSize` - size of generated data chunks (16K by default)
- * - `raw` (Boolean) - do raw deflate
- * - `gzip` (Boolean) - create gzip wrapper
- * - `to` (String) - if equal to 'string', then result will be "binary string"
- *    (each char code [0..255])
- * - `header` (Object) - custom header for gzip
- *   - `text` (Boolean) - true if compressed data believed to be text
- *   - `time` (Number) - modification time, unix timestamp
- *   - `os` (Number) - operation system code
- *   - `extra` (Array) - array of bytes with extra data (max 65536)
- *   - `name` (String) - file name (binary string)
- *   - `comment` (String) - comment (binary string)
- *   - `hcrc` (Boolean) - true if header crc should be added
- *
- * ##### Example:
- *
- * ```javascript
- * var pako = require('pako')
- *   , chunk1 = Uint8Array([1,2,3,4,5,6,7,8,9])
- *   , chunk2 = Uint8Array([10,11,12,13,14,15,16,17,18,19]);
- *
- * var deflate = new pako.Deflate({ level: 3});
- *
- * deflate.push(chunk1, false);
- * deflate.push(chunk2, true);  // true -> last chunk
- *
- * if (deflate.err) { throw new Error(deflate.err); }
- *
- * console.log(deflate.result);
- * ```
- **/
-
-/**
- * deflate(data[, options]) -> Uint8Array|Array|String
- * - data (Uint8Array|Array|String): input data to compress.
- * - options (Object): zlib deflate options.
- *
- * Compress `data` with deflate algorithm and `options`.
- *
- * Supported options are:
- *
- * - level
- * - windowBits
- * - memLevel
- * - strategy
- * - dictionary
- *
- * [http://zlib.net/manual.html#Advanced](http://zlib.net/manual.html#Advanced)
- * for more information on these.
- *
- * Sugar (options):
- *
- * - `raw` (Boolean) - say that we work with raw stream, if you don't wish to specify
- *   negative windowBits implicitly.
- * - `to` (String) - if equal to 'string', then result will be "binary string"
- *    (each char code [0..255])
- *
- * ##### Example:
- *
- * ```javascript
- * var pako = require('pako')
- *   , data = Uint8Array([1,2,3,4,5,6,7,8,9]);
- *
- * console.log(pako.deflate(data));
- * ```
- **/
-
-/**
- * deflateRaw(data[, options]) -> Uint8Array|Array|String
- * - data (Uint8Array|Array|String): input data to compress.
- * - options (Object): zlib deflate options.
- *
- * The same as [[deflate]], but creates raw data, without wrapper
- * (header and adler32 crc).
- **/
-
-/**
- * gzip(data[, options]) -> Uint8Array|Array|String
- * - data (Uint8Array|Array|String): input data to compress.
- * - options (Object): zlib deflate options.
- *
- * The same as [[deflate]], but create gzip wrapper instead of
- * deflate one.
- **/
-
-/* maximum distance from zlib header */
-
-// (!) This block is disabled in zlib defaults,
-// don't enable it for binary compatibility
-//#ifdef INFLATE_ALLOW_INVALID_DISTANCE_TOOFAR_ARRR
-//                if (len <= op - whave) {
-//                  do {
-//                    output[_out++] = 0;
-//                  } while (--len);
-//                  continue top;
-//                }
-//                len -= op - whave;
-//                do {
-//                  output[_out++] = 0;
-//                } while (--op > whave);
-//                if (op === 0) {
-//                  from = _out - dist;
-//                  do {
-//                    output[_out++] = output[from++];
-//                  } while (--len);
-//                  continue top;
-//                }
-//#endif
-
-
-/* gzip header method and flags (0 if zlib) */
-
-/* zlib header max distance (INFLATE_STRICT) */
-
-/* expect zlib header */
-
-/* check if zlib header allowed */
-
-//Tracev((stderr, "inflate:   zlib header ok\n"));
-
-
-// (!) This block is disabled in zlib defaults,
-// don't enable it for binary compatibility
-//#ifdef INFLATE_ALLOW_INVALID_DISTANCE_TOOFAR_ARRR
-//          Trace((stderr, "inflate.c too far\n"));
-//          copy -= state.whave;
-//          if (copy > state.length) { copy = state.length; }
-//          if (copy > left) { copy = left; }
-//          left -= copy;
-//          state.length -= copy;
-//          do {
-//            output[put++] = 0;
-//          } while (--copy);
-//          if (state.length === 0) { state.mode = LEN; }
-//          break;
-//#endif
-
-
-/**
- * class Inflate
- *
- * Generic JS-style wrapper for zlib calls. If you don't need
- * streaming behaviour - use more simple functions: [[inflate]]
- * and [[inflateRaw]].
- **/
-
-/**
- * new Inflate(options)
- * - options (Object): zlib inflate options.
- *
- * Creates new inflator instance with specified params. Throws exception
- * on bad params. Supported options:
- *
- * - `windowBits`
- * - `dictionary`
- *
- * [http://zlib.net/manual.html#Advanced](http://zlib.net/manual.html#Advanced)
- * for more information on these.
- *
- * Additional options, for internal needs:
- *
- * - `chunkSize` - size of generated data chunks (16K by default)
- * - `raw` (Boolean) - do raw inflate
- * - `to` (String) - if equal to 'string', then result will be converted
- *   from utf8 to utf16 (javascript) string. When string output requested,
- *   chunk length can differ from `chunkSize`, depending on content.
- *
- * By default, when no options set, autodetect deflate/gzip data format via
- * wrapper header.
- *
- * ##### Example:
- *
- * ```javascript
- * var pako = require('pako')
- *   , chunk1 = Uint8Array([1,2,3,4,5,6,7,8,9])
- *   , chunk2 = Uint8Array([10,11,12,13,14,15,16,17,18,19]);
- *
- * var inflate = new pako.Inflate({ level: 3});
- *
- * inflate.push(chunk1, false);
- * inflate.push(chunk2, true);  // true -> last chunk
- *
- * if (inflate.err) { throw new Error(inflate.err); }
- *
- * console.log(inflate.result);
- * ```
- **/
-
-/**
- * inflate(data[, options]) -> Uint8Array|Array|String
- * - data (Uint8Array|Array|String): input data to decompress.
- * - options (Object): zlib inflate options.
- *
- * Decompress `data` with inflate/ungzip and `options`. Autodetect
- * format via wrapper header by default. That's why we don't provide
- * separate `ungzip` method.
- *
- * Supported options are:
- *
- * - windowBits
- *
- * [http://zlib.net/manual.html#Advanced](http://zlib.net/manual.html#Advanced)
- * for more information.
- *
- * Sugar (options):
- *
- * - `raw` (Boolean) - say that we work with raw stream, if you don't wish to specify
- *   negative windowBits implicitly.
- * - `to` (String) - if equal to 'string', then result will be converted
- *   from utf8 to utf16 (javascript) string. When string output requested,
- *   chunk length can differ from `chunkSize`, depending on content.
- *
- *
- * ##### Example:
- *
- * ```javascript
- * var pako = require('pako')
- *   , input = pako.deflate([1,2,3,4,5,6,7,8,9])
- *   , output;
- *
- * try {
- *   output = pako.inflate(input);
- * } catch (err)
- *   console.log(err);
- * }
- * ```
- **/
-
-/**
- * inflateRaw(data[, options]) -> Uint8Array|Array|String
- * - data (Uint8Array|Array|String): input data to decompress.
- * - options (Object): zlib inflate options.
- *
- * The same as [[inflate]], but creates raw data, without wrapper
- * (header and adler32 crc).
- **/
-
-/**
- * ungzip(data[, options]) -> Uint8Array|Array|String
- * - data (Uint8Array|Array|String): input data to decompress.
- * - options (Object): zlib inflate options.
- *
- * Just shortcut to [[inflate]], because it autodetects format
- * by header.content. Done for convenience.
- **/
-
-lie upstream license reference: Upstream license reference for identified bundled code; exact embedded version not established; selected permissive option where dual licensed
-
---- lie upstream license reference 3.3.0 · license.md · SHA-256 04b11337b6a187f7601f96a7214921fd19d6fc312b861cf28595b9667fce4b74 ---
+--- lie (JSZip bundle) 3.3.0 · license.md · SHA-256 04b11337b6a187f7601f96a7214921fd19d6fc312b861cf28595b9667fce4b74 ---
 
 #Copyright (c) 2014-2018 Calvin Metcalf, Jordan Harband
 
@@ -15045,9 +14889,9 @@ The above copyright notice and this permission notice shall be included in all c
 
 **THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.**
 
-immediate upstream license reference: Upstream license reference for identified bundled code; exact embedded version not established; selected permissive option where dual licensed
+immediate (JSZip bundle): Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.
 
---- immediate upstream license reference 3.0.6 · LICENSE.txt · SHA-256 f48fea67bde19a5353f8caec4592243c9ab9f52cc7886f9e4e0bf1dfb391550b ---
+--- immediate (JSZip bundle) 3.0.6 · LICENSE.txt · SHA-256 f48fea67bde19a5353f8caec4592243c9ab9f52cc7886f9e4e0bf1dfb391550b ---
 
 Copyright (c) 2012 Barnesandnoble.com, llc, Donavon West, Domenic Denicola, Brian Cavalier
 
@@ -15070,9 +14914,9 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-pako upstream license reference: Upstream license reference for identified bundled code; exact embedded version not established; selected permissive option where dual licensed
+pako (JSZip bundle): Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.
 
---- pako upstream license reference 1.0.11 · LICENSE · SHA-256 9bce71206bb197a44eea817bf9c4091118b153cbe09f7544ed7e5abc536d5bcc ---
+--- pako (JSZip bundle) 1.0.11 · LICENSE · SHA-256 9bce71206bb197a44eea817bf9c4091118b153cbe09f7544ed7e5abc536d5bcc ---
 
 (The MIT License)
 
@@ -15096,51 +14940,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
---- pako upstream license reference 1.0.11 · NOTICE-bundled-zlib · SHA-256 99794bf9aec12a6a4e6ff7c7d0a46fd81cd90eb18a31bd8ce61332f97c482161 ---
+--- pako (JSZip bundle) 1.0.11 · NOTICE-zlib · SHA-256 71c9a147b2e157842081b4bbb859dcc0acd7207149f4125f7dd1a15989688aa6 ---
 
-Exact embedded @ohos/jszip notices; does not assert pako version.
-
-Actual @ohos/jszip 1.0.1 src/main/dist/dist.js notices (verbatim comment blocks).
-Source SHA-256: 42a29684b2ea8d7cdb0ea8b09f000390cf5455ae72a029a73d9aca132d36c703
-
-// Copyright Joyent, Inc. and other Node contributors.
-
-
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-
-
-// The above copyright notice and this permission notice shall be included
-
-
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-
-
-/**
-	 * The following functions come from pako, from pako/lib/utils/strings
-	 * released under the MIT license, see pako https://github.com/nodeca/pako/
-	 */
-
-/**
- * The following functions come from pako, from pako/lib/zlib/crc32.js
- * released under the MIT license, see pako https://github.com/nodeca/pako/
- */
-
-/** @fileOverview Low-level AES implementation.
- *
- * This file contains a low-level implementation of AES, optimized for
- * size and for efficiency on several browsers.  It is based on
- * OpenSSL's aes_core.c, a public-domain implementation by Vincent
- * Rijmen, Antoon Bosselaers and Paulo Barreto.
- *
- * An older version of this implementation is available in the public
- * domain, but this one is (c) Emily Stark, Mike Hamburg, Dan Boneh,
- * Stanford University 2008-2010 and BSD-licensed for liability
- * reasons.
- *
- * @author Emily Stark
- * @author Mike Hamburg
- * @author Dan Boneh
- */
+Sources: lib/zlib/adler32.js, lib/zlib/constants.js, lib/zlib/crc32.js, lib/zlib/deflate.js, lib/zlib/gzheader.js, lib/zlib/inffast.js, lib/zlib/inflate.js, lib/zlib/inftrees.js, lib/zlib/messages.js, lib/zlib/trees.js, lib/zlib/zstream.js
 
 // (C) 1995-2013 Jean-loup Gailly and Mark Adler
 // (C) 2014-2017 Vitaly Puzrin and Andrey Tupitsin
@@ -15161,328 +14963,291 @@ Source SHA-256: 42a29684b2ea8d7cdb0ea8b09f000390cf5455ae72a029a73d9aca132d36c703
 //   misrepresented as being the original software.
 // 3. This notice may not be removed or altered from any source distribution.
 
+readable-stream (JSZip bundle): Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.
 
-/* ===========================================================================
- * Initialize the tree data structures for a new zlib stream.
- */
+--- readable-stream (JSZip bundle) 2.3.8 · LICENSE · SHA-256 4f8ade273d406cf67b5a078d751d0b651e3f73b84f958b493e9254ab3ce47391 ---
 
-// (!) This block is disabled in zlib defaults,
-// don't enable it for binary compatibility
+Node.js is licensed for use as follows:
 
+"""
+Copyright Node.js contributors. All rights reserved.
 
-/* Slide the hash table (could be avoided with 32 bit values
-       at the expense of memory usage). We slide even when level == 0
-       to keep the hash table consistent if we switch back to level > 0
-       later. (Using level 0 permanently is not an optimal usage of
-       zlib, so we don't care about this pathological case.)
-       */
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-/* ===========================================================================
- * Initialize the "longest match" routines for a new zlib stream
- */
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-/* pointer back to this zlib stream */
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
 
-/* bit 0 true for zlib, bit 1 true for gzip */
+This license applies to parts of Node.js originating from the
+https://github.com/joyent/node repository:
 
-/* Size of match buffer for literals/lengths.  There are 4 reasons for
-   * limiting lit_bufsize to 64K:
-   *   - frequencies can be kept in 16 bit counters
-   *   - if compression is not successful for the first block, all input
-   *     data is still in the window so we can still emit a stored block even
-   *     when input comes from standard input.  (This can also be done for
-   *     all blocks if lit_bufsize is not greater than 32K.)
-   *   - if compression is not successful for a file smaller than 64K, we can
-   *     even emit a stored file instead of a stored block (saving 5 bytes).
-   *     This is applicable only for zip (not gzip or zlib).
-   *   - creating new Huffman trees less frequently may not provide fast
-   *     adaptation to changes in the input data statistics. (Take for
-   *     example a binary file with poorly compressible code followed by
-   *     a highly compressible string table.) Smaller buffer sizes give
-   *     fast adaptation but have of course the overhead of transmitting
-   *     trees more frequently.
-   *   - I can't count above 4
-   */
+"""
+Copyright Joyent, Inc. and other Node contributors. All rights reserved.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-/* suppress zlib wrapper */
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-/* when using zlib wrappers, compute Adler-32 for provided dictionary */
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
 
-/**
- * class Deflate
- *
- * Generic JS-style wrapper for zlib calls. If you don't need
- * streaming behaviour - use more simple functions: [[deflate]],
- * [[deflateRaw]] and [[gzip]].
- **/
+setimmediate (JSZip bundle): Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.
 
-/**
- * new Deflate(options)
- * - options (Object): zlib deflate options.
- *
- * Creates new deflator instance with specified params. Throws exception
- * on bad params. Supported options:
- *
- * - `level`
- * - `windowBits`
- * - `memLevel`
- * - `strategy`
- * - `dictionary`
- *
- * [http://zlib.net/manual.html#Advanced](http://zlib.net/manual.html#Advanced)
- * for more information on these.
- *
- * Additional options, for internal needs:
- *
- * - `chunkSize` - size of generated data chunks (16K by default)
- * - `raw` (Boolean) - do raw deflate
- * - `gzip` (Boolean) - create gzip wrapper
- * - `to` (String) - if equal to 'string', then result will be "binary string"
- *    (each char code [0..255])
- * - `header` (Object) - custom header for gzip
- *   - `text` (Boolean) - true if compressed data believed to be text
- *   - `time` (Number) - modification time, unix timestamp
- *   - `os` (Number) - operation system code
- *   - `extra` (Array) - array of bytes with extra data (max 65536)
- *   - `name` (String) - file name (binary string)
- *   - `comment` (String) - comment (binary string)
- *   - `hcrc` (Boolean) - true if header crc should be added
- *
- * ##### Example:
- *
- * ```javascript
- * var pako = require('pako')
- *   , chunk1 = Uint8Array([1,2,3,4,5,6,7,8,9])
- *   , chunk2 = Uint8Array([10,11,12,13,14,15,16,17,18,19]);
- *
- * var deflate = new pako.Deflate({ level: 3});
- *
- * deflate.push(chunk1, false);
- * deflate.push(chunk2, true);  // true -> last chunk
- *
- * if (deflate.err) { throw new Error(deflate.err); }
- *
- * console.log(deflate.result);
- * ```
- **/
+--- setimmediate (JSZip bundle) 1.0.5 · LICENSE.txt · SHA-256 e989f62f4fdcda4199c3d1d6049e9a52aad32539c02d2a5e8c92583ed0960e2b ---
 
-/**
- * deflate(data[, options]) -> Uint8Array|Array|String
- * - data (Uint8Array|Array|String): input data to compress.
- * - options (Object): zlib deflate options.
- *
- * Compress `data` with deflate algorithm and `options`.
- *
- * Supported options are:
- *
- * - level
- * - windowBits
- * - memLevel
- * - strategy
- * - dictionary
- *
- * [http://zlib.net/manual.html#Advanced](http://zlib.net/manual.html#Advanced)
- * for more information on these.
- *
- * Sugar (options):
- *
- * - `raw` (Boolean) - say that we work with raw stream, if you don't wish to specify
- *   negative windowBits implicitly.
- * - `to` (String) - if equal to 'string', then result will be "binary string"
- *    (each char code [0..255])
- *
- * ##### Example:
- *
- * ```javascript
- * var pako = require('pako')
- *   , data = Uint8Array([1,2,3,4,5,6,7,8,9]);
- *
- * console.log(pako.deflate(data));
- * ```
- **/
+Copyright (c) 2012 Barnesandnoble.com, llc, Donavon West, and Domenic Denicola
 
-/**
- * deflateRaw(data[, options]) -> Uint8Array|Array|String
- * - data (Uint8Array|Array|String): input data to compress.
- * - options (Object): zlib deflate options.
- *
- * The same as [[deflate]], but creates raw data, without wrapper
- * (header and adler32 crc).
- **/
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
 
-/**
- * gzip(data[, options]) -> Uint8Array|Array|String
- * - data (Uint8Array|Array|String): input data to compress.
- * - options (Object): zlib deflate options.
- *
- * The same as [[deflate]], but create gzip wrapper instead of
- * deflate one.
- **/
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
 
-/* maximum distance from zlib header */
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-// (!) This block is disabled in zlib defaults,
-// don't enable it for binary compatibility
-//#ifdef INFLATE_ALLOW_INVALID_DISTANCE_TOOFAR_ARRR
-//                if (len <= op - whave) {
-//                  do {
-//                    output[_out++] = 0;
-//                  } while (--len);
-//                  continue top;
-//                }
-//                len -= op - whave;
-//                do {
-//                  output[_out++] = 0;
-//                } while (--op > whave);
-//                if (op === 0) {
-//                  from = _out - dist;
-//                  do {
-//                    output[_out++] = output[from++];
-//                  } while (--len);
-//                  continue top;
-//                }
-//#endif
+core-util-is (JSZip bundle): Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.
 
+--- core-util-is (JSZip bundle) 1.0.3 · LICENSE · SHA-256 9248b91d3cee18551aa7386215f61578c3484a6d47bfbcd5a3b05ebe8998b7cb ---
 
-/* gzip header method and flags (0 if zlib) */
+Copyright Node.js contributors. All rights reserved.
 
-/* zlib header max distance (INFLATE_STRICT) */
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-/* expect zlib header */
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-/* check if zlib header allowed */
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
 
-//Tracev((stderr, "inflate:   zlib header ok\n"));
+inherits (JSZip bundle): Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.
 
+--- inherits (JSZip bundle) 2.0.4 · LICENSE · SHA-256 3a395674c5c917a5c484fbb4825d855da35333cc24cf770efa7e2f0420ecba14 ---
 
-// (!) This block is disabled in zlib defaults,
-// don't enable it for binary compatibility
-//#ifdef INFLATE_ALLOW_INVALID_DISTANCE_TOOFAR_ARRR
-//          Trace((stderr, "inflate.c too far\n"));
-//          copy -= state.whave;
-//          if (copy > state.length) { copy = state.length; }
-//          if (copy > left) { copy = left; }
-//          left -= copy;
-//          state.length -= copy;
-//          do {
-//            output[put++] = 0;
-//          } while (--copy);
-//          if (state.length === 0) { state.mode = LEN; }
-//          break;
-//#endif
+The ISC License
 
+Copyright (c) Isaac Z. Schlueter
 
-/**
- * class Inflate
- *
- * Generic JS-style wrapper for zlib calls. If you don't need
- * streaming behaviour - use more simple functions: [[inflate]]
- * and [[inflateRaw]].
- **/
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
 
-/**
- * new Inflate(options)
- * - options (Object): zlib inflate options.
- *
- * Creates new inflator instance with specified params. Throws exception
- * on bad params. Supported options:
- *
- * - `windowBits`
- * - `dictionary`
- *
- * [http://zlib.net/manual.html#Advanced](http://zlib.net/manual.html#Advanced)
- * for more information on these.
- *
- * Additional options, for internal needs:
- *
- * - `chunkSize` - size of generated data chunks (16K by default)
- * - `raw` (Boolean) - do raw inflate
- * - `to` (String) - if equal to 'string', then result will be converted
- *   from utf8 to utf16 (javascript) string. When string output requested,
- *   chunk length can differ from `chunkSize`, depending on content.
- *
- * By default, when no options set, autodetect deflate/gzip data format via
- * wrapper header.
- *
- * ##### Example:
- *
- * ```javascript
- * var pako = require('pako')
- *   , chunk1 = Uint8Array([1,2,3,4,5,6,7,8,9])
- *   , chunk2 = Uint8Array([10,11,12,13,14,15,16,17,18,19]);
- *
- * var inflate = new pako.Inflate({ level: 3});
- *
- * inflate.push(chunk1, false);
- * inflate.push(chunk2, true);  // true -> last chunk
- *
- * if (inflate.err) { throw new Error(inflate.err); }
- *
- * console.log(inflate.result);
- * ```
- **/
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
 
-/**
- * inflate(data[, options]) -> Uint8Array|Array|String
- * - data (Uint8Array|Array|String): input data to decompress.
- * - options (Object): zlib inflate options.
- *
- * Decompress `data` with inflate/ungzip and `options`. Autodetect
- * format via wrapper header by default. That's why we don't provide
- * separate `ungzip` method.
- *
- * Supported options are:
- *
- * - windowBits
- *
- * [http://zlib.net/manual.html#Advanced](http://zlib.net/manual.html#Advanced)
- * for more information.
- *
- * Sugar (options):
- *
- * - `raw` (Boolean) - say that we work with raw stream, if you don't wish to specify
- *   negative windowBits implicitly.
- * - `to` (String) - if equal to 'string', then result will be converted
- *   from utf8 to utf16 (javascript) string. When string output requested,
- *   chunk length can differ from `chunkSize`, depending on content.
- *
- *
- * ##### Example:
- *
- * ```javascript
- * var pako = require('pako')
- *   , input = pako.deflate([1,2,3,4,5,6,7,8,9])
- *   , output;
- *
- * try {
- *   output = pako.inflate(input);
- * } catch (err)
- *   console.log(err);
- * }
- * ```
- **/
+isarray (JSZip bundle): Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.
 
-/**
- * inflateRaw(data[, options]) -> Uint8Array|Array|String
- * - data (Uint8Array|Array|String): input data to decompress.
- * - options (Object): zlib inflate options.
- *
- * The same as [[inflate]], but creates raw data, without wrapper
- * (header and adler32 crc).
- **/
+--- isarray (JSZip bundle) 1.0.0 · LICENSE-from-README · SHA-256 6f203c01965501ab17a750e94c191a47c61c7043f587400fbeea92be853e337d ---
 
-/**
- * ungzip(data[, options]) -> Uint8Array|Array|String
- * - data (Uint8Array|Array|String): input data to decompress.
- * - options (Object): zlib inflate options.
- *
- * Just shortcut to [[inflate]], because it autodetects format
- * by header.content. Done for convenience.
- **/
+## License
 
-sjcl upstream license reference: Upstream license reference for identified bundled code; exact embedded version not established; selected permissive option where dual licensed
+(MIT)
 
---- sjcl upstream license reference 1.0.8 · LICENSE.txt · SHA-256 ef430277d3cca1d3e7cdb6d4a61d7ff1eb208c4c2058602d2b361aaab60cd9c0 ---
+Copyright (c) 2013 Julian Gruber &lt;julian@juliangruber.com&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+process-nextick-args (JSZip bundle): Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.
+
+--- process-nextick-args (JSZip bundle) 2.0.1 · license.md · SHA-256 f25d2af75b3e4127175b550231cc59ee11ed6cc07debce16498ace9ed163e25f ---
+
+# Copyright (c) 2015 Calvin Metcalf
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+**THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.**
+
+safe-buffer (JSZip bundle): Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.
+
+--- safe-buffer (JSZip bundle) 5.1.2 · LICENSE · SHA-256 dff1a84cb70365271326e19f09b24dd85364a47b4fc2beb446ccd9dec225531f ---
+
+The MIT License (MIT)
+
+Copyright (c) Feross Aboukhadijeh
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+string_decoder (JSZip bundle): Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.
+
+--- string_decoder (JSZip bundle) 1.1.1 · LICENSE · SHA-256 4f8ade273d406cf67b5a078d751d0b651e3f73b84f958b493e9254ab3ce47391 ---
+
+Node.js is licensed for use as follows:
+
+"""
+Copyright Node.js contributors. All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+This license applies to parts of Node.js originating from the
+https://github.com/joyent/node repository:
+
+"""
+Copyright Joyent, Inc. and other Node contributors. All rights reserved.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+util-deprecate (JSZip bundle): Source-equivalent reconstruction: locked Rollup rebuild matches the installed bundle with one documented external import spelling correction. This identifies a reproducible version, not a unique historical npm resolution.
+
+--- util-deprecate (JSZip bundle) 1.0.2 · LICENSE · SHA-256 ff15562c1fef0205e4f0ad1efb4d266805bd8686f95d2b788b2dac4d8da81370 ---
+
+(The MIT License)
+
+Copyright (c) 2014 Nathan Rajlich <nathan@tootallnate.net>
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+SJCL (JSZip fork build): Actual source is the fork build plus the recorded OHOS adaptation. BSD option selected; full upstream dual-license text and actual source notices retained.
+
+本版本采用的许可：BSD-2-Clause
+
+--- SJCL (JSZip fork build) 52378c05099c / OHOS patch · LICENSE.txt · SHA-256 ef430277d3cca1d3e7cdb6d4a61d7ff1eb208c4c2058602d2b361aaab60cd9c0 ---
 
 SJCL is open. You can use, modify and redistribute it under a BSD
 license or under the GNU GPL, version 2.0.
@@ -15543,6 +15308,2449 @@ You should have received a copy of the GNU General Public License along
 with this program; if not, write to the Free Software Foundation, Inc.,
 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 
+--- SJCL (JSZip fork build) 52378c05099c / OHOS patch · README/COPYRIGHT · SHA-256 bd3f345bedb5df8c1de385b22ec1a1dc532d65087c8eff42e3cf0896b2369cdf ---
+
+SJCL used to be in the public domain.  Now it's:
+
+Copyright 2009-2010 Emily Stark, Mike Hamburg, Dan Boneh, Stanford University.
+
+This is for liability reasons.  (Speaking of which, SJCL comes with NO
+WARRANTY WHATSOEVER, express or implied, to the limit of applicable
+law.)
+
+SJCL is dual-licensed under the GNU GPL version 2.0 or higher, and a
+2-clause BSD license.  You may use SJCL under the terms of either of
+these licenses.  For your convenience, the GPL versions 2.0 and 3.0
+and the 2-clause BSD license are included here.  Additionally, you may
+serve "crunched" copies of sjcl (i.e. those with comments removed,
+and other transformations to reduce code size) without any copyright
+notice.
+
+SJCL includes JsDoc toolkit, YUI compressor, Closure compressor,
+JSLint and the CodeView template in its build system.  These programs'
+copyrights are owned by other people.  They are distributed here under
+the MPL, MIT, BSD, Apache and JSLint licenses.  Codeview is "free for
+download" but has no license attached; it is Copyright 2010 Wouter Bos.
+
+The BSD license is (almost?) strictly more permissive, but the
+additionally licensing under the GPL allows us to use OCB 2.0 code
+royalty-free (at least, if OCB 2.0's creator Phil Rogaway has anything
+to say about it).  Note that if you redistribute SJCL under a license
+other than the GPL, you or your users may need to pay patent licensing
+fees for OCB 2.0.
+
+There may be patents which apply to SJCL other than Phil Rogaway's OCB
+patents.  We suggest that you consult legal counsel before using SJCL
+in a commercial project.
+
+-----
+
+Please note, two Java JAR files, Google Closure Compiler and 
+YUI Compressor, are provided in the "compress" folder as a convenience 
+for the compiling process of SJCL.  These are not part of SJCL itself 
+and provided under their own licenses.
+
+As of October 2015, more information can be found at the following
+locations:
+
+Google Closure Compiler
+  -  https://developers.google.com/closure/compiler/
+
+YUI Compressor
+  -  http://yui.github.io/yuicompressor/
+
+abort-controller (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- abort-controller (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 47a7783b604324a5e925ac5af34441bde3c80b36ee9f53e95207501fe5efed95 ---
+
+MIT License
+
+Copyright (c) 2017 Toru Nagashima
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+asn1.js (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- asn1.js (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 d15da24a59efc4c81d449433047aa067734b9637e3878122d83e6b36864731b8 ---
+
+MIT License
+
+Copyright (c) 2017 Fedor Indutny
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+base64-js (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- base64-js (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 ce471b4b8188bf221ecd29bc6585d37d2769b0657521b92459c1284307cc4936 ---
+
+The MIT License (MIT)
+
+Copyright (c) 2014 Jameson Little
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+bn.js (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- bn.js (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 45efea862951b9d9a9402de77c9e36b5892c14ad7fc7a028a6a4b85877890d57 ---
+
+Copyright Fedor Indutny, 2015.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+brorand (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- brorand (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE-from-README · SHA-256 9fc67388b6ad110dbf2f9208d671f5fbfc8a90e4a1b34ec43b79afa62e8167f7 ---
+
+#### LICENSE
+
+This software is licensed under the MIT License.
+
+Copyright Fedor Indutny, 2014.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the
+following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+browserify-aes (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- browserify-aes (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 265111dec0b1f746895b7f876b957867552d445476424fbde73932b448358f32 ---
+
+The MIT License (MIT)
+
+Copyright (c) 2014-2017 browserify-aes contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+browserify-cipher (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- browserify-cipher (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 3e5df0dc9dd887062941b31a1b709a4fdaf3179530b595b89676edb7af08dbcc ---
+
+The MIT License (MIT)
+
+Copyright (c) 2014-2017 Calvin Metcalf & contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+browserify-des (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- browserify-des (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · license · SHA-256 1f124e6c7ca835c8e847e310a090cc88383f178b2b30a84057c6fd495fdef170 ---
+
+The MIT License (MIT)
+
+Copyright (c) 2014-2017 Calvin Metcalf, Fedor Indutny & contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+browserify-rsa (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- browserify-rsa (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 af80511b74b4391d2d3a637b3ce3a83dc9c0361b988058e6ab057ec74654f28c ---
+
+The MIT License (MIT)
+
+Copyright (c) 2014-2016 Calvin Metcalf & contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+browserify-sign (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- browserify-sign (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 0279dc4b1d1c5e118d9ebd3d5d07f954b734999780cb2076c9c174cdc09098e6 ---
+
+Copyright (c) 2014-2015 Calvin Metcalf and browserify-sign contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+buffer (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- buffer (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 caf96060dc6de2af3adca29e7f50445b9ac26f860a8f646396a42e5d26cd9564 ---
+
+The MIT License (MIT)
+
+Copyright (c) Feross Aboukhadijeh, and other contributors.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+buffer-xor (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- buffer-xor (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 96369f6286ebd995734560fbffb98695f28405619d0ff54824044a0cebfbf0e1 ---
+
+The MIT License (MIT)
+
+Copyright (c) 2015 Daniel Cousens
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+cipher-base (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- cipher-base (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 cded00c8eb0ffa2d698fc3b30c91d804899b20075a5ed904503905adf744a159 ---
+
+The MIT License (MIT)
+
+Copyright (c) 2017 crypto-browserify contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+create-ecdh (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- create-ecdh (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 a9a1ea6807dbbe0136c088cf4a5f37fbc3b6fd1f31dd36f2813107028f60e62d ---
+
+The MIT License (MIT)
+
+Copyright (c) 2014-2017 createECDH contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+create-hash (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- create-hash (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 cded00c8eb0ffa2d698fc3b30c91d804899b20075a5ed904503905adf744a159 ---
+
+The MIT License (MIT)
+
+Copyright (c) 2017 crypto-browserify contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+create-hmac (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- create-hmac (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 cded00c8eb0ffa2d698fc3b30c91d804899b20075a5ed904503905adf744a159 ---
+
+The MIT License (MIT)
+
+Copyright (c) 2017 crypto-browserify contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+crypto-browserify (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- crypto-browserify (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 6134c69bc22c8289252e70de3af20bd67071233459055be74d83acfcc4865e7e ---
+
+The MIT License
+
+Copyright (c) 2013 Dominic Tarr
+
+Permission is hereby granted, free of charge, 
+to any person obtaining a copy of this software and 
+associated documentation files (the "Software"), to 
+deal in the Software without restriction, including 
+without limitation the rights to use, copy, modify, 
+merge, publish, distribute, sublicense, and/or sell 
+copies of the Software, and to permit persons to whom 
+the Software is furnished to do so, 
+subject to the following conditions:
+
+The above copyright notice and this permission notice 
+shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR 
+ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+des.js (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- des.js (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE-from-README · SHA-256 05977191d78b941fbedf4a4918312569c04c6e74d1efbe26dcdf91d3e85e615e ---
+
+## LICENSE
+
+This software is licensed under the MIT License.
+
+Copyright Fedor Indutny, 2015.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the
+following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+diffie-hellman (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- diffie-hellman (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 dc3339f05d09a3d2c2c71d1a424c0cca9f2df4f2906015c7a5aee8e3e1866764 ---
+
+Copyright (c) 2017 Calvin Metcalf
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+elliptic (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- elliptic (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE-from-README · SHA-256 4872076f23d355deffc80a8e8f3c778a36ef5e29d84b30c1b073da92bde86129 ---
+
+#### LICENSE
+
+This software is licensed under the MIT License.
+
+Copyright Fedor Indutny, 2014.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the
+following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[0]: http://tools.ietf.org/html/rfc6979
+[1]: https://github.com/indutny/bn.js
+[2]: https://github.com/indutny/hash.js
+[3]: https://github.com/bitchan/eccrypto
+[4]: https://github.com/wanderer/secp256k1-node
+
+end-of-stream (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- end-of-stream (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6 ---
+
+The MIT License (MIT)
+
+Copyright (c) 2014 Mathias Buus
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+event-target-shim (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- event-target-shim (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 633e14a004996857f9ffef9bdd1347b5036d3a4b7a2c2b356d422c19fb8dbdaa ---
+
+The MIT License (MIT)
+
+Copyright (c) 2015 Toru Nagashima
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+events (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- events (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 cc1c988042c4f240b8475653c44480b428e806be8e16fbeedbe0cb52f4c5239e ---
+
+MIT
+
+Copyright Joyent, Inc. and other Node contributors.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the
+following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+evp_bytestokey (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- evp_bytestokey (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 cded00c8eb0ffa2d698fc3b30c91d804899b20075a5ed904503905adf744a159 ---
+
+The MIT License (MIT)
+
+Copyright (c) 2017 crypto-browserify contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+hash-base (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- hash-base (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 28d5c883c27a332634d0738d4c4b549c28e4cfdf20187d26189f4690f83cdea8 ---
+
+The MIT License (MIT)
+
+Copyright (c) 2016 Kirill Fomichev
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+hash.js (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- hash.js (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE-from-README · SHA-256 9fc67388b6ad110dbf2f9208d671f5fbfc8a90e4a1b34ec43b79afa62e8167f7 ---
+
+#### LICENSE
+
+This software is licensed under the MIT License.
+
+Copyright Fedor Indutny, 2014.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the
+following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+hmac-drbg (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- hmac-drbg (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE-from-README · SHA-256 b4cc23afc821ff075d8fd610d704177c2febd2434057335ed6697fadcb821e53 ---
+
+#### LICENSE
+
+This software is licensed under the MIT License.
+
+Copyright Fedor Indutny, 2017.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the
+following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[0]: http://csrc.nist.gov/groups/ST/toolkit/documents/rng/HashBlockCipherDRBG.pdf
+
+ieee754 (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- ieee754 (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 9d78a7400453b7f1922347bd6923f27918c1039f8b1720460d07cab31dc21204 ---
+
+Copyright 2008 Fair Oaks Labs, Inc.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+inherits (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- inherits (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 3a395674c5c917a5c484fbb4825d855da35333cc24cf770efa7e2f0420ecba14 ---
+
+The ISC License
+
+Copyright (c) Isaac Z. Schlueter
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+
+md5.js (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- md5.js (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 28d5c883c27a332634d0738d4c4b549c28e4cfdf20187d26189f4690f83cdea8 ---
+
+The MIT License (MIT)
+
+Copyright (c) 2016 Kirill Fomichev
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+miller-rabin (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- miller-rabin (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE-from-README · SHA-256 9fc67388b6ad110dbf2f9208d671f5fbfc8a90e4a1b34ec43b79afa62e8167f7 ---
+
+#### LICENSE
+
+This software is licensed under the MIT License.
+
+Copyright Fedor Indutny, 2014.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the
+following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+minimalistic-assert (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- minimalistic-assert (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 136fee1129ea96ce18b41c26a72f5d4ba196ee41bfd73b55d0b8509cdda148e9 ---
+
+Copyright 2015 Calvin Metcalf
+
+Permission to use, copy, modify, and/or distribute this software for any purpose
+with or without fee is hereby granted, provided that the above copyright notice
+and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE
+OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+
+minimalistic-crypto-utils (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- minimalistic-crypto-utils (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE-from-README · SHA-256 28b226f732846b5f16af1ae09ef4e8f39b1fcbf501c889af737a3995d5065fbf ---
+
+#### LICENSE
+
+This software is licensed under the MIT License.
+
+Copyright Fedor Indutny, 2017.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the
+following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[0]: http://tools.ietf.org/html/rfc6979
+[1]: https://github.com/indutny/bn.js
+[2]: https://github.com/indutny/hash.js
+[3]: https://github.com/bitchan/eccrypto
+[4]: https://github.com/wanderer/secp256k1-node
+
+parse-asn1 (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- parse-asn1 (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 1ed7565944d5aa655783bcd7b75e2cf1554b459d0e7240ab83632aefecc3eb8f ---
+
+Copyright (c) 2017, crypto-browserify contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+pbkdf2 (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- pbkdf2 (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 c2cfec246614ccd782467926542ebeda763b902c4d2f8e8a6350937f001676bc ---
+
+The MIT License (MIT)
+
+Copyright (c) 2014 Daniel Cousens
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+process (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- process (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 ec35edfcd130a68eebfc7a5c32ce1d3a7688f8771c14437916b2772640d2d0b0 ---
+
+(The MIT License)
+
+Copyright (c) 2013 Roman Shtylman <shtylman@gmail.com>
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+public-encrypt (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- public-encrypt (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 dc3339f05d09a3d2c2c71d1a424c0cca9f2df4f2906015c7a5aee8e3e1866764 ---
+
+Copyright (c) 2017 Calvin Metcalf
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+punycode (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- punycode (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE-MIT.txt · SHA-256 e7f14c40a4fc6bcd3ac4cbbabe5b6a2fd9c4063f4fe124e3a5222fb3ce13f479 ---
+
+Copyright Mathias Bynens <https://mathiasbynens.be/>
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+randombytes (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- randombytes (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 33af78c3242ef32e9e06861fd9757c37d86af9e2667edb28028c64bc2bd77fde ---
+
+MIT License
+
+Copyright (c) 2017 crypto-browserify
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+randomfill (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- randomfill (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 33af78c3242ef32e9e06861fd9757c37d86af9e2667edb28028c64bc2bd77fde ---
+
+MIT License
+
+Copyright (c) 2017 crypto-browserify
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+readable-stream (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- readable-stream (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 4f8ade273d406cf67b5a078d751d0b651e3f73b84f958b493e9254ab3ce47391 ---
+
+Node.js is licensed for use as follows:
+
+"""
+Copyright Node.js contributors. All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+This license applies to parts of Node.js originating from the
+https://github.com/joyent/node repository:
+
+"""
+Copyright Joyent, Inc. and other Node contributors. All rights reserved.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+ripemd160 (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- ripemd160 (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 a31993ef38f79ae9ea22389055faa5897263f223a49b4084fea9ad249fa68e5b ---
+
+The MIT License (MIT)
+
+Copyright (c) 2016 crypto-browserify
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+safe-buffer (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- safe-buffer (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 dff1a84cb70365271326e19f09b24dd85364a47b4fc2beb446ccd9dec225531f ---
+
+The MIT License (MIT)
+
+Copyright (c) Feross Aboukhadijeh
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+safer-buffer (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- safer-buffer (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 aa72fb6117e423794ec098a00d0413fa4ceb2369b68869e07d32ca32235a5f1e ---
+
+MIT License
+
+Copyright (c) 2018 Nikita Skovoroda <chalkerx@gmail.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+sha.js (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- sha.js (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 e154e2a13eaefcdac28913b4c142c0e367a34584e639726b26b1d008bb345812 ---
+
+Copyright (c) 2013-2018 sha.js contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+Copyright (c) 1998 - 2009, Paul Johnston & Contributors
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.
+
+Redistributions in binary form must reproduce the above copyright notice, this
+list of conditions and the following disclaimer in the documentation and/or
+other materials provided with the distribution.
+
+Neither the name of the author nor the names of its contributors may be used to
+endorse or promote products derived from this software without specific prior
+written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+string_decoder (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- string_decoder (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 4f8ade273d406cf67b5a078d751d0b651e3f73b84f958b493e9254ab3ce47391 ---
+
+Node.js is licensed for use as follows:
+
+"""
+Copyright Node.js contributors. All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+This license applies to parts of Node.js originating from the
+https://github.com/joyent/node repository:
+
+"""
+Copyright Joyent, Inc. and other Node contributors. All rights reserved.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+util-deprecate (node-polyfill snapshot): Adapted source is identified by the pinned OHOS snapshot and per-file hashes. npm version in licenseReference is the origin of supplemental license text, not an assertion of the historical embedded npm version.
+
+--- util-deprecate (node-polyfill snapshot) 1.0.1 / cfaeb3882330 · LICENSE · SHA-256 ff15562c1fef0205e4f0ad1efb4d266805bd8686f95d2b788b2dac4d8da81370 ---
+
+(The MIT License)
+
+Copyright (c) 2014 Nathan Rajlich <nathan@tootallnate.net>
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+OHOS / Node / originjs adaptation notices: Full original package NOTICE and actual source headers; Mulan text retained from originjs upstream. README.OpenSource 0.18.6 is not a verified originjs tag; exact adapted files are pinned to OHOS commit.
+
+--- OHOS / Node / originjs adaptation notices 1.0.1 / cfaeb3882330 · LICENSE-Apache-2.0 · SHA-256 54364f4171f8f045e4295758a9a9dee0c934e6dc0861a4c5c4a82c30dc854a0e ---
+
+Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise compiles with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+--- OHOS / Node / originjs adaptation notices 1.0.1 / cfaeb3882330 · LICENSE-MulanPSL-2.0 · SHA-256 6dd81a55ee561cc72968b70e8d23b1bde847bdbde120180bd3d9abaf713904e7 ---
+
+木兰宽松许可证, 第2版
+
+   木兰宽松许可证， 第2版 
+   2020年1月 http://license.coscl.org.cn/MulanPSL2
+
+
+   您对“软件”的复制、使用、修改及分发受木兰宽松许可证，第2版（“本许可证”）的如下条款的约束：
+
+   0. 定义
+
+      “软件”是指由“贡献”构成的许可在“本许可证”下的程序和相关文档的集合。
+
+      “贡献”是指由任一“贡献者”许可在“本许可证”下的受版权法保护的作品。
+
+      “贡献者”是指将受版权法保护的作品许可在“本许可证”下的自然人或“法人实体”。
+
+      “法人实体”是指提交贡献的机构及其“关联实体”。
+
+      “关联实体”是指，对“本许可证”下的行为方而言，控制、受控制或与其共同受控制的机构，此处的控制是指有受控方或共同受控方至少50%直接或间接的投票权、资金或其他有价证券。
+
+   1. 授予版权许可
+
+      每个“贡献者”根据“本许可证”授予您永久性的、全球性的、免费的、非独占的、不可撤销的版权许可，您可以复制、使用、修改、分发其“贡献”，不论修改与否。
+
+   2. 授予专利许可
+
+      每个“贡献者”根据“本许可证”授予您永久性的、全球性的、免费的、非独占的、不可撤销的（根据本条规定撤销除外）专利许可，供您制造、委托制造、使用、许诺销售、销售、进口其“贡献”或以其他方式转移其“贡献”。前述专利许可仅限于“贡献者”现在或将来拥有或控制的其“贡献”本身或其“贡献”与许可“贡献”时的“软件”结合而将必然会侵犯的专利权利要求，不包括对“贡献”的修改或包含“贡献”的其他结合。如果您或您的“关联实体”直接或间接地，就“软件”或其中的“贡献”对任何人发起专利侵权诉讼（包括反诉或交叉诉讼）或其他专利维权行动，指控其侵犯专利权，则“本许可证”授予您对“软件”的专利许可自您提起诉讼或发起维权行动之日终止。
+
+   3. 无商标许可
+
+      “本许可证”不提供对“贡献者”的商品名称、商标、服务标志或产品名称的商标许可，但您为满足第4条规定的声明义务而必须使用除外。
+
+   4. 分发限制
+
+      您可以在任何媒介中将“软件”以源程序形式或可执行形式重新分发，不论修改与否，但您必须向接收者提供“本许可证”的副本，并保留“软件”中的版权、商标、专利及免责声明。
+
+   5. 免责声明与责任限制
+
+      “软件”及其中的“贡献”在提供时不带任何明示或默示的担保。在任何情况下，“贡献者”或版权所有者不对任何人因使用“软件”或其中的“贡献”而引发的任何直接或间接损失承担责任，不论因何种原因导致或者基于何种法律理论，即使其曾被建议有此种损失的可能性。 
+
+   6. 语言
+      “本许可证”以中英文双语表述，中英文版本具有同等法律效力。如果中英文版本存在任何冲突不一致，以中文版为准。
+
+   条款结束 
+
+   如何将木兰宽松许可证，第2版，应用到您的软件
+   
+   如果您希望将木兰宽松许可证，第2版，应用到您的新软件，为了方便接收者查阅，建议您完成如下三步：
+
+      1， 请您补充如下声明中的空白，包括软件名、软件的首次发表年份以及您作为版权人的名字；
+
+      2， 请您在软件包的一级目录下创建以“LICENSE”为名的文件，将整个许可证文本放入该文件中；
+
+      3， 请将如下声明文本放入每个源文件的头部注释中。
+
+   Copyright (c) [Year] [name of copyright holder]
+   [Software Name] is licensed under Mulan PSL v2.
+   You can use this software according to the terms and conditions of the Mulan PSL v2. 
+   You may obtain a copy of Mulan PSL v2 at:
+            http://license.coscl.org.cn/MulanPSL2 
+   THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT, MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.  
+   See the Mulan PSL v2 for more details.  
+
+
+                     Mulan Permissive Software License，Version 2
+
+   Mulan Permissive Software License，Version 2 (Mulan PSL v2)
+   January 2020 http://license.coscl.org.cn/MulanPSL2
+
+   Your reproduction, use, modification and distribution of the Software shall be subject to Mulan PSL v2 (this License) with the following terms and conditions: 
+   
+   0. Definition
+   
+      Software means the program and related documents which are licensed under this License and comprise all Contribution(s). 
+   
+      Contribution means the copyrightable work licensed by a particular Contributor under this License.
+   
+      Contributor means the Individual or Legal Entity who licenses its copyrightable work under this License.
+   
+      Legal Entity means the entity making a Contribution and all its Affiliates.
+   
+      Affiliates means entities that control, are controlled by, or are under common control with the acting entity under this License, ‘control’ means direct or indirect ownership of at least fifty percent (50%) of the voting power, capital or other securities of controlled or commonly controlled entity.
+
+   1. Grant of Copyright License
+
+      Subject to the terms and conditions of this License, each Contributor hereby grants to you a perpetual, worldwide, royalty-free, non-exclusive, irrevocable copyright license to reproduce, use, modify, or distribute its Contribution, with modification or not.
+
+   2. Grant of Patent License 
+
+      Subject to the terms and conditions of this License, each Contributor hereby grants to you a perpetual, worldwide, royalty-free, non-exclusive, irrevocable (except for revocation under this Section) patent license to make, have made, use, offer for sale, sell, import or otherwise transfer its Contribution, where such patent license is only limited to the patent claims owned or controlled by such Contributor now or in future which will be necessarily infringed by its Contribution alone, or by combination of the Contribution with the Software to which the Contribution was contributed. The patent license shall not apply to any modification of the Contribution, and any other combination which includes the Contribution. If you or your Affiliates directly or indirectly institute patent litigation (including a cross claim or counterclaim in a litigation) or other patent enforcement activities against any individual or entity by alleging that the Software or any Contribution in it infringes patents, then any patent license granted to you under this License for the Software shall terminate as of the date such litigation or activity is filed or taken.
+
+   3. No Trademark License
+
+      No trademark license is granted to use the trade names, trademarks, service marks, or product names of Contributor, except as required to fulfill notice requirements in Section 4.
+
+   4. Distribution Restriction
+
+      You may distribute the Software in any medium with or without modification, whether in source or executable forms, provided that you provide recipients with a copy of this License and retain copyright, patent, trademark and disclaimer statements in the Software.
+
+   5. Disclaimer of Warranty and Limitation of Liability
+
+      THE SOFTWARE AND CONTRIBUTION IN IT ARE PROVIDED WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. IN NO EVENT SHALL ANY CONTRIBUTOR OR COPYRIGHT HOLDER BE LIABLE TO YOU FOR ANY DAMAGES, INCLUDING, BUT NOT LIMITED TO ANY DIRECT, OR INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING FROM YOUR USE OR INABILITY TO USE THE SOFTWARE OR THE CONTRIBUTION IN IT, NO MATTER HOW IT’S CAUSED OR BASED ON WHICH LEGAL THEORY, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+   6. Language
+
+      THIS LICENSE IS WRITTEN IN BOTH CHINESE AND ENGLISH, AND THE CHINESE VERSION AND ENGLISH VERSION SHALL HAVE THE SAME LEGAL EFFECT. IN THE CASE OF DIVERGENCE BETWEEN THE CHINESE AND ENGLISH VERSIONS, THE CHINESE VERSION SHALL PREVAIL.
+
+   END OF THE TERMS AND CONDITIONS
+
+   How to Apply the Mulan Permissive Software License，Version 2 (Mulan PSL v2) to Your Software
+
+      To apply the Mulan PSL v2 to your work, for easy identification by recipients, you are suggested to complete following three steps:
+
+      i Fill in the blanks in following statement, including insert your software name, the year of the first publication of your software, and your name identified as the copyright owner; 
+
+      ii Create a file named “LICENSE” which contains the whole context of this License in the first directory of your software package;
+
+      iii Attach the statement to the appropriate annotated syntax at the beginning of each source file.
+
+
+   Copyright (c) [Year] [name of copyright holder]
+   [Software Name] is licensed under Mulan PSL v2.
+   You can use this software according to the terms and conditions of the Mulan PSL v2. 
+   You may obtain a copy of Mulan PSL v2 at:
+               http://license.coscl.org.cn/MulanPSL2 
+   THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT, MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.  
+   See the Mulan PSL v2 for more details.
+
+--- OHOS / Node / originjs adaptation notices 1.0.1 / cfaeb3882330 · NOTICE-package · SHA-256 6cd6740689176285135a0575794d7a95da922a2c5565cc7f1b463eac19841470 ---
+
+MIT License
+
+Copyright (c) 2022 Huawei Device Co., Ltd.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+
+OPEN SOURCE SOFTWARE NOTICE
+
+Please note we provide an open source software notice for the third party open source software along with this software and/or this software component (in the following just “this SOFTWARE”). The open source software licenses are granted by the respective right holders.
+
+Warranty Disclaimer
+THE OPEN SOURCE SOFTWARE IN THIS PRODUCT IS DISTRIBUTED IN THE HOPE THAT IT WILL BE USEFUL, BUT WITHOUT ANY WARRANTY, WITHOUT EVEN THE IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. SEE THE APPLICABLE LICENSES FOR MORE DETAILS.
+
+Copyright Notice and License Texts
+
+Software node-fs-extra 10.1.0
+
+Copyright notice:
+Copyright (c) 2011-2017 JP Richardson
+
+License: The MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files
+(the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify,
+ merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+----------------------------------------------------------------------
+Software node-jsonfile 6.1.0
+
+Copyright notice:
+Copyright (c) 2012-2015, JP Richardson <jprichardson@gmail.com>
+
+License: The MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files
+(the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify,
+ merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+----------------------------------------------------------------------
+Software universalify 2.0.0
+
+Copyright notice:
+Copyright (c) 2017, Ryan Zimmerman <opensrc@ryanzim.com>
+
+License: The MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the 'Software'), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+----------------------------------------------------------------------
+Software node 18.8.0
+
+Copyright notice:
+Copyright Joyent, Inc. and other Node contributors.
+
+License: The MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the
+following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+--- OHOS / Node / originjs adaptation notices 1.0.1 / cfaeb3882330 · NOTICE-source-comments · SHA-256 5a865ee45503ab3a19f3cbc5f0328e4260eaa8017e073f73f771d99c5222d252 ---
+
+Sources: src/main/core/AggregateError.js, src/main/core/primordials.js
+
+/*
+ * Copyright (c) 2021 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the 'License');
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an 'AS IS' BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+Sources: src/main/core/buffer/index.js
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+Sources: src/main/core/buffer/plugins/ieee754.js, src/main/core/crypto/index.js
+
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+Sources: src/main/core/crypto/index.js
+
+        // Copyright Joyent, Inc. and other Node contributors.
+        //
+        // Permission is hereby granted, free of charge, to any person obtaining a
+        // copy of this software and associated documentation files (the
+        // "Software"), to deal in the Software without restriction, including
+        // without limitation the rights to use, copy, modify, merge, publish,
+        // distribute, sublicense, and/or sell copies of the Software, and to permit
+        // persons to whom the Software is furnished to do so, subject to the
+        // following conditions:
+        //
+        // The above copyright notice and this permission notice shall be included
+        // in all copies or substantial portions of the Software.
+        //
+        // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+        // OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        // MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+        // NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+        // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+        // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+        // USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Sources: src/main/core/crypto/index.js
+
+              // Inspired by stringToUtf8ByteArray() in closure-library by Google
+              // https://github.com/google/closure-library/blob/8598d87242af59aac233270742c8984e2b2bdbe0/closure/goog/crypt/crypt.js#L117-L143
+              // Apache License 2.0
+              // https://github.com/google/closure-library/blob/master/LICENSE
+
+Sources: src/main/core/crypto/index.js
+
+/*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+Sources: src/main/core/crypto/index.js
+
+/*
+         * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
+         * in FIPS PUB 180-1
+         * Version 2.1a Copyright Paul Johnston 2000 - 2002.
+         * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+         * Distributed under the BSD License
+         * See http://pajhome.org.uk/crypt/md5 for details.
+         */
+
+Sources: src/main/core/crypto/index.js
+
+/**
+         * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
+         * in FIPS 180-2
+         * Version 2.2-beta Copyright Angel Marin, Paul Johnston 2000 - 2009.
+         * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+         *
+         */
+
+Sources: src/main/core/crypto/index.js
+
+/*!
+         * The buffer module from node.js, for the browser.
+         *
+         * @author   Feross Aboukhadijeh <https://feross.org>
+         * @license  MIT
+         */
+
+Sources: src/main/core/crypto/index.js
+
+        // Copyright Joyent, Inc. and other Node contributors.
+        //
+        // Permission is hereby granted, free of charge, to any person obtaining a
+        // copy of this software and associated documentation files (the
+        // "Software"), to deal in the Software without restriction, including
+        // without limitation the rights to use, copy, modify, merge, publish,
+        // distribute, sublicense, and/or sell copies of the Software, and to permit
+        // persons to whom the Software is furnished to do so, subject to the
+        // following conditions:
+        //
+        // The above copyright notice and this permission notice shall be included
+        // in all copies or substantial portions of the Software.
+        //
+        // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+        // OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        // MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+        // NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+        // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+        // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+        // USE OR OTHER DEALINGS IN THE SOFTWARE.
+        // a duplex stream is just a stream that is both readable and writable.
+        // Since JS doesn't have multiple prototype inheritance, this class
+        // prototypically inherits from Readable, and then parasitically from
+        // Writable.
+
+Sources: src/main/core/crypto/index.js
+
+        // Copyright Joyent, Inc. and other Node contributors.
+        //
+        // Permission is hereby granted, free of charge, to any person obtaining a
+        // copy of this software and associated documentation files (the
+        // "Software"), to deal in the Software without restriction, including
+        // without limitation the rights to use, copy, modify, merge, publish,
+        // distribute, sublicense, and/or sell copies of the Software, and to permit
+        // persons to whom the Software is furnished to do so, subject to the
+        // following conditions:
+        //
+        // The above copyright notice and this permission notice shall be included
+        // in all copies or substantial portions of the Software.
+        //
+        // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+        // OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        // MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+        // NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+        // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+        // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+        // USE OR OTHER DEALINGS IN THE SOFTWARE.
+        // a passthrough stream.
+        // basically just the most minimal sort of Transform stream.
+        // Every written chunk gets output as-is.
+
+Sources: src/main/core/crypto/index.js
+
+        // Copyright Joyent, Inc. and other Node contributors.
+        //
+        // Permission is hereby granted, free of charge, to any person obtaining a
+        // copy of this software and associated documentation files (the
+        // "Software"), to deal in the Software without restriction, including
+        // without limitation the rights to use, copy, modify, merge, publish,
+        // distribute, sublicense, and/or sell copies of the Software, and to permit
+        // persons to whom the Software is furnished to do so, subject to the
+        // following conditions:
+        //
+        // The above copyright notice and this permission notice shall be included
+        // in all copies or substantial portions of the Software.
+        //
+        // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+        // OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        // MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+        // NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+        // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+        // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+        // USE OR OTHER DEALINGS IN THE SOFTWARE.
+        // a transform stream is a readable/writable stream where you do
+        // something with the data.  Sometimes it's called a "filter",
+        // but that's not a great name for it, since that implies a thing where
+        // some bits pass through, and others are simply ignored.  (That would
+        // be a valid example of a transform, of course.)
+        //
+        // While the output is causally related to the input, it's not a
+        // necessarily symmetric or synchronous transformation.  For example,
+        // a zlib stream might take multiple plain-text writes(), and then
+        // emit a single compressed chunk some time in the future.
+        //
+        // Here's how this works:
+        //
+        // The Transform stream has all the aspects of the readable and writable
+        // stream classes.  When you write(chunk), that calls _write(chunk,cb)
+        // internally, and returns false if there's a lot of pending writes
+        // buffered up.  When you call read(), that calls _read(n) until
+        // there's enough pending readable data buffered up.
+        //
+        // In a transform stream, the written data is placed in a buffer.  When
+        // _read(n) is called, it transforms the queued up data, calling the
+        // buffered _write cb's as it consumes chunks.  If consuming a single
+        // written chunk would result in multiple output chunks, then the first
+        // outputted bit calls the readcb, and subsequent chunks just go into
+        // the read buffer, and will cause it to emit 'readable' if necessary.
+        //
+        // This way, back-pressure is actually determined by the reading side,
+        // since _read has to be called to start processing a new chunk.  However,
+        // a pathological inflate type of transform can cause excessive buffering
+        // here.  For example, imagine a stream where every byte of input is
+        // interpreted as an integer from 0-255, and then results in that many
+        // bytes of output.  Writing the 4 bytes {ff,ff,ff,ff} would result in
+        // 1kb of data being output.  In this case, you could write a very small
+        // amount of input, and end up with a very large amount of output.  In
+        // such a pathological inflating mechanism, there'd be no way to tell
+        // the system to stop doing the transform.  A single 4MB write could
+        // cause the system to run out of memory.
+        //
+        // However, even in such a pathological case, only a single written chunk
+        // would be consumed, and then the rest would wait (un-transformed) until
+        // the results of the previous transformed chunk were consumed.
+
+Sources: src/main/core/crypto/index.js
+
+        // Copyright Joyent, Inc. and other Node contributors.
+        //
+        // Permission is hereby granted, free of charge, to any person obtaining a
+        // copy of this software and associated documentation files (the
+        // "Software"), to deal in the Software without restriction, including
+        // without limitation the rights to use, copy, modify, merge, publish,
+        // distribute, sublicense, and/or sell copies of the Software, and to permit
+        // persons to whom the Software is furnished to do so, subject to the
+        // following conditions:
+        //
+        // The above copyright notice and this permission notice shall be included
+        // in all copies or substantial portions of the Software.
+        //
+        // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+        // OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        // MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+        // NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+        // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+        // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+        // USE OR OTHER DEALINGS IN THE SOFTWARE.
+        // A bit simpler than readable streams.
+        // Implement an async ._write(chunk, encoding, cb), and it'll handle all
+        // the drain event emission and buffering.
+
+Sources: src/main/core/crypto/index.js
+
+/**
+         * @author Toru Nagashima <https://github.com/mysticatea>
+         * See LICENSE file in root directory for full license.
+         */
+
+Sources: src/main/core/crypto/index.js
+
+/**
+         * @author Toru Nagashima <https://github.com/mysticatea>
+         * @copyright 2015 Toru Nagashima. All rights reserved.
+         * See LICENSE file in root directory for full license.
+         */
+
+Sources: src/main/core/events/index.js, src/main/core/path/index.js, src/main/core/querystring/index.js, src/main/core/stream/lib/internal/streams/readable.js, src/main/core/stream/lib/stream.js, src/main/core/string_decoder/index.js, src/main/core/url/index.js, src/main/core/util/index.js
+
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Sources: src/main/core/stream/lib/internal/streams/duplex.js
+
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+// a duplex stream is just a stream that is both readable and writable.
+// Since JS doesn't have multiple prototype inheritance, this class
+// prototypically inherits from Readable, and then parasitically from
+// Writable.
+
+Sources: src/main/core/stream/lib/internal/streams/passthrough.js
+
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+// a passthrough stream.
+// basically just the most minimal sort of Transform stream.
+// Every written chunk gets output as-is.
+
+Sources: src/main/core/stream/lib/internal/streams/transform.js
+
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+// a transform stream is a readable/writable stream where you do
+// something with the data.  Sometimes it's called a "filter",
+// but that's not a great name for it, since that implies a thing where
+// some bits pass through, and others are simply ignored.  (That would
+// be a valid example of a transform, of course.)
+//
+// While the output is causally related to the input, it's not a
+// necessarily symmetric or synchronous transformation.  For example,
+// a zlib stream might take multiple plain-text writes(), and then
+// emit a single compressed chunk some time in the future.
+//
+// Here's how this works:
+//
+// The Transform stream has all the aspects of the readable and writable
+// stream classes.  When you write(chunk), that calls _write(chunk,cb)
+// internally, and returns false if there's a lot of pending writes
+// buffered up.  When you call read(), that calls _read(n) until
+// there's enough pending readable data buffered up.
+//
+// In a transform stream, the written data is placed in a buffer.  When
+// _read(n) is called, it transforms the queued up data, calling the
+// buffered _write cb's as it consumes chunks.  If consuming a single
+// written chunk would result in multiple output chunks, then the first
+// outputted bit calls the readcb, and subsequent chunks just go into
+// the read buffer, and will cause it to emit 'readable' if necessary.
+//
+// This way, back-pressure is actually determined by the reading side,
+// since _read has to be called to start processing a new chunk.  However,
+// a pathological inflate type of transform can cause excessive buffering
+// here.  For example, imagine a stream where every byte of input is
+// interpreted as an integer from 0-255, and then results in that many
+// bytes of output.  Writing the 4 bytes {ff,ff,ff,ff} would result in
+// 1kb of data being output.  In this case, you could write a very small
+// amount of input, and end up with a very large amount of output.  In
+// such a pathological inflating mechanism, there'd be no way to tell
+// the system to stop doing the transform.  A single 4MB write could
+// cause the system to run out of memory.
+//
+// However, even in such a pathological case, only a single written chunk
+// would be consumed, and then the rest would wait (un-transformed) until
+// the results of the previous transformed chunk were consumed.
+
+Sources: src/main/core/stream/lib/internal/streams/writable.js
+
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+// A bit simpler than readable streams.
+// Implement an async ._write(chunk, encoding, cb), and it'll handle all
+// the drain event emission and buffering.
+
+Sources: src/main/core/stream/plugins/abort-controller.js
+
+/**
+ * @author Toru Nagashima <https://github.com/mysticatea>
+ * See LICENSE file in root directory for full license.
+ */
+
+Sources: src/main/core/stream/plugins/event-target-shim.js
+
+/**
+ * @author Toru Nagashima <https://github.com/mysticatea>
+ * @copyright 2015 Toru Nagashima. All rights reserved.
+ * See LICENSE file in root directory for full license.
+ */
+
+Google Closure UTF-8 conversion (hash.js): Actual bundled hash.js/lib/hash/utils.js cites this commit and Apache-2.0. Both copyright header and license are retained.
+
+--- Google Closure UTF-8 conversion (hash.js) 8598d87242af · LICENSE · SHA-256 4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe ---
+
+Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+--- Google Closure UTF-8 conversion (hash.js) 8598d87242af · NOTICE · SHA-256 ff5a785e3041bfb7203756f2d7262c6ea78c1c83df1a86d14c70bb4b94d6c3b6 ---
+
+Source: https://raw.githubusercontent.com/google/closure-library/8598d87242af59aac233270742c8984e2b2bdbe0/closure/goog/crypt/crypt.js
+
+// Copyright 2008 The Closure Library Authors. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS-IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+/**
+ * @fileoverview Namespace with crypto related helper functions.
+ */
+
 ## Rust 组件
 
 | 组件 | 版本 | 许可证 | 来源/仓库 | 分发状态 | 许可证文件 |
@@ -15555,8 +17763,8 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 | atomic-waker | 1.1.2 | Apache-2.0 OR MIT | https://github.com/smol-rs/atomic-waker | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT, LICENSE-THIRD-PARTY |
 | base64 | 0.22.1 | MIT OR Apache-2.0 | https://github.com/marshallpierce/rust-base64 | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | bitflags | 2.10.0 | MIT OR Apache-2.0 | https://github.com/bitflags/bitflags | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
-| brotli-decompressor | 5.0.0 | BSD-3-Clause/MIT | https://github.com/dropbox/rust-brotli-decompressor | 分发或构建闭包 | LICENSE |
-| brotli | 8.0.2 | BSD-3-Clause AND MIT | https://github.com/dropbox/rust-brotli | 分发或构建闭包 | LICENSE.MIT, LICENSE-BSD-dependency, NOTICE |
+| brotli-decompressor | 5.0.0 | BSD-3-Clause/MIT | https://github.com/dropbox/rust-brotli-decompressor | 分发或构建闭包 | LICENSE, LICENSE-MIT-Brotli, NOTICE-source-comments |
+| brotli | 8.0.2 | BSD-3-Clause AND MIT | https://github.com/dropbox/rust-brotli | 分发或构建闭包 | LICENSE.MIT, LICENSE-BSD-dependency, NOTICE, NOTICE-source-comments |
 | bytes | 1.11.0 | MIT | https://github.com/tokio-rs/bytes | 分发或构建闭包 | LICENSE |
 | cc | 1.2.49 | MIT OR Apache-2.0 | https://github.com/rust-lang/cc-rs | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | cfg-if | 1.0.4 | MIT OR Apache-2.0 | https://github.com/rust-lang/cfg-if | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
@@ -15567,7 +17775,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 | cookie_store | 0.21.1 | MIT OR Apache-2.0 | https://github.com/pfernie/cookie_store | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | crc32fast | 1.5.0 | MIT OR Apache-2.0 | https://github.com/srijs/rust-crc32fast | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | ctor | 0.2.9 | Apache-2.0 OR MIT | https://github.com/mmastrac/rust-ctor | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
-| deranged | 0.5.5 | MIT OR Apache-2.0 | https://github.com/jhpratt/deranged | 分发或构建闭包 | LICENSE-APACHE, LICENSE-Apache, LICENSE-MIT |
+| deranged | 0.5.5 | MIT OR Apache-2.0 | https://github.com/jhpratt/deranged | 分发或构建闭包 | LICENSE-Apache, LICENSE-MIT |
 | displaydoc | 0.2.5 | MIT OR Apache-2.0 | https://github.com/yaahc/displaydoc | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | document-features | 0.2.12 | MIT OR Apache-2.0 | https://github.com/slint-ui/document-features | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | encoding_rs | 0.8.35 | (Apache-2.0 OR MIT) AND BSD-3-Clause | https://github.com/hsivonen/encoding_rs | 分发或构建闭包 | COPYRIGHT, LICENSE-APACHE, LICENSE-MIT, LICENSE-WHATWG |
@@ -15616,22 +17824,22 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 | napi-derive | 2.16.13 | MIT | https://github.com/napi-rs/napi-rs | 分发或构建闭包 | LICENSE |
 | napi-sys | 2.4.0 | MIT | https://github.com/napi-rs/napi-rs | 分发或构建闭包 | LICENSE |
 | napi | 2.16.17 | MIT | https://github.com/napi-rs/napi-rs | 分发或构建闭包 | LICENSE |
-| num-conv | 0.1.0 | MIT OR Apache-2.0 | https://github.com/jhpratt/num-conv | 分发或构建闭包 | LICENSE-APACHE, LICENSE-Apache, LICENSE-MIT |
+| num-conv | 0.1.0 | MIT OR Apache-2.0 | https://github.com/jhpratt/num-conv | 分发或构建闭包 | LICENSE-Apache, LICENSE-MIT |
 | once_cell | 1.21.3 | MIT OR Apache-2.0 | https://github.com/matklad/once_cell | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | percent-encoding | 2.3.2 | MIT OR Apache-2.0 | https://github.com/servo/rust-url/ | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | pin-project-lite | 0.2.16 | Apache-2.0 OR MIT | https://github.com/taiki-e/pin-project-lite | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | pin-utils | 0.1.0 | MIT OR Apache-2.0 | https://github.com/rust-lang-nursery/pin-utils | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | potential_utf | 0.1.4 | Unicode-3.0 | https://github.com/unicode-org/icu4x | 分发或构建闭包 | LICENSE |
-| powerfmt | 0.2.0 | MIT OR Apache-2.0 | https://github.com/jhpratt/powerfmt | 分发或构建闭包 | LICENSE-APACHE, LICENSE-Apache, LICENSE-MIT |
+| powerfmt | 0.2.0 | MIT OR Apache-2.0 | https://github.com/jhpratt/powerfmt | 分发或构建闭包 | LICENSE-Apache, LICENSE-MIT |
 | proc-macro2 | 1.0.103 | MIT OR Apache-2.0 | https://github.com/dtolnay/proc-macro2 | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | psl-types | 2.0.11 | MIT/Apache-2.0 | https://github.com/addr-rs/psl-types | 分发或构建闭包 | LICENSE, LICENSE-APACHE |
 | publicsuffix | 2.3.0 | MIT/Apache-2.0 | https://github.com/rushmorem/publicsuffix | 分发或构建闭包 | LICENSE, LICENSE-APACHE |
 | quote | 1.0.42 | MIT OR Apache-2.0 | https://github.com/dtolnay/quote | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | regex-automata | 0.4.13 | MIT OR Apache-2.0 | https://github.com/rust-lang/regex | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
-| regex-syntax | 0.8.8 | MIT OR Apache-2.0 | https://github.com/rust-lang/regex | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
+| regex-syntax | 0.8.8 | MIT OR Apache-2.0 | https://github.com/rust-lang/regex | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT, src/unicode_tables/LICENSE-UNICODE |
 | regex | 1.12.2 | MIT OR Apache-2.0 | https://github.com/rust-lang/regex | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | reqwest | 0.12.25 | MIT OR Apache-2.0 | https://github.com/seanmonstar/reqwest | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
-| ring | 0.17.14 | Apache-2.0 AND ISC | https://github.com/briansmith/ring | 分发或构建闭包 | LICENSE, LICENSE-BoringSSL, LICENSE-other-bits |
+| ring | 0.17.14 | Apache-2.0 AND ISC | https://github.com/briansmith/ring | 分发或构建闭包 | LICENSE, LICENSE-BoringSSL, LICENSE-other-bits, src/polyfill/once_cell/LICENSE-APACHE, src/polyfill/once_cell/LICENSE-MIT, third_party/fiat/LICENSE, NOTICE-source-comments |
 | rustls-pki-types | 1.13.1 | MIT OR Apache-2.0 | https://github.com/rustls/pki-types | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | rustls-webpki | 0.103.8 | ISC | https://github.com/rustls/webpki | 分发或构建闭包 | LICENSE |
 | rustls | 0.23.35 | Apache-2.0 OR ISC OR MIT | https://github.com/rustls/rustls | 分发或构建闭包 | LICENSE-APACHE, LICENSE-ISC, LICENSE-MIT |
@@ -15652,9 +17860,9 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 | syn | 2.0.111 | MIT OR Apache-2.0 | https://github.com/dtolnay/syn | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | sync_wrapper | 1.0.2 | Apache-2.0 | https://github.com/Actyx/sync_wrapper | 分发或构建闭包 | LICENSE |
 | synstructure | 0.13.2 | MIT | https://github.com/mystor/synstructure | 分发或构建闭包 | LICENSE |
-| time-core | 0.1.6 | MIT OR Apache-2.0 | https://github.com/time-rs/time | 分发或构建闭包 | LICENSE-APACHE, LICENSE-Apache, LICENSE-MIT |
-| time-macros | 0.2.24 | MIT OR Apache-2.0 | https://github.com/time-rs/time | 分发或构建闭包 | LICENSE-APACHE, LICENSE-Apache, LICENSE-MIT |
-| time | 0.3.44 | MIT OR Apache-2.0 | https://github.com/time-rs/time | 分发或构建闭包 | LICENSE-APACHE, LICENSE-Apache, LICENSE-MIT |
+| time-core | 0.1.6 | MIT OR Apache-2.0 | https://github.com/time-rs/time | 分发或构建闭包 | LICENSE-Apache, LICENSE-MIT |
+| time-macros | 0.2.24 | MIT OR Apache-2.0 | https://github.com/time-rs/time | 分发或构建闭包 | LICENSE-Apache, LICENSE-MIT |
+| time | 0.3.44 | MIT OR Apache-2.0 | https://github.com/time-rs/time | 分发或构建闭包 | LICENSE-Apache, LICENSE-MIT |
 | tinystr | 0.8.2 | Unicode-3.0 | https://github.com/unicode-org/icu4x | 分发或构建闭包 | LICENSE |
 | tokio-rustls | 0.26.4 | MIT OR Apache-2.0 | https://github.com/rustls/tokio-rustls | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT |
 | tokio-util | 0.7.17 | MIT | https://github.com/tokio-rs/tokio | 分发或构建闭包 | LICENSE |
@@ -15663,7 +17871,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 | tower-layer | 0.3.3 | MIT | https://github.com/tower-rs/tower | 分发或构建闭包 | LICENSE |
 | tower-service | 0.3.3 | MIT | https://github.com/tower-rs/tower | 分发或构建闭包 | LICENSE |
 | tower | 0.5.2 | MIT | https://github.com/tower-rs/tower | 分发或构建闭包 | LICENSE |
-| tracing-core | 0.1.35 | MIT | https://github.com/tokio-rs/tracing | 分发或构建闭包 | LICENSE |
+| tracing-core | 0.1.35 | MIT | https://github.com/tokio-rs/tracing | 分发或构建闭包 | LICENSE, src/spin/LICENSE |
 | tracing | 0.1.43 | MIT | https://github.com/tokio-rs/tracing | 分发或构建闭包 | LICENSE |
 | try-lock | 0.2.5 | MIT | https://github.com/seanmonstar/try-lock | 分发或构建闭包 | LICENSE |
 | unicode-ident | 1.0.22 | (MIT OR Apache-2.0) AND Unicode-3.0 | https://github.com/dtolnay/unicode-ident | 分发或构建闭包 | LICENSE-APACHE, LICENSE-MIT, LICENSE-UNICODE |
@@ -15683,6 +17891,12 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 | zerotrie | 0.2.3 | Unicode-3.0 | https://github.com/unicode-org/icu4x | 分发或构建闭包 | LICENSE |
 | zerovec-derive | 0.11.2 | Unicode-3.0 | https://github.com/unicode-org/icu4x | 分发或构建闭包 | LICENSE |
 | zerovec | 0.11.5 | Unicode-3.0 | https://github.com/unicode-org/icu4x | 分发或构建闭包 | LICENSE |
+
+adler2: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- adler2 2.0.1 · LICENSE-0BSD · SHA-256 a21c914647d33e48cb4d213dfb0749dbb45491514da9d3a8ffc4763cf456217d ---
 
@@ -15929,6 +18143,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+aho-corasick: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- aho-corasick 1.1.4 · COPYING · SHA-256 65314a6c96683f76f7495709bb0ddecb4eaa6fa244b28f23c4812ef8e5524066 ---
 
 This project is dual-licensed under the Unlicense and MIT licenses.
@@ -15986,6 +18206,12 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <http://unlicense.org/>
 
+alloc-no-stdlib: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：BSD-3-Clause
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- alloc-no-stdlib 2.0.4 · LICENSE · SHA-256 6c91ec82929f91ffa341a9928e5c98b44767c6a1bb8d7789edad88d3fa5681af ---
 
 Copyright (c) 2016 Dropbox, Inc.
@@ -16001,6 +18227,12 @@ Redistribution and use in source and binary forms, with or without modification,
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+alloc-stdlib: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：BSD-3-Clause
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- alloc-stdlib 0.2.2 · LICENSE · SHA-256 6c91ec82929f91ffa341a9928e5c98b44767c6a1bb8d7789edad88d3fa5681af ---
 
 Copyright (c) 2016 Dropbox, Inc.
@@ -16015,6 +18247,12 @@ Redistribution and use in source and binary forms, with or without modification,
 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+async-compression: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- async-compression 0.4.35 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -16243,6 +18481,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+atomic-waker: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- atomic-waker 1.1.2 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -16522,6 +18766,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+base64: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- base64 0.22.1 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
 Apache License
@@ -16749,6 +18999,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+bitflags: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- bitflags 2.10.0 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -16982,6 +19238,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+brotli-decompressor: Legacy slash declaration is not treated as blanket OR: root Dropbox BSD and src/context.rs Google MIT both apply to their source scopes.
+
+本版本采用的许可：BSD-3-Clause AND MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- brotli-decompressor 5.0.0 · LICENSE · SHA-256 6c91ec82929f91ffa341a9928e5c98b44767c6a1bb8d7789edad88d3fa5681af ---
 
 Copyright (c) 2016 Dropbox, Inc.
@@ -16996,6 +19258,46 @@ Redistribution and use in source and binary forms, with or without modification,
 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+--- brotli-decompressor 5.0.0 · LICENSE-MIT-Brotli · SHA-256 2a57418d6b10947fe0dfbec3a600269e2745136c125cbf15b256e5ae18af23cb ---
+
+Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+--- brotli-decompressor 5.0.0 · NOTICE-source-comments · SHA-256 0613a492c11e141fb3144735bc4514b041a1fdd8bf5f40dd6ece39137c731535 ---
+
+Verbatim source comments from published crate brotli-decompressor-5.0.0.
+
+Sources: src/context.rs
+
+// Copyright 2013 Google Inc. All Rights Reserved.
+//
+// Distributed under MIT license.
+// See file LICENSE for detail or copy at https://opensource.org/licenses/MIT
+//
+
+brotli: Encoder LICENSE.MIT plus Google MIT file header; BSD text retained from its exact decoder dependency, not invented as an encoder root license.
+
+本版本采用的许可：BSD-3-Clause AND MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- brotli 8.0.2 · LICENSE.MIT · SHA-256 2a57418d6b10947fe0dfbec3a600269e2745136c125cbf15b256e5ae18af23cb ---
 
@@ -17038,6 +19340,24 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 brotli 8.0.2 declares BSD-3-Clause AND MIT. Its encoder license is included as LICENSE.MIT from the crate. Its brotli-decompressor 5.0.0 dependency supplies the Dropbox BSD notice reproduced here as LICENSE-BSD-dependency; the dependency is also listed separately. This is a dependency attribution, not a claim that an absent upstream LICENSE.BSD file was recovered.
 
+--- brotli 8.0.2 · NOTICE-source-comments · SHA-256 425b22949be0900b64c20ca1a250a389ae322ab1e44b78682db73b1df46ceec7 ---
+
+Verbatim source comments from published crate brotli-8.0.2.
+
+Sources: src/enc/entropy_encode.rs
+
+/* Copyright 2010 Google Inc. All Rights Reserved.
+
+   Distributed under MIT license.
+   See file LICENSE for detail or copy at https://opensource.org/licenses/MIT
+*/
+
+bytes: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- bytes 1.11.0 · LICENSE · SHA-256 51f778ffff2c0705f0392f4202c932c7c93124850ced31abb7eef1e937da42c4 ---
 
 Copyright (c) 2018 Carl Lerche
@@ -17065,6 +19385,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+cc: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- cc 1.2.49 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -17298,6 +19624,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+cfg-if: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- cfg-if 1.0.4 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
 Apache License
@@ -17530,6 +19862,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+compression-codecs: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- compression-codecs 0.4.34 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
 Apache License
@@ -17757,6 +20095,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+compression-core: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- compression-core 0.4.31 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -17986,6 +20330,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+convert_case: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- convert_case 0.6.0 · LICENSE · SHA-256 913a56268fdb6d3e5f723798169de4d706b9816ae8f0ac333b4bca65e0330441 ---
 
 MIT License
@@ -18009,6 +20359,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+cookie: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- cookie 0.18.1 · LICENSE-APACHE · SHA-256 c859d211879e327ddaf0d0956e4e4e09b0c18bdbd895b033d5be627f0af3b64f ---
 
@@ -18244,6 +20600,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+cookie_store: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- cookie_store 0.21.1 · LICENSE-APACHE · SHA-256 6dc0e068dcf3a5bc8e054205b85b7720e1d49265bbc64bf515d2cf79197df69a ---
 
 Apache License
@@ -18471,6 +20833,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+crc32fast: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- crc32fast 1.5.0 · LICENSE-APACHE · SHA-256 6dc0e068dcf3a5bc8e054205b85b7720e1d49265bbc64bf515d2cf79197df69a ---
 
@@ -18700,6 +21068,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+ctor: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- ctor 0.2.9 · LICENSE-APACHE · SHA-256 6dc0e068dcf3a5bc8e054205b85b7720e1d49265bbc64bf515d2cf79197df69a ---
 
 Apache License
@@ -18912,209 +21286,11 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
---- deranged 0.5.5 · LICENSE-APACHE · SHA-256 b4839ecf405b5fa4a20f234ae6b686ab7f245e7eec8eb634174b833ea86a4653 ---
+deranged: MIT option selected for the declared alternative; both original license texts remain available.
 
-Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+本版本采用的许可：MIT
 
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
-
-   1. Definitions.
-
-      "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
-
-      "Licensor" shall mean the copyright owner or entity authorized by
-      the copyright owner that is granting the License.
-
-      "Legal Entity" shall mean the union of the acting entity and all
-      other entities that control, are controlled by, or are under common
-      control with that entity. For the purposes of this definition,
-      "control" means (i) the power, direct or indirect, to cause the
-      direction or management of such entity, whether by contract or
-      otherwise, or (ii) ownership of fifty percent (50%) or more of the
-      outstanding shares, or (iii) beneficial ownership of such entity.
-
-      "You" (or "Your") shall mean an individual or Legal Entity
-      exercising permissions granted by this License.
-
-      "Source" form shall mean the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
-
-      "Object" form shall mean any form resulting from mechanical
-      transformation or translation of a Source form, including but
-      not limited to compiled object code, generated documentation,
-      and conversions to other media types.
-
-      "Work" shall mean the work of authorship, whether in Source or
-      Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work
-      (an example is provided in the Appendix below).
-
-      "Derivative Works" shall mean any work, whether in Source or Object
-      form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other modifications
-      represent, as a whole, an original work of authorship. For the purposes
-      of this License, Derivative Works shall not include works that remain
-      separable from, or merely link (or bind by name) to the interfaces of,
-      the Work and Derivative Works thereof.
-
-      "Contribution" shall mean any work of authorship, including
-      the original version of the Work and any modifications or additions
-      to that Work or Derivative Works thereof, that is intentionally
-      submitted to Licensor for inclusion in the Work by the copyright owner
-      or by an individual or Legal Entity authorized to submit on behalf of
-      the copyright owner. For the purposes of this definition, "submitted"
-      means any form of electronic, verbal, or written communication sent
-      to the Licensor or its representatives, including but not limited to
-      communication on electronic mailing lists, source code control systems,
-      and issue tracking systems that are managed by, or on behalf of, the
-      Licensor for the purpose of discussing and improving the Work, but
-      excluding communication that is conspicuously marked or otherwise
-      designated in writing by the copyright owner as "Not a Contribution."
-
-      "Contributor" shall mean Licensor and any individual or Legal Entity
-      on behalf of whom a Contribution has been received by Licensor and
-      subsequently incorporated within the Work.
-
-   2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      copyright license to reproduce, prepare Derivative Works of,
-      publicly display, publicly perform, sublicense, and distribute the
-      Work and such Derivative Works in Source or Object form.
-
-   3. Grant of Patent License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      (except as stated in this section) patent license to make, have made,
-      use, offer to sell, sell, import, and otherwise transfer the Work,
-      where such license applies only to those patent claims licensable
-      by such Contributor that are necessarily infringed by their
-      Contribution(s) alone or by combination of their Contribution(s)
-      with the Work to which such Contribution(s) was submitted. If You
-      institute patent litigation against any entity (including a
-      cross-claim or counterclaim in a lawsuit) alleging that the Work
-      or a Contribution incorporated within the Work constitutes direct
-      or contributory patent infringement, then any patent licenses
-      granted to You under this License for that Work shall terminate
-      as of the date such litigation is filed.
-
-   4. Redistribution. You may reproduce and distribute copies of the
-      Work or Derivative Works thereof in any medium, with or without
-      modifications, and in Source or Object form, provided that You
-      meet the following conditions:
-
-      (a) You must give any other recipients of the Work or
-          Derivative Works a copy of this License; and
-
-      (b) You must cause any modified files to carry prominent notices
-          stating that You changed the files; and
-
-      (c) You must retain, in the Source form of any Derivative Works
-          that You distribute, all copyright, patent, trademark, and
-          attribution notices from the Source form of the Work,
-          excluding those notices that do not pertain to any part of
-          the Derivative Works; and
-
-      (d) If the Work includes a "NOTICE" text file as part of its
-          distribution, then any Derivative Works that You distribute must
-          include a readable copy of the attribution notices contained
-          within such NOTICE file, excluding those notices that do not
-          pertain to any part of the Derivative Works, in at least one
-          of the following places: within a NOTICE text file distributed
-          as part of the Derivative Works; within the Source form or
-          documentation, if provided along with the Derivative Works; or,
-          within a display generated by the Derivative Works, if and
-          wherever such third-party notices normally appear. The contents
-          of the NOTICE file are for informational purposes only and
-          do not modify the License. You may add Your own attribution
-          notices within Derivative Works that You distribute, alongside
-          or as an addendum to the NOTICE text from the Work, provided
-          that such additional attribution notices cannot be construed
-          as modifying the License.
-
-      You may add Your own copyright statement to Your modifications and
-      may provide additional or different license terms and conditions
-      for use, reproduction, or distribution of Your modifications, or
-      for any such Derivative Works as a whole, provided Your use,
-      reproduction, and distribution of the Work otherwise complies with
-      the conditions stated in this License.
-
-   5. Submission of Contributions. Unless You explicitly state otherwise,
-      any Contribution intentionally submitted for inclusion in the Work
-      by You to the Licensor shall be under the terms and conditions of
-      this License, without any additional terms or conditions.
-      Notwithstanding the above, nothing herein shall supersede or modify
-      the terms of any separate license agreement you may have executed
-      with Licensor regarding such Contributions.
-
-   6. Trademarks. This License does not grant permission to use the trade
-      names, trademarks, service marks, or product names of the Licensor,
-      except as required for reasonable and customary use in describing the
-      origin of the Work and reproducing the content of the NOTICE file.
-
-   7. Disclaimer of Warranty. Unless required by applicable law or
-      agreed to in writing, Licensor provides the Work (and each
-      Contributor provides its Contributions) on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-      implied, including, without limitation, any warranties or conditions
-      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
-      PARTICULAR PURPOSE. You are solely responsible for determining the
-      appropriateness of using or redistributing the Work and assume any
-      risks associated with Your exercise of permissions under this License.
-
-   8. Limitation of Liability. In no event and under no legal theory,
-      whether in tort (including negligence), contract, or otherwise,
-      unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, indirect, special,
-      incidental, or consequential damages of any character arising as a
-      result of this License or out of the use or inability to use the
-      Work (including but not limited to damages for loss of goodwill,
-      work stoppage, computer failure or malfunction, or any and all
-      other commercial damages or losses), even if such Contributor
-      has been advised of the possibility of such damages.
-
-   9. Accepting Warranty or Additional Liability. While redistributing
-      the Work or Derivative Works thereof, You may choose to offer,
-      and charge a fee for, acceptance of support, warranty, indemnity,
-      or other liability obligations and/or rights consistent with this
-      License. However, in accepting such obligations, You may act only
-      on Your own behalf and on Your sole responsibility, not on behalf
-      of any other Contributor, and only if You agree to indemnify,
-      defend, and hold each Contributor harmless for any liability
-      incurred by, or claims asserted against, such Contributor by reason
-      of your accepting any such warranty or additional liability.
-
-   END OF TERMS AND CONDITIONS
-
-   APPENDIX: How to apply the Apache License to your work.
-
-      To apply the Apache License to your work, attach the following
-      boilerplate notice, with the fields enclosed by brackets "[]"
-      replaced with your own identifying information. (Don't include
-      the brackets!)  The text should be enclosed in the appropriate
-      comment syntax for the file format. We also recommend that a
-      file or class name and description of purpose be included on the
-      same "printed page" as the copyright notice for easier
-      identification within third-party archives.
-
-   Copyright 2024 Jacob Pratt et al.
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- deranged 0.5.5 · LICENSE-Apache · SHA-256 b4839ecf405b5fa4a20f234ae6b686ab7f245e7eec8eb634174b833ea86a4653 ---
 
@@ -19341,6 +21517,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+displaydoc: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- displaydoc 0.2.5 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -19572,6 +21754,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+document-features: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- document-features 0.2.12 · LICENSE-APACHE · SHA-256 c274f80372d90c012937370f0e1f15087d22e308ef98b27cea5dc0d2d088366c ---
 
 Apache License
@@ -19669,6 +21857,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+encoding_rs: Select MIT for implementation; retain mandatory WHATWG data BSD license and COPYRIGHT.
+
+本版本采用的许可：MIT AND BSD-3-Clause
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- encoding_rs 0.8.35 · COPYRIGHT · SHA-256 1961703c278284db0ba353f5cfb2f3e2b1c1f584a2791db44aacfe7d78656f70 ---
 
@@ -19951,6 +22145,12 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+equivalent: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- equivalent 1.0.2 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
 Apache License
@@ -20182,6 +22382,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+find-msvc-tools: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- find-msvc-tools 0.1.5 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -20415,6 +22621,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+flate2: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- flate2 1.1.5 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
 Apache License
@@ -20646,6 +22858,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+fnv: Legacy slash metadata: conservatively retain both root licenses and satisfy both notice requirements.
+
+本版本采用的许可：Apache-2.0 AND MIT
+
+履约：提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。
 
 --- fnv 1.0.7 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -20879,6 +23097,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+form_urlencoded: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- form_urlencoded 1.2.2 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
 Apache License
@@ -21110,6 +23334,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+futures-channel: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- futures-channel 0.3.31 · LICENSE-APACHE · SHA-256 27480f391bd92f66f0261466abd9456bcd58a7d8552955af6d2acc051acec5af ---
 
@@ -21345,6 +23575,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+futures-core: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- futures-core 0.3.31 · LICENSE-APACHE · SHA-256 27480f391bd92f66f0261466abd9456bcd58a7d8552955af6d2acc051acec5af ---
 
 Apache License
@@ -21578,6 +23814,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+futures-sink: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- futures-sink 0.3.31 · LICENSE-APACHE · SHA-256 27480f391bd92f66f0261466abd9456bcd58a7d8552955af6d2acc051acec5af ---
 
@@ -21813,6 +24055,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+futures-task: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- futures-task 0.3.31 · LICENSE-APACHE · SHA-256 27480f391bd92f66f0261466abd9456bcd58a7d8552955af6d2acc051acec5af ---
 
 Apache License
@@ -22046,6 +24294,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+futures-util: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- futures-util 0.3.31 · LICENSE-APACHE · SHA-256 27480f391bd92f66f0261466abd9456bcd58a7d8552955af6d2acc051acec5af ---
 
@@ -22281,6 +24535,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+getrandom: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- getrandom 0.2.16 · LICENSE-APACHE · SHA-256 e7330bf53074b4a9c5896f4a03d782be7f163381e45923d5e2369fe194a19f99 ---
 
 Apache License
@@ -22514,6 +24774,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+h2: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- h2 0.4.12 · LICENSE · SHA-256 f5352eaa5597c02c95e541596fe44c4cd73ca822230bd7283287ebb8b5d56cda ---
 
 Copyright (c) 2017 h2 authors
@@ -22541,6 +24807,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+hashbrown: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- hashbrown 0.16.1 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -22774,6 +25046,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+http-body-util: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- http-body-util 0.1.3 · LICENSE · SHA-256 4bddfb319e32f90fe9905aee729bfa0dfca9f5ee9d65a8ceddd14d0597f2b566 ---
 
 Copyright (c) 2019-2025 Sean McArthur & Hyper Contributors
@@ -22802,6 +25080,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+http-body: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- http-body 1.0.1 · LICENSE · SHA-256 ae61683b7dd6c160185ac0635b2fd42ac028a74f680aa90be4fd1a17ef13fa10 ---
 
 Copyright (c) 2019-2024 Sean McArthur & Hyper Contributors
@@ -22829,6 +25113,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+http: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- http 1.4.0 · LICENSE-APACHE · SHA-256 881c9fe2d29b216aac4499364653fda35310c7212321b54dc4f8af51fa1d5d36 ---
 
@@ -23062,6 +25352,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+httparse: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- httparse 1.10.1 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
 Apache License
@@ -23287,6 +25583,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+hyper-rustls: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- hyper-rustls 0.27.7 · LICENSE · SHA-256 ebadd391ec105d746e85461150cf3fe0170d3a1e29b4c35ab4e7ab7737764331 ---
 
@@ -23550,6 +25852,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+hyper-util: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- hyper-util 0.1.19 · LICENSE · SHA-256 e7d622e4783e8c97aba7ddccb4469d7b495d550e95b9dc7b2e2d86fad6523bf6 ---
 
 Copyright (c) 2023-2025 Sean McArthur
@@ -23572,6 +25880,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+hyper: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- hyper 1.8.1 · LICENSE · SHA-256 5f9689aff91a90591cc1e7144ab7119c9475ea24e0f04da15cf109710b2ea465 ---
 
 Copyright (c) 2014-2025 Sean McArthur
@@ -23593,6 +25907,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+icu_collections: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
 
 --- icu_collections 2.1.1 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
@@ -23643,6 +25963,12 @@ SPDX-License-Identifier: Unicode-3.0
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
 
+icu_locale_core: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
+
 --- icu_locale_core 2.1.1 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
 UNICODE LICENSE V3
@@ -23691,6 +26017,12 @@ SPDX-License-Identifier: Unicode-3.0
 
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
+
+icu_normalizer: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
 
 --- icu_normalizer 2.1.1 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
@@ -23741,6 +26073,12 @@ SPDX-License-Identifier: Unicode-3.0
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
 
+icu_normalizer_data: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
+
 --- icu_normalizer_data 2.1.1 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
 UNICODE LICENSE V3
@@ -23789,6 +26127,12 @@ SPDX-License-Identifier: Unicode-3.0
 
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
+
+icu_properties: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
 
 --- icu_properties 2.1.2 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
@@ -23839,6 +26183,12 @@ SPDX-License-Identifier: Unicode-3.0
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
 
+icu_properties_data: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
+
 --- icu_properties_data 2.1.2 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
 UNICODE LICENSE V3
@@ -23888,6 +26238,12 @@ SPDX-License-Identifier: Unicode-3.0
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
 
+icu_provider: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
+
 --- icu_provider 2.1.1 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
 UNICODE LICENSE V3
@@ -23936,6 +26292,12 @@ SPDX-License-Identifier: Unicode-3.0
 
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
+
+idna: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- idna 1.1.0 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -24169,6 +26531,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+idna_adapter: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- idna_adapter 1.2.1 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
 Apache License
@@ -24400,6 +26768,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+indexmap: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- indexmap 2.12.1 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -24633,6 +27007,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+ipnet: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- ipnet 2.11.0 · LICENSE-APACHE · SHA-256 9d8e882729a53481b83a5fba9da762bec38a289be159690c607a5375778331ee ---
 
 Apache License
@@ -24846,6 +27226,12 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+iri-string: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- iri-string 0.7.9 · LICENSE-APACHE.txt · SHA-256 283ea6cc2997a1a70da0049e09adf9317bb60ca1b51279b65196b83a69e1996b ---
 
@@ -25079,6 +27465,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+itoa: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- itoa 1.0.15 · LICENSE-APACHE · SHA-256 85ad950cce8752f716dbf49be95b2639172cb49f291336d57f1fdc9989e38179 ---
 
 Apache License
@@ -25283,6 +27675,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+libc: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- libc 0.2.178 · LICENSE-APACHE · SHA-256 85ad950cce8752f716dbf49be95b2639172cb49f291336d57f1fdc9989e38179 ---
 
@@ -25491,6 +27889,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+litemap: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
+
 --- litemap 0.8.1 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
 UNICODE LICENSE V3
@@ -25539,6 +27943,12 @@ SPDX-License-Identifier: Unicode-3.0
 
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
+
+litrs: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- litrs 1.0.0 · LICENSE-APACHE · SHA-256 85ad950cce8752f716dbf49be95b2639172cb49f291336d57f1fdc9989e38179 ---
 
@@ -25746,6 +28156,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+log: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- log 0.4.29 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -25979,6 +28395,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+memchr: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- memchr 2.7.6 · COPYING · SHA-256 65314a6c96683f76f7495709bb0ddecb4eaa6fa244b28f23c4812ef8e5524066 ---
 
 This project is dual-licensed under the Unlicense and MIT licenses.
@@ -26035,6 +28457,12 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <http://unlicense.org/>
+
+mime: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- mime 0.3.17 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -26261,6 +28689,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+miniz_oxide: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- miniz_oxide 0.8.9 · LICENSE · SHA-256 7427abc630365f6335b3ced8b620b6c8a87b3793edea701d15cdde01ec7a6cde ---
 
@@ -26513,6 +28947,12 @@ Permission is granted to anyone to use this software for any purpose, including 
 
 3. This notice may not be removed or altered from any source distribution.
 
+mio: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- mio 1.1.1 · LICENSE · SHA-256 c804065b0956d00a65ce119456ec48ee456f5446b904b07ee85225ba5a88ce41 ---
 
 Copyright (c) 2014 Carl Lerche and other MIO contributors
@@ -26534,6 +28974,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+napi-derive-backend: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- napi-derive-backend 1.0.75 · LICENSE · SHA-256 0bf0a569ac4bc5f2b96d7d12db451a2252234a5ac97124841be4bdb8057e63d5 ---
 
@@ -26581,6 +29027,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+napi-derive: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- napi-derive 2.16.13 · LICENSE · SHA-256 0bf0a569ac4bc5f2b96d7d12db451a2252234a5ac97124841be4bdb8057e63d5 ---
 
 MIT License
@@ -26626,6 +29078,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+napi-sys: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- napi-sys 2.4.0 · LICENSE · SHA-256 0bf0a569ac4bc5f2b96d7d12db451a2252234a5ac97124841be4bdb8057e63d5 ---
 
@@ -26673,6 +29131,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+napi: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- napi 2.16.17 · LICENSE · SHA-256 0bf0a569ac4bc5f2b96d7d12db451a2252234a5ac97124841be4bdb8057e63d5 ---
 
 MIT License
@@ -26719,209 +29183,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
---- num-conv 0.1.0 · LICENSE-APACHE · SHA-256 35660f0f1f5a46ac204ac2973e2f7f4e170fc10108aecdc816021d66754c0083 ---
+num-conv: MIT option selected for the declared alternative; both original license texts remain available.
 
-Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+本版本采用的许可：MIT
 
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
-
-   1. Definitions.
-
-      "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
-
-      "Licensor" shall mean the copyright owner or entity authorized by
-      the copyright owner that is granting the License.
-
-      "Legal Entity" shall mean the union of the acting entity and all
-      other entities that control, are controlled by, or are under common
-      control with that entity. For the purposes of this definition,
-      "control" means (i) the power, direct or indirect, to cause the
-      direction or management of such entity, whether by contract or
-      otherwise, or (ii) ownership of fifty percent (50%) or more of the
-      outstanding shares, or (iii) beneficial ownership of such entity.
-
-      "You" (or "Your") shall mean an individual or Legal Entity
-      exercising permissions granted by this License.
-
-      "Source" form shall mean the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
-
-      "Object" form shall mean any form resulting from mechanical
-      transformation or translation of a Source form, including but
-      not limited to compiled object code, generated documentation,
-      and conversions to other media types.
-
-      "Work" shall mean the work of authorship, whether in Source or
-      Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work
-      (an example is provided in the Appendix below).
-
-      "Derivative Works" shall mean any work, whether in Source or Object
-      form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other modifications
-      represent, as a whole, an original work of authorship. For the purposes
-      of this License, Derivative Works shall not include works that remain
-      separable from, or merely link (or bind by name) to the interfaces of,
-      the Work and Derivative Works thereof.
-
-      "Contribution" shall mean any work of authorship, including
-      the original version of the Work and any modifications or additions
-      to that Work or Derivative Works thereof, that is intentionally
-      submitted to Licensor for inclusion in the Work by the copyright owner
-      or by an individual or Legal Entity authorized to submit on behalf of
-      the copyright owner. For the purposes of this definition, "submitted"
-      means any form of electronic, verbal, or written communication sent
-      to the Licensor or its representatives, including but not limited to
-      communication on electronic mailing lists, source code control systems,
-      and issue tracking systems that are managed by, or on behalf of, the
-      Licensor for the purpose of discussing and improving the Work, but
-      excluding communication that is conspicuously marked or otherwise
-      designated in writing by the copyright owner as "Not a Contribution."
-
-      "Contributor" shall mean Licensor and any individual or Legal Entity
-      on behalf of whom a Contribution has been received by Licensor and
-      subsequently incorporated within the Work.
-
-   2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      copyright license to reproduce, prepare Derivative Works of,
-      publicly display, publicly perform, sublicense, and distribute the
-      Work and such Derivative Works in Source or Object form.
-
-   3. Grant of Patent License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      (except as stated in this section) patent license to make, have made,
-      use, offer to sell, sell, import, and otherwise transfer the Work,
-      where such license applies only to those patent claims licensable
-      by such Contributor that are necessarily infringed by their
-      Contribution(s) alone or by combination of their Contribution(s)
-      with the Work to which such Contribution(s) was submitted. If You
-      institute patent litigation against any entity (including a
-      cross-claim or counterclaim in a lawsuit) alleging that the Work
-      or a Contribution incorporated within the Work constitutes direct
-      or contributory patent infringement, then any patent licenses
-      granted to You under this License for that Work shall terminate
-      as of the date such litigation is filed.
-
-   4. Redistribution. You may reproduce and distribute copies of the
-      Work or Derivative Works thereof in any medium, with or without
-      modifications, and in Source or Object form, provided that You
-      meet the following conditions:
-
-      (a) You must give any other recipients of the Work or
-          Derivative Works a copy of this License; and
-
-      (b) You must cause any modified files to carry prominent notices
-          stating that You changed the files; and
-
-      (c) You must retain, in the Source form of any Derivative Works
-          that You distribute, all copyright, patent, trademark, and
-          attribution notices from the Source form of the Work,
-          excluding those notices that do not pertain to any part of
-          the Derivative Works; and
-
-      (d) If the Work includes a "NOTICE" text file as part of its
-          distribution, then any Derivative Works that You distribute must
-          include a readable copy of the attribution notices contained
-          within such NOTICE file, excluding those notices that do not
-          pertain to any part of the Derivative Works, in at least one
-          of the following places: within a NOTICE text file distributed
-          as part of the Derivative Works; within the Source form or
-          documentation, if provided along with the Derivative Works; or,
-          within a display generated by the Derivative Works, if and
-          wherever such third-party notices normally appear. The contents
-          of the NOTICE file are for informational purposes only and
-          do not modify the License. You may add Your own attribution
-          notices within Derivative Works that You distribute, alongside
-          or as an addendum to the NOTICE text from the Work, provided
-          that such additional attribution notices cannot be construed
-          as modifying the License.
-
-      You may add Your own copyright statement to Your modifications and
-      may provide additional or different license terms and conditions
-      for use, reproduction, or distribution of Your modifications, or
-      for any such Derivative Works as a whole, provided Your use,
-      reproduction, and distribution of the Work otherwise complies with
-      the conditions stated in this License.
-
-   5. Submission of Contributions. Unless You explicitly state otherwise,
-      any Contribution intentionally submitted for inclusion in the Work
-      by You to the Licensor shall be under the terms and conditions of
-      this License, without any additional terms or conditions.
-      Notwithstanding the above, nothing herein shall supersede or modify
-      the terms of any separate license agreement you may have executed
-      with Licensor regarding such Contributions.
-
-   6. Trademarks. This License does not grant permission to use the trade
-      names, trademarks, service marks, or product names of the Licensor,
-      except as required for reasonable and customary use in describing the
-      origin of the Work and reproducing the content of the NOTICE file.
-
-   7. Disclaimer of Warranty. Unless required by applicable law or
-      agreed to in writing, Licensor provides the Work (and each
-      Contributor provides its Contributions) on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-      implied, including, without limitation, any warranties or conditions
-      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
-      PARTICULAR PURPOSE. You are solely responsible for determining the
-      appropriateness of using or redistributing the Work and assume any
-      risks associated with Your exercise of permissions under this License.
-
-   8. Limitation of Liability. In no event and under no legal theory,
-      whether in tort (including negligence), contract, or otherwise,
-      unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, indirect, special,
-      incidental, or consequential damages of any character arising as a
-      result of this License or out of the use or inability to use the
-      Work (including but not limited to damages for loss of goodwill,
-      work stoppage, computer failure or malfunction, or any and all
-      other commercial damages or losses), even if such Contributor
-      has been advised of the possibility of such damages.
-
-   9. Accepting Warranty or Additional Liability. While redistributing
-      the Work or Derivative Works thereof, You may choose to offer,
-      and charge a fee for, acceptance of support, warranty, indemnity,
-      or other liability obligations and/or rights consistent with this
-      License. However, in accepting such obligations, You may act only
-      on Your own behalf and on Your sole responsibility, not on behalf
-      of any other Contributor, and only if You agree to indemnify,
-      defend, and hold each Contributor harmless for any liability
-      incurred by, or claims asserted against, such Contributor by reason
-      of your accepting any such warranty or additional liability.
-
-   END OF TERMS AND CONDITIONS
-
-   APPENDIX: How to apply the Apache License to your work.
-
-      To apply the Apache License to your work, attach the following
-      boilerplate notice, with the fields enclosed by brackets "[]"
-      replaced with your own identifying information. (Don't include
-      the brackets!)  The text should be enclosed in the appropriate
-      comment syntax for the file format. We also recommend that a
-      file or class name and description of purpose be included on the
-      same "printed page" as the copyright notice for easier
-      identification within third-party archives.
-
-   Copyright 2023 Jacob Pratt
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- num-conv 0.1.0 · LICENSE-Apache · SHA-256 35660f0f1f5a46ac204ac2973e2f7f4e170fc10108aecdc816021d66754c0083 ---
 
@@ -27148,6 +29414,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+once_cell: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- once_cell 1.21.3 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -27378,6 +29650,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+percent-encoding: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- percent-encoding 2.3.2 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -27611,6 +29889,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+pin-project-lite: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- pin-project-lite 0.2.16 · LICENSE-APACHE · SHA-256 4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe ---
 
 Apache License
@@ -27815,6 +30099,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+pin-utils: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- pin-utils 0.1.0 · LICENSE-APACHE · SHA-256 8348c9fe2fb74122288d01b62b79a292b71cc6b561cdceb8f2d46cc196a31e49 ---
 
@@ -28048,6 +30338,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+potential_utf: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
+
 --- potential_utf 0.1.4 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
 UNICODE LICENSE V3
@@ -28097,209 +30393,11 @@ SPDX-License-Identifier: Unicode-3.0
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
 
---- powerfmt 0.2.0 · LICENSE-APACHE · SHA-256 4b05c4b43039d82b9ef8f3fb6cbf97f8312485eb9e6546a8171b37b73e048b08 ---
+powerfmt: MIT option selected for the declared alternative; both original license texts remain available.
 
-Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+本版本采用的许可：MIT
 
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
-
-   1. Definitions.
-
-      "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
-
-      "Licensor" shall mean the copyright owner or entity authorized by
-      the copyright owner that is granting the License.
-
-      "Legal Entity" shall mean the union of the acting entity and all
-      other entities that control, are controlled by, or are under common
-      control with that entity. For the purposes of this definition,
-      "control" means (i) the power, direct or indirect, to cause the
-      direction or management of such entity, whether by contract or
-      otherwise, or (ii) ownership of fifty percent (50%) or more of the
-      outstanding shares, or (iii) beneficial ownership of such entity.
-
-      "You" (or "Your") shall mean an individual or Legal Entity
-      exercising permissions granted by this License.
-
-      "Source" form shall mean the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
-
-      "Object" form shall mean any form resulting from mechanical
-      transformation or translation of a Source form, including but
-      not limited to compiled object code, generated documentation,
-      and conversions to other media types.
-
-      "Work" shall mean the work of authorship, whether in Source or
-      Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work
-      (an example is provided in the Appendix below).
-
-      "Derivative Works" shall mean any work, whether in Source or Object
-      form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other modifications
-      represent, as a whole, an original work of authorship. For the purposes
-      of this License, Derivative Works shall not include works that remain
-      separable from, or merely link (or bind by name) to the interfaces of,
-      the Work and Derivative Works thereof.
-
-      "Contribution" shall mean any work of authorship, including
-      the original version of the Work and any modifications or additions
-      to that Work or Derivative Works thereof, that is intentionally
-      submitted to Licensor for inclusion in the Work by the copyright owner
-      or by an individual or Legal Entity authorized to submit on behalf of
-      the copyright owner. For the purposes of this definition, "submitted"
-      means any form of electronic, verbal, or written communication sent
-      to the Licensor or its representatives, including but not limited to
-      communication on electronic mailing lists, source code control systems,
-      and issue tracking systems that are managed by, or on behalf of, the
-      Licensor for the purpose of discussing and improving the Work, but
-      excluding communication that is conspicuously marked or otherwise
-      designated in writing by the copyright owner as "Not a Contribution."
-
-      "Contributor" shall mean Licensor and any individual or Legal Entity
-      on behalf of whom a Contribution has been received by Licensor and
-      subsequently incorporated within the Work.
-
-   2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      copyright license to reproduce, prepare Derivative Works of,
-      publicly display, publicly perform, sublicense, and distribute the
-      Work and such Derivative Works in Source or Object form.
-
-   3. Grant of Patent License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      (except as stated in this section) patent license to make, have made,
-      use, offer to sell, sell, import, and otherwise transfer the Work,
-      where such license applies only to those patent claims licensable
-      by such Contributor that are necessarily infringed by their
-      Contribution(s) alone or by combination of their Contribution(s)
-      with the Work to which such Contribution(s) was submitted. If You
-      institute patent litigation against any entity (including a
-      cross-claim or counterclaim in a lawsuit) alleging that the Work
-      or a Contribution incorporated within the Work constitutes direct
-      or contributory patent infringement, then any patent licenses
-      granted to You under this License for that Work shall terminate
-      as of the date such litigation is filed.
-
-   4. Redistribution. You may reproduce and distribute copies of the
-      Work or Derivative Works thereof in any medium, with or without
-      modifications, and in Source or Object form, provided that You
-      meet the following conditions:
-
-      (a) You must give any other recipients of the Work or
-          Derivative Works a copy of this License; and
-
-      (b) You must cause any modified files to carry prominent notices
-          stating that You changed the files; and
-
-      (c) You must retain, in the Source form of any Derivative Works
-          that You distribute, all copyright, patent, trademark, and
-          attribution notices from the Source form of the Work,
-          excluding those notices that do not pertain to any part of
-          the Derivative Works; and
-
-      (d) If the Work includes a "NOTICE" text file as part of its
-          distribution, then any Derivative Works that You distribute must
-          include a readable copy of the attribution notices contained
-          within such NOTICE file, excluding those notices that do not
-          pertain to any part of the Derivative Works, in at least one
-          of the following places: within a NOTICE text file distributed
-          as part of the Derivative Works; within the Source form or
-          documentation, if provided along with the Derivative Works; or,
-          within a display generated by the Derivative Works, if and
-          wherever such third-party notices normally appear. The contents
-          of the NOTICE file are for informational purposes only and
-          do not modify the License. You may add Your own attribution
-          notices within Derivative Works that You distribute, alongside
-          or as an addendum to the NOTICE text from the Work, provided
-          that such additional attribution notices cannot be construed
-          as modifying the License.
-
-      You may add Your own copyright statement to Your modifications and
-      may provide additional or different license terms and conditions
-      for use, reproduction, or distribution of Your modifications, or
-      for any such Derivative Works as a whole, provided Your use,
-      reproduction, and distribution of the Work otherwise complies with
-      the conditions stated in this License.
-
-   5. Submission of Contributions. Unless You explicitly state otherwise,
-      any Contribution intentionally submitted for inclusion in the Work
-      by You to the Licensor shall be under the terms and conditions of
-      this License, without any additional terms or conditions.
-      Notwithstanding the above, nothing herein shall supersede or modify
-      the terms of any separate license agreement you may have executed
-      with Licensor regarding such Contributions.
-
-   6. Trademarks. This License does not grant permission to use the trade
-      names, trademarks, service marks, or product names of the Licensor,
-      except as required for reasonable and customary use in describing the
-      origin of the Work and reproducing the content of the NOTICE file.
-
-   7. Disclaimer of Warranty. Unless required by applicable law or
-      agreed to in writing, Licensor provides the Work (and each
-      Contributor provides its Contributions) on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-      implied, including, without limitation, any warranties or conditions
-      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
-      PARTICULAR PURPOSE. You are solely responsible for determining the
-      appropriateness of using or redistributing the Work and assume any
-      risks associated with Your exercise of permissions under this License.
-
-   8. Limitation of Liability. In no event and under no legal theory,
-      whether in tort (including negligence), contract, or otherwise,
-      unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, indirect, special,
-      incidental, or consequential damages of any character arising as a
-      result of this License or out of the use or inability to use the
-      Work (including but not limited to damages for loss of goodwill,
-      work stoppage, computer failure or malfunction, or any and all
-      other commercial damages or losses), even if such Contributor
-      has been advised of the possibility of such damages.
-
-   9. Accepting Warranty or Additional Liability. While redistributing
-      the Work or Derivative Works thereof, You may choose to offer,
-      and charge a fee for, acceptance of support, warranty, indemnity,
-      or other liability obligations and/or rights consistent with this
-      License. However, in accepting such obligations, You may act only
-      on Your own behalf and on Your sole responsibility, not on behalf
-      of any other Contributor, and only if You agree to indemnify,
-      defend, and hold each Contributor harmless for any liability
-      incurred by, or claims asserted against, such Contributor by reason
-      of your accepting any such warranty or additional liability.
-
-   END OF TERMS AND CONDITIONS
-
-   APPENDIX: How to apply the Apache License to your work.
-
-      To apply the Apache License to your work, attach the following
-      boilerplate notice, with the fields enclosed by brackets "[]"
-      replaced with your own identifying information. (Don't include
-      the brackets!)  The text should be enclosed in the appropriate
-      comment syntax for the file format. We also recommend that a
-      file or class name and description of purpose be included on the
-      same "printed page" as the copyright notice for easier
-      identification within third-party archives.
-
-   Copyright 2023 Jacob Pratt et al.
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- powerfmt 0.2.0 · LICENSE-Apache · SHA-256 4b05c4b43039d82b9ef8f3fb6cbf97f8312485eb9e6546a8171b37b73e048b08 ---
 
@@ -28527,6 +30625,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+proc-macro2: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- proc-macro2 1.0.103 · LICENSE-APACHE · SHA-256 85ad950cce8752f716dbf49be95b2639172cb49f291336d57f1fdc9989e38179 ---
 
 Apache License
@@ -28731,6 +30835,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+psl-types: Legacy slash metadata: conservatively retain both root licenses and satisfy both notice requirements.
+
+本版本采用的许可：Apache-2.0 AND MIT
+
+履约：提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。
 
 --- psl-types 2.0.11 · LICENSE · SHA-256 327af956a156f11202f33051f664783e4fccf7995365cd016abfb42b1150f29f ---
 
@@ -28960,6 +31070,12 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
+publicsuffix: Legacy slash metadata: conservatively retain both root licenses; this crate does not bundle the external public suffix list.
+
+本版本采用的许可：Apache-2.0 AND MIT
+
+履约：提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。
+
 --- publicsuffix 2.3.0 · LICENSE · SHA-256 c7c432f69bf5233816713a63e7c4df2b1ef938f1a204d7e0a777f6ad8c31da04 ---
 
 MIT License
@@ -29188,6 +31304,12 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
+quote: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- quote 1.0.42 · LICENSE-APACHE · SHA-256 85ad950cce8752f716dbf49be95b2639172cb49f291336d57f1fdc9989e38179 ---
 
 Apache License
@@ -29392,6 +31514,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+regex-automata: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- regex-automata 0.4.13 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -29625,6 +31753,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+regex-syntax: MIT option for code; src/unicode_tables/LICENSE-UNICODE retained separately.
+
+本版本采用的许可：MIT AND Unicode-DFS-2016
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
+
 --- regex-syntax 0.8.8 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
 Apache License
@@ -29856,6 +31990,72 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+--- regex-syntax 0.8.8 · src/unicode_tables/LICENSE-UNICODE · SHA-256 ea8df489e83b7674d5c9d50c320bec3b15d2e2eeb7a3a8879a666d91e5640c16 ---
+
+UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
+
+Unicode Data Files include all data files under the directories
+http://www.unicode.org/Public/, http://www.unicode.org/reports/,
+http://www.unicode.org/cldr/data/, http://source.icu-project.org/repos/icu/, and
+http://www.unicode.org/utility/trac/browser/.
+
+Unicode Data Files do not include PDF online code charts under the
+directory http://www.unicode.org/Public/.
+
+Software includes any source code published in the Unicode Standard
+or under the directories
+http://www.unicode.org/Public/, http://www.unicode.org/reports/,
+http://www.unicode.org/cldr/data/, http://source.icu-project.org/repos/icu/, and
+http://www.unicode.org/utility/trac/browser/.
+
+NOTICE TO USER: Carefully read the following legal agreement.
+BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S
+DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),
+YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
+TERMS AND CONDITIONS OF THIS AGREEMENT.
+IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
+THE DATA FILES OR SOFTWARE.
+
+COPYRIGHT AND PERMISSION NOTICE
+
+Copyright © 1991-2018 Unicode, Inc. All rights reserved.
+Distributed under the Terms of Use in http://www.unicode.org/copyright.html.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Unicode data files and any associated documentation
+(the "Data Files") or Unicode software and any associated documentation
+(the "Software") to deal in the Data Files or Software
+without restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, and/or sell copies of
+the Data Files or Software, and to permit persons to whom the Data Files
+or Software are furnished to do so, provided that either
+(a) this copyright and permission notice appear with all copies
+of the Data Files or Software, or
+(b) this copyright and permission notice appear in associated
+Documentation.
+
+THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT OF THIRD PARTY RIGHTS.
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
+NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
+DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder
+shall not be used in advertising or otherwise to promote the sale,
+use or other dealings in these Data Files or Software without prior
+written authorization of the copyright holder.
+
+regex: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- regex 1.12.2 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -30089,6 +32289,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+reqwest: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- reqwest 0.12.25 · LICENSE-APACHE · SHA-256 5c3866f31ed28362d86aa475660b5bc4d8f064188261fbbfa421fab5da09198c ---
 
 Apache License
@@ -30314,6 +32520,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+ring: BoringSSL/fiat Apache and ISC source headers apply by file; MIT selected for nested once_cell; source copyright blocks retained.
+
+本版本采用的许可：Apache-2.0 AND ISC AND MIT
+
+履约：提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。
 
 --- ring 0.17.14 · LICENSE · SHA-256 edb9c6dbff4676b90e729ffdb6c9239076a2e01b3bb8aadf080bdc7a682296da ---
 
@@ -30617,6 +32829,1196 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
 OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
 CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
+--- ring 0.17.14 · src/polyfill/once_cell/LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
+
+Apache License
+                        Version 2.0, January 2004
+                     http://www.apache.org/licenses/
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+1. Definitions.
+
+   "License" shall mean the terms and conditions for use, reproduction,
+   and distribution as defined by Sections 1 through 9 of this document.
+
+   "Licensor" shall mean the copyright owner or entity authorized by
+   the copyright owner that is granting the License.
+
+   "Legal Entity" shall mean the union of the acting entity and all
+   other entities that control, are controlled by, or are under common
+   control with that entity. For the purposes of this definition,
+   "control" means (i) the power, direct or indirect, to cause the
+   direction or management of such entity, whether by contract or
+   otherwise, or (ii) ownership of fifty percent (50%) or more of the
+   outstanding shares, or (iii) beneficial ownership of such entity.
+
+   "You" (or "Your") shall mean an individual or Legal Entity
+   exercising permissions granted by this License.
+
+   "Source" form shall mean the preferred form for making modifications,
+   including but not limited to software source code, documentation
+   source, and configuration files.
+
+   "Object" form shall mean any form resulting from mechanical
+   transformation or translation of a Source form, including but
+   not limited to compiled object code, generated documentation,
+   and conversions to other media types.
+
+   "Work" shall mean the work of authorship, whether in Source or
+   Object form, made available under the License, as indicated by a
+   copyright notice that is included in or attached to the work
+   (an example is provided in the Appendix below).
+
+   "Derivative Works" shall mean any work, whether in Source or Object
+   form, that is based on (or derived from) the Work and for which the
+   editorial revisions, annotations, elaborations, or other modifications
+   represent, as a whole, an original work of authorship. For the purposes
+   of this License, Derivative Works shall not include works that remain
+   separable from, or merely link (or bind by name) to the interfaces of,
+   the Work and Derivative Works thereof.
+
+   "Contribution" shall mean any work of authorship, including
+   the original version of the Work and any modifications or additions
+   to that Work or Derivative Works thereof, that is intentionally
+   submitted to Licensor for inclusion in the Work by the copyright owner
+   or by an individual or Legal Entity authorized to submit on behalf of
+   the copyright owner. For the purposes of this definition, "submitted"
+   means any form of electronic, verbal, or written communication sent
+   to the Licensor or its representatives, including but not limited to
+   communication on electronic mailing lists, source code control systems,
+   and issue tracking systems that are managed by, or on behalf of, the
+   Licensor for the purpose of discussing and improving the Work, but
+   excluding communication that is conspicuously marked or otherwise
+   designated in writing by the copyright owner as "Not a Contribution."
+
+   "Contributor" shall mean Licensor and any individual or Legal Entity
+   on behalf of whom a Contribution has been received by Licensor and
+   subsequently incorporated within the Work.
+
+2. Grant of Copyright License. Subject to the terms and conditions of
+   this License, each Contributor hereby grants to You a perpetual,
+   worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+   copyright license to reproduce, prepare Derivative Works of,
+   publicly display, publicly perform, sublicense, and distribute the
+   Work and such Derivative Works in Source or Object form.
+
+3. Grant of Patent License. Subject to the terms and conditions of
+   this License, each Contributor hereby grants to You a perpetual,
+   worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+   (except as stated in this section) patent license to make, have made,
+   use, offer to sell, sell, import, and otherwise transfer the Work,
+   where such license applies only to those patent claims licensable
+   by such Contributor that are necessarily infringed by their
+   Contribution(s) alone or by combination of their Contribution(s)
+   with the Work to which such Contribution(s) was submitted. If You
+   institute patent litigation against any entity (including a
+   cross-claim or counterclaim in a lawsuit) alleging that the Work
+   or a Contribution incorporated within the Work constitutes direct
+   or contributory patent infringement, then any patent licenses
+   granted to You under this License for that Work shall terminate
+   as of the date such litigation is filed.
+
+4. Redistribution. You may reproduce and distribute copies of the
+   Work or Derivative Works thereof in any medium, with or without
+   modifications, and in Source or Object form, provided that You
+   meet the following conditions:
+
+   (a) You must give any other recipients of the Work or
+       Derivative Works a copy of this License; and
+
+   (b) You must cause any modified files to carry prominent notices
+       stating that You changed the files; and
+
+   (c) You must retain, in the Source form of any Derivative Works
+       that You distribute, all copyright, patent, trademark, and
+       attribution notices from the Source form of the Work,
+       excluding those notices that do not pertain to any part of
+       the Derivative Works; and
+
+   (d) If the Work includes a "NOTICE" text file as part of its
+       distribution, then any Derivative Works that You distribute must
+       include a readable copy of the attribution notices contained
+       within such NOTICE file, excluding those notices that do not
+       pertain to any part of the Derivative Works, in at least one
+       of the following places: within a NOTICE text file distributed
+       as part of the Derivative Works; within the Source form or
+       documentation, if provided along with the Derivative Works; or,
+       within a display generated by the Derivative Works, if and
+       wherever such third-party notices normally appear. The contents
+       of the NOTICE file are for informational purposes only and
+       do not modify the License. You may add Your own attribution
+       notices within Derivative Works that You distribute, alongside
+       or as an addendum to the NOTICE text from the Work, provided
+       that such additional attribution notices cannot be construed
+       as modifying the License.
+
+   You may add Your own copyright statement to Your modifications and
+   may provide additional or different license terms and conditions
+   for use, reproduction, or distribution of Your modifications, or
+   for any such Derivative Works as a whole, provided Your use,
+   reproduction, and distribution of the Work otherwise complies with
+   the conditions stated in this License.
+
+5. Submission of Contributions. Unless You explicitly state otherwise,
+   any Contribution intentionally submitted for inclusion in the Work
+   by You to the Licensor shall be under the terms and conditions of
+   this License, without any additional terms or conditions.
+   Notwithstanding the above, nothing herein shall supersede or modify
+   the terms of any separate license agreement you may have executed
+   with Licensor regarding such Contributions.
+
+6. Trademarks. This License does not grant permission to use the trade
+   names, trademarks, service marks, or product names of the Licensor,
+   except as required for reasonable and customary use in describing the
+   origin of the Work and reproducing the content of the NOTICE file.
+
+7. Disclaimer of Warranty. Unless required by applicable law or
+   agreed to in writing, Licensor provides the Work (and each
+   Contributor provides its Contributions) on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+   implied, including, without limitation, any warranties or conditions
+   of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+   PARTICULAR PURPOSE. You are solely responsible for determining the
+   appropriateness of using or redistributing the Work and assume any
+   risks associated with Your exercise of permissions under this License.
+
+8. Limitation of Liability. In no event and under no legal theory,
+   whether in tort (including negligence), contract, or otherwise,
+   unless required by applicable law (such as deliberate and grossly
+   negligent acts) or agreed to in writing, shall any Contributor be
+   liable to You for damages, including any direct, indirect, special,
+   incidental, or consequential damages of any character arising as a
+   result of this License or out of the use or inability to use the
+   Work (including but not limited to damages for loss of goodwill,
+   work stoppage, computer failure or malfunction, or any and all
+   other commercial damages or losses), even if such Contributor
+   has been advised of the possibility of such damages.
+
+9. Accepting Warranty or Additional Liability. While redistributing
+   the Work or Derivative Works thereof, You may choose to offer,
+   and charge a fee for, acceptance of support, warranty, indemnity,
+   or other liability obligations and/or rights consistent with this
+   License. However, in accepting such obligations, You may act only
+   on Your own behalf and on Your sole responsibility, not on behalf
+   of any other Contributor, and only if You agree to indemnify,
+   defend, and hold each Contributor harmless for any liability
+   incurred by, or claims asserted against, such Contributor by reason
+   of your accepting any such warranty or additional liability.
+
+END OF TERMS AND CONDITIONS
+
+APPENDIX: How to apply the Apache License to your work.
+
+   To apply the Apache License to your work, attach the following
+   boilerplate notice, with the fields enclosed by brackets "[]"
+   replaced with your own identifying information. (Don't include
+   the brackets!)  The text should be enclosed in the appropriate
+   comment syntax for the file format. We also recommend that a
+   file or class name and description of purpose be included on the
+   same "printed page" as the copyright notice for easier
+   identification within third-party archives.
+
+Copyright [yyyy] [name of copyright owner]
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+--- ring 0.17.14 · src/polyfill/once_cell/LICENSE-MIT · SHA-256 740a360e4d9c99a258a4a870097a4641af896babd62ca7ab2a2c6de4d5ada151 ---
+
+Permission is hereby granted, free of charge, to any
+person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the
+Software without restriction, including without
+limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software
+is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice
+shall be included in all copies or substantial portions
+of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+SHALL THE AUTHOR OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+--- ring 0.17.14 · third_party/fiat/LICENSE · SHA-256 f1954d2b51ee6ac825defdc6ee947930241269d40ad6082b9d9e758613ce7b61 ---
+
+The Apache License, Version 2.0 (Apache-2.0)
+
+Copyright 2015-2020 the fiat-crypto authors (see the AUTHORS file)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+--- ring 0.17.14 · NOTICE-source-comments · SHA-256 7350066365c8a9780984a7ef11c976b6e11cc5682f28bde0539e270d57164e49 ---
+
+Verbatim source comments from published crate ring-0.17.14.
+
+Sources: build.rs, src/ec/curve25519/ed25519/signing.rs, src/ec/curve25519/ed25519/verification.rs, src/ec/curve25519/ed25519.rs, src/ec/curve25519/x25519.rs, src/ec/suite_b/ecdsa/digest_scalar.rs, src/ec/suite_b/ecdsa/signing.rs, src/ec/suite_b/ecdsa/verification.rs, src/hmac.rs, src/lib.rs, src/polyfill.rs, src/rand.rs, src/rsa/keypair.rs, src/rsa/padding/pkcs1.rs, src/rsa/padding/pss.rs, src/rsa/padding.rs, src/rsa/verification.rs, src/rsa.rs, src/testutil.rs, tests/ecdsa_tests.rs, tests/hmac_tests.rs
+
+// Copyright 2015-2016 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: crypto/constant_time_test.c
+
+// Copyright 2014-2016 The OpenSSL Project Authors. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+Sources: crypto/cpu_intel.c, crypto/fipsmodule/bn/montgomery.c, crypto/internal.h, crypto/mem.c, include/ring-core/mem.h
+
+// Copyright 1995-2016 The OpenSSL Project Authors. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+Sources: crypto/crypto.c
+
+// Copyright 2014 The BoringSSL Authors
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+Sources: crypto/curve25519/asm/x25519-asm-arm.S, crypto/fipsmodule/ec/util.h
+
+// Copyright 2015 The BoringSSL Authors
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+Sources: crypto/curve25519/asm/x25519-asm-arm.S
+
+/* This file is taken from crypto_scalarmult/curve25519/neon2/scalarmult.s in
+ * SUPERCOP 20141124 (http://bench.cr.yp.to/supercop.html). That code is public
+ * domain licensed but the standard Apache 2.0 license is included above to keep
+ * licensing simple. */
+
+Sources: crypto/curve25519/curve25519.c, crypto/curve25519/curve25519_tables.h, crypto/curve25519/internal.h, crypto/fipsmodule/ec/p256.c, crypto/fipsmodule/ec/p256_table.h
+
+// Copyright 2020 The BoringSSL Authors
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+Sources: crypto/curve25519/curve25519_64_adx.c, include/ring-core/asm_base.h, include/ring-core/target.h
+
+// Copyright 2023 The BoringSSL Authors
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+Sources: crypto/fipsmodule/aes/aes_nohw.c
+
+/* Copyright (c) 2019, Google Inc.
+ *
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ * SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+ * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+ * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. */
+
+Sources: crypto/fipsmodule/bn/internal.h
+
+// Copyright 1995-2016 The OpenSSL Project Authors. All Rights Reserved.
+// Copyright (c) 2002, Oracle and/or its affiliates. All rights reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+Sources: crypto/fipsmodule/bn/montgomery_inv.c, crypto/fipsmodule/ec/gfp_p256.c, crypto/fipsmodule/ec/gfp_p384.c, crypto/limbs/limbs.h
+
+/* Copyright 2016 Brian Smith.
+ *
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ * SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+ * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+ * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. */
+
+Sources: crypto/fipsmodule/ec/ecp_nistz.c, crypto/fipsmodule/ec/ecp_nistz384.h
+
+/* Copyright (c) 2014, Intel Corporation.
+ *
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ * SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+ * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+ * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. */
+
+Sources: crypto/fipsmodule/ec/ecp_nistz.h
+
+/* Copyright (c) 2015, Google Inc.
+ *
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ * SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+ * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+ * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. */
+
+Sources: crypto/fipsmodule/ec/p256-nistz-table.h
+
+// Copyright 2014-2016 The OpenSSL Project Authors. All Rights Reserved.
+// Copyright (c) 2015, Intel Inc.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+Sources: crypto/fipsmodule/ec/p256-nistz.c, crypto/fipsmodule/ec/p256-nistz.h, crypto/fipsmodule/ec/p256_shared.h
+
+// Copyright 2014-2016 The OpenSSL Project Authors. All Rights Reserved.
+// Copyright (c) 2014, Intel Corporation. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+// Originally written by Shay Gueron (1, 2), and Vlad Krasnov (1)
+// (1) Intel Corporation, Israel Development Center, Haifa, Israel
+// (2) University of Haifa, Israel
+//
+// Reference:
+// S.Gueron and V.Krasnov, "Fast Prime Field Elliptic Curve Cryptography with
+//                          256 Bit Primes"
+
+Sources: crypto/limbs/limbs.c
+
+/* Copyright 2016-2017 Brian Smith.
+ *
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ * SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+ * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+ * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. */
+
+Sources: crypto/poly1305/poly1305.c, crypto/poly1305/poly1305_arm.c
+
+/* Copyright (c) 2014, Google Inc.
+ *
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ * SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+ * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+ * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. */
+
+Sources: include/ring-core/aes.h
+
+// Copyright 2002-2016 The OpenSSL Project Authors. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+Sources: include/ring-core/base.h
+
+// Copyright 2001-2016 The OpenSSL Project Authors. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+Sources: include/ring-core/check.h, tests/constant_time_tests.rs
+
+// Copyright 2020 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: include/ring-core/type_check.h
+
+// Copyright 1999-2016 The OpenSSL Project Authors. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+Sources: pregenerated/sha256-armv8-ios64.S, pregenerated/sha256-armv8-linux64.S, pregenerated/sha256-armv8-win64.S, pregenerated/sha512-armv8-ios64.S, pregenerated/sha512-armv8-linux64.S, pregenerated/sha512-armv8-win64.S
+
+// Copyright 2014-2020 The OpenSSL Project Authors. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+Sources: src/aead/aes/bs.rs, src/aead/aes/fallback.rs, src/aead/aes/ffi.rs, src/aead/aes/hw.rs, src/aead/aes/vp.rs, src/aead/aes.rs, src/aead/gcm/clmul.rs, src/aead/gcm/clmulavxmovbe.rs, src/aead/gcm/neon.rs, src/aead/gcm.rs
+
+// Copyright 2018-2024 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/aead/aes_gcm/aarch64.rs, src/aead/aes_gcm/aeshwclmulmovbe.rs, src/aead/aes_gcm/vaesclmulavx2.rs, src/aead/aes_gcm.rs, src/aead/chacha20_poly1305/integrated.rs, src/aead/chacha20_poly1305/mod.rs, src/aead/poly1305.rs, src/arithmetic/limbs/x86_64/mont.rs, src/bb/mod.rs, src/deprecated_constant_time.rs
+
+// Copyright 2015-2025 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/aead/algorithm.rs, src/aead/less_safe_key.rs, src/aead/opening_key.rs, src/aead/sealing_key.rs, src/aead/unbound_key.rs, src/rsa/public_key.rs, src/rsa/public_key_components.rs, tests/aead_tests.rs
+
+// Copyright 2015-2021 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/aead/chacha/fallback.rs
+
+// Copyright 2021 Brian Smith.
+// Portions Copyright (c) 2014, Google Inc.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. */
+// Adapted from the public domain, estream code by D. Bernstein.
+// Adapted from the BoringSSL crypto/chacha/chacha.c.
+
+Sources: src/aead/chacha/ffi.rs
+
+// Copyright 2016-2025 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/aead/chacha.rs
+
+// Copyright 2016 Brian Smith.
+// Portions Copyright (c) 2016, Google Inc.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/aead/chacha20_poly1305_openssh.rs, src/bits.rs, src/cpu.rs, src/ec/curve25519.rs, src/ec/suite_b/ops.rs, src/ec/suite_b/private_key.rs, src/ec/suite_b/public_key.rs, src/ec/suite_b.rs
+
+// Copyright 2016 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/aead/gcm/fallback.rs
+
+// Copyright (c) 2019, Google Inc.
+// Portions Copyright 2020-2024 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/aead/gcm/ffi.rs, src/aead/nonce.rs, src/aead/quic.rs, src/aead/shift.rs, src/io/der_writer.rs, src/io/positive.rs, src/io/writer.rs, src/io.rs, tests/quic_tests.rs
+
+// Copyright 2018 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/aead/gcm/vclmulavx2.rs
+
+// Copyright 2018-2025 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/aead/overlapping/array.rs, src/aead/overlapping/base.rs, src/aead/overlapping/mod.rs, src/aead/overlapping/partial_block.rs, src/bb/boolmask.rs, src/digest/sha2/ffi.rs, src/digest/sha2/sha2_32.rs, src/digest/sha2/sha2_64.rs, src/error/input_too_long.rs, src/polyfill/cold_error.rs, src/polyfill/cstr.rs, src/polyfill/notsend.rs, src/polyfill/ptr.rs, src/polyfill/sliceutil.rs, src/tests/bits_tests.rs, src/tests/mod.rs
+
+// Copyright 2024 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/aead/poly1305/ffi_arm_neon.rs, src/aead/poly1305/ffi_fallback.rs
+
+// Copyright 2015-2025 Brian Smith.
+// Portions Copyright (c) 2014, 2015, Google Inc.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/aead.rs, src/arithmetic/bigint/modulus.rs, src/arithmetic/bigint/modulusvalue.rs, src/bb/leaky.rs, src/bb/word.rs
+
+// Copyright 2015-2024 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/agreement.rs, src/ec/curve25519/ops.rs, src/ec/suite_b/curve.rs, src/ec/suite_b/ecdh.rs, src/ec.rs, src/signature.rs, tests/agreement_tests.rs, tests/digest_tests.rs, tests/ed25519_tests.rs, tests/pbkdf2_tests.rs
+
+// Copyright 2015-2017 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/arithmetic/bigint/boxed_limbs.rs, src/arithmetic/bigint/private_exponent.rs, src/arithmetic/bigint.rs
+
+// Copyright 2015-2023 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/arithmetic/ffi.rs
+
+// Copyright 2024-2025 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/arithmetic/inout.rs, src/arithmetic/limbs/aarch64/mod.rs, src/arithmetic/limbs/aarch64/mont.rs, src/arithmetic/limbs/mod.rs, src/arithmetic/limbs/x86_64/mod.rs, src/arithmetic/limbs512/mod.rs, src/arithmetic/limbs512/storage.rs, src/deprecated_test.rs, src/polyfill/slice/as_chunks.rs, src/polyfill/slice/as_chunks_mut.rs
+
+// Copyright 2025 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/arithmetic/montgomery.rs
+
+// Copyright 2017-2025 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/arithmetic/n0.rs
+
+// Copyright 2015-2022 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/arithmetic.rs
+
+// Copyright 2017-2023 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/bssl.rs, src/hkdf.rs, src/io/der.rs, src/pbkdf2.rs, tests/hkdf_tests.rs
+
+// Copyright 2015 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/c.rs
+
+// Copyright 2016-2019 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/cpu/arm/darwin.rs, src/cpu/arm/fuchsia.rs, src/cpu/arm/linux.rs, src/cpu/arm/windows.rs, src/cpu/arm.rs, src/error/into_unspecified.rs, src/error/key_rejected.rs, src/error/mod.rs, src/error/unspecified.rs
+
+// Copyright 2016-2024 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/cpu/intel.rs
+
+// Copyright 2016-2021 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/debug.rs
+
+// Copyright 2018 Trent Clarke.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/digest/dynstate.rs, src/digest.rs, src/ec/curve25519/scalar.rs, tests/rand_tests.rs
+
+// Copyright 2015-2019 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/digest/sha1.rs
+
+// Copyright 2015-2025 Brian Smith.
+// Copyright 2016 Simon Sapin.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/digest/sha2/fallback.rs
+
+// Copyright 2019-2025 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/digest/sha2/mod.rs
+
+// Copyright 2019-2024 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/ec/suite_b/ops/elem.rs, src/pkcs8.rs, tests/rsa_tests.rs
+
+// Copyright 2017 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/ec/suite_b/ops/p256.rs, src/ec/suite_b/ops/p384.rs
+
+// Copyright 2016-2023 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/limb.rs
+
+// Copyright 2016 David Judd.
+// Copyright 2016 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/polyfill/array_split_map.rs
+
+// Copyright 2023 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sources: src/polyfill/slice.rs
+
+// Permission is hereby granted, free of charge, to any
+// person obtaining a copy of this software and associated
+// documentation files (the "Software"), to deal in the
+// Software without restriction, including without
+// limitation the rights to use, copy, modify, merge,
+// publish, distribute, sublicense, and/or sell copies of
+// the Software, and to permit persons to whom the Software
+// is furnished to do so, subject to the following
+// conditions:
+//
+// The above copyright notice and this permission notice
+// shall be included in all copies or substantial portions
+// of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF
+// ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+// TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+// PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+// SHALL THE AUTHOR OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+// CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+// OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+// IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+
+Sources: src/polyfill/unwrap_const.rs
+
+// Copyright 2022 Brian Smith.
+//
+// Permission to use, copy, modify, and/or distribute this software for any
+// purpose with or without fee is hereby granted, provided that the above
+// copyright notice and this permission notice appear in all copies.
+//
+// THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+// WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+// SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+// WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+// OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+// CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+rustls-pki-types: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- rustls-pki-types 1.13.1 · LICENSE-APACHE · SHA-256 430e912c26cec30cdf52f4367b6d15dd3f898d2a19db349a62a9f3095ca98a5b ---
 
 Apache License
@@ -30849,6 +34251,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+rustls-webpki: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：ISC
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- rustls-webpki 0.103.8 · LICENSE · SHA-256 3ac27594ed56fd079c95a71f8beabc498c5b997ec31e91f4a18e59a5974adb2a ---
 
 Except as otherwise noted, this project is licensed under the following
@@ -30870,6 +34278,12 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 The files under third-party/chromium are licensed as described in
 third-party/chromium/LICENSE.
+
+rustls: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- rustls 0.23.35 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -31121,6 +34535,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+ryu: Apache option selected; upstream license and notices retained.
+
+本版本采用的许可：Apache-2.0
+
+履约：提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。
+
 --- ryu 1.0.20 · LICENSE-APACHE · SHA-256 85ad950cce8752f716dbf49be95b2639172cb49f291336d57f1fdc9989e38179 ---
 
 Apache License
@@ -31325,6 +34745,12 @@ SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
 FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+semver: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- semver 1.0.28 · LICENSE-APACHE · SHA-256 85ad950cce8752f716dbf49be95b2639172cb49f291336d57f1fdc9989e38179 ---
 
@@ -31531,6 +34957,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+serde: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- serde 1.0.228 · LICENSE-APACHE · SHA-256 85ad950cce8752f716dbf49be95b2639172cb49f291336d57f1fdc9989e38179 ---
 
 Apache License
@@ -31735,6 +35167,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+serde_core: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- serde_core 1.0.228 · LICENSE-APACHE · SHA-256 85ad950cce8752f716dbf49be95b2639172cb49f291336d57f1fdc9989e38179 ---
 
@@ -31941,6 +35379,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+serde_derive: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- serde_derive 1.0.228 · LICENSE-APACHE · SHA-256 85ad950cce8752f716dbf49be95b2639172cb49f291336d57f1fdc9989e38179 ---
 
 Apache License
@@ -32146,6 +35590,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+serde_json: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- serde_json 1.0.145 · LICENSE-APACHE · SHA-256 85ad950cce8752f716dbf49be95b2639172cb49f291336d57f1fdc9989e38179 ---
 
 Apache License
@@ -32350,6 +35800,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+serde_urlencoded: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- serde_urlencoded 0.7.1 · LICENSE-APACHE · SHA-256 85ad950cce8752f716dbf49be95b2639172cb49f291336d57f1fdc9989e38179 ---
 
@@ -32558,6 +36014,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+shlex: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- shlex 1.3.0 · LICENSE-APACHE · SHA-256 a759ce38c686a2042f62a0a6b8ea01781e3447726dcb68f4bb8b9f199feff12e ---
 
 Copyright 2015 Nicholas Allegra (comex).
@@ -32598,6 +36060,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+simd-adler32: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- simd-adler32 0.3.8 · LICENSE.md · SHA-256 627eff66d6c4b984355e737e8a92b262d584865956e93a1ece6e285a083d8be9 ---
 
 MIT License
@@ -32621,6 +36089,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+slab: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- slab 0.4.11 · LICENSE · SHA-256 12c7116c4425c559c9d7aed5cafbc1d4039286f17619ee2e6dd25f59728e679e ---
 
@@ -32649,6 +36123,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+smallvec: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- smallvec 1.15.1 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -32882,6 +36362,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+socket2: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- socket2 0.6.1 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
 Apache License
@@ -33113,6 +36599,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+stable_deref_trait: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- stable_deref_trait 1.2.1 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -33346,6 +36838,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+subtle: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：BSD-3-Clause
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- subtle 2.6.1 · LICENSE · SHA-256 24fa06d8eae3c3ba93e1f863f0640ef57c8996f4bece3e14c3d29c5efb7c0089 ---
 
 Copyright (c) 2016-2017 Isis Agora Lovecruft, Henry de Valence. All rights reserved.
@@ -33377,6 +36875,12 @@ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
 LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+syn: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- syn 2.0.111 · LICENSE-APACHE · SHA-256 85ad950cce8752f716dbf49be95b2639172cb49f291336d57f1fdc9989e38179 ---
 
@@ -33583,6 +37087,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+sync_wrapper: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Apache-2.0
+
+履约：提供许可证和适用 NOTICE、版权及免责声明；源码改动须显著标注，不暗示商标授权。
+
 --- sync_wrapper 1.0.2 · LICENSE · SHA-256 4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe ---
 
 Apache License
@@ -33762,6 +37272,12 @@ Apache License
 
    END OF TERMS AND CONDITIONS
 
+synstructure: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- synstructure 0.13.2 · LICENSE · SHA-256 3a036676ec8c0dba1c24b96f83595456280b7a754ddee64585dd8048ed2b087f ---
 
 Copyright 2016 Nika Layzell
@@ -33772,184 +37288,11 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
---- time-core 0.1.6 · LICENSE-APACHE · SHA-256 4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe ---
+time-core: MIT option selected for the declared alternative; both original license texts remain available.
 
-Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+本版本采用的许可：MIT
 
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
-
-   1. Definitions.
-
-      "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
-
-      "Licensor" shall mean the copyright owner or entity authorized by
-      the copyright owner that is granting the License.
-
-      "Legal Entity" shall mean the union of the acting entity and all
-      other entities that control, are controlled by, or are under common
-      control with that entity. For the purposes of this definition,
-      "control" means (i) the power, direct or indirect, to cause the
-      direction or management of such entity, whether by contract or
-      otherwise, or (ii) ownership of fifty percent (50%) or more of the
-      outstanding shares, or (iii) beneficial ownership of such entity.
-
-      "You" (or "Your") shall mean an individual or Legal Entity
-      exercising permissions granted by this License.
-
-      "Source" form shall mean the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
-
-      "Object" form shall mean any form resulting from mechanical
-      transformation or translation of a Source form, including but
-      not limited to compiled object code, generated documentation,
-      and conversions to other media types.
-
-      "Work" shall mean the work of authorship, whether in Source or
-      Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work
-      (an example is provided in the Appendix below).
-
-      "Derivative Works" shall mean any work, whether in Source or Object
-      form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other modifications
-      represent, as a whole, an original work of authorship. For the purposes
-      of this License, Derivative Works shall not include works that remain
-      separable from, or merely link (or bind by name) to the interfaces of,
-      the Work and Derivative Works thereof.
-
-      "Contribution" shall mean any work of authorship, including
-      the original version of the Work and any modifications or additions
-      to that Work or Derivative Works thereof, that is intentionally
-      submitted to Licensor for inclusion in the Work by the copyright owner
-      or by an individual or Legal Entity authorized to submit on behalf of
-      the copyright owner. For the purposes of this definition, "submitted"
-      means any form of electronic, verbal, or written communication sent
-      to the Licensor or its representatives, including but not limited to
-      communication on electronic mailing lists, source code control systems,
-      and issue tracking systems that are managed by, or on behalf of, the
-      Licensor for the purpose of discussing and improving the Work, but
-      excluding communication that is conspicuously marked or otherwise
-      designated in writing by the copyright owner as "Not a Contribution."
-
-      "Contributor" shall mean Licensor and any individual or Legal Entity
-      on behalf of whom a Contribution has been received by Licensor and
-      subsequently incorporated within the Work.
-
-   2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      copyright license to reproduce, prepare Derivative Works of,
-      publicly display, publicly perform, sublicense, and distribute the
-      Work and such Derivative Works in Source or Object form.
-
-   3. Grant of Patent License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      (except as stated in this section) patent license to make, have made,
-      use, offer to sell, sell, import, and otherwise transfer the Work,
-      where such license applies only to those patent claims licensable
-      by such Contributor that are necessarily infringed by their
-      Contribution(s) alone or by combination of their Contribution(s)
-      with the Work to which such Contribution(s) was submitted. If You
-      institute patent litigation against any entity (including a
-      cross-claim or counterclaim in a lawsuit) alleging that the Work
-      or a Contribution incorporated within the Work constitutes direct
-      or contributory patent infringement, then any patent licenses
-      granted to You under this License for that Work shall terminate
-      as of the date such litigation is filed.
-
-   4. Redistribution. You may reproduce and distribute copies of the
-      Work or Derivative Works thereof in any medium, with or without
-      modifications, and in Source or Object form, provided that You
-      meet the following conditions:
-
-      (a) You must give any other recipients of the Work or
-          Derivative Works a copy of this License; and
-
-      (b) You must cause any modified files to carry prominent notices
-          stating that You changed the files; and
-
-      (c) You must retain, in the Source form of any Derivative Works
-          that You distribute, all copyright, patent, trademark, and
-          attribution notices from the Source form of the Work,
-          excluding those notices that do not pertain to any part of
-          the Derivative Works; and
-
-      (d) If the Work includes a "NOTICE" text file as part of its
-          distribution, then any Derivative Works that You distribute must
-          include a readable copy of the attribution notices contained
-          within such NOTICE file, excluding those notices that do not
-          pertain to any part of the Derivative Works, in at least one
-          of the following places: within a NOTICE text file distributed
-          as part of the Derivative Works; within the Source form or
-          documentation, if provided along with the Derivative Works; or,
-          within a display generated by the Derivative Works, if and
-          wherever such third-party notices normally appear. The contents
-          of the NOTICE file are for informational purposes only and
-          do not modify the License. You may add Your own attribution
-          notices within Derivative Works that You distribute, alongside
-          or as an addendum to the NOTICE text from the Work, provided
-          that such additional attribution notices cannot be construed
-          as modifying the License.
-
-      You may add Your own copyright statement to Your modifications and
-      may provide additional or different license terms and conditions
-      for use, reproduction, or distribution of Your modifications, or
-      for any such Derivative Works as a whole, provided Your use,
-      reproduction, and distribution of the Work otherwise complies with
-      the conditions stated in this License.
-
-   5. Submission of Contributions. Unless You explicitly state otherwise,
-      any Contribution intentionally submitted for inclusion in the Work
-      by You to the Licensor shall be under the terms and conditions of
-      this License, without any additional terms or conditions.
-      Notwithstanding the above, nothing herein shall supersede or modify
-      the terms of any separate license agreement you may have executed
-      with Licensor regarding such Contributions.
-
-   6. Trademarks. This License does not grant permission to use the trade
-      names, trademarks, service marks, or product names of the Licensor,
-      except as required for reasonable and customary use in describing the
-      origin of the Work and reproducing the content of the NOTICE file.
-
-   7. Disclaimer of Warranty. Unless required by applicable law or
-      agreed to in writing, Licensor provides the Work (and each
-      Contributor provides its Contributions) on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-      implied, including, without limitation, any warranties or conditions
-      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
-      PARTICULAR PURPOSE. You are solely responsible for determining the
-      appropriateness of using or redistributing the Work and assume any
-      risks associated with Your exercise of permissions under this License.
-
-   8. Limitation of Liability. In no event and under no legal theory,
-      whether in tort (including negligence), contract, or otherwise,
-      unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, indirect, special,
-      incidental, or consequential damages of any character arising as a
-      result of this License or out of the use or inability to use the
-      Work (including but not limited to damages for loss of goodwill,
-      work stoppage, computer failure or malfunction, or any and all
-      other commercial damages or losses), even if such Contributor
-      has been advised of the possibility of such damages.
-
-   9. Accepting Warranty or Additional Liability. While redistributing
-      the Work or Derivative Works thereof, You may choose to offer,
-      and charge a fee for, acceptance of support, warranty, indemnity,
-      or other liability obligations and/or rights consistent with this
-      License. However, in accepting such obligations, You may act only
-      on Your own behalf and on Your sole responsibility, not on behalf
-      of any other Contributor, and only if You agree to indemnify,
-      defend, and hold each Contributor harmless for any liability
-      incurred by, or claims asserted against, such Contributor by reason
-      of your accepting any such warranty or additional liability.
-
-   END OF TERMS AND CONDITIONS
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- time-core 0.1.6 · LICENSE-Apache · SHA-256 4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe ---
 
@@ -34152,184 +37495,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
---- time-macros 0.2.24 · LICENSE-APACHE · SHA-256 4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe ---
+time-macros: MIT option selected for the declared alternative; both original license texts remain available.
 
-Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+本版本采用的许可：MIT
 
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
-
-   1. Definitions.
-
-      "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
-
-      "Licensor" shall mean the copyright owner or entity authorized by
-      the copyright owner that is granting the License.
-
-      "Legal Entity" shall mean the union of the acting entity and all
-      other entities that control, are controlled by, or are under common
-      control with that entity. For the purposes of this definition,
-      "control" means (i) the power, direct or indirect, to cause the
-      direction or management of such entity, whether by contract or
-      otherwise, or (ii) ownership of fifty percent (50%) or more of the
-      outstanding shares, or (iii) beneficial ownership of such entity.
-
-      "You" (or "Your") shall mean an individual or Legal Entity
-      exercising permissions granted by this License.
-
-      "Source" form shall mean the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
-
-      "Object" form shall mean any form resulting from mechanical
-      transformation or translation of a Source form, including but
-      not limited to compiled object code, generated documentation,
-      and conversions to other media types.
-
-      "Work" shall mean the work of authorship, whether in Source or
-      Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work
-      (an example is provided in the Appendix below).
-
-      "Derivative Works" shall mean any work, whether in Source or Object
-      form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other modifications
-      represent, as a whole, an original work of authorship. For the purposes
-      of this License, Derivative Works shall not include works that remain
-      separable from, or merely link (or bind by name) to the interfaces of,
-      the Work and Derivative Works thereof.
-
-      "Contribution" shall mean any work of authorship, including
-      the original version of the Work and any modifications or additions
-      to that Work or Derivative Works thereof, that is intentionally
-      submitted to Licensor for inclusion in the Work by the copyright owner
-      or by an individual or Legal Entity authorized to submit on behalf of
-      the copyright owner. For the purposes of this definition, "submitted"
-      means any form of electronic, verbal, or written communication sent
-      to the Licensor or its representatives, including but not limited to
-      communication on electronic mailing lists, source code control systems,
-      and issue tracking systems that are managed by, or on behalf of, the
-      Licensor for the purpose of discussing and improving the Work, but
-      excluding communication that is conspicuously marked or otherwise
-      designated in writing by the copyright owner as "Not a Contribution."
-
-      "Contributor" shall mean Licensor and any individual or Legal Entity
-      on behalf of whom a Contribution has been received by Licensor and
-      subsequently incorporated within the Work.
-
-   2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      copyright license to reproduce, prepare Derivative Works of,
-      publicly display, publicly perform, sublicense, and distribute the
-      Work and such Derivative Works in Source or Object form.
-
-   3. Grant of Patent License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      (except as stated in this section) patent license to make, have made,
-      use, offer to sell, sell, import, and otherwise transfer the Work,
-      where such license applies only to those patent claims licensable
-      by such Contributor that are necessarily infringed by their
-      Contribution(s) alone or by combination of their Contribution(s)
-      with the Work to which such Contribution(s) was submitted. If You
-      institute patent litigation against any entity (including a
-      cross-claim or counterclaim in a lawsuit) alleging that the Work
-      or a Contribution incorporated within the Work constitutes direct
-      or contributory patent infringement, then any patent licenses
-      granted to You under this License for that Work shall terminate
-      as of the date such litigation is filed.
-
-   4. Redistribution. You may reproduce and distribute copies of the
-      Work or Derivative Works thereof in any medium, with or without
-      modifications, and in Source or Object form, provided that You
-      meet the following conditions:
-
-      (a) You must give any other recipients of the Work or
-          Derivative Works a copy of this License; and
-
-      (b) You must cause any modified files to carry prominent notices
-          stating that You changed the files; and
-
-      (c) You must retain, in the Source form of any Derivative Works
-          that You distribute, all copyright, patent, trademark, and
-          attribution notices from the Source form of the Work,
-          excluding those notices that do not pertain to any part of
-          the Derivative Works; and
-
-      (d) If the Work includes a "NOTICE" text file as part of its
-          distribution, then any Derivative Works that You distribute must
-          include a readable copy of the attribution notices contained
-          within such NOTICE file, excluding those notices that do not
-          pertain to any part of the Derivative Works, in at least one
-          of the following places: within a NOTICE text file distributed
-          as part of the Derivative Works; within the Source form or
-          documentation, if provided along with the Derivative Works; or,
-          within a display generated by the Derivative Works, if and
-          wherever such third-party notices normally appear. The contents
-          of the NOTICE file are for informational purposes only and
-          do not modify the License. You may add Your own attribution
-          notices within Derivative Works that You distribute, alongside
-          or as an addendum to the NOTICE text from the Work, provided
-          that such additional attribution notices cannot be construed
-          as modifying the License.
-
-      You may add Your own copyright statement to Your modifications and
-      may provide additional or different license terms and conditions
-      for use, reproduction, or distribution of Your modifications, or
-      for any such Derivative Works as a whole, provided Your use,
-      reproduction, and distribution of the Work otherwise complies with
-      the conditions stated in this License.
-
-   5. Submission of Contributions. Unless You explicitly state otherwise,
-      any Contribution intentionally submitted for inclusion in the Work
-      by You to the Licensor shall be under the terms and conditions of
-      this License, without any additional terms or conditions.
-      Notwithstanding the above, nothing herein shall supersede or modify
-      the terms of any separate license agreement you may have executed
-      with Licensor regarding such Contributions.
-
-   6. Trademarks. This License does not grant permission to use the trade
-      names, trademarks, service marks, or product names of the Licensor,
-      except as required for reasonable and customary use in describing the
-      origin of the Work and reproducing the content of the NOTICE file.
-
-   7. Disclaimer of Warranty. Unless required by applicable law or
-      agreed to in writing, Licensor provides the Work (and each
-      Contributor provides its Contributions) on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-      implied, including, without limitation, any warranties or conditions
-      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
-      PARTICULAR PURPOSE. You are solely responsible for determining the
-      appropriateness of using or redistributing the Work and assume any
-      risks associated with Your exercise of permissions under this License.
-
-   8. Limitation of Liability. In no event and under no legal theory,
-      whether in tort (including negligence), contract, or otherwise,
-      unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, indirect, special,
-      incidental, or consequential damages of any character arising as a
-      result of this License or out of the use or inability to use the
-      Work (including but not limited to damages for loss of goodwill,
-      work stoppage, computer failure or malfunction, or any and all
-      other commercial damages or losses), even if such Contributor
-      has been advised of the possibility of such damages.
-
-   9. Accepting Warranty or Additional Liability. While redistributing
-      the Work or Derivative Works thereof, You may choose to offer,
-      and charge a fee for, acceptance of support, warranty, indemnity,
-      or other liability obligations and/or rights consistent with this
-      License. However, in accepting such obligations, You may act only
-      on Your own behalf and on Your sole responsibility, not on behalf
-      of any other Contributor, and only if You agree to indemnify,
-      defend, and hold each Contributor harmless for any liability
-      incurred by, or claims asserted against, such Contributor by reason
-      of your accepting any such warranty or additional liability.
-
-   END OF TERMS AND CONDITIONS
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- time-macros 0.2.24 · LICENSE-Apache · SHA-256 4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe ---
 
@@ -34532,184 +37702,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
---- time 0.3.44 · LICENSE-APACHE · SHA-256 4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe ---
+time: MIT option selected for the declared alternative; both original license texts remain available.
 
-Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+本版本采用的许可：MIT
 
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
-
-   1. Definitions.
-
-      "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
-
-      "Licensor" shall mean the copyright owner or entity authorized by
-      the copyright owner that is granting the License.
-
-      "Legal Entity" shall mean the union of the acting entity and all
-      other entities that control, are controlled by, or are under common
-      control with that entity. For the purposes of this definition,
-      "control" means (i) the power, direct or indirect, to cause the
-      direction or management of such entity, whether by contract or
-      otherwise, or (ii) ownership of fifty percent (50%) or more of the
-      outstanding shares, or (iii) beneficial ownership of such entity.
-
-      "You" (or "Your") shall mean an individual or Legal Entity
-      exercising permissions granted by this License.
-
-      "Source" form shall mean the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
-
-      "Object" form shall mean any form resulting from mechanical
-      transformation or translation of a Source form, including but
-      not limited to compiled object code, generated documentation,
-      and conversions to other media types.
-
-      "Work" shall mean the work of authorship, whether in Source or
-      Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work
-      (an example is provided in the Appendix below).
-
-      "Derivative Works" shall mean any work, whether in Source or Object
-      form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other modifications
-      represent, as a whole, an original work of authorship. For the purposes
-      of this License, Derivative Works shall not include works that remain
-      separable from, or merely link (or bind by name) to the interfaces of,
-      the Work and Derivative Works thereof.
-
-      "Contribution" shall mean any work of authorship, including
-      the original version of the Work and any modifications or additions
-      to that Work or Derivative Works thereof, that is intentionally
-      submitted to Licensor for inclusion in the Work by the copyright owner
-      or by an individual or Legal Entity authorized to submit on behalf of
-      the copyright owner. For the purposes of this definition, "submitted"
-      means any form of electronic, verbal, or written communication sent
-      to the Licensor or its representatives, including but not limited to
-      communication on electronic mailing lists, source code control systems,
-      and issue tracking systems that are managed by, or on behalf of, the
-      Licensor for the purpose of discussing and improving the Work, but
-      excluding communication that is conspicuously marked or otherwise
-      designated in writing by the copyright owner as "Not a Contribution."
-
-      "Contributor" shall mean Licensor and any individual or Legal Entity
-      on behalf of whom a Contribution has been received by Licensor and
-      subsequently incorporated within the Work.
-
-   2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      copyright license to reproduce, prepare Derivative Works of,
-      publicly display, publicly perform, sublicense, and distribute the
-      Work and such Derivative Works in Source or Object form.
-
-   3. Grant of Patent License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      (except as stated in this section) patent license to make, have made,
-      use, offer to sell, sell, import, and otherwise transfer the Work,
-      where such license applies only to those patent claims licensable
-      by such Contributor that are necessarily infringed by their
-      Contribution(s) alone or by combination of their Contribution(s)
-      with the Work to which such Contribution(s) was submitted. If You
-      institute patent litigation against any entity (including a
-      cross-claim or counterclaim in a lawsuit) alleging that the Work
-      or a Contribution incorporated within the Work constitutes direct
-      or contributory patent infringement, then any patent licenses
-      granted to You under this License for that Work shall terminate
-      as of the date such litigation is filed.
-
-   4. Redistribution. You may reproduce and distribute copies of the
-      Work or Derivative Works thereof in any medium, with or without
-      modifications, and in Source or Object form, provided that You
-      meet the following conditions:
-
-      (a) You must give any other recipients of the Work or
-          Derivative Works a copy of this License; and
-
-      (b) You must cause any modified files to carry prominent notices
-          stating that You changed the files; and
-
-      (c) You must retain, in the Source form of any Derivative Works
-          that You distribute, all copyright, patent, trademark, and
-          attribution notices from the Source form of the Work,
-          excluding those notices that do not pertain to any part of
-          the Derivative Works; and
-
-      (d) If the Work includes a "NOTICE" text file as part of its
-          distribution, then any Derivative Works that You distribute must
-          include a readable copy of the attribution notices contained
-          within such NOTICE file, excluding those notices that do not
-          pertain to any part of the Derivative Works, in at least one
-          of the following places: within a NOTICE text file distributed
-          as part of the Derivative Works; within the Source form or
-          documentation, if provided along with the Derivative Works; or,
-          within a display generated by the Derivative Works, if and
-          wherever such third-party notices normally appear. The contents
-          of the NOTICE file are for informational purposes only and
-          do not modify the License. You may add Your own attribution
-          notices within Derivative Works that You distribute, alongside
-          or as an addendum to the NOTICE text from the Work, provided
-          that such additional attribution notices cannot be construed
-          as modifying the License.
-
-      You may add Your own copyright statement to Your modifications and
-      may provide additional or different license terms and conditions
-      for use, reproduction, or distribution of Your modifications, or
-      for any such Derivative Works as a whole, provided Your use,
-      reproduction, and distribution of the Work otherwise complies with
-      the conditions stated in this License.
-
-   5. Submission of Contributions. Unless You explicitly state otherwise,
-      any Contribution intentionally submitted for inclusion in the Work
-      by You to the Licensor shall be under the terms and conditions of
-      this License, without any additional terms or conditions.
-      Notwithstanding the above, nothing herein shall supersede or modify
-      the terms of any separate license agreement you may have executed
-      with Licensor regarding such Contributions.
-
-   6. Trademarks. This License does not grant permission to use the trade
-      names, trademarks, service marks, or product names of the Licensor,
-      except as required for reasonable and customary use in describing the
-      origin of the Work and reproducing the content of the NOTICE file.
-
-   7. Disclaimer of Warranty. Unless required by applicable law or
-      agreed to in writing, Licensor provides the Work (and each
-      Contributor provides its Contributions) on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-      implied, including, without limitation, any warranties or conditions
-      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
-      PARTICULAR PURPOSE. You are solely responsible for determining the
-      appropriateness of using or redistributing the Work and assume any
-      risks associated with Your exercise of permissions under this License.
-
-   8. Limitation of Liability. In no event and under no legal theory,
-      whether in tort (including negligence), contract, or otherwise,
-      unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, indirect, special,
-      incidental, or consequential damages of any character arising as a
-      result of this License or out of the use or inability to use the
-      Work (including but not limited to damages for loss of goodwill,
-      work stoppage, computer failure or malfunction, or any and all
-      other commercial damages or losses), even if such Contributor
-      has been advised of the possibility of such damages.
-
-   9. Accepting Warranty or Additional Liability. While redistributing
-      the Work or Derivative Works thereof, You may choose to offer,
-      and charge a fee for, acceptance of support, warranty, indemnity,
-      or other liability obligations and/or rights consistent with this
-      License. However, in accepting such obligations, You may act only
-      on Your own behalf and on Your sole responsibility, not on behalf
-      of any other Contributor, and only if You agree to indemnify,
-      defend, and hold each Contributor harmless for any liability
-      incurred by, or claims asserted against, such Contributor by reason
-      of your accepting any such warranty or additional liability.
-
-   END OF TERMS AND CONDITIONS
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- time 0.3.44 · LICENSE-Apache · SHA-256 4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe ---
 
@@ -34912,6 +37909,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+tinystr: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
+
 --- tinystr 0.8.2 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
 UNICODE LICENSE V3
@@ -34960,6 +37963,12 @@ SPDX-License-Identifier: Unicode-3.0
 
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
+
+tokio-rustls: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- tokio-rustls 0.26.4 · LICENSE-APACHE · SHA-256 acddfb05f07ab0048f60a6080856befa9a37cd2f2e4aaef35bd3fe5cba145b62 ---
 
@@ -35193,6 +38202,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+tokio-util: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- tokio-util 0.7.17 · LICENSE · SHA-256 3e1bef82aa0dfee4504ad211f7e4895153e3191db6ab179f94a7e20f990a0b67 ---
 
 MIT License
@@ -35217,6 +38232,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+tokio: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- tokio 1.48.0 · LICENSE · SHA-256 3e1bef82aa0dfee4504ad211f7e4895153e3191db6ab179f94a7e20f990a0b67 ---
 
 MIT License
@@ -35240,6 +38261,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+tower-http: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- tower-http 0.6.8 · LICENSE · SHA-256 edd4b164997f67092b618b91fa823c3143ca080c1914b3d6f9bf2071f3e47359 ---
 
@@ -35269,6 +38296,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+tower-layer: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- tower-layer 0.3.3 · LICENSE · SHA-256 da6b30502badfa054473f2f0df66b8014e0636c1ccfe9725fc25efcde2b626ad ---
 
 Copyright (c) 2019 Tower Contributors
@@ -35296,6 +38329,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+tower-service: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- tower-service 0.3.3 · LICENSE · SHA-256 da6b30502badfa054473f2f0df66b8014e0636c1ccfe9725fc25efcde2b626ad ---
 
@@ -35325,6 +38364,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+tower: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- tower 0.5.2 · LICENSE · SHA-256 da6b30502badfa054473f2f0df66b8014e0636c1ccfe9725fc25efcde2b626ad ---
 
 Copyright (c) 2019 Tower Contributors
@@ -35352,6 +38397,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+tracing-core: Root MIT plus separate src/spin/LICENSE (Mathijs van de Nes) retained.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- tracing-core 0.1.35 · LICENSE · SHA-256 c1e08ee9a7288bf649d6a78f6079006333df4212f5fcda85be1a0a451f71852d ---
 
@@ -35381,6 +38432,36 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+--- tracing-core 0.1.35 · src/spin/LICENSE · SHA-256 6ac8711fb340c62ce0a4ecd463342d3fa0e8e70de697c863a2e1c0c53006003c ---
+
+The MIT License (MIT)
+
+Copyright (c) 2014 Mathijs van de Nes
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+tracing: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- tracing 0.1.43 · LICENSE · SHA-256 c1e08ee9a7288bf649d6a78f6079006333df4212f5fcda85be1a0a451f71852d ---
 
 Copyright (c) 2019 Tokio Contributors
@@ -35409,6 +38490,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+try-lock: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- try-lock 0.2.5 · LICENSE · SHA-256 381f992f70f7089ddd7c450295f7a3c5e7ee776ded8771991281a6b146c5e5b9 ---
 
 Copyright (c) 2018-2023 Sean McArthur
@@ -35431,6 +38518,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+unicode-ident: MIT option covers implementation; Unicode data terms remain mandatory.
+
+本版本采用的许可：MIT AND Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
 
 --- unicode-ident 1.0.22 · LICENSE-APACHE · SHA-256 85ad950cce8752f716dbf49be95b2639172cb49f291336d57f1fdc9989e38179 ---
 
@@ -35679,6 +38772,12 @@ not be used in advertising or otherwise to promote the sale, use or other
 dealings in these Data Files or Software without prior written
 authorization of the copyright holder.
 
+unicode-segmentation: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- unicode-segmentation 1.13.3 · COPYRIGHT · SHA-256 20cec30ad77804372faa6c82e5a1a4be426a75e32808a159ef646c2037649071 ---
 
 Licensed under the Apache License, Version 2.0
@@ -35921,6 +39020,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+untrusted: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：ISC
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- untrusted 0.9.0 · LICENSE.txt · SHA-256 a1fff344297822d3e229f6943007694a29e6bede5b83349cb7c39117f4302e3c ---
 
 // Copyright 2015-2016 Brian Smith.
@@ -35936,6 +39041,12 @@ DEALINGS IN THE SOFTWARE.
 // WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 // ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 // OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+url: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- url 2.5.7 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
@@ -36168,6 +39279,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+utf8_iter: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- utf8_iter 1.0.4 · COPYRIGHT · SHA-256 76c0e37c107dd35a99628d1c9817a685668b89d1c2a465d0d898bacd7eb94475 ---
 
@@ -36446,6 +39563,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
+version_check: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- version_check 0.9.5 · LICENSE-APACHE · SHA-256 954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76 ---
 
 Apache License
@@ -36672,6 +39795,12 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+want: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
+
 --- want 0.3.1 · LICENSE · SHA-256 f7dfffe03f9faba8e83911d59bbf459371a0fe8d18f6c84f71d5386030fba26c ---
 
 Copyright (c) 2018-2019 Sean McArthur
@@ -36693,6 +39822,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+webpki-roots: Trust-anchor dataset license included; no additional restriction on results is imposed.
+
+本版本采用的许可：CDLA-Permissive-2.0
+
+履约：提供数据许可证；不以本应用条款限制许可证授予的权利。
 
 --- webpki-roots 1.0.4 · LICENSE · SHA-256 d30183ec6610abca89d6095d5f1dc56ea50248a1001cbb4549fadc3a582f6f9a ---
 
@@ -36758,6 +39893,12 @@ agreement.
 of Data, including for example machine learning models and models'
 insights.
 
+writeable: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
+
 --- writeable 0.6.2 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
 UNICODE LICENSE V3
@@ -36806,6 +39947,12 @@ SPDX-License-Identifier: Unicode-3.0
 
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
+
+yoke-derive: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
 
 --- yoke-derive 0.8.1 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
@@ -36856,6 +40003,12 @@ SPDX-License-Identifier: Unicode-3.0
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
 
+yoke: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
+
 --- yoke 0.8.1 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
 UNICODE LICENSE V3
@@ -36904,6 +40057,12 @@ SPDX-License-Identifier: Unicode-3.0
 
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
+
+zerofrom-derive: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
 
 --- zerofrom-derive 0.1.6 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
@@ -36954,6 +40113,12 @@ SPDX-License-Identifier: Unicode-3.0
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
 
+zerofrom: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
+
 --- zerofrom 0.1.6 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
 UNICODE LICENSE V3
@@ -37002,6 +40167,12 @@ SPDX-License-Identifier: Unicode-3.0
 
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
+
+zeroize: MIT option selected for the declared alternative; both original license texts remain available.
+
+本版本采用的许可：MIT
+
+履约：保留版权、许可证和免责声明；适用 BSD 的非背书条款继续有效。
 
 --- zeroize 1.8.2 · LICENSE-APACHE · SHA-256 283ea6cc2997a1a70da0049e09adf9317bb60ca1b51279b65196b83a69e1996b ---
 
@@ -37231,6 +40402,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+zerotrie: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
+
 --- zerotrie 0.2.3 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
 UNICODE LICENSE V3
@@ -37280,6 +40457,12 @@ SPDX-License-Identifier: Unicode-3.0
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
 
+zerovec-derive: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
+
 --- zerovec-derive 0.11.2 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 
 UNICODE LICENSE V3
@@ -37328,6 +40511,12 @@ SPDX-License-Identifier: Unicode-3.0
 
 Portions of ICU4X may have been adapted from ICU4C and/or ICU4J.
 ICU 1.8.1 to ICU 57.1 © 1995-2016 International Business Machines Corporation and others.
+
+zerovec: Declared terms retained; original license and notice texts delivered.
+
+本版本采用的许可：Unicode-3.0
+
+履约：保留代码许可证及 Unicode 数据版权、许可和免责声明。
 
 --- zerovec 0.11.5 · LICENSE · SHA-256 cde87abe221f413fede55ded0f17985f37b8fdc23e5f6cba9a3955437facb3ae ---
 

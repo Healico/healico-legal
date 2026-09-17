@@ -1,0 +1,1 @@
+brotli 8.0.2 declares BSD-3-Clause AND MIT. Its encoder license is included as LICENSE.MIT from the crate. Its brotli-decompressor 5.0.0 dependency supplies the Dropbox BSD notice reproduced here as LICENSE-BSD-dependency; the dependency is also listed separately. This is a dependency attribution, not a claim that an absent upstream LICENSE.BSD file was recovered.

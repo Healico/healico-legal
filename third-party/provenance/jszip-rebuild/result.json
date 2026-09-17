@@ -1,0 +1,8 @@
+{
+  "method": "CRLF -> LF, then remove exactly one trailing slash from the external string_decoder import in the reconstructed output; no other changes.",
+  "originalBundleSha256": "42a29684b2ea8d7cdb0ea8b09f000390cf5455ae72a029a73d9aca132d36c703",
+  "rebuiltLfSha256": "9548674b29e74636ebcbd625223e807fd33bfebb1da824e9e5f2a609f5c10eec",
+  "matchedLfSha256": "80e8e6a0b94d931ea1aaa7c3176625453a5d6d0b03188eae99554dda5e700948",
+  "sourceCommit": "ebece08923c9400d104a9b2e1f4a42e0193c657f",
+  "uniqueHistoricalNpmVersionsProven": false
+}

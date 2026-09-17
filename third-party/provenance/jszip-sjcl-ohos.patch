@@ -1,0 +1,72 @@
+--- xqdoo00o@52378c0/lib/sjcl.js
++++ ohos-jszip@ebece089/lib/sjcl.js
+@@ -11,6 +11,7 @@
+ "use strict";
+ /* Define global function getRandomValues if not use in support js env(browser or node.js) */
+ /* global getRandomValues */
++var crypto = require("crypto");
+ 
+ /**
+  * The Stanford Javascript Crypto Library, top-level namespace.
+@@ -882,33 +883,34 @@
+      * @return {bitArray} The random words.
+      */
+     randomWords: function (nbytes) {
+-        function getCryptoModule() {
+-            try {
+-                return require("crypto");
+-            }
+-            catch (e) {
+-                return null;
+-            }
+-        }
+-
+-        var crypto;
+-        if (typeof window !== "undefined") {
+-            // Native crypto from window (Browser)
+-            if (window.crypto) {
+-                crypto = window.crypto;
+-            }else if(window.msCrypto) {
+-                crypto = window.msCrypto;
+-            }
+-        } else if (typeof self !== "undefined" && self.crypto) {
+-            // Native crypto from web worker (Browser)
+-            crypto = self.crypto;
+-        } else if (typeof module !== "undefined" && module.exports) {
+-            // Native crypto import from NodeJS
+-            crypto = getCryptoModule();
+-        } else if (typeof global !== "undefined" && global.crypto) {
+-            // Native crypto from global variable
+-            crypto = global.crypto;
+-        }
++        // function getCryptoModule() {
++        //     try {
++        //         return require("crypto");
++        //     }
++        //     catch (e) {
++        //         return null;
++        //     }
++        // }
++
++        // if (typeof window !== "undefined") {
++        //     // Native crypto from window (Browser)
++        //     if (window.crypto) {
++        //         crypto = window.crypto;
++        //     }else if(window.msCrypto) {
++        //         crypto = window.msCrypto;
++        //     }
++        // } else if (typeof self !== "undefined" && self.crypto) {
++        //     // Native crypto from web worker (Browser)
++        //     crypto = self.crypto;
++        // } else if (typeof module !== "undefined" && module.exports) {
++        //     // Native crypto import from NodeJS
++        //     crypto = getCryptoModule();
++        // } else if (typeof global !== "undefined" && global.crypto) {
++        //     // Native crypto from global variable
++        //     crypto = global.crypto;
++        // }else{
++        //     crypto = getCryptoModule();
++        // }
+ 
+         // Get cryptographically strong random values depending on runtime environment
+         try {
