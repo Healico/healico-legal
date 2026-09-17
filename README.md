@@ -7,4 +7,6 @@
 - [第三方软件声明（完整版）](THIRD_PARTY_NOTICES.md)
 - [第三方软件声明（摘要）](THIRD_PARTY_SUMMARY.md)
 
+- [LGPL 源码、目标文件与重新链接材料](relink/README.md)
+
 联系开发者：healico@foxmail.com

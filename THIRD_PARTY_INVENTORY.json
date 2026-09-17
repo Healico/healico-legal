@@ -14,7 +14,25 @@
       "version": "4.1.1",
       "license": "LGPL-2.1-or-later",
       "repository": "https://github.com/fukuchi/libqrencode",
-      "source": "https://github.com/ddyw/Healico/tree/store/entry/src/main/cpp/libqrencode",
+      "source": "https://github.com/Healico/healico-legal/tree/main/relink",
+      "relinkPackage": {
+        "originalLibrarySha256": "70276debbf4429193ffe3eabeb253c604e4fe96fa3f32ef7e40bf022fb3c96fe",
+        "originalTextSha256": "85b9a4765b21da264ac7bfc66c63b2a0f20f7f9b161bb3b32547a040872111d7",
+        "checks": [
+          "matching-unmodified-text",
+          "modified-library-relinks",
+          "napi-entry-retained",
+          "other-hap-entries-unchanged"
+        ],
+        "notTested": [
+          "recipient-certificate-signing",
+          "modified-hap-installation",
+          "market-encrypted-release"
+        ],
+        "package": "healico-qrgen-70276debbf442919-0d9c0da28032.zip",
+        "packageSha256": "0d9c0da28032da3bb7b2c8fa569bd2add06774b0e45cc19029c3114c20cd7d6d",
+        "packageBytes": 71424
+      },
       "distributed": true,
       "licenseFiles": [
         {
@@ -59,6 +77,25 @@
     },
     {
       "kind": "ohpm",
+      "name": "@ohos/node-polyfill",
+      "version": "1.0.1",
+      "license": "Apache License 2.0",
+      "repository": "https://gitcode.com/openharmony-sig/ohos_polyfill",
+      "source": "https://ohpm.openharmony.cn/#/cn/detail/%40ohos%2Fnode-polyfill",
+      "distributed": true,
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "54364f4171f8f045e4295758a9a9dee0c934e6dc0861a4c5c4a82c30dc854a0e"
+        },
+        {
+          "name": "NOTICE",
+          "sha256": "6cd6740689176285135a0575794d7a95da922a2c5565cc7f1b463eac19841470"
+        }
+      ]
+    },
+    {
+      "kind": "ohpm",
       "name": "@ohos/hypium",
       "version": "1.0.21",
       "license": "Apache-2.0",
@@ -69,6 +106,146 @@
         {
           "name": "LICENSE",
           "sha256": "4bf96504d6e83ce5c6fc7167f1795d9ceaa68e70ab86bc5d08ab93184262bbbe"
+        }
+      ]
+    },
+    {
+      "name": "LLVM OHOS libc++ / libc++abi / libunwind",
+      "version": "15.0.4",
+      "kind": "native-runtime",
+      "license": "Apache-2.0 WITH LLVM-exception AND MIT AND NCSA",
+      "repository": "https://gitee.com/openharmony/third_party_llvm-project",
+      "evidence": "SDK LLVM NOTICE; HAP libc++_shared.so SHA-256 f69947af100b652e349ae51e4a4888bcc7a327db9085272d318176ef1782bf0f",
+      "source": "https://gitee.com/openharmony/third_party_llvm-project",
+      "distributed": true,
+      "licenseFiles": [
+        {
+          "name": "NOTICE",
+          "sha256": "11b78ebd6a3ee9c4b7939c6c3e978924a4cdadec866c88bba08b379078330a30"
+        }
+      ]
+    },
+    {
+      "name": "Rust standard library",
+      "version": "1.93.0",
+      "kind": "native-runtime",
+      "license": "MIT OR Apache-2.0 (with bundled third-party notices)",
+      "repository": "https://github.com/rust-lang/rust/tree/254b59607d4417e9dffbc307138ae5c86280fe4c",
+      "evidence": "Compiler metadata and matching libhealico_net.so code section; full library copyright notice included",
+      "source": "https://github.com/rust-lang/rust/tree/254b59607d4417e9dffbc307138ae5c86280fe4c",
+      "distributed": true,
+      "licenseFiles": [
+        {
+          "name": "COPYRIGHT-library.html",
+          "sha256": "d93d65853736bde4e8649691233a98848ba709673873aeb39487bc1ca6ee292a"
+        },
+        {
+          "name": "LICENSE-APACHE",
+          "sha256": "954f335b8baf5e1a5748b3a1bf6eeb2ec0b28ae19813f02063d64be005765a76"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "sha256": "30fefc3a7d6a0041541858293bcbea2dde4caa4c0a5802f996a7f7e8c0085652"
+        }
+      ]
+    },
+    {
+      "name": "JSZip upstream",
+      "version": "3.10.1",
+      "kind": "embedded-js",
+      "license": "MIT",
+      "repository": "https://github.com/Stuk/jszip/tree/v3.10.1",
+      "evidence": "Actual dist.js JSZip.version=3.10.1; OHPM NOTICE incorrectly labels 3.5.0; MIT option selected",
+      "source": "https://github.com/Stuk/jszip/tree/v3.10.1",
+      "distributed": true,
+      "licenseFiles": [
+        {
+          "name": "LICENSE.markdown",
+          "sha256": "602ef1d5d3db1b23ada0b61d4230ef336012de7bc3b773d565f2b27a2757f51d"
+        }
+      ]
+    },
+    {
+      "name": "@ohos/jszip embedded notices",
+      "version": "1.0.1 bundle",
+      "kind": "embedded-js",
+      "license": "MIT AND Zlib AND BSD-2-Clause (provenance review pending)",
+      "repository": "https://ohpm.openharmony.cn/#/cn/detail/%40ohos%2Fjszip",
+      "evidence": "Verbatim bundled notices; references below do not assert exact versions of embedded dependencies",
+      "source": "https://ohpm.openharmony.cn/#/cn/detail/%40ohos%2Fjszip",
+      "distributed": true,
+      "licenseFiles": [
+        {
+          "name": "NOTICE",
+          "sha256": "37e65c3688a3d8f28adf8bba15bcc68b0c0f5d221084403bbc4eb854a98ae0c1"
+        }
+      ]
+    },
+    {
+      "name": "lie upstream license reference",
+      "version": "3.3.0",
+      "license": "MIT",
+      "kind": "license-reference",
+      "repository": "https://www.npmjs.com/package/lie/v/3.3.0",
+      "evidence": "Upstream license reference for identified bundled code; exact embedded version not established; selected permissive option where dual licensed",
+      "source": "https://www.npmjs.com/package/lie/v/3.3.0",
+      "distributed": false,
+      "licenseFiles": [
+        {
+          "name": "license.md",
+          "sha256": "04b11337b6a187f7601f96a7214921fd19d6fc312b861cf28595b9667fce4b74"
+        }
+      ]
+    },
+    {
+      "name": "immediate upstream license reference",
+      "version": "3.0.6",
+      "license": "MIT",
+      "kind": "license-reference",
+      "repository": "https://www.npmjs.com/package/immediate/v/3.0.6",
+      "evidence": "Upstream license reference for identified bundled code; exact embedded version not established; selected permissive option where dual licensed",
+      "source": "https://www.npmjs.com/package/immediate/v/3.0.6",
+      "distributed": false,
+      "licenseFiles": [
+        {
+          "name": "LICENSE.txt",
+          "sha256": "f48fea67bde19a5353f8caec4592243c9ab9f52cc7886f9e4e0bf1dfb391550b"
+        }
+      ]
+    },
+    {
+      "name": "pako upstream license reference",
+      "version": "1.0.11",
+      "license": "MIT AND Zlib",
+      "kind": "license-reference",
+      "repository": "https://www.npmjs.com/package/pako/v/1.0.11",
+      "evidence": "Upstream license reference for identified bundled code; exact embedded version not established; selected permissive option where dual licensed",
+      "source": "https://www.npmjs.com/package/pako/v/1.0.11",
+      "distributed": false,
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "9bce71206bb197a44eea817bf9c4091118b153cbe09f7544ed7e5abc536d5bcc"
+        },
+        {
+          "name": "NOTICE-bundled-zlib",
+          "sha256": "99794bf9aec12a6a4e6ff7c7d0a46fd81cd90eb18a31bd8ce61332f97c482161"
+        }
+      ]
+    },
+    {
+      "name": "sjcl upstream license reference",
+      "version": "1.0.8",
+      "license": "BSD-2-Clause",
+      "kind": "license-reference",
+      "repository": "https://www.npmjs.com/package/sjcl/v/1.0.8",
+      "evidence": "Upstream license reference for identified bundled code; exact embedded version not established; selected permissive option where dual licensed",
+      "source": "https://www.npmjs.com/package/sjcl/v/1.0.8",
+      "distributed": false,
+      "licenseFiles": [
+        {
+          "name": "LICENSE.txt",
+          "sha256": "ef430277d3cca1d3e7cdb6d4a61d7ff1eb208c4c2058602d2b361aaab60cd9c0"
         }
       ]
     },
@@ -255,6 +432,14 @@
         {
           "name": "LICENSE.MIT",
           "sha256": "2a57418d6b10947fe0dfbec3a600269e2745136c125cbf15b256e5ae18af23cb"
+        },
+        {
+          "name": "LICENSE-BSD-dependency",
+          "sha256": "6c91ec82929f91ffa341a9928e5c98b44767c6a1bb8d7789edad88d3fa5681af"
+        },
+        {
+          "name": "NOTICE",
+          "sha256": "b2869755a80ab8cfe62852c1f3b482c3c5eb1255990824571465215381483471"
         }
       ]
     },

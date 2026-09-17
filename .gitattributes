@@ -1,0 +1,2 @@
+# Preserve upstream license text, including whitespace.
+THIRD_PARTY_NOTICES.md -whitespace

@@ -1,0 +1,18 @@
+{
+  "originalLibrarySha256": "70276debbf4429193ffe3eabeb253c604e4fe96fa3f32ef7e40bf022fb3c96fe",
+  "originalTextSha256": "85b9a4765b21da264ac7bfc66c63b2a0f20f7f9b161bb3b32547a040872111d7",
+  "checks": [
+    "matching-unmodified-text",
+    "modified-library-relinks",
+    "napi-entry-retained",
+    "other-hap-entries-unchanged"
+  ],
+  "notTested": [
+    "recipient-certificate-signing",
+    "modified-hap-installation",
+    "market-encrypted-release"
+  ],
+  "package": "healico-qrgen-70276debbf442919-0d9c0da28032.zip",
+  "packageSha256": "0d9c0da28032da3bb7b2c8fa569bd2add06774b0e45cc19029c3114c20cd7d6d",
+  "packageBytes": 71424
+}
